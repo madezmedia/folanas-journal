@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-folana-primary: #4A2E72;
+  --color-folana-secondary: #E0BBE4;
+  --color-folana-accent: #957DAD;
+  --color-folana-text: #F7F7F7;
+  --color-folana-dark: #0A0A0B;
+  --color-folana-glass: rgba(255, 255, 255, 0.03);
+  --color-folana-neon: #B388FF;
+
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+:root {
+  --foreground-rgb: 247, 247, 247;
+  --background-start-rgb: 10, 10, 11;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-folana-glass border border-white/10 backdrop-blur-md rounded-2xl shadow-2xl;
+  }
+  
+  .neon-border {
+    @apply border border-folana-neon/30 shadow-[0_0_15px_rgba(179,136,255,0.2)];
+  }
+
+  .hud-tag {
+    @apply text-[10px] font-mono tracking-widest uppercase bg-folana-primary/40 text-folana-neon px-2 py-0.5 rounded-sm border border-folana-neon/20;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A2E72;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B388FF;
+}
+
+/* Cybernetic Grid Background */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(179, 136, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(179, 136, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.bg-grid-fade {
+  -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
