@@ -21,7 +21,7 @@ export default function NewEntryPage() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ title, date, content, password: process.env.NEXT_PUBLIC_ADMIN_PASSWORD }), // Pass password for MVP auth
+      body: JSON.stringify({ title, date, content }),
     });
 
     if (res.ok) {

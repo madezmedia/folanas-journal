@@ -1,13 +1,18 @@
 import { NextResponse } from 'next/server';
+import { checkAdminPassword, setAdminSession, clearAdminSession } from '@/lib/auth';
 
 export async function POST(req: Request) {
   const { password } = await req.json();
 
-  if (password === process.env.ADMIN_PASSWORD) {
-    // In a real application, you'd set a session cookie or JWT here.
-    // For this MVP, we'll just return success.
-    return NextResponse.json({ message: 'Login successful' }, { status: 200 });
-  } else {
+  if (!checkAdminPassword(password)) {
     return NextResponse.json({ message: 'Invalid password' }, { status: 401 });
   }
+
+  await setAdminSession();
+  return NextResponse.json({ message: 'Login successful' }, { status: 200 });
+}
+
+export async function DELETE() {
+  await clearAdminSession();
+  return NextResponse.json({ message: 'Logged out' }, { status: 200 });
 }

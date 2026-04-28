@@ -1,15 +1,9 @@
 import { NextResponse } from 'next/server';
 import { getSortedJournalEntries } from '@/lib/journal';
+import { isAdminAuthed } from '@/lib/auth';
 
-function isAuthenticated(password: string | null | undefined): boolean {
-  return password === process.env.ADMIN_PASSWORD;
-}
-
-export async function GET(req: Request) {
-  const url = new URL(req.url);
-  const password = url.searchParams.get('password'); // For simplicity, pass password in query for now. NOT secure for production.
-  
-  if (!isAuthenticated(password)) {
+export async function GET() {
+  if (!(await isAdminAuthed())) {
     return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
   }
 

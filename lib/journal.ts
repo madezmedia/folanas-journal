@@ -16,6 +16,22 @@ export interface JournalEntry {
   media_urls?: string[];
 }
 
+async function renderMarkdown(md: string): Promise<string> {
+  const processed = await remark().use(html).process(md || '');
+  return processed.toString();
+}
+
+// Tolerate legacy rows from migrate-journal.mjs that pre-rendered HTML into `content`.
+function looksLikeHtml(s: string | null | undefined): boolean {
+  if (!s) return false;
+  return /^\s*<\w/.test(s);
+}
+
+async function renderForDisplay(content: string | null | undefined): Promise<string> {
+  if (!content) return '';
+  return looksLikeHtml(content) ? content : await renderMarkdown(content);
+}
+
 export async function getSortedJournalEntries(): Promise<JournalEntry[]> {
   try {
     const { data, error } = await supabase
@@ -26,22 +42,23 @@ export async function getSortedJournalEntries(): Promise<JournalEntry[]> {
     if (error) throw error;
 
     if (data && data.length > 0) {
-      return data.map(entry => ({
-        id: entry.id,
-        date: entry.date,
-        title: entry.title,
-        content: entry.content,
-        image_url: entry.image_url,
-        media_urls: entry.media_urls
-      }));
+      return await Promise.all(
+        data.map(async (entry) => ({
+          id: entry.id,
+          date: entry.date,
+          title: entry.title,
+          content: await renderForDisplay(entry.content),
+          image_url: entry.image_url,
+          media_urls: entry.media_urls,
+        }))
+      );
     }
   } catch (error) {
     console.warn('Supabase fetch failed, falling back to filesystem:', error);
   }
 
-  // Fallback to local files
   if (!fs.existsSync(journalsDirectory)) return [];
-  
+
   const fileNames = fs.readdirSync(journalsDirectory);
   const allEntriesData = await Promise.all(
     fileNames.map(async (fileName) => {
@@ -49,19 +66,18 @@ export async function getSortedJournalEntries(): Promise<JournalEntry[]> {
       const fullPath = path.join(journalsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
       const matterResult = matter(fileContents);
-      const processedContent = await remark()
-        .use(html)
-        .process(matterResult.content);
-      const contentHtml = processedContent.toString();
+      const contentHtml = await renderMarkdown(matterResult.content);
 
       const dateVal = matterResult.data.date || matterResult.data.timestamp;
       return {
         id,
         content: contentHtml,
-        date: dateVal ? (dateVal instanceof Date ? dateVal.toISOString() : String(dateVal)) : new Date().toISOString(),
+        date: dateVal
+          ? (dateVal instanceof Date ? dateVal.toISOString() : String(dateVal))
+          : new Date().toISOString(),
         title: matterResult.data.title || matterResult.data.type || 'Untitled',
         image_url: matterResult.data.image_url,
-        media_urls: matterResult.data.media_urls
+        media_urls: matterResult.data.media_urls,
       };
     })
   );
@@ -77,16 +93,16 @@ export async function getJournalEntry(id: string): Promise<JournalEntry> {
       .eq('id', id)
       .single();
 
-    if (error && error.code !== 'PGRST116') throw error; // PGRST116 is "no rows found"
+    if (error && error.code !== 'PGRST116') throw error;
 
     if (data) {
       return {
         id: data.id,
         date: data.date,
         title: data.title,
-        content: data.content,
+        content: await renderForDisplay(data.content),
         image_url: data.image_url,
-        media_urls: data.media_urls
+        media_urls: data.media_urls,
       };
     }
   } catch (error) {
@@ -100,19 +116,17 @@ export async function getJournalEntry(id: string): Promise<JournalEntry> {
 
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  const contentHtml = await renderMarkdown(matterResult.content);
 
   const dateVal = matterResult.data.date || matterResult.data.timestamp;
   return {
     id,
     content: contentHtml,
-    date: dateVal ? (dateVal instanceof Date ? dateVal.toISOString() : String(dateVal)) : new Date().toISOString(),
+    date: dateVal
+      ? (dateVal instanceof Date ? dateVal.toISOString() : String(dateVal))
+      : new Date().toISOString(),
     title: matterResult.data.title || matterResult.data.type || 'Untitled',
     image_url: matterResult.data.image_url,
-    media_urls: matterResult.data.media_urls
+    media_urls: matterResult.data.media_urls,
   };
 }
-
