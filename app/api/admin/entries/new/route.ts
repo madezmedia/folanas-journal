@@ -1,18 +1,14 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
 import { revalidatePath } from 'next/cache';
-
-// Dummy authentication function for MVP
-function isAuthenticated(password: string | null | undefined): boolean {
-  return password === process.env.ADMIN_PASSWORD;
-}
+import { isAdminAuthed } from '@/lib/auth';
 
 export async function POST(req: Request) {
-  const { title, date, content, password } = await req.json();
-
-  if (!isAuthenticated(password)) {
+  if (!(await isAdminAuthed())) {
     return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
   }
+
+  const { title, date, content } = await req.json();
 
   if (!title || !date || !content) {
     return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
@@ -23,16 +19,10 @@ export async function POST(req: Request) {
   try {
     const { error } = await supabase
       .from('journal_entries')
-      .upsert({
-        id: slug,
-        title,
-        date,
-        content
-      });
+      .upsert({ id: slug, title, date, content });
 
     if (error) throw error;
 
-    // Trigger on-demand revalidation for the home page
     revalidatePath('/');
 
     return NextResponse.json({ message: 'Entry created successfully', id: slug }, { status: 201 });

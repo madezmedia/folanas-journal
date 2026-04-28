@@ -17,7 +17,7 @@ export default function EditEntryPage({ params }: { params: Promise<{ id: string
     const fetchEntry = async () => {
       try {
         // Fetch entry content for editing
-        const res = await fetch(`/api/admin/entries/${id}/edit?password=${process.env.NEXT_PUBLIC_ADMIN_PASSWORD}`); // Pass password for MVP auth
+        const res = await fetch(`/api/admin/entries/${id}/edit`);
         if (!res.ok) {
           if (res.status === 401) {
             router.push('/admin'); // Redirect to login if not authenticated
@@ -48,7 +48,7 @@ export default function EditEntryPage({ params }: { params: Promise<{ id: string
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ title, date, content, password: process.env.NEXT_PUBLIC_ADMIN_PASSWORD }), // Pass password for MVP auth
+      body: JSON.stringify({ title, date, content }),
     });
 
     if (res.ok) {
