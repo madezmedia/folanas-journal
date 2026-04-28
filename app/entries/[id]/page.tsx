@@ -1,4 +1,5 @@
 import { getJournalEntry, getSortedJournalEntries } from '@/lib/journal';
+import { getProfileSignals } from '@/lib/profile-signals';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -12,7 +13,10 @@ export async function generateStaticParams() {
 
 export default async function EntryPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const entry = await getJournalEntry(id);
+  const [entry, signals] = await Promise.all([
+    getJournalEntry(id),
+    getProfileSignals(),
+  ]);
 
   if (!entry) {
     notFound();
@@ -33,10 +37,10 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
       <article className="w-full max-w-4xl relative z-20">
         {/* Hero Image */}
         <div className="relative w-full h-[400px] lg:h-[600px] rounded-3xl overflow-hidden mb-12 border border-white/10 shadow-2xl">
-          <Image 
-            src={entry.image_url || "https://postiz-u70402.vm.elestio.app/uploads/2026/04/24/338be49529109b88963192943e612086c.jpg"} 
-            alt={entry.title} 
-            fill 
+          <Image
+            src={entry.image_url || signals.hero_image_url}
+            alt={entry.title}
+            fill
             className="object-cover"
             priority
           />
@@ -52,15 +56,15 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
         <div className="glass-panel p-8 lg:p-16 mb-12">
           <div className="flex items-center gap-4 mb-12 border-b border-white/5 pb-8">
             <div className="w-12 h-12 rounded-full overflow-hidden border border-folana-neon/30 relative">
-               <Image 
-                src="https://postiz-u70402.vm.elestio.app/uploads/2026/04/24/338be49529109b88963192943e612086c.jpg" 
-                alt="Folana" 
+              <Image
+                src={signals.avatar_url}
+                alt={signals.display_name}
                 fill
                 className="object-cover"
               />
             </div>
             <div>
-              <div className="text-folana-secondary font-serif text-lg">Folana</div>
+              <div className="text-folana-secondary font-serif text-lg">{signals.display_name}</div>
               <time className="text-folana-accent font-mono text-xs opacity-60 uppercase">
                 {new Date(entry.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
               </time>

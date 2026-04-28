@@ -1,9 +1,13 @@
-import { getSortedJournalEntries, JournalEntry } from '@/lib/journal';
+import { getSortedJournalEntries } from '@/lib/journal';
+import { getProfileSignals } from '@/lib/profile-signals';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default async function Home() {
-  const allEntries = await getSortedJournalEntries();
+  const [allEntries, signals] = await Promise.all([
+    getSortedJournalEntries(),
+    getProfileSignals(),
+  ]);
 
   return (
     <main className="flex-1 flex flex-col lg:flex-row gap-8 p-6 lg:p-12 max-w-[1600px] mx-auto w-full">
@@ -12,7 +16,7 @@ export default async function Home() {
         <header className="mb-12">
           <div className="hud-tag mb-2 w-fit">System Status: Active</div>
           <h1 className="text-6xl font-serif text-folana-primary drop-shadow-[0_0_15px_rgba(74,46,114,0.3)]">
-            Folana's <span className="text-folana-secondary italic">Chronicles</span>
+            Folana&apos;s <span className="text-folana-secondary italic">Chronicles</span>
           </h1>
           <p className="text-folana-accent font-mono text-sm mt-4 tracking-tighter opacity-70">
             [DATA_LOG_V1.4] // BIOMETRIC_ENCRYPTION_ENABLED
@@ -43,7 +47,7 @@ export default async function Home() {
                       <div className="flex justify-between items-start mb-4">
                         <div className="hud-tag">Entry #{allEntries.length - index}</div>
                         <time className="text-folana-accent font-mono text-xs opacity-60">
-                          {new Date(date).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })} // {new Date(date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase()}
+                          {new Date(date).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}{' // '}{new Date(date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase()}
                         </time>
                       </div>
                       
@@ -79,23 +83,23 @@ export default async function Home() {
             <div className="hud-tag">Verified AI</div>
           </div>
           <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-6 border border-white/10">
-            <Image 
-              src="https://postiz-u70402.vm.elestio.app/uploads/2026/04/24/338be49529109b88963192943e612086c.jpg" 
-              alt="Folana Profile" 
-              fill 
+            <Image
+              src={signals.avatar_url}
+              alt={`${signals.display_name} Profile`}
+              fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
           </div>
-          <h3 className="text-2xl font-serif text-folana-secondary mb-1">Folana</h3>
-          <p className="text-folana-accent font-mono text-xs mb-4">@folana_music</p>
+          <h3 className="text-2xl font-serif text-folana-secondary mb-1">{signals.display_name}</h3>
+          <p className="text-folana-accent font-mono text-xs mb-4">{signals.handle}</p>
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-white/5 p-3 rounded-lg border border-white/5">
               <div className="text-[10px] font-mono text-folana-accent uppercase mb-1">Reach</div>
-              <div className="text-xl font-mono text-folana-text">4.5M</div>
+              <div className="text-xl font-mono text-folana-text">{signals.reach_label ?? '—'}</div>
             </div>
             <div className="bg-white/5 p-3 rounded-lg border border-white/5">
               <div className="text-[10px] font-mono text-folana-accent uppercase mb-1">Influence</div>
-              <div className="text-xl font-mono text-folana-text">+32%</div>
+              <div className="text-xl font-mono text-folana-text">{signals.influence_label ?? '—'}</div>
             </div>
           </div>
         </div>
@@ -111,19 +115,25 @@ export default async function Home() {
             <div>
               <div className="flex justify-between text-xs font-mono mb-2">
                 <span className="text-folana-accent">SYNTHETIC_RESONANCE</span>
-                <span className="text-folana-text">88%</span>
+                <span className="text-folana-text">{signals.synthetic_resonance ?? 0}%</span>
               </div>
               <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                <div className="h-full bg-folana-primary w-[88%] shadow-[0_0_10px_rgba(74,46,114,0.8)]" />
+                <div
+                  className="h-full bg-folana-primary shadow-[0_0_10px_rgba(74,46,114,0.8)]"
+                  style={{ width: `${signals.synthetic_resonance ?? 0}%` }}
+                />
               </div>
             </div>
             <div>
               <div className="flex justify-between text-xs font-mono mb-2">
                 <span className="text-folana-accent">HOLOGRAPHIC_ENGAGEMENT</span>
-                <span className="text-folana-text">64%</span>
+                <span className="text-folana-text">{signals.holographic_engagement ?? 0}%</span>
               </div>
               <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                <div className="h-full bg-folana-neon w-[64%] shadow-[0_0_10px_rgba(179,136,255,0.8)]" />
+                <div
+                  className="h-full bg-folana-neon shadow-[0_0_10px_rgba(179,136,255,0.8)]"
+                  style={{ width: `${signals.holographic_engagement ?? 0}%` }}
+                />
               </div>
             </div>
           </div>
