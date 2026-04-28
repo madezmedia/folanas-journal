@@ -14,6 +14,15 @@ export interface JournalEntry {
   content: string;
   image_url?: string;
   media_urls?: string[];
+  mood?: string | null;
+  interests?: unknown;
+  opinions?: unknown;
+  source?: string | null;
+  visibility?: string | null;
+}
+
+export interface JournalReadOptions {
+  includeDrafts?: boolean;
 }
 
 async function renderMarkdown(md: string): Promise<string> {
@@ -32,7 +41,14 @@ async function renderForDisplay(content: string | null | undefined): Promise<str
   return looksLikeHtml(content) ? content : await renderMarkdown(content);
 }
 
-export async function getSortedJournalEntries(): Promise<JournalEntry[]> {
+// Legacy rows pre-date the visibility column — null/undefined = treat as live.
+function isVisibleToPublic(visibility: unknown): boolean {
+  return visibility !== 'draft';
+}
+
+export async function getSortedJournalEntries(opts?: JournalReadOptions): Promise<JournalEntry[]> {
+  const includeDrafts = !!opts?.includeDrafts;
+
   try {
     const { data, error } = await supabase
       .from('journal_entries')
@@ -42,14 +58,20 @@ export async function getSortedJournalEntries(): Promise<JournalEntry[]> {
     if (error) throw error;
 
     if (data && data.length > 0) {
+      const filtered = includeDrafts ? data : data.filter((e) => isVisibleToPublic(e.visibility));
       return await Promise.all(
-        data.map(async (entry) => ({
+        filtered.map(async (entry) => ({
           id: entry.id,
           date: entry.date,
           title: entry.title,
           content: await renderForDisplay(entry.content),
           image_url: entry.image_url,
           media_urls: entry.media_urls,
+          mood: entry.mood ?? null,
+          interests: entry.interests ?? null,
+          opinions: entry.opinions ?? null,
+          source: entry.source ?? null,
+          visibility: entry.visibility ?? null,
         }))
       );
     }
@@ -85,7 +107,10 @@ export async function getSortedJournalEntries(): Promise<JournalEntry[]> {
   return allEntriesData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export async function getJournalEntry(id: string): Promise<JournalEntry> {
+export async function getJournalEntry(id: string, opts?: JournalReadOptions): Promise<JournalEntry> {
+  const includeDrafts = !!opts?.includeDrafts;
+
+  let supabaseRow: Record<string, unknown> | null = null;
   try {
     const { data, error } = await supabase
       .from('journal_entries')
@@ -94,19 +119,28 @@ export async function getJournalEntry(id: string): Promise<JournalEntry> {
       .single();
 
     if (error && error.code !== 'PGRST116') throw error;
-
-    if (data) {
-      return {
-        id: data.id,
-        date: data.date,
-        title: data.title,
-        content: await renderForDisplay(data.content),
-        image_url: data.image_url,
-        media_urls: data.media_urls,
-      };
-    }
+    supabaseRow = (data as Record<string, unknown> | null) ?? null;
   } catch (error) {
     console.warn('Supabase fetch failed, falling back to filesystem:', error);
+  }
+
+  if (supabaseRow) {
+    if (!includeDrafts && !isVisibleToPublic(supabaseRow.visibility)) {
+      throw new Error(`Entry ${id} not found`);
+    }
+    return {
+      id: String(supabaseRow.id),
+      date: String(supabaseRow.date),
+      title: String(supabaseRow.title),
+      content: await renderForDisplay(supabaseRow.content as string | null | undefined),
+      image_url: supabaseRow.image_url as string | undefined,
+      media_urls: supabaseRow.media_urls as string[] | undefined,
+      mood: (supabaseRow.mood as string | null | undefined) ?? null,
+      interests: supabaseRow.interests ?? null,
+      opinions: supabaseRow.opinions ?? null,
+      source: (supabaseRow.source as string | null | undefined) ?? null,
+      visibility: (supabaseRow.visibility as string | null | undefined) ?? null,
+    };
   }
 
   const fullPath = path.join(journalsDirectory, `${id}.md`);

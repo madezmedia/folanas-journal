@@ -64,6 +64,24 @@ export async function clearAdminSession(): Promise<void> {
   });
 }
 
+export function isBrainIngestConfigured(): boolean {
+  const t = process.env.BRAIN_INGEST_TOKEN;
+  return !!t && t.length >= 16;
+}
+
+export function checkBrainIngestToken(req: Request): boolean {
+  const expected = process.env.BRAIN_INGEST_TOKEN;
+  if (!expected || expected.length < 16) return false;
+  const auth = req.headers.get('authorization');
+  if (!auth || !auth.toLowerCase().startsWith('bearer ')) return false;
+  const provided = auth.slice(7).trim();
+  if (!provided) return false;
+  const a = Buffer.from(provided);
+  const b = Buffer.from(expected);
+  if (a.length !== b.length) return false;
+  return timingSafeEqual(a, b);
+}
+
 export async function isAdminAuthed(): Promise<boolean> {
   const cookieStore = await cookies();
   const raw = cookieStore.get(COOKIE_NAME)?.value;

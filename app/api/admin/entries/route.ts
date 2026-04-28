@@ -8,7 +8,7 @@ export async function GET() {
   }
 
   try {
-    const entries = await getSortedJournalEntries();
+    const entries = await getSortedJournalEntries({ includeDrafts: true });
     return NextResponse.json(entries, { status: 200 });
   } catch (error) {
     console.error('Failed to fetch journal entries:', error);
