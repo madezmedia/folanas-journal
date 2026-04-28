@@ -1,4 +1,4 @@
-import { getSortedJournalEntries, JournalEntry } from '@/lib/journal';
+import { getSortedJournalEntries } from '@/lib/journal';
 import { getProfileSignals } from '@/lib/profile-signals';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -16,7 +16,7 @@ export default async function Home() {
         <header className="mb-12">
           <div className="hud-tag mb-2 w-fit">System Status: Active</div>
           <h1 className="text-6xl font-serif text-folana-primary drop-shadow-[0_0_15px_rgba(74,46,114,0.3)]">
-            Folana's <span className="text-folana-secondary italic">Chronicles</span>
+            Folana&apos;s <span className="text-folana-secondary italic">Chronicles</span>
           </h1>
           <p className="text-folana-accent font-mono text-sm mt-4 tracking-tighter opacity-70">
             [DATA_LOG_V1.4] // BIOMETRIC_ENCRYPTION_ENABLED
@@ -47,7 +47,7 @@ export default async function Home() {
                       <div className="flex justify-between items-start mb-4">
                         <div className="hud-tag">Entry #{allEntries.length - index}</div>
                         <time className="text-folana-accent font-mono text-xs opacity-60">
-                          {new Date(date).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })} // {new Date(date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase()}
+                          {new Date(date).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}{' // '}{new Date(date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase()}
                         </time>
                       </div>
                       

@@ -29,8 +29,8 @@ export default function EditEntryPage({ params }: { params: Promise<{ id: string
         setTitle(data.title);
         setDate(data.date);
         setContent(data.content);
-      } catch (err: any) {
-        setError(err.message);
+      } catch (err: unknown) {
+        setError(err instanceof Error ? err.message : 'Failed to fetch entry');
       } finally {
         setLoading(false);
       }
