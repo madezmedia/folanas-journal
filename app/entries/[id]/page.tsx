@@ -90,12 +90,23 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {entry.media_urls.slice(1).map((url, i) => (
                   <div key={i} className="relative aspect-square rounded-2xl overflow-hidden border border-white/10 group">
-                    <Image 
-                      src={url} 
-                      alt={`Fragment ${i + 1}`} 
-                      fill 
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
+                    {url.toLowerCase().endsWith('.mp4') ? (
+                      <video 
+                        src={url} 
+                        className="w-full h-full object-cover" 
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline 
+                      />
+                    ) : (
+                      <Image 
+                        src={url} 
+                        alt={`Fragment ${i + 1}`} 
+                        fill 
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                    )}
                     <div className="absolute inset-0 bg-folana-primary/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                   </div>
                 ))}

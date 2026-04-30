@@ -13,14 +13,25 @@ export default async function Home() {
     <main className="flex-1 flex flex-col lg:flex-row gap-8 p-6 lg:p-12 max-w-[1600px] mx-auto w-full">
       {/* Left Column: Timeline */}
       <div className="flex-1 flex flex-col">
-        <header className="mb-12">
-          <div className="hud-tag mb-2 w-fit">System Status: Active</div>
-          <h1 className="text-6xl font-serif text-folana-primary drop-shadow-[0_0_15px_rgba(74,46,114,0.3)]">
-            Folana&apos;s <span className="text-folana-secondary italic">Chronicles</span>
-          </h1>
-          <p className="text-folana-accent font-mono text-sm mt-4 tracking-tighter opacity-70">
-            [DATA_LOG_V1.4] // BIOMETRIC_ENCRYPTION_ENABLED
-          </p>
+        <header className="mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+          <div>
+            <div className="hud-tag mb-2 w-fit">System Status: Active</div>
+            <h1 className="text-6xl font-serif text-folana-primary drop-shadow-[0_0_15px_rgba(74,46,114,0.3)]">
+              Folana&apos;s <span className="text-folana-secondary italic">Chronicles</span>
+            </h1>
+            <p className="text-folana-accent font-mono text-sm mt-4 tracking-tighter opacity-70">
+              [DATA_LOG_V1.4] // BIOMETRIC_ENCRYPTION_ENABLED
+            </p>
+          </div>
+          
+          <Link href="/orchestrator" className="group">
+            <div className="glass-panel p-4 neon-border bg-folana-primary/10 hover:bg-folana-primary/20 transition-all duration-300">
+              <div className="hud-tag mb-2">CNS_UPLINK</div>
+              <div className="text-sm font-mono text-folana-text group-hover:text-folana-neon transition-colors">
+                Enter Orchestrator Mode &rarr;
+              </div>
+            </div>
+          </Link>
         </header>
 
           <div className="relative border-l-2 border-folana-primary/30 pl-8 ml-4 space-y-12">
