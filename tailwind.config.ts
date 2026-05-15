@@ -9,27 +9,39 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'folana-primary': '#4A2E72', // Deep purple
-        'folana-secondary': '#E0BBE4', // Soft lavender
-        'folana-accent': '#957DAD', // Muted plum
-        'folana-text': '#F7F7F7', // Off-white
-        'folana-dark': '#0A0A0B', // Almost black
+        // Neutral baseline — dark mode (§1.2 compliant)
+        'folana-primary': '#1A1A2E',
+        'folana-secondary': '#16213E',
+        'folana-surface': '#0F0F0F',
+        'folana-surface-elevated': '#1E1E1E',
+        'folana-text': '#F5F5F5',
+        'folana-text-secondary': '#A0A0A0',
+        'folana-text-muted': '#666666',
+        'folana-border': '#2A2A2A',
+        'folana-accent': '#E0E0E0',
         'folana-glass': 'rgba(255, 255, 255, 0.03)',
-        'folana-neon': '#B388FF', // Vibrant lavender/neon
+        // Semantic mood colors — Folana-native
+        'folana-mood-positive': '#4ADE80',
+        'folana-mood-neutral': '#94A3B8',
+        'folana-mood-melancholy': '#818CF8',
+        'folana-mood-energetic': '#FB923C',
+        'folana-mood-reflective': '#67E8F9',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'cyber-grid': 'linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)',
+      borderRadius: {
+        sm: '4px',
+        md: '8px',
+        lg: '12px',
+        xl: '16px',
       },
-      backgroundSize: {
-        'grid-small': '20px 20px',
-        'grid-large': '100px 100px',
+      boxShadow: {
+        sm: '0 1px 2px rgba(0,0,0,0.3)',
+        md: '0 4px 6px rgba(0,0,0,0.4)',
+        lg: '0 10px 15px rgba(0,0,0,0.5)',
+        glow: '0 0 20px rgba(224,224,224,0.1)',
       },
     },
   },

@@ -1,76 +1,83 @@
 @import "tailwindcss";
 
 @theme {
-  --color-folana-primary: #4A2E72;
-  --color-folana-secondary: #E0BBE4;
-  --color-folana-accent: #957DAD;
-  --color-folana-text: #F7F7F7;
-  --color-folana-dark: #0A0A0B;
-  --color-folana-glass: rgba(255, 255, 255, 0.03);
-  --color-folana-neon: #B388FF;
+  /* ═══ Folana Neutral Baseline Tokens (§1.2 compliant) ═══ */
+  /* Source: /agents/folana/visual-brand/tokens/brand-tokens.json */
+  /* Trend overlays populate via CSS custom properties at render time */
 
-  --font-serif: "Playfair Display", serif;
-  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  /* Base colors — dark neutral */
+  --color-folana-surface: #0F0F0F;
+  --color-folana-surface-elevated: #1E1E1E;
+  --color-folana-primary: #1A1A2E;
+  --color-folana-secondary: #16213E;
+  --color-folana-border: #2A2A2A;
+  --color-folana-accent: #E0E0E0;
+
+  /* Text */
+  --color-folana-text-primary: #F5F5F5;
+  --color-folana-text-secondary: #A0A0A0;
+  --color-folana-text-muted: #666666;
+
+  /* Semantic mood colors (Folana-native, always present) */
+  --color-folana-mood-positive: #4ADE80;
+  --color-folana-mood-neutral: #94A3B8;
+  --color-folana-mood-melancholy: #818CF8;
+  --color-folana-mood-energetic: #FB923C;
+  --color-folana-mood-reflective: #67E8F9;
+
+  /* Typography */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", monospace;
 }
 
 :root {
-  --foreground-rgb: 247, 247, 247;
-  --background-start-rgb: 10, 10, 11;
-  --background-end-rgb: 0, 0, 0;
+  /* Trend-overlay hooks — EMPTY by design (§1.2).
+     Populate from trend ingestion pipeline only.
+     These CSS custom properties are the skinning mechanism. */
+  --trend-primary: "";
+  --trend-secondary: "";
+  --trend-accent: "";
+  --trend-surface: "";
+
+  --foreground-rgb: 245, 245, 245;
+  --background-start-rgb: 15, 15, 15;
+  --background-end-rgb: 15, 15, 15;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(var(--background-start-rgb));
   min-height: 100vh;
+  font-family: var(--font-sans);
 }
+
+/* ═══ Component Layer ═══ */
 
 @layer components {
   .glass-panel {
-    @apply bg-folana-glass border border-white/10 backdrop-blur-md rounded-2xl shadow-2xl;
-  }
-  
-  .neon-border {
-    @apply border border-folana-neon/30 shadow-[0_0_15px_rgba(179,136,255,0.2)];
+    @apply bg-folana-surface-elevated/50 border border-folana-border rounded-2xl shadow-md;
   }
 
-  .hud-tag {
-    @apply text-[10px] font-mono tracking-widest uppercase bg-folana-primary/40 text-folana-neon px-2 py-0.5 rounded-sm border border-folana-neon/20;
+  .mood-tag {
+    @apply text-[10px] font-mono tracking-widest uppercase px-2 py-0.5 rounded-sm border border-folana-border text-folana-text-muted;
   }
 }
 
-/* Custom scrollbar */
+/* ═══ Scrollbar ═══ */
+
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0A0A0B;
+  background: var(--color-folana-surface);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4A2E72;
+  background: var(--color-folana-border);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #B388FF;
-}
-
-/* Cybernetic Grid Background */
-.bg-grid {
-  background-image: 
-    linear-gradient(rgba(179, 136, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(179, 136, 255, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
-.bg-grid-fade {
-  -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
-  mask-image: radial-gradient(circle at center, black, transparent 80%);
+  background: var(--color-folana-text-muted);
 }

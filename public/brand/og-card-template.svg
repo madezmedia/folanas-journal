@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A2E"/>
+      <stop offset="100%" style="stop-color:#0F0F0F"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+  <!-- Left: avatar zone -->
+  <rect x="80" y="120" width="360" height="360" rx="16" fill="#1E1E1E" stroke="#2A2A2A" stroke-width="1"/>
+  <text x="260" y="320" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-weight="700" font-size="120" fill="#F5F5F5" opacity="0.15">F</text>
+  <!-- Right: text zone -->
+  <text x="520" y="240" font-family="'Inter', system-ui, sans-serif" font-weight="700" font-size="72" fill="#F5F5F5" letter-spacing="-0.02em">folana</text>
+  <rect x="520" y="260" width="200" height="2" rx="1" fill="#E0E0E0" opacity="0.3"/>
+  <text x="520" y="310" font-family="'Inter', system-ui, sans-serif" font-weight="400" font-size="24" fill="#A0A0A0">music · art · brooklyn</text>
+  <!-- Bottom bar -->
+  <rect x="0" y="590" width="1200" height="40" fill="#16213E"/>
+  <text x="60" y="616" font-family="'Inter', system-ui, sans-serif" font-weight="400" font-size="14" fill="#666666">folanas-journal.vercel.app</text>
+</svg>

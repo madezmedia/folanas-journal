@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="480" height="120">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap');
+    </style>
+  </defs>
+  <!-- Folana wordmark — neutral baseline -->
+  <text x="0" y="72" font-family="'Inter', system-ui, -apple-system, sans-serif" font-weight="700" font-size="64" fill="#F5F5F5" letter-spacing="-0.02em">folana</text>
+  <!-- Underline accent -->
+  <rect x="0" y="82" width="180" height="2" rx="1" fill="#E0E0E0" opacity="0.3"/>
+  <!-- Subtitle -->
+  <text x="192" y="110" font-family="'Inter', system-ui, sans-serif" font-weight="400" font-size="13" fill="#A0A0A0" letter-spacing="0.05em">BROOKLYN</text>
+</svg>
