@@ -18,13 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${jetbrains.variable}`}>
-      <body className="bg-folana-dark font-sans selection:bg-folana-neon selection:text-folana-dark">
+      <body className="bg-folana-paper text-folana-ink font-sans selection:bg-folana-static selection:text-folana-ink">
+        {/* Analog Atmosphere */}
+        <div className="film-grain" aria-hidden="true" />
+        
         {/* Background Atmosphere */}
         <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-          <div className="absolute inset-0 bg-grid opacity-50" />
-          <div className="absolute inset-0 bg-gradient-to-b from-folana-primary/5 via-transparent to-black" />
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-folana-primary/10 rounded-full blur-[120px] animate-pulse" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-folana-neon/5 rounded-full blur-[120px] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:32px_32px] opacity-20" />
+          <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-folana-static/10 to-transparent" />
         </div>
         
         {/* Main Content Container */}

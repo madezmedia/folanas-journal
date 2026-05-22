@@ -13,70 +13,62 @@ export default async function Home() {
     <main className="flex-1 flex flex-col lg:flex-row gap-8 p-6 lg:p-12 max-w-[1600px] mx-auto w-full">
       {/* Left Column: Timeline */}
       <div className="flex-1 flex flex-col">
-        <header className="mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+        <header className="mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-folana-ink/5 pb-12">
           <div>
-            <div className="hud-tag mb-2 w-fit">System Status: Active</div>
-            <h1 className="text-6xl font-serif text-folana-primary drop-shadow-[0_0_15px_rgba(74,46,114,0.3)]">
-              Folana&apos;s <span className="text-folana-secondary italic">Chronicles</span>
+            <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-folana-accent mb-4 opacity-60">Chronicles // Brooklyn, NY</div>
+            <h1 className="text-7xl font-serif text-folana-ink leading-tight">
+              Folana&apos;s <span className="italic opacity-80">Notes</span>
             </h1>
-            <p className="text-folana-accent font-mono text-sm mt-4 tracking-tighter opacity-70">
-              [DATA_LOG_V1.4] // BIOMETRIC_ENCRYPTION_ENABLED
-            </p>
           </div>
           
           <Link href="/orchestrator" className="group">
-            <div className="glass-panel p-4 neon-border bg-folana-primary/10 hover:bg-folana-primary/20 transition-all duration-300">
-              <div className="hud-tag mb-2">CNS_UPLINK</div>
-              <div className="text-sm font-mono text-folana-text group-hover:text-folana-neon transition-colors">
-                Enter Orchestrator Mode &rarr;
+            <div className="px-6 py-3 border border-folana-ink/10 hover:border-folana-ink/30 transition-all duration-500 rounded-full">
+              <div className="text-xs font-mono text-folana-accent group-hover:text-folana-ink transition-colors">
+                Studio Access &rarr;
               </div>
             </div>
           </Link>
         </header>
 
-          <div className="relative border-l-2 border-folana-primary/30 pl-8 ml-4 space-y-12">
+        <div className="space-y-24">
           {allEntries.map(({ id, date, title, image_url }, index) => (
-            <div key={id} className="relative">
-              {/* Timeline Dot */}
-              <div className="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-folana-primary border-4 border-folana-dark shadow-[0_0_10px_rgba(74,46,114,0.8)]" />
-              
-              <Link href={`/entries/${id}`} className="group block">
-                <article className="glass-panel p-6 hover:bg-white/5 transition-all duration-500 hover:translate-x-2 group-hover:neon-border overflow-hidden">
-                  <div className="flex flex-col md:flex-row gap-6">
-                    {image_url && (
-                      <div className="relative w-full md:w-48 aspect-video md:aspect-square rounded-lg overflow-hidden border border-white/10 shrink-0">
-                        <Image 
-                          src={image_url} 
-                          alt={title} 
-                          fill 
-                          className="object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-folana-dark/60 to-transparent" />
+            <div key={id} className="group cursor-pointer">
+              <Link href={`/entries/${id}`} className="block">
+                <article className="flex flex-col gap-8">
+                  {image_url && (
+                    <div className="relative w-full aspect-[16/9] lg:aspect-[21/9] rounded-2xl overflow-hidden grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 border border-folana-ink/5">
+                      <Image 
+                        src={image_url} 
+                        alt={title} 
+                        fill 
+                        className="object-cover scale-100 group-hover:scale-105 transition-transform duration-1000"
+                      />
+                      <div className="absolute inset-0 bg-folana-ink/5 group-hover:bg-transparent transition-colors duration-1000" />
+                    </div>
+                  )}
+                  
+                  <div className="max-w-3xl">
+                    <div className="flex items-center gap-4 mb-6">
+                      <time className="text-folana-accent font-mono text-xs tracking-widest uppercase">
+                        {new Date(date).toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' })}
+                      </time>
+                      <span className="w-8 h-px bg-folana-ink/10" />
+                      <div className="text-xs font-mono text-folana-accent opacity-60 uppercase">
+                        {new Date(date).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
                       </div>
-                    )}
-                    <div className="flex-1">
-                      <div className="flex justify-between items-start mb-4">
-                        <div className="hud-tag">Entry #{allEntries.length - index}</div>
-                        <time className="text-folana-accent font-mono text-xs opacity-60">
-                          {new Date(date).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}{' // '}{new Date(date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase()}
-                        </time>
-                      </div>
-                      
-                      <h2 className="text-3xl font-serif text-folana-secondary mb-3 group-hover:text-folana-neon transition-colors duration-300">
-                        {title}
-                      </h2>
-                      
-                      <p className="text-folana-text/70 line-clamp-2 font-sans leading-relaxed">
-                        Accessing log content... Initializing decryption sequence for sequence data ID {id}.
-                      </p>
-                      
-                      <div className="mt-6 flex items-center gap-4 text-xs font-mono text-folana-accent">
-                        <span className="flex items-center gap-1">
-                          <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> Decrypted
-                        </span>
-                        <span className="opacity-40">|</span>
-                        <span className="group-hover:text-folana-neon transition-colors">Read Log &rarr;</span>
-                      </div>
+                    </div>
+                    
+                    <h2 className="text-5xl font-serif text-folana-ink mb-6 group-hover:opacity-60 transition-opacity duration-500">
+                      {title}
+                    </h2>
+                    
+                    <p className="text-folana-ink/60 text-xl font-serif italic leading-relaxed line-clamp-2">
+                      Deciphering the static between what is real and what is rendered. A reflection on the current arc...
+                    </p>
+                    
+                    <div className="mt-8 flex items-center gap-4 text-xs font-mono text-folana-accent group-hover:text-folana-ink transition-colors">
+                      <span className="uppercase tracking-widest">Open Archive</span>
+                      <span className="text-lg">&rarr;</span>
                     </div>
                   </div>
                 </article>
@@ -87,62 +79,57 @@ export default async function Home() {
       </div>
 
       {/* Right Column: Sidebar */}
-      <aside className="lg:w-96 space-y-8">
+      <aside className="lg:w-96 space-y-12">
         {/* Profile Card */}
-        <div className="glass-panel p-6 overflow-hidden relative group">
-          <div className="absolute top-0 right-0 p-2 opacity-20 group-hover:opacity-100 transition-opacity z-10">
-            <div className="hud-tag">Verified AI</div>
-          </div>
-          <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-6 border border-white/10">
+        <div className="relative group">
+          <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-8 border border-folana-ink/5 grayscale-[0.1] group-hover:grayscale-0 transition-all duration-700">
             <Image
               src={signals.avatar_url}
               alt={`${signals.display_name} Profile`}
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-700"
+              className="object-cover group-hover:scale-105 transition-transform duration-1000"
             />
           </div>
-          <h3 className="text-2xl font-serif text-folana-secondary mb-1">{signals.display_name}</h3>
-          <p className="text-folana-accent font-mono text-xs mb-4">{signals.handle}</p>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-white/5 p-3 rounded-lg border border-white/5">
-              <div className="text-[10px] font-mono text-folana-accent uppercase mb-1">Reach</div>
-              <div className="text-xl font-mono text-folana-text">{signals.reach_label ?? '—'}</div>
-            </div>
-            <div className="bg-white/5 p-3 rounded-lg border border-white/5">
-              <div className="text-[10px] font-mono text-folana-accent uppercase mb-1">Influence</div>
-              <div className="text-xl font-mono text-folana-text">{signals.influence_label ?? '—'}</div>
+          <div className="px-2">
+            <h3 className="text-3xl font-serif text-folana-ink mb-2">{signals.display_name}</h3>
+            <p className="text-folana-accent font-mono text-xs mb-8 tracking-widest">{signals.handle} // BROOKLYN_NODE</p>
+            <div className="grid grid-cols-2 gap-8 border-t border-folana-ink/5 pt-8">
+              <div>
+                <div className="text-[10px] font-mono text-folana-accent uppercase mb-2 opacity-60">Resonance</div>
+                <div className="text-2xl font-serif italic text-folana-ink">{signals.reach_label ?? '—'}</div>
+              </div>
+              <div>
+                <div className="text-[10px] font-mono text-folana-accent uppercase mb-2 opacity-60">Frequency</div>
+                <div className="text-2xl font-serif italic text-folana-ink">{signals.influence_label ?? '—'}</div>
+              </div>
             </div>
           </div>
         </div>
 
-
         {/* Streaming Stats */}
-        <div className="glass-panel p-6">
-          <div className="flex justify-between items-center mb-6">
-            <h3 className="text-lg font-serif text-folana-secondary">Analytics</h3>
-            <div className="hud-tag">Realtime</div>
-          </div>
-          <div className="space-y-6">
+        <div className="pt-12 border-t border-folana-ink/5">
+          <h3 className="text-lg font-mono text-folana-accent uppercase tracking-[0.2em] mb-8 opacity-60">Rhythm & Resonance</h3>
+          <div className="space-y-10">
             <div>
-              <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-folana-accent">SYNTHETIC_RESONANCE</span>
-                <span className="text-folana-text">{signals.synthetic_resonance ?? 0}%</span>
+              <div className="flex justify-between text-xs font-mono mb-3">
+                <span className="text-folana-accent uppercase">Synthetic_Arc</span>
+                <span className="text-folana-ink">{signals.synthetic_resonance ?? 0}%</span>
               </div>
-              <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+              <div className="h-px w-full bg-folana-ink/10 relative">
                 <div
-                  className="h-full bg-folana-primary shadow-[0_0_10px_rgba(74,46,114,0.8)]"
+                  className="h-full bg-folana-ink transition-all duration-1000"
                   style={{ width: `${signals.synthetic_resonance ?? 0}%` }}
                 />
               </div>
             </div>
             <div>
-              <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-folana-accent">HOLOGRAPHIC_ENGAGEMENT</span>
-                <span className="text-folana-text">{signals.holographic_engagement ?? 0}%</span>
+              <div className="flex justify-between text-xs font-mono mb-3">
+                <span className="text-folana-accent uppercase">Echo_Engagement</span>
+                <span className="text-folana-ink">{signals.holographic_engagement ?? 0}%</span>
               </div>
-              <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+              <div className="h-px w-full bg-folana-ink/10 relative">
                 <div
-                  className="h-full bg-folana-neon shadow-[0_0_10px_rgba(179,136,255,0.8)]"
+                  className="h-full bg-folana-static transition-all duration-1000"
                   style={{ width: `${signals.holographic_engagement ?? 0}%` }}
                 />
               </div>
@@ -151,22 +138,22 @@ export default async function Home() {
         </div>
 
         {/* Recent Compositions */}
-        <div className="glass-panel p-6">
-          <h3 className="text-lg font-serif text-folana-secondary mb-6 italic">Recent Compositions</h3>
-          <div className="space-y-4">
+        <div className="pt-12 border-t border-folana-ink/5">
+          <h3 className="text-lg font-serif text-folana-ink mb-8 italic">Archives</h3>
+          <div className="space-y-6">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="flex gap-4 items-center group cursor-pointer p-2 rounded-lg hover:bg-white/5 transition-colors">
-                <div className="relative w-12 h-12 rounded bg-folana-primary/20 border border-white/10 overflow-hidden">
+              <div key={i} className="flex gap-6 items-center group cursor-pointer py-2 border-b border-folana-ink/0 hover:border-folana-ink/5 transition-all">
+                <div className="relative w-14 h-14 rounded-lg bg-folana-ink/5 overflow-hidden">
                    <Image 
                     src="/images/folana_studio.png" 
                     alt="Composition" 
                     fill 
-                    className="object-cover opacity-60 group-hover:opacity-100 transition-opacity"
+                    className="object-cover opacity-40 group-hover:opacity-80 transition-opacity grayscale"
                   />
                 </div>
                 <div>
-                  <div className="text-sm font-sans text-folana-text group-hover:text-folana-neon transition-colors">Fragment_0{i}</div>
-                  <div className="text-[10px] font-mono text-folana-accent opacity-60">BIT_RATE: 1411kbps</div>
+                  <div className="text-base font-serif text-folana-ink group-hover:opacity-60 transition-opacity">Fragment_0{i}</div>
+                  <div className="text-[10px] font-mono text-folana-accent opacity-40 uppercase tracking-widest">Master_Tape_V1</div>
                 </div>
               </div>
             ))}

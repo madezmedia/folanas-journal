@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import { supabase } from './supabase';
+import { getAcmiJournalEntries, getAcmiJournalEntry } from './acmi-journal';
 
 const journalsDirectory = path.join(process.cwd(), 'journal-entries');
 
@@ -57,7 +58,30 @@ export async function getSortedJournalEntries(opts?: JournalReadOptions): Promis
 
     if (error) throw error;
 
-    if (data && data.length > 0) {
+    // --- ACMI Source (Primary) ---
+    const acmiEntries = await getAcmiJournalEntries();
+    if (acmiEntries.length > 0) {
+      console.log(`[journal] Found ${acmiEntries.length} entries in ACMI.`);
+      const mappedAcmi = await Promise.all(
+        acmiEntries.map(async (entry) => ({
+          id: entry.payload.entryId,
+          date: new Date(entry.ts).toISOString(),
+          title: entry.summary.replace(/^\[journal\]\s*/, ''),
+          content: await renderForDisplay(entry.payload.contentMarkdown),
+          image_url: entry.payload.image_url,
+          media_urls: entry.payload.media_urls,
+          mood: null,
+          interests: null,
+          opinions: null,
+          source: entry.source,
+          visibility: 'live'
+        }))
+      );
+      // Merge with legacy data if needed, or just return ACMI if it's the new truth
+      return mappedAcmi;
+    }
+
+    // --- Supabase Source (Legacy/Migration) ---
       const filtered = includeDrafts ? data : data.filter((e) => isVisibleToPublic(e.visibility));
       return await Promise.all(
         filtered.map(async (entry) => ({
@@ -124,7 +148,25 @@ export async function getJournalEntry(id: string, opts?: JournalReadOptions): Pr
     console.warn('Supabase fetch failed, falling back to filesystem:', error);
   }
 
-  if (supabaseRow) {
+  // --- ACMI Source (Primary) ---
+  const acmiEntry = await getAcmiJournalEntry(id);
+  if (acmiEntry) {
+    return {
+      id: acmiEntry.payload.entryId,
+      date: new Date(acmiEntry.ts).toISOString(),
+      title: acmiEntry.summary.replace(/^\[journal\]\s*/, ''),
+      content: await renderForDisplay(acmiEntry.payload.contentMarkdown),
+      image_url: acmiEntry.payload.image_url,
+      media_urls: acmiEntry.payload.media_urls,
+      mood: null,
+      interests: null,
+      opinions: null,
+      source: acmiEntry.source,
+      visibility: 'live'
+    };
+  }
+
+  // --- Supabase Source (Legacy) ---
     if (!includeDrafts && !isVisibleToPublic(supabaseRow.visibility)) {
       throw new Error(`Entry ${id} not found`);
     }
