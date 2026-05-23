@@ -4,19 +4,62 @@
       <stop offset="0%" style="stop-color:#1A1A2E"/>
       <stop offset="100%" style="stop-color:#16213E"/>
     </linearGradient>
-    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#2A2A3E"/>
-      <stop offset="100%" style="stop-color:#1E1E2E"/>
+
+    <radialGradient id="glow" cx="35%" cy="25%" r="70%">
+      <stop offset="0%" stop-color="#67E8F9" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#67E8F9" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#67E8F9" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5D7C6"/>
+      <stop offset="100%" stop-color="#E7B9A0"/>
     </linearGradient>
+
+    <linearGradient id="hair" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2B2B33"/>
+      <stop offset="100%" stop-color="#14141A"/>
+    </linearGradient>
+
+    <pattern id="kPattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M0 0 L24 24" stroke="#A0A0A0" stroke-opacity="0.12" stroke-width="2"/>
+      <path d="M24 0 L0 24" stroke="#A0A0A0" stroke-opacity="0.08" stroke-width="2"/>
+    </pattern>
   </defs>
+
   <!-- Background -->
   <rect width="384" height="384" rx="16" fill="url(#bgGrad)"/>
-  <!-- Avatar silhouette — neutral, grounded -->
-  <circle cx="192" cy="148" r="64" fill="url(#avatarGrad)" stroke="#2A2A2A" stroke-width="1"/>
-  <!-- Shoulders -->
-  <path d="M96 320 Q96 240 192 220 Q288 240 288 320" fill="url(#avatarGrad)" stroke="#2A2A2A" stroke-width="1"/>
-  <!-- "F" glyph centered -->
-  <text x="192" y="200" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-weight="700" font-size="48" fill="#F5F5F5" letter-spacing="-0.02em">F</text>
-  <!-- Baseline label -->
-  <text x="192" y="370" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-weight="400" font-size="11" fill="#666666">neutral baseline · trend-overlay ready</text>
+  <rect width="384" height="384" rx="16" fill="url(#kPattern)"/>
+  <rect width="384" height="384" rx="16" fill="url(#glow)"/>
+
+  <!-- Neck + shoulders (grounded, natural lighting) -->
+  <path d="M120 320 Q120 260 192 260 Q264 260 264 320" fill="#1E1E1E" stroke="#2A2A2A" stroke-width="2"/>
+  <path d="M142 320 Q158 282 192 282 Q226 282 242 320" fill="#0F0F0F" opacity="0.8"/>
+
+  <!-- Head -->
+  <g>
+    <circle cx="192" cy="160" r="62" fill="url(#skin)" stroke="#2A2A2A" stroke-width="2"/>
+
+    <!-- Hair + bangs (subtle) -->
+    <path d="M130 160 C130 105 165 85 192 85 C235 85 254 118 254 160 C254 150 246 144 236 140 C224 135 214 128 205 120 C195 110 185 110 175 120 C164 132 153 140 145 148 C138 154 134 156 130 160 Z" fill="url(#hair)"/>
+    <path d="M148 152 C156 132 176 122 192 122 C211 122 230 135 236 152 C228 148 220 147 212 150 C204 153 196 153 192 153 C188 153 180 153 172 150 C164 147 156 148 148 152 Z" fill="#1B1B22" opacity="0.65"/>
+
+    <!-- Headphones (producer/artist cue) -->
+    <path d="M118 180 C118 122 160 78 192 78 C224 78 266 122 266 180" fill="none" stroke="#94A3B8" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round"/>
+    <path d="M142 182 C142 143 164 122 192 122 C220 122 242 143 242 182" fill="none" stroke="#67E8F9" stroke-opacity="0.7" stroke-width="6" stroke-linecap="round"/>
+    <path d="M98 196 C98 246 130 262 130 262" fill="none" stroke="#94A3B8" stroke-opacity="0.55" stroke-width="8" stroke-linecap="round"/>
+    <path d="M286 196 C286 246 254 262 254 262" fill="none" stroke="#94A3B8" stroke-opacity="0.55" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Eyes -->
+    <circle cx="172" cy="165" r="6" fill="#0F0F0F" opacity="0.85"/>
+    <circle cx="212" cy="165" r="6" fill="#0F0F0F" opacity="0.85"/>
+    <circle cx="174" cy="163" r="2" fill="#F5F5F5" opacity="0.9"/>
+    <circle cx="214" cy="163" r="2" fill="#F5F5F5" opacity="0.9"/>
+
+    <!-- Mouth -->
+    <path d="M180 190 C186 198 198 198 204 190" fill="none" stroke="#0F0F0F" stroke-opacity="0.75" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Minimal baseline label (for internal use; can be removed in production renders) -->
+  <text x="192" y="365" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-weight="500" font-size="11" fill="#94A3B8" opacity="0.85">neutral baseline · trend-overlay ready</text>
 </svg>
