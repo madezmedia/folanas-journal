@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "brand": {
+    "name": "Folana",
+    "personaPivot": "grounded-first; aesthetic universes are optional output",
+    "aestheticFrameTemplate": {
+      "activeThemes": [],
+      "retiredThemes": [
+        "Neon Tech-Market",
+        "Y2K cyber-fairy grunge"
+      ],
+      "lastUpdatedTs": 1779529597884
+    }
+  },
+  "palette": {
+    "bgDeep": "#0F2A2E",
+    "bgMid": "#2E5B5E",
+    "accentMint": "#5EF2C6",
+    "accentBlue": "#7DB8FF",
+    "textPrimary": "#EAF7F7",
+    "strokeSoft": "#B8EEF0",
+    "skin": "#F2C7A5",
+    "hair": "#2A1B16"
+  },
+  "designTokens": {
+    "cornerRadius": 48,
+    "shadowStyle": "soft",
+    "fontPrimary": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial"
+  },
+  "components": {
+    "avatar": {
+      "templateSvg": "agents/folana/visual-brand/svg/neutral-avatar.svg",
+      "skinningHooks": [
+        "themeLayer",
+        "themeOverlay"
+      ]
+    },
+    "ogCard": {
+      "templateSvg": "agents/folana/visual-brand/svg/og-card-neutral.svg",
+      "skinningHooks": [
+        "themeLayer"
+      ]
+    }
+  }
+}

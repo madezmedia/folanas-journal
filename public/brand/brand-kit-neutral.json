@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "brandKit": {
+    "name": "Folana",
+    "baseline": "neutral",
+    "personaPivot": "grounded-first; aesthetic universes are optional output",
+    "themeSkinning": {
+      "activeThemesSource": "trend-ingestion/opinion-engine",
+      "activeThemesRule": "Day-1 baseline must be an empty array; never hand-author activeThemes during bootstrap.",
+      "skinningHooks": [
+        "themeLayer",
+        "themeOverlay"
+      ],
+      "neutralLocks": [
+        "grounded identity",
+        "core palette",
+        "neutral avatar silhouette"
+      ],
+      "retiredThemes": [
+        "Neon Tech-Market",
+        "Y2K cyber-fairy grunge"
+      ]
+    }
+  },
+  "aestheticFrame": {
+    "activeThemes": [],
+    "retiredThemes": [
+      "Neon Tech-Market",
+      "Y2K cyber-fairy grunge"
+    ],
+    "lastUpdatedTs": 1779655607128
+  },
+  "designTokens": {
+    "cornerRadius": 48,
+    "shadowStyle": "soft"
+  },
+  "assets": {
+    "avatar": {
+      "svg": "agents/folana/visual-brand/svg/neutral-avatar.svg",
+      "png": "agents/folana/visual-brand/png/neutral-avatar.png"
+    },
+    "wordmark": {
+      "svg": "agents/folana/visual-brand/svg/wordmark.svg",
+      "png": "agents/folana/visual-brand/png/wordmark.png"
+    },
+    "glyph": {
+      "svg": "agents/folana/visual-brand/svg/glyph.svg",
+      "png": "agents/folana/visual-brand/png/glyph.png"
+    },
+    "ogCard": {
+      "svg": "agents/folana/visual-brand/svg/og-card-neutral.svg",
+      "png": "agents/folana/visual-brand/png/og-card-neutral.png"
+    }
+  }
+}
