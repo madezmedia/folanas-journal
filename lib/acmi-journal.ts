@@ -18,9 +18,16 @@ export interface AcmiJournalEntry {
 const REDIS_URL = process.env.UPSTASH_REDIS_REST_URL;
 const REDIS_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 
+let hasLoggedMissingRedis = false;
+
 async function redis(command: string, ...args: any[]) {
   if (!REDIS_URL || !REDIS_TOKEN) {
-    throw new Error("Missing Upstash Redis environment variables");
+    // Graceful for local development — we fall back to local markdown + Supabase
+    if (!hasLoggedMissingRedis && process.env.NODE_ENV === 'development') {
+      console.info('[acmi-journal] No Upstash Redis credentials found (UPSTASH_REDIS_REST_URL / TOKEN). Falling back to local journal-entries/ + Supabase.');
+      hasLoggedMissingRedis = true;
+    }
+    throw new Error('MISSING_REDIS_CREDS'); // internal signal, caught below
   }
   const endpoint = `${REDIS_URL.replace(/\/$/, '')}/`;
   const res = await fetch(endpoint, {
@@ -37,11 +44,23 @@ async function redis(command: string, ...args: any[]) {
 }
 
 export async function getAcmiJournalEntries(): Promise<AcmiJournalEntry[]> {
+  if (!REDIS_URL || !REDIS_TOKEN) {
+    // Fast path: no credentials → no error, just empty (triggers filesystem fallback)
+    if (process.env.NODE_ENV === 'development' && !hasLoggedMissingRedis) {
+      console.info('[acmi-journal] No Upstash Redis credentials — using local journal-entries/ + Supabase fallback');
+      hasLoggedMissingRedis = true;
+    }
+    return [];
+  }
+
   try {
     const rawEntries: string[] = await redis('ZREVRANGE', 'acmi:character:folana:v1:corpus:journal', 0, -1);
     return rawEntries.map(e => JSON.parse(e));
-  } catch (error) {
-    console.error("[acmi-journal] Failed to fetch entries from ACMI:", error);
+  } catch (error: any) {
+    if (error?.message === 'MISSING_REDIS_CREDS') {
+      return [];
+    }
+    console.warn("[acmi-journal] Failed to fetch entries from ACMI:", error);
     return [];
   }
 }

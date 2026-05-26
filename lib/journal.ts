@@ -49,16 +49,39 @@ function isVisibleToPublic(visibility: unknown): boolean {
 
 export async function getSortedJournalEntries(opts?: JournalReadOptions): Promise<JournalEntry[]> {
   const includeDrafts = !!opts?.includeDrafts;
+  const entries: JournalEntry[] = [];
 
+  // 1. Load local markdown files first (these are the newest Ep31 content you just created)
+  if (fs.existsSync(journalsDirectory)) {
+    const fileNames = fs.readdirSync(journalsDirectory);
+    const localEntries = await Promise.all(
+      fileNames.map(async (fileName) => {
+        const id = fileName.replace(/\.md$/, '');
+        const fullPath = path.join(journalsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const matterResult = matter(fileContents);
+        const contentHtml = await renderMarkdown(matterResult.content);
+
+        const dateVal = matterResult.data.date || matterResult.data.timestamp;
+        return {
+          id,
+          content: contentHtml,
+          date: dateVal
+            ? (dateVal instanceof Date ? dateVal.toISOString() : String(dateVal))
+            : new Date().toISOString(),
+          title: matterResult.data.title || matterResult.data.type || 'Untitled',
+          image_url: matterResult.data.image_url,
+          media_urls: matterResult.data.media_urls,
+          source: 'local-markdown',
+          visibility: 'live',
+        } as JournalEntry;
+      })
+    );
+    entries.push(...localEntries);
+  }
+
+  // 2. Merge in ACMI entries (if available on Vercel)
   try {
-    const { data, error } = await supabase
-      .from('journal_entries')
-      .select('*')
-      .order('date', { ascending: false });
-
-    if (error) throw error;
-
-    // --- ACMI Source (Primary) ---
     const acmiEntries = await getAcmiJournalEntries();
     if (acmiEntries.length > 0) {
       console.log(`[journal] Found ${acmiEntries.length} entries in ACMI.`);
@@ -66,69 +89,61 @@ export async function getSortedJournalEntries(opts?: JournalReadOptions): Promis
         acmiEntries.map(async (entry) => ({
           id: entry.payload.entryId,
           date: new Date(entry.ts).toISOString(),
-          title: entry.summary.replace(/^\[journal\]\s*/, ''),
+          title: entry.summary.replace(/^\[journal]\s*/, ''),
           content: await renderForDisplay(entry.payload.contentMarkdown),
           image_url: entry.payload.image_url,
           media_urls: entry.payload.media_urls,
           mood: null,
           interests: null,
           opinions: null,
-          source: entry.source,
+          source: entry.source || 'acmi',
           visibility: 'live'
         }))
       );
-      // Merge with legacy data if needed, or just return ACMI if it's the new truth
-      return mappedAcmi;
-    }
 
-    // --- Supabase Source (Legacy/Migration) ---
-      const filtered = includeDrafts ? data : data.filter((e) => isVisibleToPublic(e.visibility));
-      return await Promise.all(
-        filtered.map(async (entry) => ({
-          id: entry.id,
-          date: entry.date,
-          title: entry.title,
-          content: await renderForDisplay(entry.content),
-          image_url: entry.image_url,
-          media_urls: entry.media_urls,
-          mood: entry.mood ?? null,
-          interests: entry.interests ?? null,
-          opinions: entry.opinions ?? null,
-          source: entry.source ?? null,
-          visibility: entry.visibility ?? null,
-        }))
-      );
+      // Merge: prefer local version if ID already exists (so your new Ep31 entries win)
+      const localIds = new Set(entries.map(e => e.id));
+      const newFromAcmi = mappedAcmi.filter(e => !localIds.has(e.id));
+      entries.push(...newFromAcmi);
     }
-  } catch (error) {
-    console.warn('Supabase fetch failed, falling back to filesystem:', error);
+  } catch (err) {
+    console.warn('[journal] ACMI fetch failed (using local entries only):', err);
   }
 
-  if (!fs.existsSync(journalsDirectory)) return [];
+  // 3. Optional Supabase (only used if no local + no ACMI)
+  if (entries.length === 0) {
+    try {
+      const { data, error } = await supabase
+        .from('journal_entries')
+        .select('*')
+        .order('date', { ascending: false });
 
-  const fileNames = fs.readdirSync(journalsDirectory);
-  const allEntriesData = await Promise.all(
-    fileNames.map(async (fileName) => {
-      const id = fileName.replace(/\.md$/, '');
-      const fullPath = path.join(journalsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
-      const matterResult = matter(fileContents);
-      const contentHtml = await renderMarkdown(matterResult.content);
+      if (!error && data && data.length > 0) {
+        const filtered = includeDrafts ? data : data.filter((e) => isVisibleToPublic(e.visibility));
+        const supabaseMapped = await Promise.all(
+          filtered.map(async (entry) => ({
+            id: entry.id,
+            date: entry.date,
+            title: entry.title,
+            content: await renderForDisplay(entry.content),
+            image_url: entry.image_url,
+            media_urls: entry.media_urls,
+            mood: entry.mood ?? null,
+            interests: entry.interests ?? null,
+            opinions: entry.opinions ?? null,
+            source: entry.source ?? 'supabase',
+            visibility: entry.visibility ?? null,
+          }))
+        );
+        entries.push(...supabaseMapped);
+      }
+    } catch (error) {
+      console.warn('Supabase fetch failed:', error);
+    }
+  }
 
-      const dateVal = matterResult.data.date || matterResult.data.timestamp;
-      return {
-        id,
-        content: contentHtml,
-        date: dateVal
-          ? (dateVal instanceof Date ? dateVal.toISOString() : String(dateVal))
-          : new Date().toISOString(),
-        title: matterResult.data.title || matterResult.data.type || 'Untitled',
-        image_url: matterResult.data.image_url,
-        media_urls: matterResult.data.media_urls,
-      };
-    })
-  );
-
-  return allEntriesData.sort((a, b) => (a.date < b.date ? 1 : -1));
+  // Sort newest first
+  return entries.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export async function getJournalEntry(id: string, opts?: JournalReadOptions): Promise<JournalEntry> {
@@ -149,24 +164,29 @@ export async function getJournalEntry(id: string, opts?: JournalReadOptions): Pr
   }
 
   // --- ACMI Source (Primary) ---
-  const acmiEntry = await getAcmiJournalEntry(id);
-  if (acmiEntry) {
-    return {
-      id: acmiEntry.payload.entryId,
-      date: new Date(acmiEntry.ts).toISOString(),
-      title: acmiEntry.summary.replace(/^\[journal\]\s*/, ''),
-      content: await renderForDisplay(acmiEntry.payload.contentMarkdown),
-      image_url: acmiEntry.payload.image_url,
-      media_urls: acmiEntry.payload.media_urls,
-      mood: null,
-      interests: null,
-      opinions: null,
-      source: acmiEntry.source,
-      visibility: 'live'
-    };
+  try {
+    const acmiEntry = await getAcmiJournalEntry(id);
+    if (acmiEntry) {
+      return {
+        id: acmiEntry.payload.entryId,
+        date: new Date(acmiEntry.ts).toISOString(),
+        title: acmiEntry.summary.replace(/^\[journal]\s*/, ''),
+        content: await renderForDisplay(acmiEntry.payload.contentMarkdown),
+        image_url: acmiEntry.payload.image_url,
+        media_urls: acmiEntry.payload.media_urls,
+        mood: null,
+        interests: null,
+        opinions: null,
+        source: acmiEntry.source,
+        visibility: 'live'
+      };
+    }
+  } catch (e) {
+    console.warn('[journal] ACMI single entry fetch failed');
   }
 
   // --- Supabase Source (Legacy) ---
+  if (supabaseRow) {
     if (!includeDrafts && !isVisibleToPublic(supabaseRow.visibility)) {
       throw new Error(`Entry ${id} not found`);
     }
@@ -185,6 +205,7 @@ export async function getJournalEntry(id: string, opts?: JournalReadOptions): Pr
     };
   }
 
+  // Filesystem fallback
   const fullPath = path.join(journalsDirectory, `${id}.md`);
   if (!fs.existsSync(fullPath)) {
     throw new Error(`Entry ${id} not found`);

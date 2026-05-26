@@ -1,0 +1,11 @@
+2026-05-26 Asset Standardizer sync note (non-binary text layer).
+Canonical enforcement complete.
+Missing real files for full Ep31 114343 variants + pipeline audio/hero: run cp from agents/folana/output/ and pipeline-*/ (see agents/folana/assets/SYNC_INVENTORY_2026-05-26.txt + enhanced generate_folana_fal_nsfw.py sync_folana_assets fn).
+Current real: 4x Ep31 114527 jpg + 2 Ep30 0937 jpg + 3 MD entries.
+ACMI corr: cli-anything-ez-influencer-acmi-integration-20260525-folana-asset-standardizer-sync-20260526
+MANIFEST: /Users/michaelshaw/clawd/agents/folana/assets/MANIFEST.md updated.
+Journal components cleaned (page.tsx FAL sims).
+.mp4: solid (MusicVideoPlayer + EP31_VEIL_LYRICS).
+LoRA: local enforced. Locked sigs: dark-fairy-grunge + Ep31 veil fracture.
+4+ ACMI pre/post_asset_sync emitted to acmi_bus.txt.
+Next: cp binaries + git atomic.

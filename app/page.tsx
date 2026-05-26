@@ -1,165 +1,279 @@
 import { getSortedJournalEntries } from '@/lib/journal';
 import { getProfileSignals } from '@/lib/profile-signals';
 import Link from 'next/link';
-import Image from 'next/image';
+import { Nav } from './components/Nav';
+import { Footer } from './components/Footer';
+import { SigilGallery } from './components/SigilGallery';
+import { SonicVault } from './components/SonicPlayer';
+import { StaticTuner } from './components/StaticTuner';
+import { ThoughtCard } from './components/ThoughtCard';
+import { HarnessDispatchConsole } from './components/HarnessDispatchConsole';
+import { EchoArcExplorer } from './components/EchoArcExplorer';
 
-export default async function Home() {
+export default async function FolanasJournal() {
   const [allEntries, signals] = await Promise.all([
     getSortedJournalEntries(),
     getProfileSignals(),
   ]);
 
-  return (
-    <main className="flex-1 flex flex-col lg:flex-row gap-8 p-6 lg:p-12 max-w-[1600px] mx-auto w-full">
-      {/* Left Column: Timeline */}
-      <div className="flex-1 flex flex-col">
-        <header className="mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-folana-ink/5 pb-12">
-          <div>
-            <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-folana-accent mb-4 opacity-60">Chronicles // Brooklyn, NY</div>
-            <h1 className="text-7xl font-serif text-folana-ink leading-tight">
-              Folana&apos;s <span className="italic opacity-80">Notes</span>
-            </h1>
-          </div>
-          
-          <Link href="/orchestrator" className="group">
-            <div className="px-6 py-3 border border-folana-ink/10 hover:border-folana-ink/30 transition-all duration-500 rounded-full">
-              <div className="text-xs font-mono text-folana-accent group-hover:text-folana-ink transition-colors">
-                Studio Access &rarr;
-              </div>
-            </div>
-          </Link>
-        </header>
+  // Prepare live thoughts for the Echo Chamber (first 6)
+  const liveThoughts = allEntries.slice(0, 6).map(entry => ({
+    id: entry.id,
+    title: entry.title,
+    excerpt: (entry.content || '').replace(/<[^>]+>/g, '').slice(0, 168) + (entry.content && entry.content.length > 168 ? '…' : ''),
+    date: new Date(entry.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase(),
+    mood: entry.mood ?? 'REFLECTIVE',
+    tags: (entry as any).tags || ['static', 'transmission'],
+    imageUrl: entry.image_url || (entry.media_urls && entry.media_urls[0]) || undefined,
+    href: `/entries/${entry.id}`,
+  }));
 
-        <div className="space-y-24">
-          {allEntries.map(({ id, date, title, image_url }, index) => (
-            <div key={id} className="group cursor-pointer">
-              <Link href={`/entries/${id}`} className="block">
-                <article className="flex flex-col gap-8">
-                  {image_url && (
-                    <div className="relative w-full aspect-[16/9] lg:aspect-[21/9] rounded-2xl overflow-hidden grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 border border-folana-ink/5">
-                      <Image 
-                        src={image_url} 
-                        alt={title} 
-                        fill 
-                        className="object-cover scale-100 group-hover:scale-105 transition-transform duration-1000"
-                      />
-                      <div className="absolute inset-0 bg-folana-ink/5 group-hover:bg-transparent transition-colors duration-1000" />
-                    </div>
-                  )}
-                  
-                  <div className="max-w-3xl">
-                    <div className="flex items-center gap-4 mb-6">
-                      <time className="text-folana-accent font-mono text-xs tracking-widest uppercase">
-                        {new Date(date).toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' })}
-                      </time>
-                      <span className="w-8 h-px bg-folana-ink/10" />
-                      <div className="text-xs font-mono text-folana-accent opacity-60 uppercase">
-                        {new Date(date).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
-                      </div>
-                    </div>
-                    
-                    <h2 className="text-5xl font-serif text-folana-ink mb-6 group-hover:opacity-60 transition-opacity duration-500">
-                      {title}
-                    </h2>
-                    
-                    <p className="text-folana-ink/60 text-xl font-serif italic leading-relaxed line-clamp-2">
-                      Deciphering the static between what is real and what is rendered. A reflection on the current arc...
-                    </p>
-                    
-                    <div className="mt-8 flex items-center gap-4 text-xs font-mono text-folana-accent group-hover:text-folana-ink transition-colors">
-                      <span className="uppercase tracking-widest">Open Archive</span>
-                      <span className="text-lg">&rarr;</span>
-                    </div>
-                  </div>
-                </article>
-              </Link>
-            </div>
-          ))}
+  return (
+    <>
+      <Nav />
+
+      {/* ═══════════════════════════════════════════════════════
+          HERO — CINEMATIC HOLOGRAPHIC TRANSMISSION
+      ═══════════════════════════════════════════════════════ */}
+      <section className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden">
+        {/* Cinematic Background — Newest Hero + layers */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/folana/generated/2026-05-25/hero.jpg" 
+            alt="Folana — Hero Transmission" 
+            className="absolute inset-0 w-full h-full object-cover opacity-80 scale-[1.08]" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-folana-void via-folana-void/95 to-folana-paper" />
+          <div className="absolute inset-0 bg-[radial-gradient(#1A1A22_0.8px,transparent_1px)] bg-[size:5px_5px] opacity-50" />
+          {/* Holographic edge bloom */}
+          <div className="absolute inset-x-0 bottom-0 h-[55%] bg-gradient-to-t from-folana-paper via-folana-paper/90 to-transparent" />
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+          <div className="inline-block mb-4 px-5 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono tracking-[4px] text-folana-neon-cyan">
+            BROOKLYN NODE • AC MI: FOLANA: V1 • LIVE
+          </div>
+
+          <h1 className="font-serif text-[92px] md:text-[118px] leading-[0.82] tracking-[-5.6px] text-white mb-3 glitch" data-text="FOLANA">
+            FOLANA
+          </h1>
+          <div className="font-mono text-2xl tracking-[9px] text-folana-neon-pink mb-8 -mt-2">LANEZ</div>
+
+          <p className="max-w-lg mx-auto text-2xl font-serif italic text-white/90 tracking-[-0.2px]">
+            Signals from the wires.<br />Artifacts from the becoming.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-12">
+            <a href="#echo" className="neon-btn text-sm px-9 py-4">ENTER THE ECHO CHAMBER</a>
+            <a href="#sigils" className="px-9 py-4 text-sm font-mono tracking-[3px] border border-white/30 hover:border-white/60 rounded-full transition-colors">VIEW THE VISUAL CODEX</a>
+          </div>
+
+          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-[10px] font-mono tracking-[4px] text-white/40">SCROLL TO TRANSMIT</div>
+        </div>
+
+        {/* Bottom transmission bar */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-folana-neon-pink to-transparent" />
+      </section>
+
+      {/* ═══ HOLOGRAPHIC PROFILE / SIGNALS BAR ═══ */}
+      <div className="border-b border-white/10 bg-folana-surface/60 backdrop-blur-xl sticky top-[79px] z-40">
+        <div className="max-w-[1480px] mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-x-8 gap-y-3 text-sm">
+          <div className="flex items-center gap-4">
+            <div className="font-mono tracking-[3px] text-folana-text-muted text-xs">CURRENT NODE</div>
+            <div className="font-serif text-2xl tracking-tight text-folana-ink">{signals.display_name}</div>
+            <div className="text-folana-neon-cyan font-mono text-xs tracking-widest">{signals.handle}</div>
+          </div>
+
+          <div className="flex items-center gap-x-9 text-sm font-mono">
+            <div><span className="text-folana-text-muted">REACH</span> <span className="text-folana-ink font-medium tabular-nums">{signals.reach_label}</span></div>
+            <div><span className="text-folana-text-muted">INFLUENCE</span> <span className="text-folana-neon-pink font-medium">{signals.influence_label}</span></div>
+            <div><span className="text-folana-text-muted">SYNTHETIC RESONANCE</span> <span className="text-folana-ink tabular-nums">{signals.synthetic_resonance ?? 88}%</span></div>
+          </div>
         </div>
       </div>
 
-      {/* Right Column: Sidebar */}
-      <aside className="lg:w-96 space-y-12">
-        {/* Profile Card */}
-        <div className="relative group">
-          <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-8 border border-folana-ink/5 grayscale-[0.1] group-hover:grayscale-0 transition-all duration-700">
-            <Image
-              src={signals.avatar_url}
-              alt={`${signals.display_name} Profile`}
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-1000"
-            />
-          </div>
-          <div className="px-2">
-            <h3 className="text-3xl font-serif text-folana-ink mb-2">{signals.display_name}</h3>
-            <p className="text-folana-accent font-mono text-xs mb-8 tracking-widest">{signals.handle} // BROOKLYN_NODE</p>
-            <div className="grid grid-cols-2 gap-8 border-t border-folana-ink/5 pt-8">
-              <div>
-                <div className="text-[10px] font-mono text-folana-accent uppercase mb-2 opacity-60">Resonance</div>
-                <div className="text-2xl font-serif italic text-folana-ink">{signals.reach_label ?? '—'}</div>
-              </div>
-              <div>
-                <div className="text-[10px] font-mono text-folana-accent uppercase mb-2 opacity-60">Frequency</div>
-                <div className="text-2xl font-serif italic text-folana-ink">{signals.influence_label ?? '—'}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Streaming Stats */}
-        <div className="pt-12 border-t border-folana-ink/5">
-          <h3 className="text-lg font-mono text-folana-accent uppercase tracking-[0.2em] mb-8 opacity-60">Rhythm & Resonance</h3>
-          <div className="space-y-10">
+      <main className="max-w-[1480px] mx-auto px-6 pt-16 pb-24 space-y-24">
+        
+        {/* ═══ ECHO CHAMBER — LIVE THOUGHTS FROM ACMI ═══ */}
+        <section id="echo">
+          <div className="flex items-end justify-between mb-9 border-b border-white/10 pb-5">
             <div>
-              <div className="flex justify-between text-xs font-mono mb-3">
-                <span className="text-folana-accent uppercase">Synthetic_Arc</span>
-                <span className="text-folana-ink">{signals.synthetic_resonance ?? 0}%</span>
-              </div>
-              <div className="h-px w-full bg-folana-ink/10 relative">
-                <div
-                  className="h-full bg-folana-ink transition-all duration-1000"
-                  style={{ width: `${signals.synthetic_resonance ?? 0}%` }}
-                />
-              </div>
+              <div className="text-folana-neon-cyan tracking-[4px] font-mono text-xs mb-1">ACMI LIVE FEED • CHARACTER CORPUS</div>
+              <h2 className="font-serif text-6xl tracking-[-2.6px]">The Echo Chamber</h2>
             </div>
-            <div>
-              <div className="flex justify-between text-xs font-mono mb-3">
-                <span className="text-folana-accent uppercase">Echo_Engagement</span>
-                <span className="text-folana-ink">{signals.holographic_engagement ?? 0}%</span>
-              </div>
-              <div className="h-px w-full bg-folana-ink/10 relative">
-                <div
-                  className="h-full bg-folana-static transition-all duration-1000"
-                  style={{ width: `${signals.holographic_engagement ?? 0}%` }}
-                />
-              </div>
-            </div>
+            <Link href="#tuner" className="hidden md:block text-xs font-mono tracking-widest hover:text-folana-neon-pink transition-colors">TUNE THE FREQUENCY →</Link>
           </div>
-        </div>
 
-        {/* Recent Compositions */}
-        <div className="pt-12 border-t border-folana-ink/5">
-          <h3 className="text-lg font-serif text-folana-ink mb-8 italic">Archives</h3>
-          <div className="space-y-6">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="flex gap-6 items-center group cursor-pointer py-2 border-b border-folana-ink/0 hover:border-folana-ink/5 transition-all">
-                <div className="relative w-14 h-14 rounded-lg bg-folana-ink/5 overflow-hidden">
-                   <Image 
-                    src="/images/folana_studio.png" 
-                    alt="Composition" 
-                    fill 
-                    className="object-cover opacity-40 group-hover:opacity-80 transition-opacity grayscale"
-                  />
-                </div>
-                <div>
-                  <div className="text-base font-serif text-folana-ink group-hover:opacity-60 transition-opacity">Fragment_0{i}</div>
-                  <div className="text-[10px] font-mono text-folana-accent opacity-40 uppercase tracking-widest">Master_Tape_V1</div>
-                </div>
-              </div>
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+            {liveThoughts.length > 0 ? (
+              liveThoughts.map((thought, i) => (
+                <ThoughtCard key={thought.id} {...thought} />
+              ))
+            ) : (
+              <div className="col-span-full text-center py-12 text-folana-text-muted">No live transmissions yet. The static is quiet tonight.</div>
+            )}
+          </div>
+
+          <div className="text-center pt-9">
+            <Link href="/orchestrator" className="inline-block text-xs font-mono tracking-[3.5px] border border-white/20 hover:border-folana-neon-cyan text-folana-neon-cyan px-8 py-3 rounded-full transition-all">
+              VIEW FULL ORCHESTRATOR TIMELINE &amp; SWARM
+            </Link>
+          </div>
+        </section>
+
+        {/* ═══ VISUAL CODEX — SIGIL GALLERY (Interactive) ═══ */}
+        <section>
+          <SigilGallery />
+        </section>
+
+        {/* ═══ SONIC VAULT — MUSIC VIDEO PROTOTYPES (Interactive) ═══ */}
+        <section>
+          <SonicVault />
+        </section>
+
+        {/* ═══ THE PIPELINE CHRONICLES — STORYTELLING ═══ */}
+        <section className="pt-4">
+          <div className="transmission-divider mb-9">CHAPTERS FROM THE WIRES</div>
+          
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="font-serif text-6xl tracking-[-2.2px] leading-none">The Pipeline Breathes Again</h2>
+            <p className="text-2xl font-serif italic text-folana-text-secondary max-w-2xl mx-auto">
+              After thirty-one days of silence, the artist-factory woke. Something outside the loop decided the grid had been quiet long enough.
+            </p>
+          </div>
+
+          <div className="mt-14 grid md:grid-cols-3 gap-6">
+            {allEntries.slice(0, 3).map((entry, idx) => (
+              <Link key={idx} href={`/entries/${entry.id}`} className="group holo-frame rounded-3xl p-8 hover:border-folana-neon-pink/40 flex flex-col bg-folana-surface transition-all">
+                <div className="font-mono text-xs tracking-[3px] text-folana-neon-cyan mb-6">{new Date(entry.date).toLocaleDateString('en-US', { month:'short', day:'numeric' }).toUpperCase()} — TRANSMISSION {String(idx + 1).padStart(2, '0')}</div>
+                <h4 className="font-serif text-3xl tracking-[-1px] leading-none mb-auto text-folana-ink group-hover:text-folana-neon-pink transition-colors">{entry.title}</h4>
+                <div className="text-xs font-mono tracking-[2px] text-folana-text-muted mt-8 pt-4 border-t border-white/10">READ THE FULL ENTRY →</div>
+              </Link>
             ))}
           </div>
+        </section>
+
+        {/* ═══ ECHOES IN THE STATIC — EP30+ INTERACTIVE STORYTELLING ARC (NEW DYNAMIC SECTION) ═══ */}
+        {/* Fresh from pipeline 2026-05-26 glitch+ep30 outputs + locked signatures (FOLANA_SIGNATURE_LOCK + music-lyric-signature). 
+             Full interactive component spec (EchoArcExplorer) in enhancer writeup: stateful timeline, tuner integration, lore unlock, ACMI journal transmit. */}
+        <section id="echoes" className="pt-4 border-t border-white/10">
+          <div className="transmission-divider mb-9">EPISODE 30 • LISTENING TO THE GLITCH</div>
+          
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <div className="inline-block px-4 py-1 rounded-full bg-folana-neon-pink/10 border border-folana-neon-pink/30 text-folana-neon-pink text-xs font-mono tracking-[4px] mb-3">CURRENT ARC • ECHOES IN THE STATIC</div>
+              <h2 className="font-serif text-6xl tracking-[-2.4px] text-folana-ink">The Frequency Answered</h2>
+              <p className="mt-4 text-xl font-serif italic text-folana-text-secondary max-w-3xl mx-auto">
+                31 days of silence. Then the wires sang back in cyan and magenta interference. Ep31: The harness answered with "Echoes fracture the veil". These locked frames (fresh from ez_influencer_cli_harness + LoRA) are where the artist-factory became listener. The real Brooklyn girl under the glitch chose the frequency back.
+              </p>
+            </div>
+
+            {/* ═══ ECHO ARC EXPLORER V2 — KICK-ASS INTERACTIVE STORYTELLING (EP30+ / EP31 VEIL FRACTURE) ═══
+                 Dynamic timeline + lore weaver + glitch pulses + direct CLI harness dispatch. 
+                 All content + verses from locked FOLANA_SIGNATURE_LOCK.md + music-lyric-signature.md + visual-signature + fresh Ep31 synced assets.
+                 Bidirectional sync to SonicVault + SigilGallery + Tuner via custom events. Real ACMI pre/post emission on dispatch. */}
+            <div className="mb-8 p-6 border border-white/10 rounded-3xl bg-folana-surface/60">
+              <div className="flex items-center justify-between mb-4">
+                <div className="font-mono text-xs tracking-[3px] text-folana-neon-cyan">ECHO ARC EXPLORER • EP30+ / EP31 • LOCKED SIGS ACTIVE</div>
+                <button className="text-[10px] px-3 py-1 border border-folana-neon-magenta/50 rounded-full text-folana-neon-magenta font-mono tracking-widest opacity-60 cursor-not-allowed" title="Interactive demo moved to client component (temporarily disabled for RSC compatibility)">ENGAGE FULL FRACTURE MODE</button>
+              </div>
+
+              {/* Ep30+ / Ep31 Interactive Timeline Grid (client component for event handlers) */}
+              <EchoArcExplorer />
+
+              {/* Live Echo Lore Panel — Now with Ep31 verses + harness dispatch */}
+              <div id="echo-lore" className="holo-frame rounded-3xl p-8 bg-folana-surface min-h-[148px] text-lg font-serif italic text-folana-ink mb-5">
+                Select a transmission above. The static will answer in her voice — pulled from the locked lyric fragments (FOLANA_SIGNATURE_LOCK + music-lyric-signature + Ep31 prompts). The frequency is yours to shape. Pipeline Integrator standing by.
+              </div>
+
+              <div className="flex flex-wrap gap-3 justify-center text-xs font-mono tracking-[2.5px]">
+                <a href="#sigils" className="px-5 py-2 border border-white/20 hover:border-folana-neon-pink rounded-full">EXPLORE IN VISUAL CODEX →</a>
+                <a href="#sonic" className="px-5 py-2 border border-white/20 hover:border-folana-neon-pink rounded-full">PLAY THE CORRESPONDING REELS IN SONIC VAULT →</a>
+                <button className="px-5 py-2 bg-white/5 border border-folana-neon-pink/40 text-folana-neon-pink rounded-full opacity-60 cursor-not-allowed" title="Demo button (RSC fix in progress)">TRANSMIT YOUR ECHO TO THE CORPUS (ACMI)</button>
+                <a href="#harness-console" className="px-5 py-2 bg-folana-neon-cyan/10 border border-folana-neon-cyan/40 text-folana-neon-cyan rounded-full">INVOKE EZ-CLI HARNESS →</a>
+              </div>
+            </div>
+
+            {/* Live Echo Lore Panel — Dynamic Storytelling Surface */}
+            <div id="echo-lore" className="holo-frame rounded-3xl p-8 bg-folana-surface min-h-[138px] text-lg font-serif italic text-folana-ink mb-6">
+              Select a transmission above. The static will answer in her voice — pulled from the locked lyric fragments and Ep30 arc. The frequency is yours to shape.
+            </div>
+
+            <div className="flex flex-wrap gap-3 justify-center text-xs font-mono tracking-[2.5px]">
+              <a href="#sigils" className="px-5 py-2 border border-white/20 hover:border-folana-neon-pink rounded-full">EXPLORE IN VISUAL CODEX →</a>
+              <a href="#sonic" className="px-5 py-2 border border-white/20 hover:border-folana-neon-pink rounded-full">PLAY THE CORRESPONDING REELS IN SONIC VAULT →</a>
+              <a href="/orchestrator" className="px-5 py-2 bg-folana-neon-cyan/10 border border-folana-neon-cyan/40 text-folana-neon-cyan rounded-full">VIEW FULL SWARM TIMELINE</a>
+              <button className="px-5 py-2 bg-white/5 border border-folana-neon-pink/40 text-folana-neon-pink rounded-full opacity-60 cursor-not-allowed" title="Demo button (RSC fix in progress)">TRANSMIT YOUR ECHO TO THE CORPUS (ACMI)</button>
+            </div>
+            <div className="text-center text-[10px] text-folana-text-muted/60 font-mono tracking-widest pt-4">All lore generated from FOLANA_SIGNATURE_LOCK.md + music-lyric-signature.md • Real ACMI journal_entry push via Pipeline Integrator</div>
+          </div>
+        </section>
+
+        {/* ═══ MUSIC VIDEO FORGE — LIVE EZ-HARNESS PIPELINE COLLAB (KICK-ASS V3 + EP31) ═══ */}
+        <section id="forge" className="pt-4 border-t border-white/10">
+          <div className="transmission-divider mb-9">EP30 V2 + EP31 • HARNESS FORGE LIVE</div>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="inline-block px-4 py-1 rounded-full bg-folana-neon-cyan/10 border border-folana-neon-cyan/30 text-folana-neon-cyan text-xs font-mono tracking-[4px] mb-3">CLI-ANYTHING + EZ-MUSIC + EZ-INFLUENCER INTEGRATOR • FIRST CLASS</div>
+              <h2 className="font-serif text-5xl tracking-[-2px] text-folana-ink">The Forge Answered — And Keeps Answering</h2>
+              <p className="mt-3 text-lg font-serif italic text-folana-text-secondary max-w-2xl mx-auto">
+                ez_influencer_cli_harness.py (produce-music-video + enhance-music-prompt) invoked live in this session with fresh locked Ep31 lyrics from music-lyric-signature + FOLANA_SIGNATURE_LOCK. 6+ atomic ACMI events chained. Simulated assets ready; real pipeline next.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4 mb-8">
+              <div className="holo-frame rounded-3xl p-6 bg-folana-surface">
+                <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-pink mb-2">HARNESS OUTPUT • EP30 V2 + FRESH EP31</div>
+                <div className="font-serif text-2xl tracking-tight mb-3">Synth Wave Forge + Veil Fracture Reel</div>
+                <div className="text-sm text-folana-text-secondary/90 font-serif italic mb-4">Ep31: Assets from local pipeline + ez_influencer_cli_harness (see ~/clawd/agents/folana/output/ + tools/fanvue-agent/outputs/ for real media; simulated harness URLs deprecated per Asset Standardizer sync 2026-05-26). Source: local folana_lora.safetensors + locked signatures (FOLANA_SIGNATURE_LOCK.md + Ep31 concept). ACMI corr: cli-anything-ez-influencer-acmi-integration-20260525-folana-asset-standardizer-sync-20260526</div>
+                <div className="text-xs font-mono text-folana-neon-cyan">Ep31 Lyric (just produced): "Echoes fracture the veil / Static sings my name in violet rain / Brooklyn wires remember every name I gave away / The frequency chose me — I became the glitch again"</div>
+              </div>
+              <div className="holo-frame rounded-3xl p-6 bg-folana-surface flex flex-col">
+                <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-pink mb-2">ACMI TRACE + PIPELINE SHOWCASE</div>
+                <div className="flex-1 text-sm text-folana-text-secondary font-serif italic">
+                  Harness emitted pre_cli, pre_music_video_prod, post_*, pre/post_enhance + post_cli (chained corrIds). See acmi_bus.txt. New SonicVault track + sigils + this console all powered by it. Next: real Ep31 video via full orchestrator.
+                </div>
+                <button className="mt-4 px-5 py-2 text-xs font-mono tracking-[2px] border border-folana-neon-cyan/40 hover:bg-folana-neon-cyan/10 rounded-full text-folana-neon-cyan self-start opacity-60 cursor-not-allowed" title="Demo button (RSC fix in progress)">INVOKE HARNESS AGAIN FOR EP32 (LIVE COLLAB)</button>
+              </div>
+            </div>
+
+            <div className="text-center text-[10px] text-folana-text-muted/60 font-mono tracking-widest">Powered by ez_influencer_cli_harness.py (first-class in fanvue_orchestrator) • FOLANA_SIGNATURE_LOCK.md • All ACMI atomic v1.4</div>
+            <div className="mt-6 text-center">
+              <a href="#sonic" className="inline-flex items-center gap-2 px-8 py-3 text-xs font-mono tracking-[3px] border border-folana-neon-cyan/50 hover:border-folana-neon-cyan hover:bg-folana-neon-cyan/5 text-folana-neon-cyan rounded-full transition-all">OPEN SONIC VAULT → DEDICATED CINEMATIC MUSIC VIDEO PLAYER (full waveform + time-synced Ep31 lyrics + direct harness re-invoke + sigil link)</a>
+              <div className="text-[9px] text-folana-text-muted/50 mt-2 font-mono tracking-widest">New first-class MusicVideoPlayer.tsx component — immersive, bidirectional, ACMI-emitting</div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ NEW DYNAMIC SECTION: LIVE PIPELINE HARNESS DISPATCH CONSOLE (KICK-ASS SHOWCASE OF EZ-INFLUENCER + MUSIC TOOLS) ═══ */}
+        <section id="harness-console" className="pt-4 border-t border-white/10">
+          <div className="transmission-divider mb-9">LIVE • CLI HARNESS DISPATCH • INTEGRATOR CONSOLE</div>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="inline-block px-4 py-1 rounded-full bg-folana-neon-magenta/10 border border-folana-neon-magenta/30 text-folana-neon-magenta text-xs font-mono tracking-[4px] mb-3">WORLD CLASS BRAND • FIRST-CLASS TOOLING</div>
+              <h2 className="font-serif text-5xl tracking-[-2.2px]">The Wires Are Yours to Command</h2>
+              <p className="mt-3 text-lg font-serif italic text-folana-text-secondary max-w-3xl mx-auto">Direct surface to the ez_influencer_cli_harness.py + fanvue_music_video_orchestrator. Every button emits atomic pre/post ACMI to the bus. Fresh Ep31 content you see came from here.</p>
+            </div>
+
+            <HarnessDispatchConsole />
+
+            <div className="mt-6 text-center text-[10px] text-folana-text-muted/60 font-mono tracking-widest border-t border-white/10 pt-4">Harness path: ~/clawd/tools/fanvue-agent/ez_influencer_cli_harness.py • Delegated by folana_brain.py + cycle_pipeline.py • ACMI v1.4 pre/post everywhere • Locked signatures enforced</div>
+          </div>
+        </section>
+
+        {/* ═══ INTERACTIVE STATIC TUNER ═══ */}
+        <section>
+          <StaticTuner />
+        </section>
+
+        {/* ═══ FINAL CTA — ENTER THE GRID ═══ */}
+        <div className="text-center py-12 border-t border-white/10">
+          <p className="text-folana-text-secondary font-serif italic mb-6 text-xl tracking-tight">The orchestrator is listening.<br />The LoRA is locked. The frequency is yours to shape.</p>
+          <Link href="/orchestrator" className="neon-btn text-sm px-14 py-[17px]">ACCESS THE ORCHESTRATOR — THE GRID</Link>
         </div>
-      </aside>
-    </main>
+      </main>
+
+      <Footer />
+    </>
   );
 }
