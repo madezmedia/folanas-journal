@@ -10,6 +10,7 @@ export interface ProfileSignals {
   influence_label: string | null;
   synthetic_resonance: number | null;
   holographic_engagement: number | null;
+  current_mood: string | null;
   bio: string | null;
   metrics: unknown;
   compositions: unknown;
@@ -25,6 +26,7 @@ const DEFAULT_PROFILE: ProfileSignals = {
   influence_label: '+32%',
   synthetic_resonance: 88,
   holographic_engagement: 64,
+  current_mood: null,
   bio: null,
   metrics: null,
   compositions: null,
@@ -64,6 +66,7 @@ export async function getProfileSignals(id: string = 'folana'): Promise<ProfileS
         influence_label: asMaybeString(row.influence_label) ?? DEFAULT_PROFILE.influence_label,
         synthetic_resonance: asMaybeNumber(row.synthetic_resonance) ?? DEFAULT_PROFILE.synthetic_resonance,
         holographic_engagement: asMaybeNumber(row.holographic_engagement) ?? DEFAULT_PROFILE.holographic_engagement,
+        current_mood: asMaybeString(row.current_mood),
         bio: asMaybeString(row.bio),
         metrics: row.metrics ?? null,
         compositions: row.compositions ?? null,
