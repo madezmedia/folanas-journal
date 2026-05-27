@@ -36,6 +36,16 @@ Static girl, come home to the smoke
   <a href="/folana/generated/2026-05-27/fracture_dispatch_001_signal_sings_back.mp3">Download the track</a>
 </audio>
 
+**Music Video (InfiniteTalk + Locked Folana)**
+
+<video controls style="width: 100%; max-width: 800px; margin: 1rem 0; border-radius: 8px; background: #000;">
+  <source src="/folana/generated/2026-05-27/fracture_dispatch_001_music_video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  <a href="/folana/generated/2026-05-27/fracture_dispatch_001_music_video.mp4">Download the music video</a>
+</video>
+
+*Generated with RunPod InfiniteTalk (Meigen) using the locked hero image + full song audio + optimized prompt for dynamics, emotion, and gestures.*
+
 **Track + Visuals**  
 Music + vocal textures: MiniMax (mmx-cli, music-2.6 with full locked lyric + dark fairy grunge synthwave vinyl static descriptors, breathy female edge vocals, 92 bpm A minor).  
 Hero + portrait: Detailed locked visual signature prompts (dark-skinned Black woman, voluminous curly/coily hair high volume afro/bun, full features, strong brows, full lips — dark fairy grunge holographic glitch veil, violet rain, rooftop, metallic lace cyber fashion, film grain cinematic).  
