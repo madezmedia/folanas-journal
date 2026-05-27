@@ -149,21 +149,32 @@ export async function getSortedJournalEntries(opts?: JournalReadOptions): Promis
 export async function getJournalEntry(id: string, opts?: JournalReadOptions): Promise<JournalEntry> {
   const includeDrafts = !!opts?.includeDrafts;
 
-  let supabaseRow: Record<string, unknown> | null = null;
-  try {
-    const { data, error } = await supabase
-      .from('journal_entries')
-      .select('*')
-      .eq('id', id)
-      .single();
+  // === Priority 1: Local filesystem for brand new / recent entries (most reliable for fresh MD content) ===
+  const fullPath = path.join(journalsDirectory, `${id}.md`);
+  if (fs.existsSync(fullPath)) {
+    try {
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const matterResult = matter(fileContents);
+      const contentHtml = await renderMarkdown(matterResult.content);
 
-    if (error && error.code !== 'PGRST116') throw error;
-    supabaseRow = (data as Record<string, unknown> | null) ?? null;
-  } catch (error) {
-    console.warn('Supabase fetch failed, falling back to filesystem:', error);
+      const dateVal = matterResult.data.date || matterResult.data.timestamp;
+      return {
+        id,
+        content: contentHtml,
+        date: dateVal
+          ? (dateVal instanceof Date ? dateVal.toISOString() : String(dateVal))
+          : new Date().toISOString(),
+        title: matterResult.data.title || matterResult.data.type || 'Untitled',
+        image_url: matterResult.data.image_url,
+        media_urls: matterResult.data.media_urls,
+      };
+    } catch (e) {
+      console.error(`[getJournalEntry] Failed to parse local file for ${id}`, e);
+      // fall through to other sources
+    }
   }
 
-  // --- ACMI Source (Primary) ---
+  // === Priority 2: ACMI (for entries published via the protocol) ===
   try {
     const acmiEntry = await getAcmiJournalEntry(id);
     if (acmiEntry) {
@@ -185,7 +196,21 @@ export async function getJournalEntry(id: string, opts?: JournalReadOptions): Pr
     console.warn('[journal] ACMI single entry fetch failed');
   }
 
-  // --- Supabase Source (Legacy) ---
+  // === Fallbacks: Supabase then error ===
+  let supabaseRow: Record<string, unknown> | null = null;
+  try {
+    const { data, error } = await supabase
+      .from('journal_entries')
+      .select('*')
+      .eq('id', id)
+      .single();
+
+    if (error && error.code !== 'PGRST116') throw error;
+    supabaseRow = (data as Record<string, unknown> | null) ?? null;
+  } catch (error) {
+    console.warn('Supabase fetch failed for single entry:', error);
+  }
+
   if (supabaseRow) {
     if (!includeDrafts && !isVisibleToPublic(supabaseRow.visibility)) {
       throw new Error(`Entry ${id} not found`);
@@ -205,11 +230,13 @@ export async function getJournalEntry(id: string, opts?: JournalReadOptions): Pr
     };
   }
 
-  // Filesystem fallback
-  const fullPath = path.join(journalsDirectory, `${id}.md`);
-  if (!fs.existsSync(fullPath)) {
-    throw new Error(`Entry ${id} not found`);
-  }
+  // Final diagnostic error
+  console.error(`[getJournalEntry] Entry ${id} not found after checking local fs, ACMI, and Supabase`, {
+    attemptedPath: fullPath,
+    journalsDirExists: fs.existsSync(journalsDirectory),
+  });
+  throw new Error(`Entry ${id} not found`);
+
 
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
