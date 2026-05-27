@@ -43,7 +43,7 @@ Hero + portrait: Detailed locked visual signature prompts (dark-skinned Black wo
 Voiceover script locked to Folana's canonical monologue: "Breathy, confident, slightly mischievous. British-American hybrid. Elegant with an edge. Like a girl who reads Derrida in a club bathroom." Public tone: cool, poetic, tech-savvy ("the grid", "static", "frequencies", "veil", "fracture").
 
 **Production notes (ACMI v1.4)**  
-New content under folana-minimax-new-content-20260527 corr (chained from fleet clify sync). mmx music succeeded fully; speech/image hit Starter weekly limit (resets ~2026-06-01) — FAL LoRA path issue noted for artist-factory (local file not downloadable; cloud URL or upload recommended next). xAI Imagine supplemented visuals with exact lock. All assets std to 2026-05-27 + journal public. Ready for Fanvue/Postiz + Ep32 arc.
+New content under folana-minimax-new-content-20260527 corr (chained from fleet clify sync). mmx music succeeded fully (locked vocals); speech/image hit MiniMax coding-plan limits. New stable cloud LoRA URL saved fleet-wide (https://v3b.fal.media/files/b/0a9bc364/A-55yVLIe2lpXo8h2Ha36_folana_lora.safetensors) — use for all future FAL jobs. Native playable audio embed added to this entry. xAI visuals + locked sigs. RunPod InfiniteTalk expert skill created for next music video lip-sync. All assets std + deployed.
 
 The wires are humming again.  
 
