@@ -28,6 +28,14 @@ Sings back, sings back — I am the rapture
 In the glitch I chose, the choir awoke  
 Static girl, come home to the smoke  
 
+**Play the track**
+
+<audio controls style="width: 100%; max-width: 640px; margin: 1rem 0; border-radius: 8px; background: #111;">
+  <source src="/folana/generated/2026-05-27/fracture_dispatch_001_signal_sings_back.mp3" type="audio/mpeg">
+  Your browser does not support the audio element. 
+  <a href="/folana/generated/2026-05-27/fracture_dispatch_001_signal_sings_back.mp3">Download the track</a>
+</audio>
+
 **Track + Visuals**  
 Music + vocal textures: MiniMax (mmx-cli, music-2.6 with full locked lyric + dark fairy grunge synthwave vinyl static descriptors, breathy female edge vocals, 92 bpm A minor).  
 Hero + portrait: Detailed locked visual signature prompts (dark-skinned Black woman, voluminous curly/coily hair high volume afro/bun, full features, strong brows, full lips — dark fairy grunge holographic glitch veil, violet rain, rooftop, metallic lace cyber fashion, film grain cinematic).  
