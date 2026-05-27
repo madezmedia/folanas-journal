@@ -28,23 +28,15 @@ Sings back, sings back — I am the rapture
 In the glitch I chose, the choir awoke  
 Static girl, come home to the smoke  
 
-**Play the track**
+**Play in the SonicVault (recommended — full glitch-synced experience)**
 
-<audio controls style="width: 100%; max-width: 640px; margin: 1rem 0; border-radius: 8px; background: #111;">
-  <source src="/folana/generated/2026-05-27/fracture_dispatch_001_signal_sings_back.mp3" type="audio/mpeg">
-  Your browser does not support the audio element. 
-  <a href="/folana/generated/2026-05-27/fracture_dispatch_001_signal_sings_back.mp3">Download the track</a>
-</audio>
+This transmission is now wired into the main immersive player. Open the SonicVault on the homepage, select **"FRACTURE DISPATCH 001 — THE SIGNAL SINGS BACK"**, and enjoy the RunPod InfiniteTalk music video playing in perfect sync with the locked vocal textures, glitch canvas, and time-synced fragments.
 
-**Music Video (InfiniteTalk + Locked Folana)**
+Direct asset links (raw):
+- [Download the track (mp3)](/folana/generated/2026-05-27/fracture_dispatch_001_signal_sings_back.mp3)
+- [Download the music video (mp4)](/folana/generated/2026-05-27/fracture_dispatch_001_music_video.mp4)
 
-<video controls style="width: 100%; max-width: 800px; margin: 1rem 0; border-radius: 8px; background: #000;">
-  <source src="/folana/generated/2026-05-27/fracture_dispatch_001_music_video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-  <a href="/folana/generated/2026-05-27/fracture_dispatch_001_music_video.mp4">Download the music video</a>
-</video>
-
-*Generated with RunPod InfiniteTalk (Meigen) using the locked hero image + full song audio + optimized prompt for dynamics, emotion, and gestures.*
+*Video generated with RunPod InfiniteTalk (Meigen) + locked hero image + full song audio + optimized prompt for dynamics, emotion, and gestures.*
 
 **Track + Visuals**  
 Music + vocal textures: MiniMax (mmx-cli, music-2.6 with full locked lyric + dark fairy grunge synthwave vinyl static descriptors, breathy female edge vocals, 92 bpm A minor).  
