@@ -11,10 +11,20 @@ import { HarnessDispatchConsole } from './components/HarnessDispatchConsole';
 import { EchoArcExplorer } from './components/EchoArcExplorer';
 
 export default async function FolanasJournal() {
-  const [allEntries, signals] = await Promise.all([
-    getSortedJournalEntries(),
-    getProfileSignals(),
-  ]);
+  let allEntries: any[] = [];
+  let signals: any = { bio: null };
+
+  try {
+    allEntries = await getSortedJournalEntries();
+  } catch (e) {
+    console.error('[Home] getSortedJournalEntries failed:', e);
+  }
+
+  try {
+    signals = await getProfileSignals();
+  } catch (e) {
+    console.warn('[Home] getProfileSignals failed, using defaults');
+  }
 
   // Prepare live thoughts for the Echo Chamber (first 6)
   const liveThoughts = allEntries.slice(0, 6).map(entry => ({
