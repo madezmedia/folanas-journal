@@ -1,0 +1,55 @@
+{
+  "ts": 1779716785167,
+  "source": "agent:antigravity",
+  "kind": "work-validation",
+  "correlationId": "folanaVisualBrandNeutralValidation-1779716785167",
+  "summary": "Neutral baseline validation (activeThemes empty + required assets present)",
+  "payload": {
+    "evidence": {
+      "artifact": "/Users/michaelshaw/clawd/agents/folana/visual-brand/brand-kit-neutral.json"
+    },
+    "checks": {
+      "activeThemes": [],
+      "activeThemesRulePassed": true,
+      "retiredThemes": [
+        "Neon Tech-Market",
+        "Y2K cyber-fairy grunge"
+      ],
+      "requiredAssets": [
+        {
+          "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/neutral-avatar.svg",
+          "exists": true
+        },
+        {
+          "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/neutral-avatar.png",
+          "exists": true
+        },
+        {
+          "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/wordmark.svg",
+          "exists": true
+        },
+        {
+          "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/wordmark.png",
+          "exists": true
+        },
+        {
+          "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/glyph.svg",
+          "exists": true
+        },
+        {
+          "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/glyph.png",
+          "exists": true
+        },
+        {
+          "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/og-card-neutral.svg",
+          "exists": true
+        },
+        {
+          "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/og-card-neutral.png",
+          "exists": true
+        }
+      ],
+      "requiredAssetsRulePassed": true
+    }
+  }
+}

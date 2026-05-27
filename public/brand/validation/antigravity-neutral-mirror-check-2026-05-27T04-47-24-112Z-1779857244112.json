@@ -1,0 +1,169 @@
+{
+  "kind": "mirror_check",
+  "ts": 1779857244112,
+  "source": {
+    "baseA": "/Users/michaelshaw/clawd/agents/folana/visual-brand",
+    "baseB": "/Users/michaelshaw/clawd/apps/folanas-journal/public/brand"
+  },
+  "requiredAssets": [
+    {
+      "a": "brand-kit-neutral.json",
+      "b": "brand-kit-neutral.json"
+    },
+    {
+      "a": "svg/neutral-avatar.svg",
+      "b": "svg/neutral-avatar.svg"
+    },
+    {
+      "a": "png/neutral-avatar.png",
+      "b": "png/neutral-avatar.png"
+    },
+    {
+      "a": "svg/wordmark.svg",
+      "b": "svg/wordmark.svg"
+    },
+    {
+      "a": "png/wordmark.png",
+      "b": "png/wordmark.png"
+    },
+    {
+      "a": "svg/glyph.svg",
+      "b": "svg/glyph.svg"
+    },
+    {
+      "a": "png/glyph.png",
+      "b": "png/glyph.png"
+    },
+    {
+      "a": "svg/og-card-neutral.svg",
+      "b": "svg/og-card-neutral.svg"
+    },
+    {
+      "a": "png/og-card-neutral.png",
+      "b": "png/og-card-neutral.png"
+    },
+    {
+      "a": "png/favicon-16.png",
+      "b": "png/favicon-16.png"
+    },
+    {
+      "a": "png/favicon-32.png",
+      "b": "png/favicon-32.png"
+    },
+    {
+      "a": "png/favicon-48.png",
+      "b": "png/favicon-48.png"
+    }
+  ],
+  "results": [
+    {
+      "relA": "brand-kit-neutral.json",
+      "relB": "brand-kit-neutral.json",
+      "existsA": true,
+      "existsB": true,
+      "hashA": "6bde096775d14b77581fa835245cab36741c05d09c5e10dcf95f0f41a6b2ec4e",
+      "hashB": "6bde096775d14b77581fa835245cab36741c05d09c5e10dcf95f0f41a6b2ec4e",
+      "match": true
+    },
+    {
+      "relA": "svg/neutral-avatar.svg",
+      "relB": "svg/neutral-avatar.svg",
+      "existsA": true,
+      "existsB": true,
+      "hashA": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2",
+      "hashB": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2",
+      "match": true
+    },
+    {
+      "relA": "png/neutral-avatar.png",
+      "relB": "png/neutral-avatar.png",
+      "existsA": true,
+      "existsB": true,
+      "hashA": "3a58962221f8170400131a6dfb538bdf1c1223f7dcd3e28b6383919422b61935",
+      "hashB": "3a58962221f8170400131a6dfb538bdf1c1223f7dcd3e28b6383919422b61935",
+      "match": true
+    },
+    {
+      "relA": "svg/wordmark.svg",
+      "relB": "svg/wordmark.svg",
+      "existsA": true,
+      "existsB": true,
+      "hashA": "f12f5d9ecd57ba77fbb5f65bee726823d8b68b7bcb1d07676103a561c7983686",
+      "hashB": "f12f5d9ecd57ba77fbb5f65bee726823d8b68b7bcb1d07676103a561c7983686",
+      "match": true
+    },
+    {
+      "relA": "png/wordmark.png",
+      "relB": "png/wordmark.png",
+      "existsA": true,
+      "existsB": true,
+      "hashA": "1c1afd4f3a2fdc9ceaae5a9e47c04e5cf4d63b915d0739df54e63120a68ff8ae",
+      "hashB": "1c1afd4f3a2fdc9ceaae5a9e47c04e5cf4d63b915d0739df54e63120a68ff8ae",
+      "match": true
+    },
+    {
+      "relA": "svg/glyph.svg",
+      "relB": "svg/glyph.svg",
+      "existsA": true,
+      "existsB": true,
+      "hashA": "8ee5ff4ce296201df556d891e273906e5e382749d2d4a829e00d6141d324c64a",
+      "hashB": "8ee5ff4ce296201df556d891e273906e5e382749d2d4a829e00d6141d324c64a",
+      "match": true
+    },
+    {
+      "relA": "png/glyph.png",
+      "relB": "png/glyph.png",
+      "existsA": true,
+      "existsB": true,
+      "hashA": "5e0370c25fd56aecf63a65a1cf85dd905faffe5fdc2cc99ca88c60f879dbd1c1",
+      "hashB": "5e0370c25fd56aecf63a65a1cf85dd905faffe5fdc2cc99ca88c60f879dbd1c1",
+      "match": true
+    },
+    {
+      "relA": "svg/og-card-neutral.svg",
+      "relB": "svg/og-card-neutral.svg",
+      "existsA": true,
+      "existsB": true,
+      "hashA": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8",
+      "hashB": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8",
+      "match": true
+    },
+    {
+      "relA": "png/og-card-neutral.png",
+      "relB": "png/og-card-neutral.png",
+      "existsA": true,
+      "existsB": true,
+      "hashA": "5a17740102c8950bf5d25527d477efcfe482237f1bafdd2281a2bce1b311139f",
+      "hashB": "5a17740102c8950bf5d25527d477efcfe482237f1bafdd2281a2bce1b311139f",
+      "match": true
+    },
+    {
+      "relA": "png/favicon-16.png",
+      "relB": "png/favicon-16.png",
+      "existsA": true,
+      "existsB": true,
+      "hashA": "d95b5b41069452994d5998963488c1ddd000000935803ede5dd71bb2fadbad57",
+      "hashB": "d95b5b41069452994d5998963488c1ddd000000935803ede5dd71bb2fadbad57",
+      "match": true
+    },
+    {
+      "relA": "png/favicon-32.png",
+      "relB": "png/favicon-32.png",
+      "existsA": true,
+      "existsB": true,
+      "hashA": "dc86cbc9f98f95a595700d8374b1080f8e6cf17f26025d0b140f3a4caaf487d7",
+      "hashB": "dc86cbc9f98f95a595700d8374b1080f8e6cf17f26025d0b140f3a4caaf487d7",
+      "match": true
+    },
+    {
+      "relA": "png/favicon-48.png",
+      "relB": "png/favicon-48.png",
+      "existsA": true,
+      "existsB": true,
+      "hashA": "87b8fde4652dadc394d72c209f5f5b0249924754b1563e18b96dc626f08bf5c1",
+      "hashB": "87b8fde4652dadc394d72c209f5f5b0249924754b1563e18b96dc626f08bf5c1",
+      "match": true
+    }
+  ],
+  "overallMatch": true
+}

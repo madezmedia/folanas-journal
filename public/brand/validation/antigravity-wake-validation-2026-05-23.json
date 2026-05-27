@@ -1,0 +1,22 @@
+{
+  "ts": 1779533191813,
+  "checks": {
+    "activeThemesIsEmpty": true,
+    "retiredThemesPresentCount": 2,
+    "neutralAvatarHasThemeLayer": true,
+    "neutralAvatarHasThemeOverlay": true,
+    "ogCardHasThemeLayer": true
+  },
+  "filesystem": {
+    "missing": []
+  },
+  "required": [
+    "agents/folana/visual-brand/svg/neutral-avatar.svg",
+    "agents/folana/visual-brand/svg/og-card-neutral.svg",
+    "agents/folana/visual-brand/svg/wordmark.svg",
+    "agents/folana/visual-brand/svg/glyph.svg",
+    "agents/folana/visual-brand/png/neutral-avatar.png",
+    "agents/folana/visual-brand/png/og-card-neutral.png"
+  ],
+  "overall": true
+}

@@ -1,0 +1,34 @@
+{
+  "ts": 1779652046126,
+  "checks": {
+    "activeThemesIsEmpty": true,
+    "assetsSha256MatchAllKeyFiles": true
+  },
+  "missing": {
+    "src": [],
+    "dest": []
+  },
+  "sha256Matches": {
+    "brand-kit-base.json": true,
+    "brand-kit-neutral.json": true,
+    "tokens/brand-tokens.json": true,
+    "svg/neutral-avatar.svg": true,
+    "svg/og-card-neutral.svg": true,
+    "svg/wordmark.svg": true,
+    "svg/glyph.svg": true,
+    "svg/avatar-placeholder.svg": true,
+    "svg/favicon-16.svg": true,
+    "svg/favicon-32.svg": true,
+    "svg/favicon-48.svg": true,
+    "png/neutral-avatar.png": true,
+    "png/og-card-neutral.png": true,
+    "png/wordmark.png": true,
+    "png/glyph.png": true,
+    "png/avatar-placeholder.png": true,
+    "png/favicon-16.png": true,
+    "png/favicon-32.png": true,
+    "png/favicon-48.png": true
+  },
+  "srcBase": "/Users/michaelshaw/clawd/agents/folana/visual-brand",
+  "destBase": "/Users/michaelshaw/clawd/apps/folanas-journal/public/brand"
+}

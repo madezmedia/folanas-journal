@@ -1,0 +1,125 @@
+{
+  "kitVersion": "1.0.0",
+  "generatedAt": "2026-05-27T19:13:10.945Z",
+  "inputDispatch": "dispatch-antigravity-folana-visual-brand-1777953580441",
+  "pivotRule": "activeThemes must be [] for day-1 baseline; do not hardcode cyber/Y2K frames in baseline assets",
+  "results": [
+    {
+      "asset": "neutral-avatar.svg",
+      "fileKind": "svg",
+      "rel": "svg/neutral-avatar.svg",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/neutral-avatar.svg",
+      "exists": true,
+      "sizeBytes": 2748,
+      "sha256": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2"
+    },
+    {
+      "asset": "neutral-avatar.png",
+      "fileKind": "png",
+      "rel": "png/neutral-avatar.png",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/neutral-avatar.png",
+      "exists": true,
+      "sizeBytes": 125068,
+      "sha256": "3a58962221f8170400131a6dfb538bdf1c1223f7dcd3e28b6383919422b61935"
+    },
+    {
+      "asset": "wordmark.svg",
+      "fileKind": "svg",
+      "rel": "svg/wordmark.svg",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/wordmark.svg",
+      "exists": true,
+      "sizeBytes": 741,
+      "sha256": "f12f5d9ecd57ba77fbb5f65bee726823d8b68b7bcb1d07676103a561c7983686"
+    },
+    {
+      "asset": "wordmark.png",
+      "fileKind": "png",
+      "rel": "png/wordmark.png",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/wordmark.png",
+      "exists": true,
+      "sizeBytes": 6621,
+      "sha256": "1c1afd4f3a2fdc9ceaae5a9e47c04e5cf4d63b915d0739df54e63120a68ff8ae"
+    },
+    {
+      "asset": "glyph.svg",
+      "fileKind": "svg",
+      "rel": "svg/glyph.svg",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/glyph.svg",
+      "exists": true,
+      "sizeBytes": 365,
+      "sha256": "8ee5ff4ce296201df556d891e273906e5e382749d2d4a829e00d6141d324c64a"
+    },
+    {
+      "asset": "glyph.png",
+      "fileKind": "png",
+      "rel": "png/glyph.png",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/glyph.png",
+      "exists": true,
+      "sizeBytes": 5138,
+      "sha256": "5e0370c25fd56aecf63a65a1cf85dd905faffe5fdc2cc99ca88c60f879dbd1c1"
+    },
+    {
+      "asset": "og-card-neutral.svg",
+      "fileKind": "svg",
+      "rel": "svg/og-card-neutral.svg",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/og-card-neutral.svg",
+      "exists": true,
+      "sizeBytes": 2050,
+      "sha256": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8"
+    },
+    {
+      "asset": "og-card-neutral.png",
+      "fileKind": "png",
+      "rel": "png/og-card-neutral.png",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/og-card-neutral.png",
+      "exists": true,
+      "sizeBytes": 3362,
+      "sha256": "5a17740102c8950bf5d25527d477efcfe482237f1bafdd2281a2bce1b311139f"
+    },
+    {
+      "asset": "favicon-16.png",
+      "fileKind": "png",
+      "rel": "png/favicon-16.png",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/favicon-16.png",
+      "exists": true,
+      "sizeBytes": 495,
+      "sha256": "d95b5b41069452994d5998963488c1ddd000000935803ede5dd71bb2fadbad57"
+    },
+    {
+      "asset": "favicon-32.png",
+      "fileKind": "png",
+      "rel": "png/favicon-32.png",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/favicon-32.png",
+      "exists": true,
+      "sizeBytes": 460,
+      "sha256": "dc86cbc9f98f95a595700d8374b1080f8e6cf17f26025d0b140f3a4caaf487d7"
+    },
+    {
+      "asset": "favicon-48.png",
+      "fileKind": "png",
+      "rel": "png/favicon-48.png",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/favicon-48.png",
+      "exists": true,
+      "sizeBytes": 467,
+      "sha256": "87b8fde4652dadc394d72c209f5f5b0249924754b1563e18b96dc626f08bf5c1"
+    },
+    {
+      "asset": "brand-kit-neutral.json",
+      "fileKind": "brand-kit-neutral.json",
+      "rel": "brand-kit-neutral.json",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/brand-kit-neutral.json",
+      "exists": true,
+      "sizeBytes": 1532,
+      "sha256": "3c07bb78ce09609ff431ea2ac2369108c1c254741539c0c11f9d357815c59139"
+    },
+    {
+      "asset": "brand-tokens.json",
+      "fileKind": "tokens",
+      "rel": "tokens/brand-tokens.json",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/tokens/brand-tokens.json",
+      "exists": true,
+      "sizeBytes": 3151,
+      "sha256": "a45f526d1ff5ab2d541af6c504908689de929026b8c36937ab9d243b1412b154"
+    }
+  ]
+}

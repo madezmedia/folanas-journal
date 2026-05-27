@@ -1,0 +1,54 @@
+{
+  "ts": 1779677203930,
+  "agent": "antigravity",
+  "check": "folana-brand-kit-linkage-sha256-match",
+  "pivotRule": {
+    "activeThemesEmpty": true,
+    "retiredThemesHasLegacyCyberKeywords": true
+  },
+  "filePairs": [
+    {
+      "name": "brand-kit-neutral",
+      "srcSha": "11bbab16112b7dd56a81f20b99628bc23c2bde9e3844dac5274ff7659c55abcd",
+      "appSha": "11bbab16112b7dd56a81f20b99628bc23c2bde9e3844dac5274ff7659c55abcd",
+      "shaMatch": true
+    },
+    {
+      "name": "brand-kit-base",
+      "srcSha": "4766ec2f8602a2cdb4b4063757c250f057a08282cc146e383d4eb8b35ccb1d60",
+      "appSha": "4766ec2f8602a2cdb4b4063757c250f057a08282cc146e383d4eb8b35ccb1d60",
+      "shaMatch": true
+    },
+    {
+      "name": "brand-tokens",
+      "srcSha": "a45f526d1ff5ab2d541af6c504908689de929026b8c36937ab9d243b1412b154",
+      "appSha": "a45f526d1ff5ab2d541af6c504908689de929026b8c36937ab9d243b1412b154",
+      "shaMatch": true
+    },
+    {
+      "name": "wordmark.svg",
+      "srcSha": "f12f5d9ecd57ba77fbb5f65bee726823d8b68b7bcb1d07676103a561c7983686",
+      "appSha": "f12f5d9ecd57ba77fbb5f65bee726823d8b68b7bcb1d07676103a561c7983686",
+      "shaMatch": true
+    },
+    {
+      "name": "glyph.svg",
+      "srcSha": "8ee5ff4ce296201df556d891e273906e5e382749d2d4a829e00d6141d324c64a",
+      "appSha": "8ee5ff4ce296201df556d891e273906e5e382749d2d4a829e00d6141d324c64a",
+      "shaMatch": true
+    },
+    {
+      "name": "neutral-avatar.svg",
+      "srcSha": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2",
+      "appSha": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2",
+      "shaMatch": true
+    },
+    {
+      "name": "og-card-neutral.svg",
+      "srcSha": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8",
+      "appSha": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8",
+      "shaMatch": true
+    }
+  ],
+  "allShaMatch": true
+}

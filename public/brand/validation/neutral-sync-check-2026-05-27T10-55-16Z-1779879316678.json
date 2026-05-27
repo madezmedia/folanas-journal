@@ -1,0 +1,12 @@
+{
+  "kitName": "Folana",
+  "checkKind": "neutral-sync-check",
+  "generatedAtMs": 1779879316678,
+  "generatedAtIso": "2026-05-27T10:55:16Z",
+  "sourceRoot": "/Users/michaelshaw/clawd/agents/folana/visual-brand",
+  "targetRoot": "/Users/michaelshaw/clawd/apps/folanas-journal/public/brand",
+  "resultsCount": 40,
+  "changesCount": 0,
+  "changes": [],
+  "changeExamplesTruncated": false
+}

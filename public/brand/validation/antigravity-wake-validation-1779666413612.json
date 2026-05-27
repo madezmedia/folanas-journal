@@ -1,0 +1,56 @@
+{
+  "ts": 1779666413612,
+  "agent": "antigravity",
+  "check": "baseline-neutral-no-cyber-keywords",
+  "svgFiles": [
+    "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/avatar-placeholder.svg",
+    "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/favicon-16.svg",
+    "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/favicon-32.svg",
+    "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/favicon-48.svg",
+    "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/glyph.svg",
+    "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/neutral-avatar.svg",
+    "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/og-card-neutral.svg",
+    "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/og-card-template.svg",
+    "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/wordmark.svg"
+  ],
+  "sha256ByFile": [
+    {
+      "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/avatar-placeholder.svg",
+      "sha256": "4897a5c041c6c60001d9c66585a988036fd3b7eca24a5a9ed73cf34549fb74d8"
+    },
+    {
+      "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/favicon-16.svg",
+      "sha256": "2607296eb04f75486548f3b25a860871711bb586bc696f443027b6a7d63b2da2"
+    },
+    {
+      "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/favicon-32.svg",
+      "sha256": "cdd3d3dc4b777372d05cbaf6b161e847bcf529b5e1f8a49d6134982f8e9cfc91"
+    },
+    {
+      "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/favicon-48.svg",
+      "sha256": "57f13b1ee34079d01272a3ad564075f3159cf1656ccf1c07cd02927dfca8610f"
+    },
+    {
+      "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/glyph.svg",
+      "sha256": "8ee5ff4ce296201df556d891e273906e5e382749d2d4a829e00d6141d324c64a"
+    },
+    {
+      "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/neutral-avatar.svg",
+      "sha256": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2"
+    },
+    {
+      "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/og-card-neutral.svg",
+      "sha256": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8"
+    },
+    {
+      "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/og-card-template.svg",
+      "sha256": "3dad2064a27ff8e5b3270a5d06cde5486f6a0cd968255cd93b1521669d77052c"
+    },
+    {
+      "path": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/wordmark.svg",
+      "sha256": "f12f5d9ecd57ba77fbb5f65bee726823d8b68b7bcb1d07676103a561c7983686"
+    }
+  ],
+  "keywordMatches": [],
+  "result": "PASS"
+}

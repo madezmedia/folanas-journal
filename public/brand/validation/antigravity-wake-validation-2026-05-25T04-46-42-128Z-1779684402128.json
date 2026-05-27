@@ -1,0 +1,51 @@
+{
+  "ts": 1779684402128,
+  "checks": {
+    "activeThemesIsEmpty": true,
+    "assetsSha256MatchAllKeyFiles": false
+  },
+  "missing": {
+    "src": [],
+    "dest": [
+      "svg/neutral-avatar.svg",
+      "svg/og-card-neutral.svg",
+      "svg/wordmark.svg",
+      "svg/glyph.svg",
+      "svg/avatar-placeholder.svg",
+      "svg/favicon-16.svg",
+      "svg/favicon-32.svg",
+      "svg/favicon-48.svg",
+      "png/neutral-avatar.png",
+      "png/og-card-neutral.png",
+      "png/wordmark.png",
+      "png/glyph.png",
+      "png/avatar-placeholder.png",
+      "png/favicon-16.png",
+      "png/favicon-32.png",
+      "png/favicon-48.png"
+    ]
+  },
+  "sha256Matches": {
+    "brand-kit-base.json": true,
+    "brand-kit-neutral.json": true,
+    "tokens/brand-tokens.json": true,
+    "svg/neutral-avatar.svg": false,
+    "svg/og-card-neutral.svg": false,
+    "svg/wordmark.svg": false,
+    "svg/glyph.svg": false,
+    "svg/avatar-placeholder.svg": false,
+    "svg/favicon-16.svg": false,
+    "svg/favicon-32.svg": false,
+    "svg/favicon-48.svg": false,
+    "png/neutral-avatar.png": false,
+    "png/og-card-neutral.png": false,
+    "png/wordmark.png": false,
+    "png/glyph.png": false,
+    "png/avatar-placeholder.png": false,
+    "png/favicon-16.png": false,
+    "png/favicon-32.png": false,
+    "png/favicon-48.png": false
+  },
+  "srcBase": "/Users/michaelshaw/clawd/agents/folana/visual-brand",
+  "destBase": "/Users/michaelshaw/clawd/apps/folanas-journal/public/brand"
+}

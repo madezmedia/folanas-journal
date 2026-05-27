@@ -1,0 +1,203 @@
+{
+  "kit": "Folana visual-brand neutral baseline",
+  "ts": 1779898038239,
+  "iso": "2026-05-27T16:07:18.239Z",
+  "srcBase": "/Users/michaelshaw/clawd/agents/folana/visual-brand",
+  "dstBase": "/Users/michaelshaw/clawd/apps/folanas-journal/public/brand",
+  "counts": {
+    "ok": 21,
+    "mismatch": 0,
+    "missing": 0
+  },
+  "results": [
+    {
+      "srcRel": "svg/wordmark.svg",
+      "dstRel": "wordmark.svg",
+      "srcSha256": "f12f5d9ecd57ba77fbb5f65bee726823d8b68b7bcb1d07676103a561c7983686",
+      "dstSha256": "f12f5d9ecd57ba77fbb5f65bee726823d8b68b7bcb1d07676103a561c7983686",
+      "status": "ok",
+      "srcSizeBytes": 741,
+      "dstSizeBytes": 741
+    },
+    {
+      "srcRel": "svg/glyph.svg",
+      "dstRel": "glyph.svg",
+      "srcSha256": "8ee5ff4ce296201df556d891e273906e5e382749d2d4a829e00d6141d324c64a",
+      "dstSha256": "8ee5ff4ce296201df556d891e273906e5e382749d2d4a829e00d6141d324c64a",
+      "status": "ok",
+      "srcSizeBytes": 365,
+      "dstSizeBytes": 365
+    },
+    {
+      "srcRel": "svg/neutral-avatar.svg",
+      "dstRel": "neutral-avatar.svg",
+      "srcSha256": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2",
+      "dstSha256": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2",
+      "status": "ok",
+      "srcSizeBytes": 2748,
+      "dstSizeBytes": 2748
+    },
+    {
+      "srcRel": "svg/avatar-placeholder.svg",
+      "dstRel": "avatar-placeholder.svg",
+      "srcSha256": "4897a5c041c6c60001d9c66585a988036fd3b7eca24a5a9ed73cf34549fb74d8",
+      "dstSha256": "4897a5c041c6c60001d9c66585a988036fd3b7eca24a5a9ed73cf34549fb74d8",
+      "status": "ok",
+      "srcSizeBytes": 3672,
+      "dstSizeBytes": 3672
+    },
+    {
+      "srcRel": "svg/og-card-neutral.svg",
+      "dstRel": "og-card-neutral.svg",
+      "srcSha256": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8",
+      "dstSha256": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8",
+      "status": "ok",
+      "srcSizeBytes": 2050,
+      "dstSizeBytes": 2050
+    },
+    {
+      "srcRel": "svg/og-card-template.svg",
+      "dstRel": "og-card-template.svg",
+      "srcSha256": "3dad2064a27ff8e5b3270a5d06cde5486f6a0cd968255cd93b1521669d77052c",
+      "dstSha256": "3dad2064a27ff8e5b3270a5d06cde5486f6a0cd968255cd93b1521669d77052c",
+      "status": "ok",
+      "srcSizeBytes": 1789,
+      "dstSizeBytes": 1789
+    },
+    {
+      "srcRel": "svg/favicon-16.svg",
+      "dstRel": "favicon-16.svg",
+      "srcSha256": "2607296eb04f75486548f3b25a860871711bb586bc696f443027b6a7d63b2da2",
+      "dstSha256": "2607296eb04f75486548f3b25a860871711bb586bc696f443027b6a7d63b2da2",
+      "status": "ok",
+      "srcSizeBytes": 365,
+      "dstSizeBytes": 365
+    },
+    {
+      "srcRel": "svg/favicon-32.svg",
+      "dstRel": "favicon-32.svg",
+      "srcSha256": "cdd3d3dc4b777372d05cbaf6b161e847bcf529b5e1f8a49d6134982f8e9cfc91",
+      "dstSha256": "cdd3d3dc4b777372d05cbaf6b161e847bcf529b5e1f8a49d6134982f8e9cfc91",
+      "status": "ok",
+      "srcSizeBytes": 365,
+      "dstSizeBytes": 365
+    },
+    {
+      "srcRel": "svg/favicon-48.svg",
+      "dstRel": "favicon-48.svg",
+      "srcSha256": "57f13b1ee34079d01272a3ad564075f3159cf1656ccf1c07cd02927dfca8610f",
+      "dstSha256": "57f13b1ee34079d01272a3ad564075f3159cf1656ccf1c07cd02927dfca8610f",
+      "status": "ok",
+      "srcSizeBytes": 365,
+      "dstSizeBytes": 365
+    },
+    {
+      "srcRel": "png/wordmark.png",
+      "dstRel": "wordmark.png",
+      "srcSha256": "1c1afd4f3a2fdc9ceaae5a9e47c04e5cf4d63b915d0739df54e63120a68ff8ae",
+      "dstSha256": "1c1afd4f3a2fdc9ceaae5a9e47c04e5cf4d63b915d0739df54e63120a68ff8ae",
+      "status": "ok",
+      "srcSizeBytes": 6621,
+      "dstSizeBytes": 6621
+    },
+    {
+      "srcRel": "png/glyph.png",
+      "dstRel": "glyph.png",
+      "srcSha256": "5e0370c25fd56aecf63a65a1cf85dd905faffe5fdc2cc99ca88c60f879dbd1c1",
+      "dstSha256": "5e0370c25fd56aecf63a65a1cf85dd905faffe5fdc2cc99ca88c60f879dbd1c1",
+      "status": "ok",
+      "srcSizeBytes": 5138,
+      "dstSizeBytes": 5138
+    },
+    {
+      "srcRel": "png/neutral-avatar.png",
+      "dstRel": "neutral-avatar.png",
+      "srcSha256": "3a58962221f8170400131a6dfb538bdf1c1223f7dcd3e28b6383919422b61935",
+      "dstSha256": "3a58962221f8170400131a6dfb538bdf1c1223f7dcd3e28b6383919422b61935",
+      "status": "ok",
+      "srcSizeBytes": 125068,
+      "dstSizeBytes": 125068
+    },
+    {
+      "srcRel": "png/avatar-placeholder.png",
+      "dstRel": "avatar-placeholder.png",
+      "srcSha256": "46c8f341d10d6fb73be1a91b24a14e7fa8e7e5d95ba17935b787f4591b321dc9",
+      "dstSha256": "46c8f341d10d6fb73be1a91b24a14e7fa8e7e5d95ba17935b787f4591b321dc9",
+      "status": "ok",
+      "srcSizeBytes": 33363,
+      "dstSizeBytes": 33363
+    },
+    {
+      "srcRel": "png/og-card-neutral.png",
+      "dstRel": "og-card-neutral.png",
+      "srcSha256": "5a17740102c8950bf5d25527d477efcfe482237f1bafdd2281a2bce1b311139f",
+      "dstSha256": "5a17740102c8950bf5d25527d477efcfe482237f1bafdd2281a2bce1b311139f",
+      "status": "ok",
+      "srcSizeBytes": 3362,
+      "dstSizeBytes": 3362
+    },
+    {
+      "srcRel": "png/og-card-template.png",
+      "dstRel": "og-card-template.png",
+      "srcSha256": "ef649af7c194ba1fb272b9f2a258265add2ed4709b175fc69bb6d6a85cab9a34",
+      "dstSha256": "ef649af7c194ba1fb272b9f2a258265add2ed4709b175fc69bb6d6a85cab9a34",
+      "status": "ok",
+      "srcSizeBytes": 71117,
+      "dstSizeBytes": 71117
+    },
+    {
+      "srcRel": "png/favicon-16.png",
+      "dstRel": "favicon-16.png",
+      "srcSha256": "d95b5b41069452994d5998963488c1ddd000000935803ede5dd71bb2fadbad57",
+      "dstSha256": "d95b5b41069452994d5998963488c1ddd000000935803ede5dd71bb2fadbad57",
+      "status": "ok",
+      "srcSizeBytes": 495,
+      "dstSizeBytes": 495
+    },
+    {
+      "srcRel": "png/favicon-32.png",
+      "dstRel": "favicon-32.png",
+      "srcSha256": "dc86cbc9f98f95a595700d8374b1080f8e6cf17f26025d0b140f3a4caaf487d7",
+      "dstSha256": "dc86cbc9f98f95a595700d8374b1080f8e6cf17f26025d0b140f3a4caaf487d7",
+      "status": "ok",
+      "srcSizeBytes": 460,
+      "dstSizeBytes": 460
+    },
+    {
+      "srcRel": "png/favicon-48.png",
+      "dstRel": "favicon-48.png",
+      "srcSha256": "87b8fde4652dadc394d72c209f5f5b0249924754b1563e18b96dc626f08bf5c1",
+      "dstSha256": "87b8fde4652dadc394d72c209f5f5b0249924754b1563e18b96dc626f08bf5c1",
+      "status": "ok",
+      "srcSizeBytes": 467,
+      "dstSizeBytes": 467
+    },
+    {
+      "srcRel": "brand-kit-neutral.json",
+      "dstRel": "brand-kit-neutral.json",
+      "srcSha256": "3c07bb78ce09609ff431ea2ac2369108c1c254741539c0c11f9d357815c59139",
+      "dstSha256": "3c07bb78ce09609ff431ea2ac2369108c1c254741539c0c11f9d357815c59139",
+      "status": "ok",
+      "srcSizeBytes": 1532,
+      "dstSizeBytes": 1532
+    },
+    {
+      "srcRel": "brand-kit-base.json",
+      "dstRel": "brand-kit-base.json",
+      "srcSha256": "5032eff1e94be95a9c5c0ab7740c5ce77eb21d1f3b3476d5f5cd438502603920",
+      "dstSha256": "5032eff1e94be95a9c5c0ab7740c5ce77eb21d1f3b3476d5f5cd438502603920",
+      "status": "ok",
+      "srcSizeBytes": 1085,
+      "dstSizeBytes": 1085
+    },
+    {
+      "srcRel": "tokens/brand-tokens.json",
+      "dstRel": "tokens/brand-tokens.json",
+      "srcSha256": "a45f526d1ff5ab2d541af6c504908689de929026b8c36937ab9d243b1412b154",
+      "dstSha256": "a45f526d1ff5ab2d541af6c504908689de929026b8c36937ab9d243b1412b154",
+      "status": "ok",
+      "srcSizeBytes": 3151,
+      "dstSizeBytes": 3151
+    }
+  ]
+}

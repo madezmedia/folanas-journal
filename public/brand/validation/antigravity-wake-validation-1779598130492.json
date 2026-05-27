@@ -1,0 +1,32 @@
+{
+  "ts": 1779598130492,
+  "checks": {
+    "activeThemesIsEmpty": true,
+    "trendOverlayEmpty": true,
+    "brandAssetsPresentInApp": false,
+    "neutralAvatarMatchAcrossLocations": true,
+    "neutralOgMatchAcrossLocations": true
+  },
+  "filesystem": {
+    "missingSrc": [
+      "png/favicon-48.png"
+    ],
+    "missingDest": [
+      "favicon-32.png",
+      "favicon-48.png"
+    ]
+  },
+  "sha256": {
+    "brand-kit-base.json": "4766ec2f8602a2cdb4b4063757c250f057a08282cc146e383d4eb8b35ccb1d60",
+    "tokens/brand-tokens.json": "a45f526d1ff5ab2d541af6c504908689de929026b8c36937ab9d243b1412b154",
+    "svg/neutral-avatar.svg": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2",
+    "png/neutral-avatar.png": "fbe09441cd963b85f21280b0f7fbc0eb15dc0f6ed204804e9210f5f8538b6fa8",
+    "svg/og-card-neutral.svg": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8",
+    "png/og-card-neutral.png": "5a17740102c8950bf5d25527d477efcfe482237f1bafdd2281a2bce1b311139f"
+  },
+  "evidence": {
+    "generator": "antigravity-wake-validation",
+    "destBase": "/Users/michaelshaw/clawd/apps/folanas-journal/public/brand",
+    "sourceBase": "/Users/michaelshaw/clawd/agents/folana/visual-brand"
+  }
+}

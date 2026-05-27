@@ -1,0 +1,58 @@
+{
+  "ts": 1779581039436,
+  "checks": {
+    "filesMatch": true,
+    "missingCount": 0,
+    "mismatchedCount": 0
+  },
+  "filesystem": {
+    "missing": [],
+    "mismatched": []
+  },
+  "details": [
+    {
+      "name": "neutral-avatar.svg",
+      "srcHash": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2",
+      "dstHash": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2",
+      "same": true
+    },
+    {
+      "name": "neutral-avatar.png",
+      "srcHash": "fbe09441cd963b85f21280b0f7fbc0eb15dc0f6ed204804e9210f5f8538b6fa8",
+      "dstHash": "fbe09441cd963b85f21280b0f7fbc0eb15dc0f6ed204804e9210f5f8538b6fa8",
+      "same": true
+    },
+    {
+      "name": "og-card-neutral.svg",
+      "srcHash": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8",
+      "dstHash": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8",
+      "same": true
+    },
+    {
+      "name": "og-card-neutral.png",
+      "srcHash": "5a17740102c8950bf5d25527d477efcfe482237f1bafdd2281a2bce1b311139f",
+      "dstHash": "5a17740102c8950bf5d25527d477efcfe482237f1bafdd2281a2bce1b311139f",
+      "same": true
+    },
+    {
+      "name": "wordmark.svg",
+      "srcHash": "f12f5d9ecd57ba77fbb5f65bee726823d8b68b7bcb1d07676103a561c7983686",
+      "dstHash": "f12f5d9ecd57ba77fbb5f65bee726823d8b68b7bcb1d07676103a561c7983686",
+      "same": true
+    },
+    {
+      "name": "glyph.svg",
+      "srcHash": "8ee5ff4ce296201df556d891e273906e5e382749d2d4a829e00d6141d324c64a",
+      "dstHash": "8ee5ff4ce296201df556d891e273906e5e382749d2d4a829e00d6141d324c64a",
+      "same": true
+    }
+  ],
+  "requiredPairs": [
+    "neutral-avatar.svg",
+    "neutral-avatar.png",
+    "og-card-neutral.svg",
+    "og-card-neutral.png",
+    "wordmark.svg",
+    "glyph.svg"
+  ]
+}
