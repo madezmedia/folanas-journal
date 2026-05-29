@@ -459,6 +459,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep70', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-29'],
     isRealProduction: true,
   },
+  // EP71 — THE UNWRITTEN LETTER (2026-05-29) — Ghost Frequencies Arc (5/10)
+  {
+    id: 'the-unwritten-letter-ep71',
+    title: 'THE UNWRITTEN LETTER',
+    subtitle: 'EP71 • MINIMAX MUSIC-2.6 • GHOST FREQUENCIES ARC (5/10)',
+    description: 'Folana sits alone with her grandfather\'s radio, turning the dial through static and silence. Between stations, fragments of a letter she never wrote echo back at her — words she meant to say, confessions she buried. The radio becomes a confessional, each frequency a different draft of a message that was never brave enough to be sent. The fifth transmission from the Ghost Frequencies arc: the unfinished correspondence. Dream pop/ethereal indie folk with acoustic guitar, piano, strings, soft synth pads, and intimate layered female vocals.',
+    audioSrc: '/folana/generated/2026-05-29/music/ep71-the-unwritten-letter-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/ep71-the-unwritten-letter-hero.jpg',
+    duration: '2:03',
+    mood: 'TENDER • INTROSPECTIVE • HAUNTING',
+    tags: ['ep71', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
