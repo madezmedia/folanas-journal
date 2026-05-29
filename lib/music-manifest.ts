@@ -342,6 +342,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep61', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-29'],
     isRealProduction: true,
   },
+  // EP62 — NOON INTERLUDE (2026-05-29) — City Souls Arc (6/?)
+  {
+    id: 'noon-interlude-ep62',
+    title: 'NOON INTERLUDE',
+    subtitle: 'EP62 • MINIMAX MUSIC-2.6 • CITY SOULS ARC (6/?)',
+    description: 'The city at its brightest — mid-afternoon, when the sun stands still above the skyline and the streets are molten gold. Folana finds herself on a rooftop cafe, watching the city hold its breath between the morning rush and the evening chaos. A warm, contemplative meditation on the nowhere and the everywhere — the center of the day when nothing is rushing and nothing is overdue. Indie folk/dream pop with fingerpicked acoustic guitar, warm piano, soft strings, gentle percussion, and ethereal female vocals.',
+    audioSrc: '/folana/generated/2026-05-29/music/folana_ep62_noon_interlude.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/folana_ep62_noon_interlude_hero.jpg',
+    duration: '2:43',
+    mood: 'WARM • CONTEMPLATIVE • GOLDEN',
+    tags: ['ep62', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)

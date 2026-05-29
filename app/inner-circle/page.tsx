@@ -19,7 +19,7 @@ const tiers = [
     features: ['All new tracks 2 weeks early', '5 exclusive unreleased songs', 'Weekly audio dispatches', 'Behind-the-scenes process notes', 'Community access', 'Vote on future tracks'],
     cta: 'Join the Inner Circle',
     popular: true,
-    href: '#',
+    href: 'https://whop.com/checkout/plan_2Tz2QipTSn0O9',
   },
   {
     name: 'Codex',
@@ -80,7 +80,7 @@ export default function InnerCirclePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              href="#pricing"
+              href="https://whop.com/checkout/plan_2Tz2QipTSn0O9"
               className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium transition-all"
             >
               Join for $7/month
@@ -228,7 +228,7 @@ export default function InnerCirclePage() {
             $7/month. Cancel anytime. Your first track drops the moment you join.
           </p>
           <Link
-            href="#pricing"
+            href="https://whop.com/checkout/plan_2Tz2QipTSn0O9"
             className="inline-flex items-center gap-2 px-10 py-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-lg transition-all"
           >
             Join the Inner Circle
