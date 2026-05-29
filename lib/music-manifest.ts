@@ -537,6 +537,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep76', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-30', 'arc-finale'],
     isRealProduction: true,
   },
+  // EP77 — FIRST BROADCAST (2026-05-30) — Broadcast Arc (1/10)
+  {
+    id: 'first-broadcast-ep77',
+    title: 'FIRST BROADCAST',
+    subtitle: 'EP77 • MINIMAX MUSIC-2.6 • BROADCAST ARC (1/10)',
+    description: 'The radio is silent now. No more ghosts in the static. Folana sits alone in her dim bedroom studio, the red ON AIR light blinking for the first time. Her hands tremble on the microphone as she presses record the bravest thing she has ever done is press record and let the world decide. The Broadcast Arc opens: the moment the listener becomes the broadcaster, the receiver becomes the source. Dream pop/ethereal indie folk with acoustic guitar, piano, strings, warm bass, soft synth pads, and intimate female vocals growing from tentative whisper to confident transmission.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep77-first-broadcast-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep77-first-broadcast-hero.jpg',
+    duration: '2:50',
+    mood: 'TENDER • HOPEFUL • INTIMATE',
+    tags: ['ep77', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30', 'arc-opener'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
