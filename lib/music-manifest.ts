@@ -407,6 +407,32 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep66', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-29'],
     isRealProduction: true,
   },
+  // EP67 — STATIC SIGNALS (2026-05-29) — Ghost Frequencies Arc (1/10)
+  {
+    id: 'static-signals-ep67',
+    title: 'STATIC SIGNALS',
+    subtitle: 'EP67 • MINIMAX MUSIC-2.6 • GHOST FREQUENCIES ARC (1/10)',
+    description: 'Half past three, rain against the window, her grandfather\'s old shortwave radio crackling to life. Folana catches strange signals — voices reciting poetry she wrote at seventeen, a piano melody that bends wrong, fragments of conversations from futures she hasn\'t lived yet. The line between memory and prophecy begins to blur. A new arc opens: the ghosts between stations. Dream pop/ethereal indie folk with acoustic guitar, piano, strings, soft synth pads, and haunting layered vocals.',
+    audioSrc: '/folana/generated/2026-05-29/music/ep67-static-signals-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/ep67-hero.jpg',
+    duration: '3:50',
+    mood: 'HAUNTING • INTIMATE • MYSTERIOUS',
+    tags: ['ep67', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-29', 'arc-opener'],
+    isRealProduction: true,
+  },
+  // EP68 — VOICE IN THE STATIC (2026-05-29) — Ghost Frequencies Arc (2/10)
+  {
+    id: 'voice-in-the-static-ep68',
+    title: 'VOICE IN THE STATIC',
+    subtitle: 'EP68 • MINIMAX MUSIC-2.6 • GHOST FREQUENCIES ARC (2/10)',
+    description: 'A voice emerges from the static — achingly familiar, warm, like someone Folana should know but can\'t place. It sings verses from songs she\'s never written, laughs at conversations she hasn\'t had yet, whispers her name like a promise. The second transmission from the Ghost Frequencies arc: the voice between the stations. Dream pop/ethereal indie folk with acoustic guitar, piano, strings, soft synth pads, electric guitar with delay reverb, and haunting layered vocals.',
+    audioSrc: '/folana/generated/2026-05-29/music/ep68-voice-in-the-static-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/ep68-hero.jpg',
+    duration: '3:05',
+    mood: 'HAUNTING • INTIMATE • MYSTERIOUS',
+    tags: ['ep68', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)

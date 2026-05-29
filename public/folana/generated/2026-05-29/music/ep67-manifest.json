@@ -1,0 +1,51 @@
+{
+  "episode": 67,
+  "title": "Static Signals",
+  "arc": "Ghost Frequencies",
+  "arc_position": 1,
+  "arc_total": 10,
+  "date": "2026-05-29",
+  "theme": "Folana sits alone in her Brooklyn apartment at 3am, rain against the window, her grandfather's old shortwave radio crackling to life. She catches strange signals — voices reciting poetry she wrote years ago but never shared, a piano melody that sounds familiar but wrong, fragments of conversations from times she hasn't lived yet. The first hint that reality has more bandwidth than we're tuned to receive. A new arc begins: the ghosts between stations.",
+  "artist": "Folana Lanez",
+  "generated_by": "mmx music-2.6 (MiniMax via CLI) — full song generation",
+  "generation_time": "2026-05-29T08:21:00Z",
+  "duration_sec": 229.8,
+  "key": "E minor",
+  "tempo": "72 BPM (slow)",
+  "bpm": 72,
+  "genre": "dream pop, ethereal indie folk, ambient",
+  "mood": "haunting, intimate, nostalgic, mysterious, warm, melancholic",
+  "vocals": "warm female, breathy intimate verses soaring to layered harmonies in chorus, British-American hybrid accent, ethereal",
+  "instruments": "acoustic guitar, piano, strings, soft synth pads, gentle percussion, electric guitar with delay reverb",
+  "structure": "Intro-Verse1-PreChorus-Chorus-Verse2-PreChorus-Chorus-Bridge-GuitarSolo-Chorus-Outro",
+  "references": "Cocteau Twins, Lana Del Rey, Mazzy Star, Beach House",
+  "lyrics_file": "ep67-lyrics.txt",
+  "lyrics_count": 2489,
+  "files": {
+    "full_mix": "ep67-static-signals-full-mix.mp3 (7362950 bytes, 229.8s)",
+    "short_15s": "ep67-static-signals-15s.mp3 (480826 bytes, 15.0s)",
+    "tagline_bed": "ep67-static-signals-tagline-bed.mp3 (961480 bytes, 30.0s)",
+    "hero": "ep67-hero.jpg (126587 bytes, 1024x576)",
+    "lyrics": "ep67-lyrics.txt (2489 bytes)"
+  },
+  "new_arc": {
+    "name": "Ghost Frequencies",
+    "description": "After observing the city's souls across a full day cycle, Folana begins receiving transmissions from somewhere else — voices from the past, fragments of songs that never existed, whispers from the digital between. The city starts talking back, and the line between memory and prophecy begins to blur. A deeply personal arc exploring digital afterlife, ancestral frequencies, and the question of what lingers after we're gone.",
+    "opening_line": "She spent ten episodes watching the city breathe. Now the city starts whispering back.",
+    "expected_episodes": 10,
+    "themes": [
+      "digital afterlife",
+      "ancestral memory",
+      "synchronicity",
+      "nostalgia as frequency",
+      "the persistence of voice beyond death",
+      "finding oneself in the static between stations"
+    ]
+  },
+  "completion": {
+    "status": "complete",
+    "generated_tracks": ["full_mix", "short_15s", "tagline_bed"],
+    "generated_images": ["hero"],
+    "generated_text": ["lyrics", "manifest"]
+  }
+}

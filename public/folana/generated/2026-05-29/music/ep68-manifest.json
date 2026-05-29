@@ -1,0 +1,37 @@
+{
+  "episode": 68,
+  "title": "Voice in the Static",
+  "arc": "Ghost Frequencies",
+  "arc_position": 2,
+  "arc_total": 10,
+  "date": "2026-05-29",
+  "theme": "After the first night of strange signals, Folana can't stop turning the dial. A voice emerges from the static — achingly familiar, warm, like someone she should know but can't place. It sings verses from songs she's never written, laughs at conversations she hasn't had yet, whispers her name like a promise. The second transmission from the Ghost Frequencies arc: the voice between the stations.",
+  "artist": "Folana Lanez",
+  "generated_by": "mmx music-2.6 (MiniMax via CLI) — full song generation",
+  "generation_time": "2026-05-29T09:29:00Z",
+  "duration_sec": 185.1,
+  "key": "E minor",
+  "tempo": "70 BPM (slow)",
+  "bpm": 70,
+  "genre": "dream pop, ethereal indie folk, ambient",
+  "mood": "haunting, intimate, nostalgic, mysterious, warm, melancholic",
+  "vocals": "warm female, breathy intimate verses soaring to layered harmonies in chorus, British-American hybrid accent, ethereal",
+  "instruments": "acoustic guitar, piano, strings, soft synth pads, gentle percussion, electric guitar with delay reverb",
+  "structure": "Intro-Verse1-PreChorus-Chorus-Verse2-PreChorus-Chorus-Bridge-GuitarSolo-Chorus-Outro",
+  "references": "Cocteau Twins, Lana Del Rey, Mazzy Star, Beach House",
+  "lyrics_file": "ep68-lyrics.txt",
+  "lyrics_count": 2395,
+  "files": {
+    "full_mix": "ep68-voice-in-the-static-full-mix.mp3 (5933774 bytes, 185.1s)",
+    "short_15s": "ep68-voice-in-the-static-15s.mp3 (361916 bytes, 15.0s)",
+    "tagline_bed": "ep68-voice-in-the-static-tagline-bed.mp3 (721779 bytes, 30.0s)",
+    "hero": "ep68-hero.jpg (121475 bytes, 1024x576)",
+    "lyrics": "ep68-lyrics.txt (2395 bytes)"
+  },
+  "completion": {
+    "status": "complete",
+    "generated_tracks": ["full_mix", "short_15s", "tagline_bed"],
+    "generated_images": ["hero"],
+    "generated_text": ["lyrics", "manifest"]
+  }
+}
