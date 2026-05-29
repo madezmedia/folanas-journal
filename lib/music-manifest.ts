@@ -316,6 +316,32 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep59', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-29'],
     isRealProduction: true,
   },
+  // EP60 — FIRST LIGHT (2026-05-29) — City Souls Arc (4/?)
+  {
+    id: 'first-light-ep60',
+    title: 'FIRST LIGHT',
+    subtitle: 'EP60 • MINIMAX MUSIC-2.6 • CITY SOULS ARC (4/?)',
+    description: 'The city breathes its first amber breath at 4:30 AM. Bakers light their ovens, newspaper trucks rumble through sleeping streets, and the night waitress hands her apron to the morning crew. Folana watches from a diner window as the world softens into gold — a duet between the last star and the first bird. Acoustic fingerpicked guitars, warm piano, gentle strings, and the quiet beauty of a city waking up.',
+    audioSrc: '/folana/generated/2026-05-29/music/folana_ep60_first_light.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/folana_ep60_first_light_hero.jpg',
+    duration: '2:50',
+    mood: 'WARM • HOPEFUL • DAWN',
+    tags: ['ep60', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
+  // EP61 — MORNING COMMUTE (2026-05-29) — City Souls Arc (5/?)
+  {
+    id: 'morning-commute-ep61',
+    title: 'MORNING COMMUTE',
+    subtitle: 'EP61 • MINIMAX MUSIC-2.6 • CITY SOULS ARC (5/?)',
+    description: 'The 8 AM rush hour in the city — subway platforms packed with commuters, coffee shops buzzing with early orders, the energy of a thousand people moving in sync. But also the quiet moments: a woman reading on the train, a busker at the station, the shared glance between strangers. A celebration of the everyday rhythm that makes a city alive. Warm indie folk with gentle fingerpicked acoustic guitar, soft piano, warm bass — Folana finds poetry in the morning crowd.',
+    audioSrc: '/folana/generated/2026-05-29/music/folana_ep61_morning_commute.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/folana_ep61_morning_commute_hero.jpg',
+    duration: '3:10',
+    mood: 'WARM • HOPEFUL • TENDER',
+    tags: ['ep61', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
