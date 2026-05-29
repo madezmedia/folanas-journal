@@ -355,6 +355,32 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep62', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-29'],
     isRealProduction: true,
   },
+  // EP63 — AFTERNOON SHADOWS (2026-05-29) — City Souls Arc (7/?)
+  {
+    id: 'afternoon-shadows-ep63',
+    title: 'AFTERNOON SHADOWS',
+    subtitle: 'EP63 • MINIMAX MUSIC-2.6 • CITY SOULS ARC (7/?)',
+    description: 'The quiet afternoon in the city — 2-3 PM on a slow Tuesday, sunlight through venetian blinds casting striped shadows across wooden floorboards. Folana sits on the fire escape with a cold coffee cup, a ginger cat curled beside her, watching dust particles float in the golden light. A meditation on the nowhere and the everywhere — the center of the day when nothing is rushing. Indie folk/dream pop with fingerpicked acoustic guitar, warm piano, soft strings, gentle percussion, and ethereal female vocals.',
+    audioSrc: '/folana/generated/2026-05-29/music/folana_ep63_afternoon_shadows.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/folana_ep63_afternoon_shadows_hero.jpg',
+    duration: '2:01',
+    mood: 'WARM • CONTEMPLATIVE • TENDER',
+    tags: ['ep63', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
+  // EP64 — GOLDEN EVENING (2026-05-29) — City Souls Arc (8/?)
+  {
+    id: 'golden-evening-ep64',
+    title: 'GOLDEN EVENING',
+    subtitle: 'EP64 • MINIMAX MUSIC-2.6 • CITY SOULS ARC (8/?)',
+    description: '5 PM in Brooklyn on a late spring day — the light turns amber, shadows stretch across the street. A woman waters her window plants, a kid chases a soccer ball, the bodega cat counts change on the step. Folana watches from her stoop as the whole block holds its breath in the golden hour. The slowest, warmest moment of the day — the evening that holds you closer than a promise. Indie folk/dream pop with fingerpicked acoustic guitar, soft piano, gentle strings, warm bass.',
+    audioSrc: '/folana/generated/2026-05-29/music/folana_ep64_golden_evening.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/folana_ep64_golden_evening_hero.jpg',
+    duration: '3:00',
+    mood: 'WARM • GOLDEN • NOSTALGIC',
+    tags: ['ep64', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
