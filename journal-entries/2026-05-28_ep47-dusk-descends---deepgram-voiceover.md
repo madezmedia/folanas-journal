@@ -8,9 +8,9 @@ tags:
   - video
   - pipeline
   - 2026-05-28
-image_url: agents/folana/assets/music/2026-05-28/ep48-hero.jpg
+image_url: /folana/generated/2026-05-28/music/ep48-hero.jpg
 media_urls:
-  - agents/folana/assets/music/2026-05-28/ep47-deepgram-voiceover.mp3
+  - /folana/generated/2026-05-28/music/folana_ep47_dusk_descends.mp3
 type: video-dispatch
 ---
 Dusk Descends

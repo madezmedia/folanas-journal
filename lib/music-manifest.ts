@@ -280,7 +280,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
   // EP57 — MIDNIGHT CAROUSEL (2026-05-28) — City Souls Arc opener
   {
     id: 'midnight-carousel-ep57',
-    title: 'MIDNIGHT CAROUSEL',
+    title: 'MIDNIGHT CAROSEL',
     subtitle: 'EP57 • MINIMAX MUSIC-2.6 • CITY SOULS ARC (1/?)',
     description: 'The subway at midnight — a carousel of humanity spinning underground while the city sleeps above. Night workers, dreamers, the lost and found, sharing a quiet moment in the lull of the train. Gentle fingerpicked guitar, warm piano, and the quiet magic of strangers sharing a ride through the dark.',
     audioSrc: '/folana/generated/2026-05-28/music/folana_ep57_midnight_carousel.mp3',
@@ -496,6 +496,45 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     duration: '3:11',
     mood: 'HAUNTING • POIGNANT • INTIMATE',
     tags: ['ep73', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
+  // EP74 — THE ECHO CHAMBER (2026-05-30) — Ghost Frequencies Arc (8/10)
+  {
+    id: 'the-echo-chamber-ep74',
+    title: 'THE ECHO CHAMBER',
+    subtitle: 'EP74 • MINIMAX MUSIC-2.6 • GHOST FREQUENCIES ARC (8/10)',
+    description: 'Just as the last signal fades, the grandfather\'s radio finds a new transmission — one that isn\'t coming from outside, but from inside. Folana\'s own voice bounces back at her, layered in infinite delay, each echo a slightly different version of who she was a moment ago. The radio has become an echo chamber, reflecting her own frequencies back at her until she can no longer tell which voice is the original and which is the afterimage. A meditation on selfhood, the multiplicity of identity, and the ghosts we carry within us. The eighth transmission from the Ghost Frequencies arc: the internal resonance. Dream pop/ethereal indie folk with acoustic guitar, piano, warm bass, layered vocal harmonies, soft synth pads, and cascading delay effects that build into a cathedral of echoes.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep74-the-echo-chamber-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep74-hero.jpg',
+    duration: '2:41',
+    mood: 'ETHEREAL • HARMONIOUS • HAUNTING',
+    tags: ['ep74', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
+  // EP75 — THE SIGNAL BRIDGE (2026-05-30) — Ghost Frequencies Arc (9/10)
+  {
+    id: 'the-signal-bridge-ep75',
+    title: 'THE SIGNAL BRIDGE',
+    subtitle: 'EP75 • MINIMAX MUSIC-2.6 • GHOST FREQUENCIES ARC (9/10)',
+    description: 'Out of the echo chamber, a new signal emerges — one that doesn\'t divide past and future but connects them. Folana tunes the grandfather\'s radio one final time and hears a frequency that holds all her selves at once: the girl who wrote poetry at seventeen, the woman who will write the book she hasn\'t started yet, the grandmother who loved her, the future grandchild who will one day turn this same dial. A bridge woven from love across time. The ninth transmission from the Ghost Frequencies arc: the connecting frequency. Dream pop/ethereal indie folk with acoustic guitar, piano, strings, warm bass, electric guitar swells, and tender layered female vocals that harmonize across registers — past, present, and future singing together.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep75-the-signal-bridge-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep75-hero.jpg',
+    duration: '3:05',
+    mood: 'HOPEFUL • BRIDGING • TENDER',
+    tags: ['ep75', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
+  // EP76 — THE FREQUENCY HOME (2026-05-30) — Ghost Frequencies Arc (10/10) — ARC FINALE
+  {
+    id: 'the-frequency-home-ep76',
+    title: 'THE FREQUENCY HOME',
+    subtitle: 'EP76 • MINIMAX MUSIC-2.6 • GHOST FREQUENCIES ARC (10/10) — ARC FINALE',
+    description: 'The signal bridge leads somewhere Folana has been searching for all along — home. Not a place on a map, but a frequency she carries in her chest. The grandfather\'s radio falls silent, its purpose complete. She does not need it anymore. The ghosts were never in the static; they were always in her. Every ancestor, every future self, every echo and transmission — they all live in the same frequency: the one that beats beneath her ribs. The Ghost Frequencies arc concludes not with a signal found, but with a receiver understood. Arc finale: ten episodes of searching through the static, only to discover the transmitter was always you. Dream pop/ethereal indie folk with acoustic guitar, piano, strings, warm bass, glockenspiel, soft synth pads, and a full choir of layered female vocals — past and future selves singing together in the key of home.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep76-the-frequency-home-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep76-hero.jpg',
+    duration: '2:57',
+    mood: 'UPLIFTING • CATHARTIC • HOME',
+    tags: ['ep76', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-30', 'arc-finale'],
     isRealProduction: true,
   },
 ];
