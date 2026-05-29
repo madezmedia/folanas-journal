@@ -472,6 +472,32 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep71', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-29'],
     isRealProduction: true,
   },
+  // EP72 — THE PHANTOM FREQUENCY (2026-05-29) — Ghost Frequencies Arc (6/10)
+  {
+    id: 'the-phantom-frequency-ep72',
+    title: 'THE PHANTOM FREQUENCY',
+    subtitle: 'EP72 • MINIMAX MUSIC-2.6 • GHOST FREQUENCIES ARC (6/10)',
+    description: 'The grandfather\'s radio finds a station that\'s been off the air for 40 years. But it\'s still broadcasting — old jazz, old commercials, the voice of a DJ who signed off in 1986 and never stopped talking. Folana realizes the radio doesn\'t just receive ghosts; it receives the spaces between memory and forgetting — the broadcasts that never stopped, just waiting for someone to tune back in. The sixth transmission from the Ghost Frequencies arc: the undead station. Dream pop/ethereal indie folk with acoustic guitar, piano, strings, soft synth pads, distant jazz textures, and intimate layered female vocals.',
+    audioSrc: '/folana/generated/2026-05-29/music/ep72-the-phantom-frequency-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/ep72-hero.jpg',
+    duration: '1:49',
+    mood: 'NOSTALGIC • HAUNTING • WARM',
+    tags: ['ep72', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
+  // EP73 — THE FADING TRANSMISSION (2026-05-29) — Ghost Frequencies Arc (7/10)
+  {
+    id: 'the-fading-transmission-ep73',
+    title: 'THE FADING TRANSMISSION',
+    subtitle: 'EP73 • MINIMAX MUSIC-2.6 • GHOST FREQUENCIES ARC (7/10)',
+    description: 'The grandfather\\'s shortwave radio is dying. The batteries are fading, the ghosts are growing quieter. Grandmother\\'s voice dissolves mid-recipe, the future self\\'s final advice fades to static, the phantom DJ plays his last song. Folana desperately tries to hold onto each signal as it slips away, learning the hardest lesson of all: every transmission has its end. A meditation on impermanence, the cost of holding on, and the grace of letting go. The seventh transmission from the Ghost Frequencies arc: the fading signal. Dream pop/ethereal indie folk with acoustic guitar, piano, strings, soft synth pads, electric guitar with delay reverb, and intimate layered female vocals.',
+    audioSrc: '/folana/generated/2026-05-29/music/ep73-the-fading-transmission-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/ep73-hero.jpg',
+    duration: '3:11',
+    mood: 'HAUNTING • POIGNANT • INTIMATE',
+    tags: ['ep73', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
