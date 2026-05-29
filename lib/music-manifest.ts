@@ -381,6 +381,32 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep64', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-29'],
     isRealProduction: true,
   },
+  // EP65 — DUSK DESCENDS (2026-05-29) — City Souls Arc (9/?)
+  {
+    id: 'dusk-descends-ep65',
+    title: 'DUSK DESCENDS',
+    subtitle: 'EP65 • MINIMAX MUSIC-2.6 • CITY SOULS ARC (9/?)',
+    description: 'The purple and orange hour — when the sun melts into the horizon and the city holds its breath between day and night. Folana sits on the fire escape at dusk, the first stars appearing above the Brooklyn skyline, a ginger cat curled beside her. The energy shift as day people come home and night people lace up their boots. The slowest, most beautiful surrender — light giving way to dark over a warm mug of tea. Indie folk/dream pop with fingerpicked acoustic guitar, warm piano, soft strings, gentle percussion, and ethereal female vocals.',
+    audioSrc: '/folana/generated/2026-05-29/music/folana_ep65_dusk_descends.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/folana_ep65_dusk_descends_hero.jpg',
+    duration: '3:30',
+    mood: 'WARM • TWILIGHT • INTROSPECTIVE',
+    tags: ['ep65', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
+  // EP66 — CITY LIGHTS (2026-05-29) — City Souls Arc (10/?)
+  {
+    id: 'city-lights-ep66',
+    title: 'CITY LIGHTS',
+    subtitle: 'EP66 • MINIMAX MUSIC-2.6 • CITY SOULS ARC (10/?)',
+    description: 'Night falls completely, and the city becomes a galaxy of lights. Neon signs reflect on wet midnight streets, high-rise windows glow like stars in vertical canyons, and the city breathes a different rhythm after dark. Folana stands on a rooftop, looking out at the glittering skyline — the quiet thrill of being awake while millions sleep, of belonging to a city that never closes. Indie folk/dream pop with fingerpicked acoustic guitar, warm piano, soft strings, gentle percussion, and ethereal female vocals.',
+    audioSrc: '/folana/generated/2026-05-29/music/folana_ep66_city_lights.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/folana_ep66_city_lights_hero.jpg',
+    duration: '2:50',
+    mood: 'ATMOSPHERIC • NIGHTFALL • TENDER',
+    tags: ['ep66', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
