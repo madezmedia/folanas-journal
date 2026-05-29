@@ -446,6 +446,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep69', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-29'],
     isRealProduction: true,
   },
+  // EP70 — THE FUTURE FREQUENCY (2026-05-29) — Ghost Frequencies Arc (4/10)
+  {
+    id: 'the-future-frequency-ep70',
+    title: 'THE FUTURE FREQUENCY',
+    subtitle: 'EP70 • MINIMAX MUSIC-2.6 • GHOST FREQUENCIES ARC (4/10)',
+    description: 'Folanas grandfather\'s shortwave picks up a signal from ten years ahead — her own voice, worn with experience the younger her hasnt earned yet. A conversation across time: the book on a shelf she hasn\'t written, the lovers name she hasn\'t learned to say, the city she hasn\'t visited. The radio becomes a device not for receiving, but for witnessing — a younger self in dialogue with an older one she hasn\'t become. The fourth transmission from the Ghost Frequencies arc: the future frequency. Dream pop/ethereal indie folk with acoustic guitar, piano, strings, soft synth pads, electric guitar with delay reverb, and tender layered female vocals.',
+    audioSrc: '/folana/generated/2026-05-29/music/ep70-the-future-frequency-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/ep70-hero.jpg',
+    duration: '2:41',
+    mood: 'TENDER • HAUNTING • TIMELESS',
+    tags: ['ep70', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
