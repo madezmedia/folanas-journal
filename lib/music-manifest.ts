@@ -281,12 +281,26 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
   {
     id: 'midnight-carousel-ep57',
     title: 'MIDNIGHT CAROUSEL',
-    subtitle: 'EP57 • MINIMAX MUSIC-2.6 • CITY SOULS ARC (1/?).',
+    subtitle: 'EP57 • MINIMAX MUSIC-2.6 • CITY SOULS ARC (1/?)',
     description: 'The subway at midnight — a carousel of humanity spinning underground while the city sleeps above. Night workers, dreamers, the lost and found, sharing a quiet moment in the lull of the train. Gentle fingerpicked guitar, warm piano, and the quiet magic of strangers sharing a ride through the dark.',
     audioSrc: '/folana/generated/2026-05-28/music/folana_ep57_midnight_carousel.mp3',
+    posterSrc: '/folana/generated/2026-05-28/music/folana_ep57_midnight_carousel_hero.jpg',
     duration: '3:01',
     mood: 'TENDER • ATMOSPHERIC',
     tags: ['ep57', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-28', 'arc-opener'],
+    isRealProduction: true,
+  },
+  // EP58 — STREET LAMPS & SHADOWS (2026-05-28) — City Souls Arc (2/?)
+  {
+    id: 'street-lamps-and-shadows-ep58',
+    title: 'STREET LAMPS & SHADOWS',
+    subtitle: 'EP58 • MINIMAX MUSIC-2.6 • CITY SOULS ARC (2/?)',
+    description: 'Walking alone under amber street lamps on wet pavement at midnight — the quiet intimacy of being awake while the city sleeps around you. Footsteps echo between sleeping buildings, each pool of light a small stage in the dark. Acoustic fingerpicked guitar, soft piano, and the stillness of a world holding its breath until dawn.',
+    audioSrc: '/folana/generated/2026-05-28/music/folana_ep58_street_lamps_and_shadows.mp3',
+    posterSrc: '/folana/generated/2026-05-28/music/folana_ep58_street_lamps_and_shadows_hero.jpg',
+    duration: '2:42',
+    mood: 'ATMOSPHERIC • INTROSPECTIVE',
+    tags: ['ep58', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-28'],
     isRealProduction: true,
   },
 ];
