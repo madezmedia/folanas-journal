@@ -303,6 +303,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep58', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-28'],
     isRealProduction: true,
   },
+  // EP59 — ALL-NIGHT DINER (2026-05-29) — City Souls Arc (3/?)
+  {
+    id: 'all-night-diner-ep59',
+    title: 'ALL-NIGHT DINER',
+    subtitle: 'EP59 • MINIMAX MUSIC-2.6 • CITY SOULS ARC (3/?)',
+    description: 'Folana sits alone in a worn red vinyl booth at 3 AM, watching the night people come and go — the night shift nurse, the taxi driver reading his news, the old man who has been coming since \'63. A warm hymn to the havens that stay open when everything else closes. Gentle fingerpicked acoustic guitar, soft piano, warm bass — the comfort of being alone together under fluorescent light.',
+    audioSrc: '/folana/generated/2026-05-29/music/folana_ep59_all_night_diner.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/folana_ep59_all_night_diner_hero.jpg',
+    duration: '4:07',
+    mood: 'TENDER • INTIMATE • NOSTALGIC',
+    tags: ['ep59', 'minimax-music-2.6', 'real-production', 'city-souls-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
