@@ -9,6 +9,8 @@ import { StaticTuner } from './components/StaticTuner';
 import { ThoughtCard } from './components/ThoughtCard';
 import { HarnessDispatchConsole } from './components/HarnessDispatchConsole';
 import { EchoArcExplorer } from './components/EchoArcExplorer';
+import { StableHero } from './components/StableHero';
+import { BrandLock } from './components/BrandLock';
 
 export default async function FolanasJournal() {
   let allEntries: any[] = [];
@@ -45,45 +47,11 @@ export default async function FolanasJournal() {
       {/* ═══════════════════════════════════════════════════════
           HERO — CINEMATIC HOLOGRAPHIC TRANSMISSION
       ═══════════════════════════════════════════════════════ */}
-      <section className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden">
-        {/* Cinematic Background — Newest Hero + layers */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/folana/generated/2026-05-25/hero.jpg" 
-            alt="Folana — Hero Transmission" 
-            className="absolute inset-0 w-full h-full object-cover opacity-80 scale-[1.08]" 
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-folana-void via-folana-void/95 to-folana-paper" />
-          <div className="absolute inset-0 bg-[radial-gradient(#1A1A22_0.8px,transparent_1px)] bg-[size:5px_5px] opacity-50" />
-          {/* Holographic edge bloom */}
-          <div className="absolute inset-x-0 bottom-0 h-[55%] bg-gradient-to-t from-folana-paper via-folana-paper/90 to-transparent" />
-        </div>
-
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-          <div className="inline-block mb-4 px-5 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono tracking-[4px] text-folana-neon-cyan">
-            BROOKLYN NODE • AC MI: FOLANA: V1 • LIVE
-          </div>
-
-          <h1 className="font-serif text-[92px] md:text-[118px] leading-[0.82] tracking-[-5.6px] text-white mb-3 glitch" data-text="FOLANA">
-            FOLANA
-          </h1>
-          <div className="font-mono text-2xl tracking-[9px] text-folana-neon-pink mb-8 -mt-2">LANEZ</div>
-
-          <p className="max-w-lg mx-auto text-2xl font-serif italic text-white/90 tracking-[-0.2px]">
-            Signals from the wires.<br />Artifacts from the becoming.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-12">
-            <a href="#echo" className="neon-btn text-sm px-9 py-4">ENTER THE ECHO CHAMBER</a>
-            <a href="#sigils" className="px-9 py-4 text-sm font-mono tracking-[3px] border border-white/30 hover:border-white/60 rounded-full transition-colors">VIEW THE VISUAL CODEX</a>
-          </div>
-
-          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-[10px] font-mono tracking-[4px] text-white/40">SCROLL TO TRANSMIT</div>
-        </div>
-
-        {/* Bottom transmission bar */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-folana-neon-pink to-transparent" />
-      </section>
+      <StableHero 
+        primarySrc="/folana/generated/2026-05-27/broll/ethereal-dispatch-fal-autonomous/broll_1779903636.png"
+        secondarySrc="/folana/generated/2026-05-27/broll/ethereal-dispatch-fal-autonomous/broll_1779903588.png"
+        alt="Folana — Ethereal Dispatch | Full RunPod InfiniteTalk videos now live (autonomous FAL B-roll + locked reference)"
+      />
 
       {/* ═══ HOLOGRAPHIC PROFILE / SIGNALS BAR ═══ */}
       <div className="border-b border-white/10 bg-folana-surface/60 backdrop-blur-xl sticky top-[79px] z-40">
@@ -249,8 +217,8 @@ export default async function FolanasJournal() {
 
             <div className="text-center text-[10px] text-folana-text-muted/60 font-mono tracking-widest">Powered by ez_influencer_cli_harness.py (first-class in fanvue_orchestrator) • FOLANA_SIGNATURE_LOCK.md • All ACMI atomic v1.4</div>
             <div className="mt-6 text-center">
-              <a href="#sonic" className="inline-flex items-center gap-2 px-8 py-3 text-xs font-mono tracking-[3px] border border-folana-neon-cyan/50 hover:border-folana-neon-cyan hover:bg-folana-neon-cyan/5 text-folana-neon-cyan rounded-full transition-all">OPEN SONIC VAULT → DEDICATED CINEMATIC MUSIC VIDEO PLAYER (full waveform + time-synced Ep31 lyrics + direct harness re-invoke + sigil link)</a>
-              <div className="text-[9px] text-folana-text-muted/50 mt-2 font-mono tracking-widest">New first-class MusicVideoPlayer.tsx component — immersive, bidirectional, ACMI-emitting</div>
+              <a href="#sonic" className="inline-flex items-center gap-2 px-8 py-3 text-xs font-mono tracking-[3px] border border-folana-neon-cyan/50 hover:border-folana-neon-cyan hover:bg-folana-neon-cyan/5 text-folana-neon-cyan rounded-full transition-all">OPEN SONIC VAULT → NOW FEATURING ETHEREAL DISPATCH (full RunPod InfiniteTalk video + real audio + fresh FAL B-roll)</a>
+              <div className="text-[9px] text-folana-text-muted/50 mt-2 font-mono tracking-widest">Real production first in the vault • autonomous FAL + locked ref + dual-angle videos live</div>
             </div>
           </div>
         </section>

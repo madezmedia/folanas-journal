@@ -4,21 +4,37 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, X, Volume2, VolumeX, Maximize2, Film } from 'lucide-react';
 import { MusicVideoPlayer } from './MusicVideoPlayer';
+import { REAL_PRODUCTIONS, VISUAL_PROTOTYPES } from '@/lib/music-manifest'; // New manifest from dev subagent plan
 
 interface Track {
   id: string;
   title: string;
   subtitle: string;
   description: string;
-  videoSrc: string;
+  videoSrc?: string;           // Real video when available (e.g. Dispatch 001)
+  audioSrc?: string;           // Real audio (mp3) when available
   posterSrc?: string;
   duration: string;
   mood: string;
   tags: string[];
+  isPrototype?: boolean;       // Mark visual references / early pipeline tests
   timedLyrics?: Array<{ time: number; text: string; verse?: string }>;
 }
 
 const TRACKS: Track[] = [
+  // === REAL PRODUCTION: ETHEREAL DISPATCH (autonomous FAL B-roll + full RunPod InfiniteTalk videos, May 27 pipeline) ===
+  {
+    id: 'ethereal-dispatch',
+    title: 'ETHEREAL DISPATCH',
+    subtitle: 'AMBIENT • FULL PIPELINE PRODUCTION',
+    description: 'Dreamy atmospheric transmission on a rainy Brooklyn rooftop at blue hour. Real mmx audio + two full InfiniteTalk performances from the best autonomous FAL B-roll (locked full-body reference verified). The wires breathing between the heavier dispatches.',
+    videoSrc: '/folana/generated/2026-05-27/videos/ethereal-dispatch-fal-front.mp4',
+    audioSrc: '/folana/generated/2026-05-27/music/folana_ethereal_dispatch.mp3',
+    posterSrc: '/folana/generated/2026-05-27/broll/ethereal-dispatch-fal-autonomous/broll_1779903636.png',
+    duration: '—',
+    mood: 'ETHEREAL',
+    tags: ['ambient', 'real-production', 'fal-autonomous', 'runpod-infinitetalk', 'locked-ref', '2026-05-27']
+  },
   {
     id: 'mirror-transmission',
     title: 'MIRROR IN THE STATIC',
@@ -204,13 +220,14 @@ const TRACKS: Track[] = [
   {
     id: 'fracture-dispatch-001',
     title: 'FRACTURE DISPATCH 001 — THE SIGNAL SINGS BACK',
-    subtitle: 'DISPATCH • RUNPOD INFINITETALK + LOCKED SIGS',
-    description: 'The grid answered. Violet rain on the rooftop, lace dissolving into data. The signal chose the glitch and the glitch chose her back. New vocal textures via mmx music + full InfiniteTalk lip-sync visual. Wires remember everything.',
+    subtitle: 'DISPATCH • REAL PRODUCTION (mmx + RunPod InfiniteTalk)',
+    description: 'The grid answered. Violet rain on the rooftop, lace dissolving into data. The signal chose the glitch and the glitch chose her back. Real mmx music + full InfiniteTalk lip-sync video. This is the first complete produced track with actual audio and synced visual.',
     videoSrc: '/folana/generated/2026-05-27/fracture_dispatch_001_music_video.mp4',
+    audioSrc: '/folana/generated/2026-05-27/fracture_dispatch_001_signal_sings_back.mp3',
     posterSrc: '/folana/generated/2026-05-27/fracture_dispatch_hero_01.jpg',
     duration: '2:48',
     mood: 'FRACTURE',
-    tags: ['dispatch-001', 'signal-sings-back', 'runpod-infinitetalk', 'locked', 'echoes-arc', 'new-2026-05'],
+    tags: ['dispatch-001', 'signal-sings-back', 'real-production', 'runpod-infinitetalk', 'mmx-music', 'locked', 'echoes-arc'],
     timedLyrics: [
       { time: 0, text: "The wires remember every static kiss", verse: "VERSE" },
       { time: 8, text: "Brooklyn loft, vinyl hiss, frequencies twist", verse: "" },
@@ -464,7 +481,9 @@ export function SonicVault() {
       let amp = Math.sin(phase) * 0.6 + Math.sin(phase * 1.7) * 0.4 + 0.6;
       if (glitchMode || vizIntensity !== 'normal') {
         const mult = vizIntensity === 'fracture' ? 1.8 : 1.1;
-        amp = Math.pow(amp, 0.55) * (0.6 + Math.random() * 0.95 * mult);
+        // Deterministic pseudo-random for stable glitch/fracture viz (fixes React purity lint)
+        const pseudo = Math.sin(time * 9.7 + i * 0.9) * 0.5 + 0.5;
+        amp = Math.pow(amp, 0.55) * (0.6 + pseudo * 0.95 * mult);
       }
 
       const barHeight = h * 0.18 + amp * (h * 0.55) * (isPlaying ? 1 : 0.3);
@@ -564,44 +583,108 @@ export function SonicVault() {
         </div>
       </div>
 
-      {/* Track Grid — Holographic Cards */}
-      <div className="grid md:grid-cols-3 gap-5">
-        {TRACKS.map((track, idx) => (
+      {/* === REAL PRODUCTIONS (the only actual finished music + video right now) === */}
+      <div className="mb-8">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-pink">REAL PRODUCTIONS</div>
+          <div className="h-px flex-1 bg-gradient-to-r from-folana-neon-pink/40 to-transparent" />
+        </div>
+
+        {(() => {
+          const realTrack = REAL_PRODUCTIONS[0]; // Sourced from new music-manifest (dev subagent plan)
+          return realTrack ? (
+            <div className="space-y-4">
+              <motion.button
+                onClick={() => openPlayer(realTrack)}
+                whileHover={{ y: -4 }}
+                className="group w-full holo-frame rounded-3xl overflow-hidden text-left bg-folana-surface block border border-folana-neon-pink/30 hover:border-folana-neon-pink/70 transition-all"
+              >
+                <div className="grid md:grid-cols-5 gap-0">
+                  <div className="md:col-span-2 relative aspect-video md:aspect-auto bg-black">
+                    <img 
+                      src={realTrack.posterSrc} 
+                      alt={realTrack.title} 
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+                    <div className="absolute bottom-4 left-4 px-4 py-1 rounded-full bg-black/70 text-xs font-mono tracking-widest text-folana-neon-pink border border-folana-neon-pink/50">
+                      REAL AUDIO + VIDEO
+                    </div>
+                  </div>
+                  <div className="md:col-span-3 p-8 space-y-4">
+                    <div>
+                      <div className="font-serif text-4xl tracking-[-1px] text-folana-ink group-hover:text-folana-neon-pink transition-colors">{realTrack.title}</div>
+                      <div className="font-mono text-sm tracking-[2px] text-folana-text-muted mt-1">{realTrack.subtitle} • {realTrack.duration}</div>
+                    </div>
+                    <p className="text-base leading-snug text-folana-text-secondary/95 font-serif italic max-w-prose">{realTrack.description}</p>
+                    <div className="pt-2">
+                      <div className="inline-flex items-center gap-2 text-xs font-mono tracking-[2px] text-folana-neon-cyan group-hover:text-white transition-colors">
+                        WATCH THE FULL VIDEO → <Play className="w-3 h-3" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.button>
+
+              {/* Dedicated Real Audio Player for Dispatch 001 */}
+              <div className="bg-folana-surface/80 border border-white/10 rounded-2xl p-5 flex flex-col md:flex-row items-center gap-4">
+                <div className="flex-1">
+                  <div className="font-mono text-[10px] tracking-[2px] text-folana-neon-cyan mb-1">LISTEN TO THE FULL TRACK</div>
+                  <div className="font-serif text-xl text-folana-ink">Fracture Dispatch 001 — The Signal Sings Back</div>
+                </div>
+                <audio 
+                  controls 
+                  className="w-full md:w-80 accent-folana-neon-pink"
+                  src="/folana/generated/2026-05-27/fracture_dispatch_001_signal_sings_back.mp3"
+                >
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+          ) : null;
+        })()}
+      </div>
+
+      {/* === VISUAL PROTOTYPES & EARLY PIPELINE WORK === */}
+      <div className="mb-4">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="font-mono text-[10px] tracking-[3px] text-folana-text-muted">VISUAL PROTOTYPES • EARLY PIPELINE</div>
+          <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
+        </div>
+        <p className="text-sm text-folana-text-secondary/80 mb-6 max-w-2xl">
+          High-quality visual references and early music video language experiments from the development of the pipeline. 
+          These are not full audio productions — the first complete real track is <span className="text-folana-neon-pink">Fracture Dispatch 001</span> above.
+        </p>
+      </div>
+
+      {/* Visual Prototypes Grid — Beautiful posters, no fake video */}
+      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-5">
+        {TRACKS.filter(t => t.id !== 'fracture-dispatch-001').map((track) => (
           <motion.button
             key={track.id}
             onClick={() => openPlayer(track)}
             whileHover={{ y: -3 }}
-            className="group holo-frame rounded-3xl overflow-hidden text-left bg-folana-surface block focus:outline-none focus-visible:ring-1 focus-visible:ring-folana-neon-pink"
+            className="group holo-frame rounded-3xl overflow-hidden text-left bg-folana-surface block focus:outline-none focus-visible:ring-1 focus-visible:ring-white/30"
           >
             <div className="relative aspect-[16/9] bg-black">
               <img 
                 src={track.posterSrc} 
                 alt={track.title} 
-                className="absolute inset-0 w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-700 scale-[1.01] group-hover:scale-100" 
+                className="absolute inset-0 w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700 scale-[1.01] group-hover:scale-100" 
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/70 to-black/90" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black/95" />
               
-              {/* Play indicator */}
-              <div className="absolute bottom-4 right-4 w-11 h-11 rounded-full border border-white/70 bg-black/50 flex items-center justify-center group-hover:bg-folana-neon-pink group-hover:border-folana-neon-pink transition-all">
-                <Play className="w-4 h-4 ml-0.5 text-white" fill="currentColor" />
-              </div>
-
-              <div className="absolute top-4 left-4 px-3 py-px text-[10px] font-mono tracking-[2px] bg-black/60 text-folana-neon-cyan border border-white/10 rounded">
-                {track.mood}
+              <div className="absolute top-4 left-4 px-3 py-px text-[10px] font-mono tracking-[2px] bg-black/70 text-white/80 border border-white/10 rounded">
+                VISUAL REFERENCE
               </div>
             </div>
 
-            <div className="p-6 space-y-3">
+            <div className="p-5 space-y-2.5">
               <div>
-                <div className="font-serif text-2xl tracking-[-0.6px] text-folana-ink group-hover:text-folana-neon-pink transition-colors">{track.title}</div>
-                <div className="font-mono text-xs tracking-[2px] text-folana-text-muted">{track.subtitle} • {track.duration}</div>
+                <div className="font-serif text-xl tracking-[-0.4px] text-folana-ink group-hover:text-white transition-colors line-clamp-1">{track.title}</div>
+                <div className="font-mono text-[10px] tracking-[1.5px] text-folana-text-muted">{track.subtitle} • {track.duration}</div>
               </div>
-              <p className="text-sm leading-snug text-folana-text-secondary/90 line-clamp-3 font-serif italic">{track.description}</p>
-              <div className="flex flex-wrap gap-1.5 pt-1">
-                {track.tags.map(t => (
-                  <span key={t} className="px-2 py-px text-[10px] border border-white/10 rounded text-folana-grunge-lace/90 font-mono tracking-widest">{t}</span>
-                ))}
-              </div>
+              <p className="text-xs leading-snug text-folana-text-secondary/80 line-clamp-2 font-serif italic">{track.description}</p>
             </div>
           </motion.button>
         ))}
@@ -627,13 +710,38 @@ export function SonicVault() {
               <div className="video-holo-container holo-frame rounded-[22px] overflow-hidden border border-white/10">
                 {/* Video + Visualizer Stack */}
                 <div className="relative bg-black">
-                  <video
-                    ref={videoRef}
-                    src={selectedTrack.videoSrc}
-                    poster={selectedTrack.posterSrc}
-                    className={`w-full max-h-[62vh] object-contain bg-black transition-all duration-300 ${glitchMode ? 'contrast-[1.25] saturate-[1.35] hue-rotate-[12deg]' : ''}`}
-                    playsInline
-                  />
+                  {selectedTrack.videoSrc && !selectedTrack.videoSrc.includes('folana_animation_test.mp4') ? (
+                    // Real production video (e.g. Dispatch 001)
+                    <video
+                      ref={videoRef}
+                      src={selectedTrack.videoSrc}
+                      poster={selectedTrack.posterSrc}
+                      className={`w-full max-h-[62vh] object-contain bg-black transition-all duration-300 ${glitchMode ? 'contrast-[1.25] saturate-[1.35] hue-rotate-[12deg]' : ''}`}
+                      playsInline
+                    />
+                  ) : (
+                    // Prototype / Visual Reference — do not play the old test video
+                    <div className="relative w-full max-h-[62vh] bg-black flex items-center justify-center overflow-hidden">
+                      {selectedTrack.posterSrc && (
+                        <img 
+                          src={selectedTrack.posterSrc} 
+                          alt={selectedTrack.title}
+                          className="max-h-[58vh] object-contain opacity-90" 
+                        />
+                      )}
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <div className="text-center px-6">
+                          <div className="inline-block mb-3 px-4 py-1 rounded-full border border-white/30 text-[10px] font-mono tracking-[3px] text-white/70">
+                            VISUAL REFERENCE — EARLY PIPELINE PROTOTYPE
+                          </div>
+                          <div className="text-white/90 text-sm max-w-md">
+                            This piece was generated during early pipeline development. 
+                            The first complete produced track with real audio + video is <span className="text-folana-neon-pink">Fracture Dispatch 001</span>.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Live Visualizer Canvas Overlay */}
                   {showVisualizer && (

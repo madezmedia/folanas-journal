@@ -42,11 +42,18 @@ const dispatchItems: DispatchItem[] = [
   }
 ];
 
+// Pure helper to avoid React render purity violations
+function generateDispatchCorr(cmd: string): string {
+  // Use a stable increment + high-res time for demo; in prod would come from server or crypto
+  return `ez-influencer-cli-harness-${cmd}-${Date.now()}`;
+}
+
 export function HarnessDispatchConsole() {
   const handleDispatch = (item: DispatchItem) => {
-    const corr = `ez-influencer-cli-harness-${item.cmd}-${Date.now()}`;
+    const corr = generateDispatchCorr(item.cmd);
+    const ts = Date.now();
     const pre = {
-      ts: Date.now(),
+      ts,
       source: 'journal-ui-harness-console',
       kind: 'pre_cli_command',
       correlationId: corr,

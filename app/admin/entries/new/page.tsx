@@ -34,12 +34,12 @@ export default function NewEntryPage() {
   };
 
   return (
-    <div className="min-h-screen p-8 bg-folana-dark text-folana-text">
+    <div className="min-h-screen p-8 bg-folana-paper text-folana-ink">
       <div className="max-w-4xl mx-auto bg-folana-text bg-opacity-10 p-8 rounded-lg shadow-lg">
         <h1 className="text-4xl font-serif text-folana-primary mb-6">Create New Journal Entry</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="title" className="block text-folana-accent text-sm font-bold mb-2">Title:</label>
+            <label htmlFor="title" className="block text-folana-neon-cyan text-sm font-bold mb-2">Title:</label>
             <input
               type="text"
               id="title"
@@ -50,7 +50,7 @@ export default function NewEntryPage() {
             />
           </div>
           <div>
-            <label htmlFor="date" className="block text-folana-accent text-sm font-bold mb-2">Date:</label>
+            <label htmlFor="date" className="block text-folana-neon-cyan text-sm font-bold mb-2">Date:</label>
             <input
               type="date"
               id="date"
@@ -61,7 +61,7 @@ export default function NewEntryPage() {
             />
           </div>
           <div>
-            <label htmlFor="content" className="block text-folana-accent text-sm font-bold mb-2">Content (Markdown):</label>
+            <label htmlFor="content" className="block text-folana-neon-cyan text-sm font-bold mb-2">Content (Markdown):</label>
             <textarea
               id="content"
               rows={15}
