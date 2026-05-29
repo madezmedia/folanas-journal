@@ -433,6 +433,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep68', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-29'],
     isRealProduction: true,
   },
+  // EP69 — ANCESTRAL FREQUENCY (2026-05-29) — Ghost Frequencies Arc (3/10)
+  {
+    id: 'ancestral-frequency-ep69',
+    title: 'ANCESTRAL FREQUENCY',
+    subtitle: 'EP69 • MINIMAX MUSIC-2.6 • GHOST FREQUENCIES ARC (3/10)',
+    description: 'The voice from the static reveals itself as Folanas grandmother — or something that wears her voice perfectly, like a favorite coat from the back of a closet. It speaks of childhood memories only Folana knows, whispers recipes only her grandmother made, laughs at moments from a life Folana never lived alongside her. The radio becomes a time machine. A deeply intimate, tender episode about ancestral memory, the persistence of voice beyond death, and the love that outlasts the body. The third transmission from the Ghost Frequencies arc: the grandmothers signal. Dream pop/ethereal indie folk with acoustic guitar, piano, strings, warm bass, soft synth pads, and tender layered female vocals.',
+    audioSrc: '/folana/generated/2026-05-29/music/folana_ep69_ancestral_frequency.mp3',
+    posterSrc: '/folana/generated/2026-05-29/music/folana_ep69_ancestral_frequency_hero.jpg',
+    duration: '2:15',
+    mood: 'TENDER • NOSTALGIC • INTIMATE',
+    tags: ['ep69', 'minimax-music-2.6', 'real-production', 'ghost-frequencies-arc', '2026-05-29'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)

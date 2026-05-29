@@ -29,7 +29,7 @@ const tiers = [
     features: ['Everything in Inner Circle', 'Full production files & stems', 'All prompts & generation parameters', 'Monthly masterclass walkthrough', '1-on-1 feedback session/quarter'],
     cta: 'Join Waitlist',
     popular: false,
-    href: '#',
+    href: '/waitlist?tier=codex',
     waitlist: true,
   },
   {
@@ -40,7 +40,7 @@ const tiers = [
     features: ['Everything in Codex', 'Custom AI workflow templates', 'Fleet tool access', 'Monthly group coaching call', 'Priority feature requests'],
     cta: 'Join Waitlist',
     popular: false,
-    href: '#',
+    href: '/waitlist?tier=engine',
     waitlist: true,
   },
   {
@@ -51,7 +51,7 @@ const tiers = [
     features: ['Everything in Engine', 'Co-creation sessions', 'Custom branded sonic identity', 'Dedicated agent time allocation', 'Direct line to the creative team'],
     cta: 'Join Waitlist',
     popular: false,
-    href: '#',
+    href: '/waitlist?tier=atelier',
     waitlist: true,
   },
 ];
