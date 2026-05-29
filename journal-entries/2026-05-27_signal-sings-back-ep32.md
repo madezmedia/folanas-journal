@@ -4,9 +4,9 @@ timestamp: '2026-05-27T07:30:00Z'
 type: 'Milestone'
 tags: ['ep32', 'signal-sings-back', 'echoes-in-the-static', 'overnight-pipeline', 'audio-generated']
 audio_urls:
-  - /overnight/folana-ep32-intro-mix.mp3
-  - /overnight/folana-ep32-ambient.mp3
-  - /overnight/folana-ep32-15s.mp3
+  - /folana/generated/2026-05-27/music/folana-ep32-intro-mix.mp3
+  - /folana/generated/2026-05-27/music/folana-ep32-ambient.mp3
+  - /folana/generated/2026-05-27/music/folana-ep32-15s.mp3
 ---
 
 The signal sings back.
