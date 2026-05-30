@@ -706,6 +706,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep89', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
     isRealProduction: true,
   },
+  // EP90 — THE LISTENING PARTY (2026-05-30) — Inner Circle Arc (4/?)
+  {
+    id: 'the-listening-party-ep90',
+    title: 'THE LISTENING PARTY',
+    subtitle: 'EP90 • MINIMAX MUSIC-2.6 • INNER CIRCLE ARC (4/?)',
+    description: 'The first exclusive Inner Circle listening party. Folana gathers the community around the record player for a private listening session — warm analog crackle, fairy light glow, the quiet intimacy of friends sharing music together in a cozy room late at night. Dream pop/ethereal indie folk instrumental with fingerpicked acoustic guitar, soft warm piano, warm bass, subtle gentle percussion, and ethereal synth pads. A hearth song for the circle that gathers in the dark.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep90-the-listening-party-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep90-the-listening-party-hero.jpg',
+    duration: '2:15',
+    mood: 'INTIMATE • COZY • WARM • NOSTALGIC • COMMUNITY',
+    tags: ['ep90', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
