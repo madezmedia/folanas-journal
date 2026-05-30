@@ -20,8 +20,8 @@ const DEFAULT_PROFILE: ProfileSignals = {
   id: 'folana',
   display_name: 'Folana',
   handle: '@folana_music',
-  avatar_url: 'https://postiz-u70402.vm.elestio.app/uploads/2026/04/24/338be49529109b88963192943e612086c.jpg',
-  hero_image_url: 'https://postiz-u70402.vm.elestio.app/uploads/2026/04/24/338be49529109b88963192943e612086c.jpg',
+  avatar_url: '/images/folana-avatar.jpg', // TODO: replace with generated asset URL (old Postiz VM expired Apr 23)
+  hero_image_url: '/images/folana-hero.jpg', // TODO: replace with generated asset URL (old Postiz VM expired Apr 23)
   reach_label: '4.5M',
   influence_label: '+32%',
   synthetic_resonance: 88,

@@ -1,0 +1,83 @@
+{
+  "kind": "neutral-assets-manifest-validation",
+  "ts": 1779901737266,
+  "iso": "2026-05-27T17:08:57.266Z",
+  "kitPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/brand-kit-neutral.json",
+  "assetCount": 8,
+  "missingCount": 0,
+  "missing": [],
+  "assets": [
+    {
+      "assetGroup": "avatar",
+      "assetKey": "svg",
+      "relPath": "agents/folana/visual-brand/svg/neutral-avatar.svg",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/neutral-avatar.svg",
+      "exists": true,
+      "sizeBytes": 2748,
+      "sha256": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2"
+    },
+    {
+      "assetGroup": "avatar",
+      "assetKey": "png",
+      "relPath": "agents/folana/visual-brand/png/neutral-avatar.png",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/neutral-avatar.png",
+      "exists": true,
+      "sizeBytes": 125068,
+      "sha256": "3a58962221f8170400131a6dfb538bdf1c1223f7dcd3e28b6383919422b61935"
+    },
+    {
+      "assetGroup": "wordmark",
+      "assetKey": "svg",
+      "relPath": "agents/folana/visual-brand/svg/wordmark.svg",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/wordmark.svg",
+      "exists": true,
+      "sizeBytes": 741,
+      "sha256": "f12f5d9ecd57ba77fbb5f65bee726823d8b68b7bcb1d07676103a561c7983686"
+    },
+    {
+      "assetGroup": "wordmark",
+      "assetKey": "png",
+      "relPath": "agents/folana/visual-brand/png/wordmark.png",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/wordmark.png",
+      "exists": true,
+      "sizeBytes": 6621,
+      "sha256": "1c1afd4f3a2fdc9ceaae5a9e47c04e5cf4d63b915d0739df54e63120a68ff8ae"
+    },
+    {
+      "assetGroup": "glyph",
+      "assetKey": "svg",
+      "relPath": "agents/folana/visual-brand/svg/glyph.svg",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/glyph.svg",
+      "exists": true,
+      "sizeBytes": 365,
+      "sha256": "8ee5ff4ce296201df556d891e273906e5e382749d2d4a829e00d6141d324c64a"
+    },
+    {
+      "assetGroup": "glyph",
+      "assetKey": "png",
+      "relPath": "agents/folana/visual-brand/png/glyph.png",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/glyph.png",
+      "exists": true,
+      "sizeBytes": 5138,
+      "sha256": "5e0370c25fd56aecf63a65a1cf85dd905faffe5fdc2cc99ca88c60f879dbd1c1"
+    },
+    {
+      "assetGroup": "ogCard",
+      "assetKey": "svg",
+      "relPath": "agents/folana/visual-brand/svg/og-card-neutral.svg",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/og-card-neutral.svg",
+      "exists": true,
+      "sizeBytes": 2050,
+      "sha256": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8"
+    },
+    {
+      "assetGroup": "ogCard",
+      "assetKey": "png",
+      "relPath": "agents/folana/visual-brand/png/og-card-neutral.png",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/og-card-neutral.png",
+      "exists": true,
+      "sizeBytes": 3362,
+      "sha256": "5a17740102c8950bf5d25527d477efcfe482237f1bafdd2281a2bce1b311139f"
+    }
+  ]
+}

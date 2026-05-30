@@ -177,7 +177,9 @@ export function MusicVideoPlayer({ track, onClose, onSigilLink, onHarnessReinvok
       let amp = Math.sin(phase) * 0.65 + Math.sin(phase * 1.9) * 0.38 + 0.55;
       if (glitchMode || vizIntensity !== 'normal') {
         const mult = vizIntensity === 'fracture' ? 2.1 : 1.25;
-        amp = Math.pow(amp, 0.5) * (0.55 + Math.random() * 1.05 * mult);
+        // Deterministic "random" for glitch intensity (avoids React purity lint + stable frames)
+        const pseudo = Math.sin(time * 12.3 + i * 0.7) * 0.5 + 0.5;
+        amp = Math.pow(amp, 0.5) * (0.55 + pseudo * 1.05 * mult);
       }
 
       const barHeight = h * 0.14 + amp * (h * 0.62) * (isPlaying ? 1.05 : 0.28);

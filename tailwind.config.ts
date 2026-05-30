@@ -9,17 +9,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Neutral baseline — dark mode (§1.2 compliant)
-        'folana-primary': '#1A1A2E',
+        // Neutral baseline — dark mode (§1.2 compliant) + CYBERPUNK/DARK FAIRY GRUNGE/NEON HOLO SKIN
+        'folana-void': '#050507',
+        'folana-paper': '#08080C',
+        'folana-surface': '#111117',
+        'folana-surface-elevated': '#1A1A22',
+        'folana-primary': '#1A1625',
         'folana-secondary': '#16213E',
-        'folana-surface': '#0F0F0F',
-        'folana-surface-elevated': '#1E1E1E',
-        'folana-text': '#F5F5F5',
-        'folana-text-secondary': '#A0A0A0',
-        'folana-text-muted': '#666666',
-        'folana-border': '#2A2A2A',
-        'folana-accent': '#E0E0E0',
+        'folana-border': '#2A2A38',
+        'folana-accent': '#C8C8D8',
+        'folana-ink': '#F4F4F8',
+        'folana-static': '#A8A8B8',
+        'folana-text': '#F8F8FC',
+        'folana-text-secondary': '#A8A8C0',
+        'folana-text-muted': '#666680',
         'folana-glass': 'rgba(255, 255, 255, 0.03)',
+
+        // Neon Holographic Signature (locked visual signature skin)
+        'folana-neon-pink': '#FF1F9A',
+        'folana-neon-cyan': '#00E5FF',
+        'folana-neon-magenta': '#D946EF',
+        'folana-holo-gold': '#E8B923',
+        'folana-grunge-lace': '#C8A0A8',
+
         // Semantic mood colors — Folana-native
         'folana-mood-positive': '#4ADE80',
         'folana-mood-neutral': '#94A3B8',

@@ -1,0 +1,35 @@
+{
+  "ts": 1779738376776,
+  "agent": "antigravity",
+  "task": "folana-folana-visual-brand-neutral-baseline",
+  "pivotRule": {
+    "activeThemes": [],
+    "activeThemesLength": 0
+  },
+  "assets": {
+    "count": 8,
+    "missing": [
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/svg/neutral-avatar.svg",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/png/neutral-avatar.png",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/svg/wordmark.svg",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/png/wordmark.png",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/svg/glyph.svg",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/png/glyph.png",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/svg/og-card-neutral.svg",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/png/og-card-neutral.png"
+    ]
+  },
+  "evidence": {
+    "brandKitNeutralPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/brand-kit-neutral.json",
+    "checkedAssetPaths": [
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/svg/neutral-avatar.svg",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/png/neutral-avatar.png",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/svg/wordmark.svg",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/png/wordmark.png",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/svg/glyph.svg",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/png/glyph.png",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/svg/og-card-neutral.svg",
+      "/Users/michaelshaw/clawd/agents/folana/visual-brand/folana/visual-brand/png/og-card-neutral.png"
+    ]
+  }
+}

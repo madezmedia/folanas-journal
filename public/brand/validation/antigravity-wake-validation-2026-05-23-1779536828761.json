@@ -1,0 +1,23 @@
+{
+  "ts": 1779536828761,
+  "checks": {
+    "activeThemesIsEmpty": true,
+    "neutralAvatarHasThemeLayer": true,
+    "neutralAvatarHasThemeOverlay": true,
+    "ogCardHasThemeLayer": true
+  },
+  "filesystem": {
+    "missing": []
+  },
+  "sha256": {
+    "agents/folana/visual-brand/svg/neutral-avatar.svg": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2",
+    "agents/folana/visual-brand/svg/og-card-neutral.svg": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8",
+    "agents/folana/visual-brand/svg/wordmark.svg": "f12f5d9ecd57ba77fbb5f65bee726823d8b68b7bcb1d07676103a561c7983686",
+    "agents/folana/visual-brand/svg/glyph.svg": "8ee5ff4ce296201df556d891e273906e5e382749d2d4a829e00d6141d324c64a",
+    "agents/folana/visual-brand/png/neutral-avatar.png": "fbe09441cd963b85f21280b0f7fbc0eb15dc0f6ed204804e9210f5f8538b6fa8",
+    "agents/folana/visual-brand/png/og-card-neutral.png": "5a17740102c8950bf5d25527d477efcfe482237f1bafdd2281a2bce1b311139f",
+    "agents/folana/visual-brand/brand-kit-base.json": "4766ec2f8602a2cdb4b4063757c250f057a08282cc146e383d4eb8b35ccb1d60",
+    "agents/folana/visual-brand/svg/avatar-placeholder.svg": "4897a5c041c6c60001d9c66585a988036fd3b7eca24a5a9ed73cf34549fb74d8"
+  },
+  "overall": true
+}

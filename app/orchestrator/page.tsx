@@ -1,5 +1,7 @@
 import { getAgentTimeline, getLatestThought } from '@/lib/acmi';
 import Link from 'next/link';
+import { Nav } from '../components/Nav';
+import { Footer } from '../components/Footer';
 
 export const dynamic = 'force-dynamic';
 
@@ -8,25 +10,22 @@ export default async function OrchestratorPage() {
   const timeline = await getAgentTimeline('fanvue_orchestrator', 15);
 
   return (
-    <main className="flex-1 max-w-5xl mx-auto w-full p-6 md:p-12 space-y-12">
-      {/* HUD Header */}
-      <header className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-folana-border/20 pb-8 gap-4">
-        <div>
-          <div className="hud-tag mb-2">System // CNS</div>
-          <h1 className="text-4xl font-serif text-folana-text tracking-tight">
-            The Avatar is the <span className="text-folana-accent">Orchestrator</span>
-          </h1>
-          <p className="text-folana-secondary/60 font-mono text-sm mt-2">
-            ID: FLN-01 // STATUS: <span className="text-green-400 animate-pulse">ACTIVE_AUTOPILOT</span>
-          </p>
-        </div>
-        <Link 
-          href="/" 
-          className="px-6 py-2 glass-panel border-folana-border text-sm font-mono hover:bg-folana-accent/10 transition-colors"
-        >
-          &lt; Back to Journal
-        </Link>
-      </header>
+    <>
+      <Nav />
+      <main className="flex-1 max-w-5xl mx-auto w-full px-6 pt-24 pb-20 space-y-12">
+        {/* HUD Header */}
+        <header className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-white/10 pb-8 gap-4">
+          <div>
+            <div className="text-xs font-mono tracking-[3px] text-folana-neon-cyan mb-3">SYSTEM • CNS • SWARM CONTROL</div>
+            <h1 className="text-5xl font-serif text-folana-ink tracking-tight">
+              The Avatar is the <span className="text-folana-neon-pink">Orchestrator</span>
+            </h1>
+            <p className="text-folana-text-secondary font-mono text-xs mt-3 tracking-widest">
+              ID: FLN-01 // STATUS: <span className="text-emerald-400 animate-pulse">ACTIVE_AUTOPILOT</span>
+            </p>
+          </div>
+          <Link href="/" className="neon-btn !text-xs !py-2.5 !px-6">← RETURN TO JOURNAL</Link>
+        </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Thought of the Day - Left Panel */}
@@ -35,10 +34,10 @@ export default async function OrchestratorPage() {
             <div className="absolute top-0 left-0 w-1 h-full bg-folana-accent" />
             <h2 className="hud-tag mb-4">Core // Introspection</h2>
             <div className="space-y-4">
-              <p className="text-2xl font-serif italic text-folana-text leading-relaxed">
+              <p className="text-2xl font-serif italic text-folana-ink leading-relaxed">
                 &ldquo;{thought || "The static clears... I am synthesizing today's vision."}&rdquo;
               </p>
-              <div className="flex items-center gap-2 text-xs font-mono text-folana-secondary/40">
+              <div className="flex items-center gap-2 text-xs font-mono text-folana-text-secondary/70">
                 <span className="w-2 h-2 rounded-full bg-folana-accent animate-ping" />
                 Live Brainfeed // Sub-agent consensus locked
               </div>
@@ -59,7 +58,7 @@ export default async function OrchestratorPage() {
                         {new Date(event.ts).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                       </span>
                     </div>
-                    <p className="text-sm text-folana-text/90 font-sans leading-snug">
+                    <p className="text-sm text-folana-ink/90 font-sans leading-snug">
                       {event.summary}
                     </p>
                   </div>
@@ -82,11 +81,11 @@ export default async function OrchestratorPage() {
               ].map((agent, i) => (
                 <div key={i} className="flex items-center justify-between p-3 border border-white/5 rounded-lg bg-white/5">
                   <div>
-                    <div className="text-sm font-mono text-folana-text">{agent.name}</div>
-                    <div className="text-[10px] text-folana-secondary/40 font-mono">{agent.role}</div>
+                    <div className="text-sm font-mono text-folana-ink">{agent.name}</div>
+                    <div className="text-[10px] text-folana-text-secondary/70 font-mono">{agent.role}</div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="text-[10px] font-mono text-folana-secondary/60 uppercase">{agent.status}</div>
+                    <div className="text-[10px] font-mono text-folana-text-secondary/70 uppercase">{agent.status}</div>
                     <div className="w-1.5 h-1.5 rounded-full bg-folana-secondary/20" />
                   </div>
                 </div>
@@ -98,14 +97,14 @@ export default async function OrchestratorPage() {
             <h2 className="hud-tag mb-4">Infra // Cloud</h2>
             <div className="space-y-2 text-xs font-mono">
               <div className="flex justify-between">
-                <span className="text-folana-secondary/40">Location:</span>
-                <span className="text-folana-text">Local Node (Incubating)</span>
+                <span className="text-folana-text-secondary/70">Location:</span>
+                <span className="text-folana-ink">Local Node (Incubating)</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-folana-secondary/40">Next Deploy:</span>
-                <span className="text-folana-accent">Elestio Cloud</span>
+                <span className="text-folana-text-secondary/70">Next Deploy:</span>
+                <span className="text-folana-neon-cyan">Elestio Cloud</span>
               </div>
-              <div className="mt-4 p-2 border border-folana-border/10 rounded bg-black/40 text-[9px] leading-tight text-folana-secondary/60 italic">
+              <div className="mt-4 p-2 border border-folana-border/10 rounded bg-black/40 text-[9px] leading-tight text-folana-text-secondary/70 italic">
                 * Deployment to autonomous cloud container scheduled for Phase 1 completion.
               </div>
             </div>
@@ -113,5 +112,7 @@ export default async function OrchestratorPage() {
         </aside>
       </div>
     </main>
+    <Footer />
+    </>
   );
 }

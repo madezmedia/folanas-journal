@@ -1,14 +1,18 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
 import { revalidatePath } from 'next/cache';
-import { isAdminAuthed } from '@/lib/auth';
+import { isAdminAuthed, checkAdminPassword } from '@/lib/auth';
 
 export async function POST(req: Request) {
-  if (!(await isAdminAuthed())) {
+  // Allow either session cookie auth OR password in request body/header
+  const body = await req.json().catch(() => ({}));
+  const headerPw = req.headers.get('x-admin-password');
+  const isAuthed = await isAdminAuthed() || checkAdminPassword(body.password) || checkAdminPassword(headerPw);
+  if (!isAuthed) {
     return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
   }
 
-  const { title, date, content } = await req.json();
+  const { title, date, content } = body;
 
   if (!title || !date || !content) {
     return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });

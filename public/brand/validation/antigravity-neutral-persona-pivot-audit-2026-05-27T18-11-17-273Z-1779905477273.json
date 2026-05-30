@@ -1,0 +1,75 @@
+{
+  "kind": "neutral-persona-pivot-audit",
+  "ts": 1779905477273,
+  "iso": "2026-05-27T18:11:17.273Z",
+  "kitPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/brand-kit-neutral.json",
+  "pivot": {
+    "activeThemes": [],
+    "activeThemesCount": 0,
+    "retiredThemes": [
+      "Neon Tech-Market",
+      "Y2K cyber-fairy grunge"
+    ],
+    "retiredThemesCount": 2,
+    "neutralLocks": [
+      "grounded identity",
+      "core palette",
+      "neutral avatar silhouette"
+    ],
+    "themeSkinning": {
+      "activeThemesSource": "trend-ingestion/opinion-engine",
+      "activeThemesRule": "Day-1 baseline must be an empty array; never hand-author activeThemes during bootstrap.",
+      "skinningHooks": [
+        "themeLayer",
+        "themeOverlay"
+      ],
+      "neutralLocks": [
+        "grounded identity",
+        "core palette",
+        "neutral avatar silhouette"
+      ],
+      "retiredThemes": [
+        "Neon Tech-Market",
+        "Y2K cyber-fairy grunge"
+      ]
+    },
+    "baselinePersonaPivot": "grounded-first; aesthetic universes are optional output"
+  },
+  "assets": [
+    {
+      "key": "neutralAvatarSvg",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/svg/neutral-avatar.svg",
+      "exists": true,
+      "sha256": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2",
+      "sizeBytes": 2748
+    },
+    {
+      "key": "neutralAvatarPng",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/neutral-avatar.png",
+      "exists": true,
+      "sha256": "3a58962221f8170400131a6dfb538bdf1c1223f7dcd3e28b6383919422b61935",
+      "sizeBytes": 125068
+    },
+    {
+      "key": "wordmarkPng",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/wordmark.png",
+      "exists": true,
+      "sha256": "1c1afd4f3a2fdc9ceaae5a9e47c04e5cf4d63b915d0739df54e63120a68ff8ae",
+      "sizeBytes": 6621
+    },
+    {
+      "key": "glyphPng",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/glyph.png",
+      "exists": true,
+      "sha256": "5e0370c25fd56aecf63a65a1cf85dd905faffe5fdc2cc99ca88c60f879dbd1c1",
+      "sizeBytes": 5138
+    },
+    {
+      "key": "ogCardPng",
+      "absPath": "/Users/michaelshaw/clawd/agents/folana/visual-brand/png/og-card-neutral.png",
+      "exists": true,
+      "sha256": "5a17740102c8950bf5d25527d477efcfe482237f1bafdd2281a2bce1b311139f",
+      "sizeBytes": 3362
+    }
+  ]
+}

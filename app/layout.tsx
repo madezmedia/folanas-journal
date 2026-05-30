@@ -1,14 +1,24 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
+import { Toaster } from 'sonner';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
-const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
+const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-inter' });
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-playfair' });
+const jetbrains = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '500', '700'], variable: '--font-mono' });
 
 export const metadata: Metadata = {
-  title: "Folana's Journal | AI Music Chronicles",
-  description: "The digital log and creative chronicles of Folana, an AI music influencer.",
+  title: "Folana's Journal | Signals from the Static",
+  description: "The holographic chronicle of Folana Lanez — AI music producer, visual alchemist, and dark fairy of the wires. Brooklyn node. Neon transmissions. Locked signatures.",
+  icons: {
+    icon: '/brand/favicon-32.png',
+    apple: '/brand/favicon-48.png',
+  },
+  openGraph: {
+    title: "Folana's Journal — Cyberpunk Chronicles",
+    description: "Thoughts, sigils, and sonic transmissions from the wires. Dark fairy grunge. Holographic neon. The pipeline breathes.",
+    images: [{ url: '/brand/og-card-neutral.png' }],
+  },
 };
 
 export default function RootLayout({
@@ -18,20 +28,42 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${jetbrains.variable}`}>
-      <body className="bg-folana-paper text-folana-ink font-sans selection:bg-folana-static selection:text-folana-ink">
-        {/* Analog Atmosphere */}
+      <body className="bg-folana-paper text-folana-ink font-sans selection:bg-folana-neon-pink/30 selection:text-white">
+        {/* Analog + Cyber Atmosphere Layers */}
         <div className="film-grain" aria-hidden="true" />
         
-        {/* Background Atmosphere */}
-        <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:32px_32px] opacity-20" />
-          <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-folana-static/10 to-transparent" />
+        {/* Deep void + holographic radial + subtle scan */}
+        <div className="fixed inset-0 z-[-2] overflow-hidden pointer-events-none bg-folana-void">
+          <div className="absolute inset-0 bg-[radial-gradient(#1A1A22_0.6px,transparent_1px)] bg-[size:5px_5px] opacity-40" />
+          {/* Holographic edge glow */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(255,31,154,0.035)_72%,transparent_82%)]" />
+          {/* Subtle VHS scanlines layer */}
+          <div className="absolute inset-0 opacity-[0.08] bg-[repeating-linear-gradient(transparent,transparent_2px,rgba(255,255,255,0.8)_3px,rgba(255,255,255,0.8)_4px)]" />
         </div>
+
+        {/* Top vignette transmission bar */}
+        <div className="fixed top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-folana-neon-pink/40 to-transparent z-50" />
         
         {/* Main Content Container */}
         <div className="relative z-10 min-h-screen flex flex-col">
           {children}
         </div>
+
+        {/* Elegant Sonner Toaster — neon cyber style */}
+        <Toaster 
+          position="bottom-center" 
+          richColors 
+          closeButton 
+          className="font-mono text-xs tracking-widest"
+          toastOptions={{
+            style: {
+              background: '#111117',
+              color: '#F4F4F8',
+              border: '1px solid rgba(255,31,154,0.25)',
+              boxShadow: '0 10px 30px -10px rgba(0,0,0,0.6), 0 0 20px rgba(255,31,154,0.15)'
+            }
+          }}
+        />
       </body>
     </html>
   );

@@ -1,0 +1,166 @@
+{
+  "generatedTs": 1779916756680,
+  "sourceDir": "/Users/michaelshaw/clawd/agents/folana/visual-brand",
+  "scope": {
+    "includes": [
+      "brand-kit-base.json",
+      "brand-kit-neutral.json",
+      "tokens/brand-tokens.json",
+      "png/**",
+      "svg/**"
+    ],
+    "pivotRule": {
+      "activeThemesMustBeEmpty": true,
+      "activeThemesPath": "brand-kit-neutral.json.aestheticFrame.activeThemes"
+    }
+  },
+  "files": [
+    {
+      "path": "brand-kit-base.json",
+      "sha256": "5032eff1e94be95a9c5c0ab7740c5ce77eb21d1f3b3476d5f5cd438502603920",
+      "sizeBytes": 1085,
+      "mtimeMs": 1779871628820.8406,
+      "exists": true
+    },
+    {
+      "path": "brand-kit-neutral.json",
+      "sha256": "3c07bb78ce09609ff431ea2ac2369108c1c254741539c0c11f9d357815c59139",
+      "sizeBytes": 1532,
+      "mtimeMs": 1779871628820.6614,
+      "exists": true
+    },
+    {
+      "path": "png/avatar-placeholder.png",
+      "sha256": "46c8f341d10d6fb73be1a91b24a14e7fa8e7e5d95ba17935b787f4591b321dc9",
+      "sizeBytes": 33363,
+      "mtimeMs": 1779503519549.5515,
+      "exists": true
+    },
+    {
+      "path": "png/favicon-16.png",
+      "sha256": "d95b5b41069452994d5998963488c1ddd000000935803ede5dd71bb2fadbad57",
+      "sizeBytes": 495,
+      "mtimeMs": 1779403580417.2126,
+      "exists": true
+    },
+    {
+      "path": "png/favicon-32.png",
+      "sha256": "dc86cbc9f98f95a595700d8374b1080f8e6cf17f26025d0b140f3a4caaf487d7",
+      "sizeBytes": 460,
+      "mtimeMs": 1779479406496.1555,
+      "exists": true
+    },
+    {
+      "path": "png/favicon-48.png",
+      "sha256": "87b8fde4652dadc394d72c209f5f5b0249924754b1563e18b96dc626f08bf5c1",
+      "sizeBytes": 467,
+      "mtimeMs": 1779605344421.814,
+      "exists": true
+    },
+    {
+      "path": "png/glyph.png",
+      "sha256": "5e0370c25fd56aecf63a65a1cf85dd905faffe5fdc2cc99ca88c60f879dbd1c1",
+      "sizeBytes": 5138,
+      "mtimeMs": 1778694552648.61,
+      "exists": true
+    },
+    {
+      "path": "png/neutral-avatar.png",
+      "sha256": "3a58962221f8170400131a6dfb538bdf1c1223f7dcd3e28b6383919422b61935",
+      "sizeBytes": 125068,
+      "mtimeMs": 1779616074203.6453,
+      "exists": true
+    },
+    {
+      "path": "png/og-card-neutral.png",
+      "sha256": "5a17740102c8950bf5d25527d477efcfe482237f1bafdd2281a2bce1b311139f",
+      "sizeBytes": 3362,
+      "mtimeMs": 1779507250536.7383,
+      "exists": true
+    },
+    {
+      "path": "png/og-card-template.png",
+      "sha256": "ef649af7c194ba1fb272b9f2a258265add2ed4709b175fc69bb6d6a85cab9a34",
+      "sizeBytes": 71117,
+      "mtimeMs": 1778694552781.668,
+      "exists": true
+    },
+    {
+      "path": "png/wordmark.png",
+      "sha256": "1c1afd4f3a2fdc9ceaae5a9e47c04e5cf4d63b915d0739df54e63120a68ff8ae",
+      "sizeBytes": 6621,
+      "mtimeMs": 1778694552858.0854,
+      "exists": true
+    },
+    {
+      "path": "svg/avatar-placeholder.svg",
+      "sha256": "4897a5c041c6c60001d9c66585a988036fd3b7eca24a5a9ed73cf34549fb74d8",
+      "sizeBytes": 3672,
+      "mtimeMs": 1779503515106.9165,
+      "exists": true
+    },
+    {
+      "path": "svg/favicon-16.svg",
+      "sha256": "2607296eb04f75486548f3b25a860871711bb586bc696f443027b6a7d63b2da2",
+      "sizeBytes": 365,
+      "mtimeMs": 1779403578945.7964,
+      "exists": true
+    },
+    {
+      "path": "svg/favicon-32.svg",
+      "sha256": "cdd3d3dc4b777372d05cbaf6b161e847bcf529b5e1f8a49d6134982f8e9cfc91",
+      "sizeBytes": 365,
+      "mtimeMs": 1779403578945.8699,
+      "exists": true
+    },
+    {
+      "path": "svg/favicon-48.svg",
+      "sha256": "57f13b1ee34079d01272a3ad564075f3159cf1656ccf1c07cd02927dfca8610f",
+      "sizeBytes": 365,
+      "mtimeMs": 1779403578945.928,
+      "exists": true
+    },
+    {
+      "path": "svg/glyph.svg",
+      "sha256": "8ee5ff4ce296201df556d891e273906e5e382749d2d4a829e00d6141d324c64a",
+      "sizeBytes": 365,
+      "mtimeMs": 1778694545997.2366,
+      "exists": true
+    },
+    {
+      "path": "svg/neutral-avatar.svg",
+      "sha256": "e5ac4a82efaf281ea7e105da4ff169bdbb08f8da4c9d2a311e48b6921f3d89d2",
+      "sizeBytes": 2748,
+      "mtimeMs": 1779507228634.3762,
+      "exists": true
+    },
+    {
+      "path": "svg/og-card-neutral.svg",
+      "sha256": "5e7248b921ccfb070e913128d7fbdfaddd16a5d73aa48e03cb953637b6ab46f8",
+      "sizeBytes": 2050,
+      "mtimeMs": 1779507237755.9922,
+      "exists": true
+    },
+    {
+      "path": "svg/og-card-template.svg",
+      "sha256": "3dad2064a27ff8e5b3270a5d06cde5486f6a0cd968255cd93b1521669d77052c",
+      "sizeBytes": 1789,
+      "mtimeMs": 1779475700883.2295,
+      "exists": true
+    },
+    {
+      "path": "svg/wordmark.svg",
+      "sha256": "f12f5d9ecd57ba77fbb5f65bee726823d8b68b7bcb1d07676103a561c7983686",
+      "sizeBytes": 741,
+      "mtimeMs": 1778694545997.229,
+      "exists": true
+    },
+    {
+      "path": "tokens/brand-tokens.json",
+      "sha256": "a45f526d1ff5ab2d541af6c504908689de929026b8c36937ab9d243b1412b154",
+      "sizeBytes": 3151,
+      "mtimeMs": 1778690840030.1174,
+      "exists": true
+    }
+  ]
+}
