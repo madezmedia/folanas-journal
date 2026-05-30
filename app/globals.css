@@ -25,6 +25,18 @@
   --color-folana-mood-energetic: #FB923C;
   --color-folana-mood-reflective: #67E8F9;
 
+  /* Neon accent palette */
+  --color-folana-neon-cyan: #2DD4BF;
+  --color-folana-neon-pink: #F472B6;
+  --color-folana-neon-magenta: #C084FC;
+  --color-folana-neon: #C084FC;
+
+  /* Paper/Ink/Static/Void — ambient surface tokens */
+  --color-folana-paper: #0F0F0F;
+  --color-folana-ink: #F5F5F5;
+  --color-folana-static: #2DD4BF;
+  --color-folana-void: #08080F;
+
   /* Typography */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", "SF Mono", monospace;
@@ -60,6 +72,60 @@ body {
 
   .mood-tag {
     @apply text-[10px] font-mono tracking-widest uppercase px-2 py-0.5 rounded-sm border border-folana-border text-folana-text-muted;
+  }
+
+  .neon-btn {
+    display: inline-block;
+    border-radius: 9999px;
+    border: 1px solid rgba(45, 212, 191, 0.5);
+    background: linear-gradient(135deg, rgba(244, 114, 182, 0.15), rgba(45, 212, 191, 0.1));
+    color: #f5f5f5;
+    font-weight: 500;
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .neon-btn:hover {
+    background: linear-gradient(135deg, rgba(244, 114, 182, 0.25), rgba(45, 212, 191, 0.2));
+    border-color: #2dd4bf;
+    box-shadow: 0 0 24px rgba(45, 212, 191, 0.15);
+  }
+
+  .holo-frame {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.03);
+  }
+
+  .transmission-divider {
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #666;
+    text-align: center;
+    position: relative;
+    padding-bottom: 9px;
+  }
+  .transmission-divider::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #2DD4BF, transparent);
+    margin: 9px auto 0;
+  }
+
+  .film-grain {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+
+  .glitch {
+    position: relative;
   }
 }
 
