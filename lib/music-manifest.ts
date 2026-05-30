@@ -628,6 +628,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep83', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30'],
     isRealProduction: true,
   },
+  // EP84 — AMPLIFY (2026-05-30) — Broadcast Arc (8/10)
+  {
+    id: 'amplify-ep84',
+    title: 'AMPLIFY',
+    subtitle: 'EP84 • MINIMAX MUSIC-2.6 • BROADCAST ARC (8/10)',
+    description: 'Folana turns up the volume. After finding her voice in the reroute, she discovers that every frequency shared is a signal multiplied. The quiet whisper becomes a chorus, the solo voice becomes a community. A meditation on amplification — not as noise, but as connection. The moment the bedroom broadcast reaches the world. Dream pop/ethereal indie folk with acoustic guitar, warm piano, soft strings, gentle percussion, and tender female vocals growing from intimate whisper to confident layered harmonies.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep84-amplify-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep84-amplify-hero.jpg',
+    duration: '3:01',
+    mood: 'WARM • BUILDING • HOPEFUL • CONNECTED • TRANSMISSIVE',
+    tags: ['ep84', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
