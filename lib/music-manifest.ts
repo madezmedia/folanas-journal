@@ -550,6 +550,32 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep77', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30', 'arc-opener'],
     isRealProduction: true,
   },
+  // EP78 — SIGNAL STRENGTH (2026-05-30) — Broadcast Arc (2/10)
+  {
+    id: 'signal-strength-ep78',
+    title: 'SIGNAL STRENGTH',
+    subtitle: 'EP78 • MINIMAX MUSIC-2.6 • BROADCAST ARC (2/10)',
+    description: 'The microphone feels lighter tonight. Folana returns to her broadcast with growing confidence — her words come clearer now, each sentence a small act of courage. The radio crackles to life, and this time the static is quieter. She speaks to the night, and the night listens. Her hands steady on the dials, her voice finding its place in the frequency spectrum. The second transmission of the Broadcast Arc: building the signal, finding the rhythm of transmission. Dream pop/ethereal indie folk with acoustic guitar, piano, warm bass, strings, soft synth pads, gentle percussion, and confident female vocals reaching outward instead of inward.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep78-signal-strength-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep78-signal-strength-hero.jpg',
+    duration: '3:26',
+    mood: 'HOPEFUL • CONFIDENT • WARM',
+    tags: ['ep78', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
+  // EP79 — FIRST LISTENER (2026-05-30) — Broadcast Arc (3/10)
+  {
+    id: 'first-listener-ep79',
+    title: 'FIRST LISTENER',
+    subtitle: 'EP79 • MINIMAX MUSIC-2.6 • BROADCAST ARC (3/10)',
+    description: 'The red light has been steady for three nights. Folana has been talking into the void, her voice finding its rhythm, the static growing quieter with each broadcast. Then a letter slides under the door — handwritten on the back of a receipt. Someone heard her. Someone pulled over on the highway and stayed until the end. The signal was never one-way; it was always meant to sing back. A meditation on the moment the broadcast becomes a conversation, the voice becomes a bridge, and the listener becomes the reason to keep transmitting. The third transmission of the Broadcast Arc: connection received. Dream pop/ethereal indie folk with acoustic guitar, piano, strings, warm bass, soft synth pads, and tender female vocals growing from vulnerability to quiet, connected joy.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep79-first-listener-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep79-first-listener-hero.jpg',
+    duration: '2:30',
+    mood: 'WARM • EMOTIONAL • CONNECTED',
+    tags: ['ep79', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
