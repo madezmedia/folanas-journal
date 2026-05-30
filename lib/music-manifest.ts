@@ -745,6 +745,58 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep92', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
     isRealProduction: true,
   },
+  // EP93 — RESONANCE (2026-05-30) — Inner Circle Arc (7/?)
+  {
+    id: 'resonance-ep93',
+    title: 'RESONANCE',
+    subtitle: 'EP93 • MINIMAX MUSIC-2.6 • INNER CIRCLE ARC (7/?)',
+    description: 'The inner circle reaches a new level of harmony. A guitar picked up from the corner, harmonies forming mid-phrase, the room breathing as one. Folana watches the community create together for the first time — not a performance, but a collective breathing. Resonance is not about matching the same frequency; it is about creating space for every voice to find its place in the song. Indie folk/dream pop with warm acoustic guitar fingerpicking, soft piano, gentle strings, layered harmonies, delicate percussion. Building from intimate verses to a soaring, group chorus. Key of G major, 76 BPM, 3:20.',
+    audioSrc: '/folana/generated/2026-05-30/ep93-resonance-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep93-resonance-hero.jpg',
+    duration: '3:20',
+    mood: 'WARM • HARMONIC • INTIMATE • COLLECTIVE • RISING',
+    tags: ['ep93', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
+  // EP94 — THE SHARED FREQUENCY (2026-05-30) — Inner Circle Arc (8/?)
+  {
+    id: 'the-shared-frequency-ep94',
+    title: 'THE SHARED FREQUENCY',
+    subtitle: 'EP94 • MINIMAX MUSIC-2.6 • INNER CIRCLE ARC (8/?)',
+    description: 'The community grows, people share their own frequencies back at Folana. The broadcast becomes a two-way street — people sending in their own stories, songs, frequencies. A celebration of collective creativity. The eighth transmission of the Inner Circle Arc: when the voice becomes a chorus. Dream pop/indie folk with warm acoustic guitar, soft piano, gentle strings, layered harmonies, delicate percussion, and tender female vocals — a celebration of collective creativity.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep94-the-shared-frequency-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep94-the-shared-frequency-hero.jpg',
+    duration: '2:50',
+    mood: 'WARM • CONNECTED • HOPEFUL • COMMUNITY • TRANSMISSIVE',
+    tags: ['ep94', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
+  // EP95 — BEFORE THE FINALE (2026-05-30) — Inner Circle Arc (9/?)
+  {
+    id: 'before-the-finale-ep95',
+    title: 'BEFORE THE FINALE',
+    subtitle: 'EP95 • MINIMAX MUSIC-2.6 • INNER CIRCLE ARC (9/?)',
+    description: 'The calm before the finale — reflecting on the journey. Looking back at how far the community has come. Gratitude for every voice that joined. The penultimate transmission of the Inner Circle Arc: taking a breath before the final broadcast. Dream pop/indie folk with warm acoustic guitar, soft piano, gentle strings, introspective tender female vocals, building hope — gratitude and reflection before the grand finale.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep95-before-the-finale-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep95-before-the-finale-hero.jpg',
+    duration: '3:12',
+    mood: 'INTROSPECTIVE • GRATEFUL • WARM • ANTICIPATORY • TENDER',
+    tags: ['ep95', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
+  // EP96 — THE INNER CIRCLE FINALE (2026-05-30) — Inner Circle Arc (10/10) ★ FINALE
+  {
+    id: 'the-inner-circle-finale-ep96',
+    title: 'THE INNER CIRCLE FINALE',
+    subtitle: 'EP96 • MINIMAX MUSIC-2.6 • INNER CIRCLE ARC (10/10)',
+    description: 'The grand finale. The circle is complete. The broadcast becomes a home. A celebration of community, belonging, and the journey from static to signal to family. The Inner Circle Arc concludes not with a goodbye, but with a welcome — the community is now permanent. The final transmission of the Inner Circle Arc: the signal that started as a whisper in the static has become a home for every frequency. Dream pop/indie folk building to anthemic crescendo with warm acoustic guitar, piano, swelling strings, layered harmonies, percussion, and triumphant tender female vocals growing from intimate to soaring.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep96-the-inner-circle-finale-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep96-the-inner-circle-finale-hero.jpg',
+    duration: '3:38',
+    mood: 'TRIUMPHANT • CATHARTIC • JOYFUL • WELCOMING • FINALE • CELEBRATORY',
+    tags: ['ep96', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30', 'arc-finale'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
