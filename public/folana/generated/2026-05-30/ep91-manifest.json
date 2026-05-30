@@ -1,0 +1,23 @@
+{
+  "episode": 91,
+  "title": "THE OPEN MIC",
+  "arc": "Inner Circle",
+  "arc_position": "5/?",
+  "date": "2026-05-30",
+  "key": "C major / A minor",
+  "tempo": "Moderate, building",
+  "duration": "3:39",
+  "model": "minimax-music-2.6",
+  "hero": "mmx image-01 (Folana's cozy radio room, fairy lights, open mic night, community gathered)",
+  "narration": "mmx speech-2.8-hd, English_CaptivatingStoryteller (46s)",
+  "description": "The first Open Mic night at the Inner Circle. Folana steps back from the microphone to let others be heard. The broadcast becomes a collective — no longer 'her show' but 'our show.' Vulnerable, raw, beautiful. Members share their own frequencies for the first time.",
+  "style": "Indie folk / Dream pop with acoustic guitar fingerpicking, warm piano, soft strings, gentle percussion, tender female vocals with layered harmonies. Building from intimate verse to soaring anthemic chorus.",
+  "assets": {
+    "full_mix": "ep91-open-mic-full-mix.mp3 (7.0MB)",
+    "preview_15s": "ep91-open-mic-15s.mp3 (362KB)",
+    "tagline_bed": "ep91-open-mic-tagline-bed.mp3 (722KB)",
+    "hero": "ep91-open-mic-hero.jpg (383KB)",
+    "lyrics": "ep91-open-mic-lyrics.txt",
+    "narration": "ep91-open-mic-narration.mp3 (743KB, 46s)"
+  }
+}

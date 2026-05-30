@@ -719,6 +719,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep90', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
     isRealProduction: true,
   },
+  // EP91 — THE OPEN MIC (2026-05-30) — Inner Circle Arc (5/?)
+  {
+    id: 'the-open-mic-ep91',
+    title: 'THE OPEN MIC',
+    subtitle: 'EP91 • MINIMAX MUSIC-2.6 • INNER CIRCLE ARC (5/?)',
+    description: 'The first Open Mic night at the Inner Circle. Folana steps back from the microphone to let others be heard. The broadcast becomes a collective — no longer "her show" but "our show." Vulnerable, raw, beautiful. Members share their own frequencies for the first time. Indie folk/dream pop with acoustic guitar, warm piano, soft strings, gentle percussion, tender female vocals with layered harmonies. The host becomes a curator, and every listener becomes a potential broadcaster.',
+    audioSrc: '/folana/generated/2026-05-30/ep91-open-mic-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep91-open-mic-hero.jpg',
+    duration: '3:39',
+    mood: 'VULNERABLE • COMMUNITY • WARM • COURAGEOUS • COLLECTIVE',
+    tags: ['ep91', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
