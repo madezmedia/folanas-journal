@@ -602,6 +602,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep81', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30'],
     isRealProduction: true,
   },
+  // EP82 — THE REQUEST LINE (2026-05-30) — Broadcast Arc (6/10)
+  {
+    id: 'the-request-line-ep82',
+    title: 'THE REQUEST LINE',
+    subtitle: 'EP82 • MINIMAX MUSIC-2.6 • BROADCAST ARC (6/10)',
+    description: 'The letters started arriving — slid under the studio door, written on napkins, on receipt paper, on the back of envelopes. Folana reads them on air: a night shift nurse who found solace in the midnight broadcasts, a trucker who picked up the frequency somewhere outside Cleveland, an insomniac who finally feels less alone. The broadcast has become a two-way conversation. A meditation on the moment the signal connects back — when the voice finds its listeners, and the listeners find each other through the static. The sixth transmission of the Broadcast Arc: the request line is open. Dream pop/ethereal indie folk with fingerpicked acoustic guitar, soft piano, warm bass, strings, gentle percussion, and tender layered female vocals — intimate and connected, a voice reading letters from strangers.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep82-the-request-line-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep82-the-request-line-hero.jpg',
+    duration: '3:45',
+    mood: 'WARM • CONNECTED • TENDER • HOPEFUL',
+    tags: ['ep82', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
