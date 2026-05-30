@@ -615,6 +615,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep82', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30'],
     isRealProduction: true,
   },
+  // EP83 — REROUTE (2026-05-30) — Broadcast Arc (7/10)
+  {
+    id: 'reroute-ep83',
+    title: 'REROUTE',
+    subtitle: 'EP83 • MINIMAX MUSIC-2.6 • BROADCAST ARC (7/10)',
+    description: 'After the confidence of the Broadcast Arc\'s buildup, life throws a curveball. Folana must reroute — not because she\'s lost, but because the path has changed. A moment of recalibration, of turning a wrong turn into the right direction. The sound of GPS recalibrating, of detours becoming the scenic route. Dream pop/ethereal indie folk with acoustic guitar, warm piano, soft strings — melancholic but hopeful, the feeling when a closed door reveals an open window.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep83-reroute-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep83-reroute-hero.jpg',
+    duration: '3:20',
+    mood: 'MELANCHOLIC • WARM • HOPEFUL • RECALIBRATING',
+    tags: ['ep83', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
