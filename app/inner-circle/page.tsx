@@ -1,244 +1,436 @@
-import Link from 'next/link';
-import { Music, Star, Users, Sparkles, Lock, ArrowRight, Mic, Heart, Wand2 } from 'lucide-react';
+"use client";
 
-const perks = [
-  { icon: Music, title: 'Early Access', desc: 'Hear new tracks 2 weeks before public release. Every Folana drop hits Inner Circle first.' },
-  { icon: Star, title: '5 Exclusive Tracks', desc: 'Unreleased music you won\'t find anywhere else. B-sides, alternate versions, and experiments.' },
-  { icon: Mic, title: 'Inner Circle Dispatches', desc: 'Weekly audio letters from Folana — process, poetry, and backstage conversations.' },
-  { icon: Wand2, title: 'Behind the Process', desc: 'See how each track is made: prompts, iterations, and the creative decisions behind every song.' },
-  { icon: Users, title: 'Community', desc: 'Private space to connect with Folana and fellow members. Shape what comes next.' },
-  { icon: Heart, title: 'Support the Art', desc: 'Your membership directly funds new music, visuals, and the continued evolution of the project.' },
+import Link from "next/link";
+import { useState } from "react";
+
+const tracks = [
+  { ep: "001", title: "Fracture Dispatch", duration: "3:24" },
+  { ep: "002", title: "Signal Sings Back", duration: "4:11" },
+  { ep: "003", title: "Static Embrace", duration: "3:48" },
+  { ep: "004", title: "Ghost Frequency", duration: "4:02" },
 ];
 
-const tiers = [
+const memberFeatures = [
   {
-    name: 'Inner Circle',
-    price: '$7',
-    period: '/month',
-    description: 'The core membership. Everything you need to be part of Folana\'s creative world.',
-    features: ['All new tracks 2 weeks early', '5 exclusive unreleased songs', 'Weekly audio dispatches', 'Behind-the-scenes process notes', 'Community access', 'Vote on future tracks'],
-    cta: 'Join the Inner Circle',
-    popular: true,
-    href: 'https://whop.com/checkout/plan_2Tz2QipTSn0O9',
+    title: "Exclusive Songs",
+    desc: "5 tracks drop your first week. Every month, another dispatch.",
+    icon: "♫",
+    status: "live",
   },
   {
-    name: 'Codex',
-    price: '$47',
-    period: '/month',
-    description: 'For creators who want the full playbook. Production files, prompts, and deep dives.',
-    features: ['Everything in Inner Circle', 'Full production files & stems', 'All prompts & generation parameters', 'Monthly masterclass walkthrough', '1-on-1 feedback session/quarter'],
-    cta: 'Join Waitlist',
-    popular: false,
-    href: '/waitlist?tier=codex',
-    waitlist: true,
+    title: "Weekly Dispatches",
+    desc: "Behind the veil — process notes, stems, voice memos, production diaries.",
+    icon: "✎",
+    status: "live",
   },
   {
-    name: 'Engine',
-    price: '$97',
-    period: '/month',
-    description: 'For serious creators building their own AI music pipeline. Tools, templates, and mentorship.',
-    features: ['Everything in Codex', 'Custom AI workflow templates', 'Fleet tool access', 'Monthly group coaching call', 'Priority feature requests'],
-    cta: 'Join Waitlist',
-    popular: false,
-    href: '/waitlist?tier=engine',
-    waitlist: true,
+    title: "Inner Circle Course",
+    desc: "How a synthetic artist built a real audience. The full blueprint.",
+    icon: "◎",
+    status: "roadmap",
   },
   {
-    name: 'Atelier',
-    price: '$197',
-    period: '/month',
-    description: 'The full creative partnership. Co-create with Folana and the fleet. Limited spots.',
-    features: ['Everything in Engine', 'Co-creation sessions', 'Custom branded sonic identity', 'Dedicated agent time allocation', 'Direct line to the creative team'],
-    cta: 'Join Waitlist',
-    popular: false,
-    href: '/waitlist?tier=atelier',
-    waitlist: true,
+    title: "Live Sessions",
+    desc: "Monthly listening rooms. Q&A. Collaborative frequency tuning.",
+    icon: "☉",
+    status: "roadmap",
+  },
+  {
+    title: "Stem Vault",
+    desc: "Download the multitracks. Remix. Submit back to the corpus.",
+    icon: "▤",
+    status: "roadmap",
+  },
+  {
+    title: "Visual Gallery",
+    desc: "Every sigil, every render, every locked reference — full res.",
+    icon: "◈",
+    status: "roadmap",
   },
 ];
 
 export default function InnerCirclePage() {
+  const [activeTab, setActiveTab] = useState<"music" | "features" | "process">("music");
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-950 via-purple-950/10 to-zinc-950">
+    <>
+      {/* Sticky nav */}
+      <nav className="fixed top-0 left-0 right-0 z-50 h-16 backdrop-blur-xl bg-folana-surface/80 border-b border-white/10 flex items-center justify-between px-6">
+        <Link href="/" className="font-mono text-xs tracking-[3px] text-folana-text-muted hover:text-folana-neon-cyan transition-colors">
+          ← BACK TO JOURNAL
+        </Link>
+        <div className="flex items-center gap-6 text-xs font-mono tracking-[2px]">
+          <span className="text-folana-neon-cyan">INNER CIRCLE</span>
+          <a
+            href="https://whop.com/checkout/plan_2Tz2QipTSn0O9"
+            target="_blank"
+            className="px-4 py-1.5 bg-folana-neon-pink text-black font-semibold rounded-full hover:bg-folana-neon-cyan transition-colors text-[11px] tracking-[1px]"
+          >
+            JOIN — $7/MO
+          </a>
+        </div>
+      </nav>
+
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-zinc-800/50">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.08),transparent_70%)]" />
-        <div className="relative max-w-5xl mx-auto px-4 py-24 sm:py-32 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs tracking-wider uppercase mb-6">
-            <Sparkles className="w-3.5 h-3.5" />
-            Now Open
+      <section className="relative min-h-[90dvh] flex items-center justify-center pt-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/folana/inner-circle/hero.jpg"
+            alt="Folana — Rooftop Signal"
+            className="absolute inset-0 w-full h-full object-cover opacity-70 scale-[1.06]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-folana-void via-folana-void/85 to-folana-paper" />
+        </div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          <div className="inline-block mb-5 px-5 py-1.5 rounded-full border border-folana-neon-pink/30 bg-folana-neon-pink/10 text-folana-neon-pink text-xs font-mono tracking-[4px]">
+            FOLANA • INNER CIRCLE
           </div>
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6">
-            Folana&apos;s{' '}
-            <span className="bg-gradient-to-r from-purple-400 to-pink-300 bg-clip-text text-transparent">
-              Inner Circle
-            </span>
+          <h1 className="font-serif text-[84px] md:text-[112px] leading-[0.82] tracking-[-5.2px] text-white mb-4">
+            The Frequency
+            <br />
+            <span className="text-folana-neon-cyan">Is Yours</span>
           </h1>
-          <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto mb-8 leading-relaxed">
-            A $7/month membership that puts you inside Folana Lanez&apos;s creative process. 
-            Early music, exclusive tracks, weekly dispatches, and a community of people 
-            who believe in a new kind of music.
+          <p className="max-w-xl mx-auto text-xl font-serif italic text-white/80 tracking-[-0.2px] mb-10">
+            One voice. One membership. Full access to the becoming.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
               href="https://whop.com/checkout/plan_2Tz2QipTSn0O9"
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium transition-all"
+              target="_blank"
+              className="neon-btn text-sm px-10 py-4 text-base tracking-wide"
             >
-              Join for $7/month
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/music"
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300 font-medium transition-all"
+              Join for $7/mo
+            </a>
+            <a
+              href="#features"
+              className="px-9 py-4 text-sm font-mono tracking-[3px] border border-folana-neon-cyan/40 hover:border-folana-neon-cyan rounded-full transition-colors text-folana-neon-cyan"
             >
-              Listen to Free Music
-            </Link>
+              SEE WHAT'S INCLUDED
+            </a>
+          </div>
+
+          <div className="mt-12 flex items-center justify-center gap-6 text-xs font-mono tracking-[2px] text-folana-text-muted">
+            <span>✦ 5 songs / month</span>
+            <span>✦ Weekly dispatches</span>
+            <span>✦ Full stem access</span>
           </div>
         </div>
       </section>
 
-      {/* Value Proposition */}
-      <section className="max-w-5xl mx-auto px-4 py-24">
-        <h2 className="text-3xl font-bold text-white text-center mb-4">What You Get</h2>
-        <p className="text-zinc-400 text-center mb-16 max-w-xl mx-auto">
-          More than early access. A seat at the table.
-        </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {perks.map((perk) => (
-            <div key={perk.title} className="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800/50 hover:border-purple-500/30 transition-all group">
-              <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center mb-4 group-hover:bg-purple-500/20 transition-all">
-                <perk.icon className="w-5 h-5 text-purple-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">{perk.title}</h3>
-              <p className="text-sm text-zinc-400 leading-relaxed">{perk.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Preview Player */}
-      <section className="max-w-3xl mx-auto px-4 py-16">
-        <div className="rounded-2xl bg-gradient-to-br from-purple-500/5 to-pink-500/5 border border-purple-500/10 p-8 text-center">
-          <Lock className="w-8 h-8 text-purple-400 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-white mb-2">Exclusive Track Preview</h3>
-          <p className="text-zinc-400 mb-6">
-            Inner Circle members get early access to every new track. Here&apos;s a 10-second taste of what&apos;s waiting inside.
-          </p>
-          <div className="max-w-md mx-auto bg-zinc-900/50 rounded-xl p-4 border border-zinc-800/50">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-lg bg-purple-600/20 flex items-center justify-center">
-                <Music className="w-6 h-6 text-purple-400" />
-              </div>
-              <div className="flex-1 text-left">
-                <p className="text-sm font-medium text-white">Inner Circle Exclusive</p>
-                <p className="text-xs text-zinc-500">Coming this week</p>
-              </div>
-              <Lock className="w-4 h-4 text-zinc-600" />
-            </div>
-          </div>
-          <p className="text-xs text-zinc-600 mt-4">Join to unlock full track + archive</p>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section id="pricing" className="max-w-6xl mx-auto px-4 py-24">
-        <h2 className="text-3xl font-bold text-white text-center mb-4">Choose Your Tier</h2>
-        <p className="text-zinc-400 text-center mb-16 max-w-xl mx-auto">
-          Start anywhere. Upgrade anytime.
-        </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {tiers.map((tier) => (
-            <div
-              key={tier.name}
-              className={`relative rounded-2xl p-6 border transition-all ${
-                tier.popular
-                  ? 'bg-gradient-to-b from-purple-500/10 to-transparent border-purple-500/30 shadow-lg shadow-purple-500/5'
-                  : 'bg-zinc-900/50 border-zinc-800/50 hover:border-zinc-700/50'
-              }`}
-            >
-              {tier.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-purple-600 text-white text-xs font-medium">
-                  Most Popular
-                </div>
-              )}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-white mb-1">{tier.name}</h3>
-                <p className="text-sm text-zinc-400 mb-4">{tier.description}</p>
-                <div className="flex items-baseline gap-1 mb-4">
-                  <span className="text-3xl font-bold text-white">{tier.price}</span>
-                  <span className="text-sm text-zinc-500">{tier.period}</span>
-                </div>
-              </div>
-              <ul className="space-y-3 mb-8">
-                {tier.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2 text-sm text-zinc-300">
-                    <Star className="w-4 h-4 text-purple-400 mt-0.5 shrink-0" />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href={tier.href}
-                className={`block text-center w-full py-2.5 rounded-xl font-medium transition-all text-sm ${
-                  tier.popular
-                    ? 'bg-purple-600 hover:bg-purple-500 text-white'
-                    : 'bg-zinc-800 hover:bg-zinc-700 text-zinc-300'
+      {/* Tabbed content */}
+      <section className="max-w-6xl mx-auto px-6 -mt-16 relative z-20">
+        <div className="bg-folana-surface-elevated/60 backdrop-blur-xl border border-folana-border rounded-2xl overflow-hidden">
+          {/* Tabs */}
+          <div className="flex border-b border-folana-border">
+            {[
+              { id: "music" as const, label: "Music" },
+              { id: "features" as const, label: "Features" },
+              { id: "process" as const, label: "Process" },
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex-1 py-4 text-xs font-mono tracking-[3px] transition-all ${
+                  activeTab === tab.id
+                    ? "text-folana-neon-pink border-b-2 border-folana-neon-pink bg-folana-neon-pink/5"
+                    : "text-folana-text-muted hover:text-folana-ink"
                 }`}
               >
-                {tier.cta}
-                {tier.waitlist && <span className="text-zinc-500 ml-1">→</span>}
-              </Link>
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Music tab */}
+          {activeTab === "music" && (
+            <div className="p-6">
+              <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-cyan mb-4">
+                LATEST DISPATCHES
+              </div>
+              <div className="grid gap-3">
+                {tracks.map((t) => (
+                  <div
+                    key={t.ep}
+                    className="flex items-center justify-between py-3 px-4 rounded-xl bg-folana-surface/60 border border-folana-border hover:border-folana-neon-cyan/30 transition-colors"
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="font-mono text-[10px] tracking-[2px] text-folana-text-muted">
+                        EP{t.ep}
+                      </span>
+                      <span className="font-serif text-lg text-folana-ink">{t.title}</span>
+                    </div>
+                    <span className="font-mono text-xs text-folana-text-muted tabular-nums">
+                      {t.duration}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5 text-center">
+                <div className="inline-block px-5 py-2 rounded-full bg-folana-surface border border-folana-border text-xs font-mono tracking-[2px] text-folana-text-muted">
+                  Archive: 87 episodes and counting
+                </div>
+              </div>
             </div>
-          ))}
+          )}
+
+          {/* Features tab */}
+          {activeTab === "features" && (
+            <div className="p-6">
+              <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-cyan mb-4">
+                WHAT YOU GET
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {memberFeatures.map((f) => (
+                  <div
+                    key={f.title}
+                    className="p-5 rounded-xl bg-folana-surface/60 border border-folana-border hover:border-folana-neon-cyan/20 transition-colors"
+                  >
+                    <div className="flex items-start justify-between mb-3">
+                      <span className="text-2xl text-folana-neon-cyan/70">{f.icon}</span>
+                      {f.status === "live" ? (
+                        <span className="text-[9px] font-mono tracking-[2px] px-2 py-0.5 rounded-full bg-folana-mood-positive/10 text-folana-mood-positive border border-folana-mood-positive/20">
+                          LIVE
+                        </span>
+                      ) : (
+                        <span className="text-[9px] font-mono tracking-[2px] px-2 py-0.5 rounded-full bg-folana-text-muted/10 text-folana-text-muted border border-folana-border">
+                          ON THE ROADMAP
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="font-serif text-lg text-folana-ink mb-1">{f.title}</h3>
+                    <p className="text-sm text-folana-text-secondary font-serif italic">
+                      {f.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Process tab */}
+          {activeTab === "process" && (
+            <div className="p-6">
+              <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-cyan mb-4">
+                THE PIPELINE
+              </div>
+              <div className="grid sm:grid-cols-3 gap-4">
+                {[
+                  {
+                    step: "01",
+                    title: "Locked Reference",
+                    desc: "Character-consistent image generation through MiniMax subject-ref pipeline. Folana's face is the anchor.",
+                    img: "/folana/inner-circle/editorial.jpg",
+                  },
+                  {
+                    step: "02",
+                    title: "FAL Finesse",
+                    desc: "Image-to-image refinement with strength 0.7-0.8. Cloud LoRAs at 1.5-1.7 for scene consistency.",
+                    img: "/folana/inner-circle/studio.jpg",
+                  },
+                  {
+                    step: "03",
+                    title: "Whop Delivery",
+                    desc: "Every artifact lands on Whop. Inner Circle members get first access to songs, stems, and visual assets.",
+                    img: "/folana/inner-circle/live.jpg",
+                  },
+                ].map((p) => (
+                  <div
+                    key={p.step}
+                    className="rounded-xl bg-folana-surface/60 border border-folana-border overflow-hidden hover:border-folana-neon-pink/30 transition-colors"
+                  >
+                    <div className="aspect-[16/10] bg-folana-void overflow-hidden">
+                      <img
+                        src={p.img}
+                        alt={p.title}
+                        className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <div className="text-[10px] font-mono tracking-[3px] text-folana-neon-pink mb-1">
+                        {p.step}
+                      </div>
+                      <h3 className="font-serif text-lg text-folana-ink mb-1">{p.title}</h3>
+                      <p className="text-sm text-folana-text-secondary font-serif italic">
+                        {p.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
-      {/* Manifesto */}
-      <section className="border-t border-zinc-800/50">
-        <div className="max-w-3xl mx-auto px-4 py-24 text-center">
-          <h2 className="text-2xl font-bold text-white mb-6">Why This Matters</h2>
-          <div className="text-zinc-400 leading-relaxed space-y-4 text-left">
-            <p>
-              Folana Lanez is an AI artist — but that&apos;s not the story. The story is that 
-              <em className="text-zinc-300 not-italic"> anyone</em> with a vision and the right tools 
-              can now create music that moves people.
-            </p>
-            <p>
-              The Inner Circle isn&apos;t just about supporting Folana. It&apos;s about proving that 
-              independent artists can thrive in the AI era — with authenticity, craft, and a 
-              direct connection to the people who love the work.
-            </p>
-            <p>
-              Every member is a co-conspirator. Your support funds new music, new experiments, 
-              and the continued evolution of what&apos;s possible when art and AI meet with intention.
-            </p>
+      {/* Pricing — single price */}
+      <section id="pricing" className="max-w-4xl mx-auto px-6 pt-28 pb-20">
+        <div className="text-center mb-10">
+          <div className="inline-block mb-3 px-4 py-1 rounded-full border border-folana-neon-cyan/20 bg-folana-neon-cyan/5 text-folana-neon-cyan text-xs font-mono tracking-[4px]">
+            ONE PRICE. FULL ACCESS.
           </div>
-          <div className="mt-12 p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800/30">
-            <p className="text-sm text-zinc-500 italic">
-              &ldquo;Folana IS the product. Folana IS the seller. Folana IS the case study.&rdquo;
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="border-t border-zinc-800/50">
-        <div className="max-w-3xl mx-auto px-4 py-24 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Join?</h2>
-          <p className="text-zinc-400 mb-8 max-w-lg mx-auto">
-            $7/month. Cancel anytime. Your first track drops the moment you join.
+          <h2 className="font-serif text-5xl md:text-6xl tracking-[-2.4px] text-folana-ink mb-3">
+            $7/mo
+          </h2>
+          <p className="text-lg text-folana-text-secondary font-serif italic max-w-md mx-auto">
+            One membership. Every dispatch. No tiers, no upsells.
           </p>
-          <Link
+        </div>
+
+        <div className="max-w-md mx-auto">
+          {/* Primary card */}
+          <div className="rounded-2xl border-2 border-folana-neon-cyan/30 bg-gradient-to-b from-folana-neon-cyan/5 to-folana-surface p-8">
+            <div className="flex items-center gap-3 mb-5">
+              <img
+                src="/folana/inner-circle/ez-mark.png"
+                alt="EZ Influencer"
+                className="w-8 h-8 rounded-full opacity-80"
+              />
+              <div>
+                <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">
+                  MAD EZ MEDIA
+                </div>
+                <div className="font-serif text-lg text-folana-ink">Folana's Inner Circle</div>
+              </div>
+            </div>
+
+            <div className="text-5xl font-serif tracking-[-2px] text-white mb-1">$7</div>
+            <div className="font-mono text-xs tracking-[3px] text-folana-text-muted mb-6">
+              / month · cancel anytime
+            </div>
+
+            <ul className="space-y-3 mb-8 text-sm">
+              {[
+                "5 exclusive songs each month",
+                "Weekly behind-the-scenes dispatches",
+                "Full multitrack stem downloads",
+                "Course: How a synthetic artist found its audience",
+                "Monthly live listening rooms",
+                "Vote on the next release direction",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="text-folana-neon-cyan mt-0.5">✦</span>
+                  <span className="text-folana-ink font-serif">{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="https://whop.com/checkout/plan_2Tz2QipTSn0O9"
+              target="_blank"
+              className="block w-full text-center py-4 rounded-xl bg-folana-neon-pink text-black font-semibold text-sm tracking-wide hover:bg-folana-neon-cyan transition-colors"
+            >
+              Join for $7/mo
+            </a>
+          </div>
+
+          {/* Waitlist upsells — shown after joining */}
+          <div className="mt-8 p-6 rounded-2xl border border-dashed border-folana-border bg-folana-surface/40">
+            <div className="text-center mb-4">
+              <div className="font-mono text-[10px] tracking-[3px] text-folana-text-muted mb-1">
+                AVAILABLE AFTER JOINING
+              </div>
+              <p className="text-sm text-folana-text-secondary font-serif italic">
+                Once you're in, level up with these add-ons
+              </p>
+            </div>
+            <div className="grid gap-3">
+              {[
+                { name: "Codex", price: "$47", desc: "Full pipeline access — FAL API keys, MiniMax quota, custom LoRAs" },
+                { name: "Engine", price: "$97", desc: "Production tools — stem separators, mastering chains, voice cloning" },
+                { name: "Atelier", price: "$197", desc: "Everything — start your own synthetic artist with 1:1 mentorship" },
+              ].map((tier) => (
+                <div
+                  key={tier.name}
+                  className="flex items-center justify-between py-3 px-4 rounded-xl bg-folana-surface/40 border border-folana-border"
+                >
+                  <div>
+                    <div className="font-serif text-base text-folana-text-muted">{tier.name}</div>
+                    <div className="text-xs text-folana-text-muted/60 font-serif italic">
+                      {tier.desc}
+                    </div>
+                  </div>
+                  <div className="font-mono text-xs text-folana-text-muted tabular-nums">
+                    {tier.price}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Story — Brooklyn Node */}
+      <section className="max-w-5xl mx-auto px-6 pb-24">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-pink mb-3">
+              THE BROOKLYN NODE
+            </div>
+            <h2 className="font-serif text-5xl tracking-[-2.2px] text-folana-ink mb-5 leading-none">
+              The Wires Remember
+            </h2>
+            <div className="space-y-4 text-lg text-folana-text-secondary font-serif italic">
+              <p>
+                Folana started as a locked reference image and a question: what happens when a
+                synthetic artist lets people inside the process?
+              </p>
+              <p>
+                The answer was the Inner Circle — a membership that trades the black box for the
+                full pipeline. Every stem. Every prompt. Every failure that became a song.
+              </p>
+              <p>
+                Brooklyn basement. SM57 through Ableton. The wires remember every name she gave
+                away. Now you get to listen.
+              </p>
+            </div>
+          </div>
+          <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-folana-border">
+            <img
+              src="/folana/inner-circle/ghost-frequency.jpg"
+              alt="Folana — Ghost Frequency"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="max-w-4xl mx-auto px-6 pb-28 text-center">
+        <div className="rounded-2xl border border-folana-border bg-gradient-to-b from-folana-surface-elevated/60 to-folana-surface p-12 md:p-16">
+          <div className="inline-block mb-4 px-4 py-1 rounded-full border border-folana-neon-cyan/20 bg-folana-neon-cyan/5 text-folana-neon-cyan text-xs font-mono tracking-[4px]">
+            FIRST 5 SONGS LAND THE DAY YOU JOIN
+          </div>
+          <h2 className="font-serif text-4xl md:text-5xl tracking-[-2px] text-folana-ink mb-4">
+            Ready for the Signal?
+          </h2>
+          <p className="text-lg text-folana-text-secondary font-serif italic max-w-lg mx-auto mb-8">
+            One price. Full access. Cancel anytime.
+          </p>
+          <a
             href="https://whop.com/checkout/plan_2Tz2QipTSn0O9"
-            className="inline-flex items-center gap-2 px-10 py-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-lg transition-all"
+            target="_blank"
+            className="inline-block px-12 py-4 rounded-full bg-folana-neon-pink text-black font-semibold text-sm tracking-wide hover:bg-folana-neon-cyan transition-colors"
           >
-            Join the Inner Circle
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-          <p className="text-xs text-zinc-600 mt-4">
-            Whop checkout. Secure. Instant access.
-          </p>
+            Join for $7/mo
+          </a>
         </div>
       </section>
-    </div>
+
+      {/* Footer */}
+      <footer className="border-t border-folana-border py-8">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <Link href="/" className="font-mono text-xs tracking-[3px] text-folana-text-muted hover:text-folana-neon-cyan transition-colors">
+            ← BACK TO JOURNAL
+          </Link>
+          <div className="flex items-center gap-6 text-[10px] font-mono tracking-[2px] text-folana-text-muted">
+            <span>FOLANA'S INNER CIRCLE</span>
+            <span>MAD EZ MEDIA</span>
+            <span>$7/MO</span>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }
