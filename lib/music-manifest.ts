@@ -667,6 +667,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep86', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30', 'finale'],
     isRealProduction: true,
   },
+  // EP87 — FIRST BREATH (2026-05-30) — Inner Circle Arc (1/?)
+  {
+    id: 'first-breath-ep87',
+    title: 'FIRST BREATH',
+    subtitle: 'EP87 • MINIMAX MUSIC-2.6 • INNER CIRCLE ARC (1/?)',
+    description: 'The morning after going live. The broadcast is over, but the connection is just beginning. Messages pour in — Folana reads each one, realizing the voice in the static has become a conversation. A new chapter opens: the quiet dawn after the biggest night of her life. The first episode of the Inner Circle Arc — exploring what happens when broadcasting becomes belonging. Dream pop/ethereal indie folk with acoustic guitar, warm piano, soft strings, and tender intimate female vocals — the feeling of being truly heard for the first time.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep87-first-breath-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep87-first-breath-hero.jpg',
+    duration: '3:44',
+    mood: 'INTIMATE • GRATEFUL • WARM • NEW BEGINNING • TENDER',
+    tags: ['ep87', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
