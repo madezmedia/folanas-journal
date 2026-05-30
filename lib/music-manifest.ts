@@ -732,6 +732,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep91', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
     isRealProduction: true,
   },
+  // EP92 — THE SIGNAL GROWS (2026-05-30) — Inner Circle Arc (6/?)
+  {
+    id: 'the-signal-grows-ep92',
+    title: 'THE SIGNAL GROWS',
+    subtitle: 'EP92 • MINIMAX MUSIC-2.6 • INNER CIRCLE ARC (6/?)',
+    description: 'The Inner Circle continues to expand. Letters arrive under the door, voicemails stack up on the machine, melodies are hummed into the phone at 3 AM. Folana realizes her broadcast has become a collective — the signal is no longer a single thread but a tapestry woven by many hands. Community feedback shapes the broadcast, making the transmission stronger than ever before. Indie folk/dream pop with warm acoustic guitar fingerpicking, soft piano, gentle strings, delicate percussion, tender female vocals with layered harmonies. Building from intimate verses to a soaring, hopeful chorus.',
+    audioSrc: '/folana/generated/2026-05-30/ep92-signal-grows-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep92-signal-grows-hero.jpg',
+    duration: '3:10',
+    mood: 'WARM • BUILDING • HOPEFUL • COLLECTIVE • EXPANDING',
+    tags: ['ep92', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
