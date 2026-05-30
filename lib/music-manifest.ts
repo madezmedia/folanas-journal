@@ -641,6 +641,32 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep84', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30'],
     isRealProduction: true,
   },
+  // EP85 — THE NOISE AND THE SIGNAL (2026-05-30) — Broadcast Arc (9/10)
+  {
+    id: 'the-noise-and-the-signal-ep85',
+    title: 'THE NOISE AND THE SIGNAL',
+    subtitle: 'EP85 • MINIMAX MUSIC-2.6 • BROADCAST ARC (9/10)',
+    description: 'Folana faces the noise of the world — critics, doubts, distractions — and learns to distinguish the real signal from the static. After the courage to amplify, comes the wisdom to listen. A meditation on clarity, discernment, and trusting the frequency that feels like home. The penultimate transmission of the Broadcast Arc: finding the signal through the noise. Dream pop/ethereal indie folk with acoustic guitar, soft piano, strings, warm bass, and tender female vocals — starting textured with ambient static and resolving into crystal clear warmth.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep85-the-noise-and-the-signal-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep85-the-noise-and-the-signal-hero.jpg',
+    duration: '2:35',
+    mood: 'CONTEMPLATIVE • CLEAR • RESOLUTE • DISCERNING',
+    tags: ['ep85', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
+  // EP86 — BROADCAST LIVE (2026-05-30) — Broadcast Arc (10/10) ★ FINALE
+  {
+    id: 'broadcast-live-ep86',
+    title: 'BROADCAST LIVE',
+    subtitle: 'EP86 • MINIMAX MUSIC-2.6 • BROADCAST ARC (10/10)',
+    description: 'The moment of truth. After finding clarity through the noise, Folana goes live for the first time — not a recording, not a late-night broadcast, but LIVE. Real time. Real listeners. Real connection. The arc completes with the courage to be fully present, fully heard, fully herself. The grand finale of the Broadcast Arc: ten episodes that traced the journey from a whisper in the static to a voice broadcast live to the world. Dream pop/ethereal indie folk building to anthemic crescendo with acoustic guitar, warm piano, swelling strings, layered harmonies, percussion, and tender female vocals growing from intimate to triumphant.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep86-broadcast-live-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep86-broadcast-live-hero.jpg',
+    duration: '3:08',
+    mood: 'TRIUMPHANT • INTIMATE • CATHARTIC • FINALE',
+    tags: ['ep86', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30', 'finale'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
