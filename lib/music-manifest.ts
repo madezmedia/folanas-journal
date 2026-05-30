@@ -576,6 +576,32 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep79', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30'],
     isRealProduction: true,
   },
+  // EP80 — THE MIDNIGHT FREQUENCY (2026-05-30) — Broadcast Arc (4/10)
+  {
+    id: 'the-midnight-frequency-ep80',
+    title: 'THE MIDNIGHT FREQUENCY',
+    subtitle: 'EP80 • MINIMAX MUSIC-2.6 • BROADCAST ARC (4/10)',
+    description: "The radio is on every night at midnight now. Folana has found her time slot, her rhythm. The broadcasts are becoming a ritual — the red light, the deep breath, the first words into the microphone. Strangers are starting to tune in — insomniacs, truck drivers, night shift workers. She doesn't know their names, but she knows their hours. The midnight frequency is becoming a thread through dark hours, a lullaby for the sleepless. The fourth transmission of the Broadcast Arc: the ritual. Dream pop/ethereal indie folk with acoustic guitar, piano, strings, warm bass, soft synth pads, and tender intimate female vocals — a lullaby for the sleepless.",
+    audioSrc: '/folana/generated/2026-05-30/music/ep80-midnight-frequency-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep80-midnight-frequency-hero.jpg',
+    duration: '3:14',
+    mood: 'INTIMATE • NIGHTTIME • RITUALISTIC',
+    tags: ['ep80', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
+  // EP81 — THE LATE HOUR (2026-05-30) — Broadcast Arc (5/10)
+  {
+    id: 'the-late-hour-ep81',
+    title: 'THE LATE HOUR',
+    subtitle: 'EP81 • MINIMAX MUSIC-2.6 • BROADCAST ARC (5/10)',
+    description: "The clocks strike midnight and Folana's broadcasts have become a fixture for the late-night tribe. The night clerk turns up the volume at the all-night diner. The trucker on I-95 lets the melody carry him through the dark hours. The insomniac in a quiet apartment finds a voice in the static. Folana realizes she is no longer broadcasting into the void — she is the thread connecting strangers through the late hour. A meditation on the community of the night shift, the unspoken bond between the one who transmits and the ones who receive in the dark. The fifth transmission of the Broadcast Arc: the late hour connection. Dream pop/ethereal indie folk with acoustic guitar, soft piano, warm bass, strings, soft synth pads, gentle percussion, ambient radio static textures, and tender female vocals — intimate and connected, the voice that keeps the late hours company.",
+    audioSrc: '/folana/generated/2026-05-30/music/ep81-the-late-hour-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep81-the-late-hour-hero.jpg',
+    duration: '3:00',
+    mood: 'INTIMATE • NIGHTTIME • CONNECTED',
+    tags: ['ep81', 'minimax-music-2.6', 'real-production', 'broadcast-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
