@@ -693,6 +693,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep88', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
     isRealProduction: true,
   },
+  // EP89 — THE WELCOME MAT (2026-05-30) — Inner Circle Arc (3/?)
+  {
+    id: 'the-welcome-mat-ep89',
+    title: 'THE WELCOME MAT',
+    subtitle: 'EP89 • MINIMAX MUSIC-2.6 • INNER CIRCLE ARC (3/?)',
+    description: 'The community opens its doors wider — the welcome mat is out. New members arrive, drawn by the warmth spilling from Folana\'s open door. Old members extend hands, show them the way. Dream pop/ethereal indie folk with acoustic guitar, warm piano, soft strings, gentle percussion — welcoming, warm, open-hearted. A hearth song for all who find their way home.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep89-the-welcome-mat-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep89-the-welcome-mat-hero.jpg',
+    duration: '2:07',
+    mood: 'WELCOMING • OPEN • WARM • INCLUSIVE',
+    tags: ['ep89', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
