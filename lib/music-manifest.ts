@@ -680,6 +680,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep87', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
     isRealProduction: true,
   },
+  // EP88 — THE INNER CIRCLE (2026-05-30) — Inner Circle Arc (2/?)
+  {
+    id: 'the-inner-circle-ep88',
+    title: 'THE INNER CIRCLE',
+    subtitle: 'EP88 • MINIMAX MUSIC-2.6 • INNER CIRCLE ARC (2/?)',
+    description: 'The community that formed around Folana\'s broadcasts becomes a living thing. The first group of listeners who became friends — late-night conversations, shared frequencies, a circle of voices in the static. Folana realizes the broadcast was never just her voice; it was all of them together. Dream pop/ethereal indie folk with fingerpicked acoustic guitar, warm piano, soft strings, warm bass, gentle percussion, and tender layered female vocals — intimate and warm, a lullaby for a growing community.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep88-the-inner-circle-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep88-the-inner-circle-hero.jpg',
+    duration: '2:49',
+    mood: 'INTIMATE • WARM • COMMUNITY • BELONGING • TENDER',
+    tags: ['ep88', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
