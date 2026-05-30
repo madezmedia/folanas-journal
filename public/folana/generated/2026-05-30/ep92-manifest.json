@@ -1,0 +1,23 @@
+{
+  "episode": 92,
+  "title": "THE SIGNAL GROWS",
+  "arc": "Inner Circle",
+  "arc_position": "6/?",
+  "date": "2026-05-30",
+  "key": "G major / E minor",
+  "tempo": "Warm, building, hopeful",
+  "duration": "3:10",
+  "model": "minimax-music-2.6",
+  "hero": "mmx image-01 (Folana's cozy radio room, fairy lights, signal meters glowing, community gathered with letters and photos)",
+  "narration": "mmx speech-2.8-hd, English_CaptivatingStoryteller (53s)",
+  "description": "The Inner Circle continues to expand. Letters arrive under the door, voicemails stack up on the machine, melodies are hummed into the phone at 3 AM. Folana realizes her broadcast has become a collective — the signal is no longer a single thread but a tapestry woven by many hands. Community feedback shapes the broadcast, making the transmission stronger than ever before.",
+  "style": "Indie folk / Dream pop with warm acoustic guitar fingerpicking, soft piano, gentle strings, delicate percussion, tender female vocals with layered harmonies. Building from intimate verses to a soaring, hopeful chorus. Key of G major with E minor shifts. Warm, building, hopeful.",
+  "assets": {
+    "full_mix": "ep92-signal-grows-full-mix.mp3 (5.8MB)",
+    "preview_15s": "ep92-signal-grows-15s.mp3 (470KB)",
+    "tagline_bed": "ep92-signal-grows-tagline-bed.mp3 (470KB)",
+    "hero": "ep92-signal-grows-hero.jpg (351KB)",
+    "lyrics": "ep92-signal-grows-lyrics.txt",
+    "narration": "ep92-signal-grows-narration.mp3 (825KB, 53s)"
+  }
+}
