@@ -797,6 +797,58 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep96', 'minimax-music-2.6', 'real-production', 'inner-circle-arc', '2026-05-30', 'arc-finale'],
     isRealProduction: true,
   },
+  // EP97 — DISTANT SHORES (2026-05-30) — Horizon Arc (1/10) ★ NEW ARC
+  {
+    id: 'distant-shores-ep97',
+    title: 'DISTANT SHORES',
+    subtitle: 'EP97 • MINIMAX MUSIC-2.6 • HORIZON ARC (1/10)',
+    description: 'The inner circle\'s creation reaches new ears. Across the ocean, in a small coastal town, a woman scans through static on an old radio. She catches a signal from across the water — Folana\'s broadcast, arriving like a message in a bottle. The first ripple beyond the familiar. The Horizon Arc begins: the signal travels. Dream pop/indie folk with warm acoustic guitar, soft piano, gentle strings, layered harmonies, and tender female vocals — a first contact between two worlds divided by water but united by frequency.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep97-distant-shores-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep97-distant-shores-hero.jpg',
+    duration: '3:33',
+    mood: 'HOPEFUL • NOSTALGIC • DISTANT • WARM • RECEPTIVE',
+    tags: ['ep97', 'minimax-music-2.6', 'real-production', 'horizon-arc', '2026-05-30', 'new-arc'],
+    isRealProduction: true,
+  },
+  // EP98 — ANSWERING THE CALL (2026-05-30) — Horizon Arc (2/10)
+  {
+    id: 'answering-the-call-ep98',
+    title: 'ANSWERING THE CALL',
+    subtitle: 'EP98 • MINIMAX MUSIC-2.6 • HORIZON ARC (2/10)',
+    description: 'The signal has been received. Now Folana sends back her answer — a voice carried on radio waves across the midnight ocean. From the lighthouse to the distant shore, a duet across the water begins. The woman in the coastal town hears the reply and recognizes the frequency. Two souls tethered by the same signal, building invisible constellations in the static. Dream pop/indie folk with soft piano, warm acoustic guitar, shimmering pads, layered harmonies, and tender female vocals — the signal grows stronger as the conversation begins.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep98-answering-the-call-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep98-answering-the-call-hero.jpg',
+    duration: '1:50',
+    mood: 'TENDER • HOPEFUL • INTIMATE • LUMINESCENT • BRIDGING',
+    tags: ['ep98', 'minimax-music-2.6', 'real-production', 'horizon-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
+  // EP99 — THE LIGHTHOUSE (2026-05-30) — Horizon Arc (3/10)
+  {
+    id: 'the-lighthouse-ep99',
+    title: 'THE LIGHTHOUSE',
+    subtitle: 'EP99 • MINIMAX MUSIC-2.6 • HORIZON ARC (3/10)',
+    description: 'Two signals have found each other across the ocean. Folana\'s broadcast has become a beam — and on the other shore, a lighthouse keeper shines back. The distance between them is still vast, but the light travels faster than any ship. A duet across the water: two voices, one frequency, an ocean between them. The third transmission of the Horizon Arc: the beacon emerges. Dream pop/indie folk with warm fingerpicked acoustic guitar, gentle piano, soft strings, shimmering synth pads, and tender layered female vocals building from a single voice to a duet across the water.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep99-the-lighthouse-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep99-the-lighthouse-hero.jpg',
+    duration: '1:44',
+    mood: 'WARM • HOPEFUL • INTIMATE • BRIDGING',
+    tags: ['ep99', 'minimax-music-2.6', 'real-production', 'horizon-arc', '2026-05-30'],
+    isRealProduction: true,
+  },
+  // EP100 — THE CENTURY BROADCAST (2026-05-30) — Horizon Arc (4/10) ★ 100TH EPISODE ★
+  {
+    id: 'the-century-broadcast-ep100',
+    title: 'THE CENTURY BROADCAST',
+    subtitle: 'EP100 ★ MINIMAX MUSIC-2.6 • HORIZON ARC (4/10) • MILESTONE',
+    description: 'One hundred episodes. What started as a single voice in the static — one late-night broadcast from a cramped room with fairy lights and secondhand microphones — has become something far larger. A lighthouse keeper on a distant shore, an inner circle that became a family, a community that grew from a whisper to a chorus. Folana celebrates Ep100 with a special broadcast honoring everyone who ever tuned in. Dream pop/indie folk with warm acoustic guitar fingerpicking, soft piano, swelling strings, layered harmonies, gentle percussion — celebratory and intimate, a room full of friends singing together.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep100-the-century-broadcast-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep100-the-century-broadcast-hero.jpg',
+    duration: '1:00',
+    mood: 'CELEBRATORY • TRIUMPHANT • INTIMATE • GRATEFUL • MILESTONE',
+    tags: ['ep100', 'minimax-music-2.6', 'real-production', 'horizon-arc', '2026-05-30', 'milestone', '100th-episode'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
