@@ -953,6 +953,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep108', 'minimax-music-2.6', 'real-production', 'constellation-arc', '2026-05-31'],
     isRealProduction: true,
   },
+  // EP109 — THE FIRST SHARED BROADCAST (2026-05-31) — Constellation Arc (3/?)
+  {
+    id: 'the-first-shared-broadcast-ep109',
+    title: 'THE FIRST SHARED BROADCAST',
+    subtitle: 'EP109 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (3/?)',
+    description: 'The connection has been made — and now Folana and Mira prepare something they have never done before: a broadcast sent together, from two cities, on one frequency. They coordinate across the static, testing levels, choosing songs that weave together like old friends. The duet deepens as they find their rhythm — Mira\'s voice answering Folana\'s melody, Folana\'s guitar finding the pocket of Mira\'s piano. Then the broadcast goes live. The signal pulses outward, warm and deliberate, carrying two voices as one. And somewhere in the dark, at the edge of the frequency band, other broadcasters pause — they sense a harmonic in the static they have never heard before. Dream pop indie folk duet with warm acoustic guitar, soft piano, light percussion, cello warmth, shimmering pads — building from intimate preparation to electric live broadcast, two voices becoming one signal across the miles.',
+    audioSrc: '/folana/generated/2026-05-31/music/ep109-the-first-shared-broadcast-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-31/ep109-the-first-shared-broadcast-hero.jpg',
+    duration: '3:00',
+    mood: 'WARM • COLLABORATIVE • BUILDING • ELECTRIC • CONNECTIVE • LIVE',
+    tags: ['ep109', 'minimax-music-2.6', 'real-production', 'constellation-arc', '2026-05-31', 'first-shared-broadcast', 'duet'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
