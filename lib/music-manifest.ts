@@ -927,6 +927,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep106', 'minimax-music-2.6', 'real-production', 'horizon-arc', '2026-05-30', 'arc-finale'],
     isRealProduction: true,
   },
+  // EP107 — THE CONSTELLATION BEGINS (2026-05-30) — Constellation Arc (1/?) ★ NEW ARC
+  {
+    id: 'the-constellation-begins-ep107',
+    title: 'THE CONSTELLATION BEGINS',
+    subtitle: 'EP107 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (1/?)',
+    description: 'The signal has reached farther than Folana ever dreamed — and now she finds she is not alone on the frequency. From a lighthouse on a distant shore, from a coastal town that gathered around her static, from corners of the map she has never seen, other voices answer back. She begins reaching out, one by one, threading their frequencies into something larger than any single transmission — a network of signals turning toward each other in the dark. The Constellation Arc opens: not a single voice, but a chorus of them, learning to sing together across the world.',
+    audioSrc: '/folana/generated/2026-05-30/music/ep107-the-constellation-begins-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-30/ep107-the-constellation-begins-hero.jpg',
+    duration: '2:52',
+    mood: 'WARM • HOPEFUL • EXPANSIVE • CONNECTIVE • NEW BEGINNING',
+    tags: ['ep107', 'minimax-music-2.6', 'real-production', 'constellation-arc', '2026-05-30', 'arc-opener'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
