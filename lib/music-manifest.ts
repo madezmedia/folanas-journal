@@ -940,6 +940,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep107', 'minimax-music-2.6', 'real-production', 'constellation-arc', '2026-05-30', 'arc-opener'],
     isRealProduction: true,
   },
+  // EP108 — THE ANSWERING SIGNAL (2026-05-31) — Constellation Arc (2/?)
+  {
+    id: 'the-answering-signal-ep108',
+    title: 'THE ANSWERING SIGNAL',
+    subtitle: 'EP108 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (2/?)',
+    description: 'Folana turns the dial and hears something new — not static, not silence, but a voice. A warm pulse at the edge of the night. Another broadcaster, reaching back through the frequencies. Mira, a wanderer with a vinyl sunrise, answers the call. Two voices meet across the static for the first time — a melody for a melody, a story for a story. The constellation has its first bridge. Dream pop indie folk duet with call-and-response harmonies, warm acoustic guitar fingerpicking, soft piano, gentle strings, shimmering pads — intimate and connective, two broadcasters harmonizing across the miles.',
+    audioSrc: '/folana/generated/2026-05-31/music/ep108-the-answering-signal-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-31/ep108-the-answering-signal-hero.jpg',
+    duration: '2:02',
+    mood: 'WARM • INTIMATE • CONNECTIVE • HOPEFUL • MAGICAL • FIRST CONTACT',
+    tags: ['ep108', 'minimax-music-2.6', 'real-production', 'constellation-arc', '2026-05-31'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
