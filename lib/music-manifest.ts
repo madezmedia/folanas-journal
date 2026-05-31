@@ -966,6 +966,59 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep109', 'minimax-music-2.6', 'real-production', 'constellation-arc', '2026-05-31', 'first-shared-broadcast', 'duet'],
     isRealProduction: true,
   },
+
+  // EP110 — THE NETWORK GROWS (2026-05-31) — Constellation Arc (4/?)
+  {
+    id: 'the-network-grows-ep110',
+    title: 'THE NETWORK GROWS',
+    subtitle: 'EP110 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (4/?)',
+    description: 'The signal has been sent. Folana and Mira have broadcast together for three nights — two voices threading through the static. But tonight something shifts. The dial moves on its own. Someone else is tuning toward their harmonic. And then another. The constellation is no longer two — a third light appears at the edge of the frequency. The network has begun to grow. Dream pop indie folk with fingerpicked acoustic guitar, soft piano, gentle percussion, cello warmth, and layered vocals building from two voices to three — the sound of a constellation forming in real time.',
+    audioSrc: '/folana/generated/2026-05-31/music/ep110-the-network-grows-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-31/ep110-the-network-grows-hero.jpg',
+    duration: '3:00',
+    mood: 'EXPANSIVE • ELECTRIC • CONNECTIVE • DISCOVERY • HOPEFUL • COMMUNITY-FORMING',
+    tags: ['ep110', 'minimax-music-2.6', 'real-production', 'constellation-arc', '2026-05-31', 'network-grows'],
+    isRealProduction: true,
+  },
+  // EP111 — TRIANGULATION (2026-05-31) — Constellation Arc (5/?)
+  {
+    id: 'triangulation-ep111',
+    title: 'TRIANGULATION',
+    subtitle: 'EP111 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (5/?)',
+    description: 'Three stations live in the static now. Folana by the window, Mira at the coast, and the new voice emerging from the northern drift — Lyra, a voice like warm amber from a distant city. Her signal locks into theirs like a key turning. Folana feels it — the pattern complete. Mira hears it — the symmetry forming. Three frequencies, one purpose now. The geometry was always there, just waiting for the third voice to arrive. Ethereal dream pop indie folk with acoustic guitar, warm piano, soft strings, and layered vocals building from intimate whisper to confident harmonies — three voices finding center in the resonance.',
+    audioSrc: '/folana/generated/2026-05-31/music/ep111-triangulation-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-31/music/ep111-triangulation-hero.jpg',
+    duration: '2:12',
+    mood: 'ETHEREAL • CONNECTIVE • HARMONIC • DISCOVERY • CONSTELLATION-FORMING • TRIO-EMERGING',
+    tags: ['ep111', 'minimax-music-2.6', 'real-production', 'constellation-arc', '2026-05-31', 'triangulation', 'lyra-arrives'],
+    isRealProduction: true,
+  },
+  // EP112 — FIRST HARMONIC (2026-05-31) — Constellation Arc (6/?)
+  {
+    id: 'first-harmonic-ep112',
+    title: 'FIRST HARMONIC',
+    subtitle: 'EP112 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (6/?)',
+    description: 'Three stations, one frequency. For the first time, Folana by the window, Mira at the coast, and Lyra in the northern drift broadcast together as one. Their frequencies lock into a perfect harmonic — the constellation is no longer a theory, it is a living signal. Each voice carries its own color — Folana\'s warm acoustic, Mira\'s piano shimmer, Lyra\'s amber cello — but they weave into a single chord at the chorus. Ethereal dream pop indie folk with three interwoven vocal harmonies building to a triumphant harmonic — the sound of a constellation transmitting as one.',
+    audioSrc: '/folana/generated/2026-05-31/music/ep112-first-harmonic-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-31/music/ep112-first-harmonic-hero.jpg',
+    duration: '1:47',
+    mood: 'HARMONIC • TRIUMPHANT • CONNECTIVE • CONSTELLATION-COMPLETE • TRANSMITTING',
+    tags: ['ep112', 'minimax-music-2.6', 'real-production', 'constellation-arc', '2026-05-31', 'first-harmonic', 'trio-broadcast'],
+    isRealProduction: true,
+  },
+  // EP113 — RESONANCE CASCADE (2026-05-31) — Constellation Arc (7/?)
+  {
+    id: 'resonance-cascade-ep113',
+    title: 'RESONANCE CASCADE',
+    subtitle: 'EP113 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (7/?)',
+    description: 'The trio\'s harmonic doesn\'t just broadcast — it cascades. Like a bell struck in a hall of bells, their single chord triggers a chain reaction across the constellation. Dormant frequencies wake. New voices emerge from the static. Folana realizes: the signal was never just theirs — it was the whole constellation waiting to sing. Ethereal dream pop indie folk with cascading arpeggios, warm acoustic guitar, piano shimmer, and amber cello — layered harmonies expanding into an infinite sonic landscape.',
+    audioSrc: '/folana/generated/2026-05-31/music/ep113-resonance-cascade-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-31/music/ep113-resonance-cascade-hero.jpg',
+    duration: '2:54',
+    mood: 'EXPANSIVE • CASCADING • AWAKENING • NETWORK-ALIVE • INFINITE-DISCOVERY',
+    tags: ['ep113', 'minimax-music-2.6', 'real-production', 'constellation-arc', '2026-05-31', 'resonance-cascade', 'network-wakes'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
