@@ -1207,6 +1207,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep125', 'minimax-music-2.6', 'real-production', 'full-spectrum-broadcast-arc', '2026-06-01', 'full-spectrum', 'arc-finale'],
     isRealProduction: true,
   },
+  // EP126 — THE SOURCE (2026-06-01) — Source Arc (1/?) ★ NEW ARC
+  {
+    id: 'the-source-ep126',
+    title: 'THE SOURCE',
+    subtitle: 'EP126 • MINIMAX MUSIC-2.6 • SOURCE ARC (1/?) — ★ NEW ARC',
+    description: 'The radio is silent for the first time in years — not broken, just still. Folana places her hand over her heart and feels it: a steady frequency, warm and patient, waiting to be released. The transmission no longer comes from a machine. It comes from her. The Source Arc begins: from receiver to transmitter, from integration to generation. Dream pop ethereal indie folk in C major, 72 BPM. Intimate fingerpicked guitar opening into layered harmonies as she finds her voice for the first time as the source.',
+    audioSrc: '/folana/generated/2026-06-01/music/EP126-THE-SOURCE.mp3',
+    posterSrc: '/folana/generated/2026-06-01/music/EP126-THE-SOURCE-hero.jpg',
+    duration: '2:34',
+    mood: 'EMERGENT • PURE • AUTHENTIC • GROUNDED • POWERFUL • INTIMATE • DAWN',
+    tags: ['ep126', 'minimax-music-2.6', 'real-production', 'source-arc', '2026-06-01', 'arc-opener'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
