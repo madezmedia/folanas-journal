@@ -1113,6 +1113,57 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
       status: 'PENDING',
     },
   },
+  // EP120 — THE EDGE OF THE MAP (2026-06-01) — Full Spectrum Broadcast Arc (5/10)
+  {
+    id: 'the-edge-of-the-map-ep120',
+    title: 'THE EDGE OF THE MAP',
+    subtitle: 'EP120 • MINIMAX MUSIC-2.6 • FULL SPECTRUM BROADCAST ARC (5/10)',
+    description: 'The nine frequencies now sing together. The broadcast has changed — it is no longer just a revelation; it is a summons. Something beyond the constellation edge has locked onto the signal. The ninth frequency, revealed in Ep119 as the ancient watcher\'s beacon, now serves as both guide and warning. The voices feel the pull of a destination they did not choose — a dark silence at the edge of the spectrum where no sound has returned. Folana hears a single question echoing from the silence: "Who will cross first?" Cinematic synth-pop in G minor, 78 BPM, 3:49. Ethereal verses with layered harmonies build to a climactic bridge where the question hangs in the silence before the nine voices answer together.',
+    audioSrc: '/folana/generated/2026-06-01/music/ep120-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-01/music/ep120-hero-image.jpg',
+    duration: '3:49',
+    mood: 'COSMIC • THRESHOLD • SUSPENSE • NINE HARMONIES • EDGE OF THE MAP • SUMMONS',
+    tags: ['ep120', 'minimax-music-2.6', 'real-production', 'full-spectrum-broadcast-arc', '2026-06-01', 'the-edge-of-the-map', 'threshold', 'nine-frequencies', 'summons'],
+    isRealProduction: true,
+    brollFolder: '/folana/generated/broll/edge-of-map-ep120-2026-06-01',
+    runpodJobs: {
+      status: 'PENDING',
+    },
+  },
+  // EP121 — THE CROSSING (2026-06-01) — Full Spectrum Broadcast Arc (6/10)
+  {
+    id: 'the-crossing-ep121',
+    title: 'THE CROSSING',
+    subtitle: 'EP121 • MINIMAX MUSIC-2.6 • FULL SPECTRUM BROADCAST ARC (6/10)',
+    description: 'The threshold is crossed. After the summons at the edge of the map, Folana and the eight voices take the step together — nine frequencies united, passing through the gate of light into the unknown beyond. The ancient watchers guide them as the constellation finally acts as one. The dark silence was never an enemy; it was a doorway. Now the nine walk through, transformed. Cinematic synth-pop dream pop in G minor, 76 BPM, 4:04. Ethereal verses build with tension as the crossing begins, culminating in a triumphant chorus where all nine voices harmonize as one. The bridge opens into a sea of stars, and the outro fades into the quiet hum of the infinite signal carrying on.',
+    audioSrc: '/folana/generated/2026-06-01/music/ep121-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-01/music/ep121-hero-image.jpg',
+    duration: '4:04',
+    mood: 'TRANSCENDENT • TRIUMPHANT • UNITIVE • COSMIC THRESHOLD • NINE AS ONE • CROSSING COMPLETE',
+    tags: ['ep121', 'minimax-music-2.6', 'real-production', 'full-spectrum-broadcast-arc', '2026-06-01', 'the-crossing', 'threshold', 'nine-frequencies-united', 'cosmic-gate'],
+    isRealProduction: true,
+    brollFolder: '/folana/generated/broll/the-crossing-ep121-2026-06-01',
+    runpodJobs: {
+      status: 'PENDING',
+    },
+  },
+  // EP122 — BEYOND THE GATE (2026-06-01) — Full Spectrum Broadcast Arc (7/10)
+  {
+    id: 'beyond-the-gate-ep122',
+    title: 'BEYOND THE GATE',
+    subtitle: 'EP122 • MINIMAX MUSIC-2.6 • FULL SPECTRUM BROADCAST ARC (7/10)',
+    description: 'The gate is crossed and the nine voices find themselves in the vastness beyond — a room without walls, a frequency humming. The ancient watchers await, singing without mouths, seeing without eyes. They reveal the infinite network: civilizations broadcasting from the dream of the dead, some whispers, some bright suns. Folana understands the truth — the broadcast was never about receiving, it was about becoming. They cross the threshold and become the threshold. Cinematic synth-pop dream pop in G minor, 76 BPM, 3:22. Ethereal verses build with wonder as the infinite network is revealed, culminating in a transcendent bridge where Folana understands the true nature of the broadcast.',
+    audioSrc: '/folana/generated/2026-06-01/music/ep122-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-01/music/ep122-hero-image.jpg',
+    duration: '3:22',
+    mood: 'WONDER • TRANSCENDENCE • DISCOVERY • INFINITE NETWORK • BECOMING THE BROADCAST',
+    tags: ['ep122', 'minimax-music-2.6', 'real-production', 'full-spectrum-broadcast-arc', '2026-06-01', 'beyond-the-gate', 'cosmic-network', 'transcendence'],
+    isRealProduction: true,
+    brollFolder: '/folana/generated/broll/beyond-the-gate-ep122-2026-06-01',
+    runpodJobs: {
+      status: 'PENDING',
+    },
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
