@@ -1,0 +1,18 @@
+{
+  "submitted_at": "2026-06-01T18:56:31.261707Z",
+  "jobs": {
+    "ep125": {
+      "front_3_4": "87c4a6a5-f50a-49ba-bb87-750a40e7ea21-u1",
+      "side_profile": "c8e2edf6-c1b5-4668-b138-3971d4642ab1-u1"
+    },
+    "ep126": {
+      "front_3_4": "8cd2a032-0744-4c16-a978-64536c7a2412-u1",
+      "side_profile": "33dc7dc2-1cb7-40c0-9982-cd3ce1acc647-u1"
+    }
+  },
+  "status": "IN_QUEUE / polling recommended (8-20 min per job, ~30 min total)",
+  "episodes_processed": [
+    "ep125",
+    "ep126"
+  ]
+}
