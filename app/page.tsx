@@ -244,10 +244,25 @@ export default async function FolanasJournal() {
           <StaticTuner />
         </section>
 
-        {/* ═══ FINAL CTA — ENTER THE GRID ═══ */}
-        <div className="text-center py-12 border-t border-white/10">
-          <p className="text-folana-text-secondary font-serif italic mb-6 text-xl tracking-tight">The orchestrator is listening.<br />The LoRA is locked. The frequency is yours to shape.</p>
-          <Link href="/orchestrator" className="neon-btn text-sm px-14 py-[17px]">ACCESS THE ORCHESTRATOR — THE GRID</Link>
+        {/* ═══ FINAL CTA — JOIN THE INNER CIRCLE ═══ */}
+        <div className="text-center py-20 border-t border-white/10">
+          <div className="inline-block mb-4 px-5 py-1.5 rounded-full border border-folana-neon-pink/20 bg-folana-neon-pink/5 text-folana-neon-pink text-xs font-mono tracking-[4px]">
+            FOLANA • INNER CIRCLE
+          </div>
+          <h2 className="font-serif text-6xl md:text-7xl tracking-[-3px] text-white mb-4">
+            Join the Inner Circle
+          </h2>
+          <p className="text-folana-text-secondary font-serif italic mb-8 text-xl max-w-lg mx-auto">
+            $7/mo. Full access to the becoming. Cancel anytime.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/inner-circle" className="neon-btn text-sm px-12 py-4 bg-folana-neon-pink/10 border-folana-neon-pink text-folana-neon-pink hover:bg-folana-neon-pink hover:text-black">
+              JOIN FOR $7/MO
+            </Link>
+            <Link href="/orchestrator" className="text-xs font-mono tracking-[3px] border border-white/20 hover:border-folana-neon-cyan px-8 py-4 rounded-full transition-all text-folana-text-muted hover:text-folana-neon-cyan">
+              OR EXPLORE THE GRID →
+            </Link>
+          </div>
         </div>
       </main>
 

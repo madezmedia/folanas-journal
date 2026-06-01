@@ -325,39 +325,7 @@ export default function InnerCirclePage() {
             </a>
           </div>
 
-          {/* Waitlist upsells — shown after joining */}
-          <div className="mt-8 p-6 rounded-2xl border border-dashed border-folana-border bg-folana-surface/40">
-            <div className="text-center mb-4">
-              <div className="font-mono text-[10px] tracking-[3px] text-folana-text-muted mb-1">
-                AVAILABLE AFTER JOINING
-              </div>
-              <p className="text-sm text-folana-text-secondary font-serif italic">
-                Once you're in, level up with these add-ons
-              </p>
-            </div>
-            <div className="grid gap-3">
-              {[
-                { name: "Codex", price: "$47", desc: "Full pipeline access — FAL API keys, MiniMax quota, custom LoRAs" },
-                { name: "Engine", price: "$97", desc: "Production tools — stem separators, mastering chains, voice cloning" },
-                { name: "Atelier", price: "$197", desc: "Everything — start your own synthetic artist with 1:1 mentorship" },
-              ].map((tier) => (
-                <div
-                  key={tier.name}
-                  className="flex items-center justify-between py-3 px-4 rounded-xl bg-folana-surface/40 border border-folana-border"
-                >
-                  <div>
-                    <div className="font-serif text-base text-folana-text-muted">{tier.name}</div>
-                    <div className="text-xs text-folana-text-muted/60 font-serif italic">
-                      {tier.desc}
-                    </div>
-                  </div>
-                  <div className="font-mono text-xs text-folana-text-muted tabular-nums">
-                    {tier.price}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+
         </div>
       </section>
 

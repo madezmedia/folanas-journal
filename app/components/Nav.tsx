@@ -9,6 +9,7 @@ import { BrandLock } from './BrandLock';
 
 const navLinks = [
   { href: '/', label: 'THE ARCHIVE', short: 'JOURNAL' },
+  { href: '/inner-circle', label: 'INNER CIRCLE', short: 'JOIN' },
   { href: '/music', label: 'MUSIC RELEASES', short: 'MUSIC' },
   { href: '/#sigils', label: 'VISUAL CODEX', short: 'SIGILS' },
   { href: '/#sonic', label: 'SONIC VAULT', short: 'VAULT' },
@@ -54,10 +55,10 @@ export function Nav() {
         {/* Right side actions */}
         <div className="flex items-center gap-3">
           <Link 
-            href="/#sigils"
-            className="hidden sm:block neon-btn text-[10px] py-2 px-5"
+            href="/inner-circle"
+            className="hidden sm:block neon-btn text-[10px] py-2 px-5 bg-folana-neon-pink/10 border-folana-neon-pink text-folana-neon-pink hover:bg-folana-neon-pink hover:text-black"
           >
-            ENTER THE SIGILS
+            JOIN $7/MO
           </Link>
           
           {/* Mobile Hamburger */}
@@ -85,7 +86,7 @@ export function Nav() {
             </Link>
           ))}
           <div className="pt-4 border-t border-white/10">
-            <Link href="/#sigils" onClick={() => setMobileOpen(false)} className="neon-btn w-full justify-center text-xs py-3">BROWSE THE VISUAL CODEX</Link>
+            <Link href="/inner-circle" onClick={() => setMobileOpen(false)} className="neon-btn w-full justify-center text-xs py-3">JOIN THE INNER CIRCLE — $7/MO</Link>
           </div>
         </div>
       )}

@@ -19,6 +19,14 @@ export const metadata: Metadata = {
     description: "Thoughts, sigils, and sonic transmissions from the wires. Dark fairy grunge. Holographic neon. The pipeline breathes.",
     images: [{ url: '/brand/og-card-neutral.png' }],
   },
+  alternates: {
+    types: {
+      'application/rss+xml': [{
+        url: '/api/rss',
+        title: "Folana's Journal | RSS Feed",
+      }],
+    },
+  },
 };
 
 export default function RootLayout({
