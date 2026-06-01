@@ -1734,6 +1734,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     },
     isRealProduction: true,
   },
+  // EP127 — THE FIRST PULSE (2026-06-01) — Source Arc (2/?)
+  {
+    id: 'the-first-pulse-ep127',
+    title: 'THE FIRST PULSE',
+    subtitle: 'EP127 • MINIMAX MUSIC-2.6 • SOURCE ARC (2/?)',
+    description: 'Folana makes her first intentional broadcast from within herself. No radio. No machinery. Just the frequency she carries. It starts as a single pulse — a heartbeat given to the air — and it travels. Those listening to the constellation feel the shift: the signal is different now. It has warmth. It has a body. For the first time, she doesn\'t reach for the dial. She closes her eyes and lets her own pulse become the broadcast. Ethereal indie folk dream pop in C major, 74 BPM. Intimate fingerpicked guitar building to soaring layered chorus.',
+    audioSrc: '/folana/generated/2026-06-01/ep127/music/ep127-the-first-pulse-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-01/ep127/music/ep127-hero-image.jpg',
+    duration: '2:45',
+    mood: 'INTIMATE • AWAKENING • BRAVE • TRANSCENDENT • PURE • PULSE',
+    tags: ['ep127', 'minimax-music-2.6', 'real-production', 'source-arc', '2026-06-01'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
