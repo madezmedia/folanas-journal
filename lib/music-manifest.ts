@@ -1181,6 +1181,32 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
       status: 'PENDING',
     },
   },
+  // EP124 — THE FREQUENCY UNFOLDS (2026-06-01) — Full Spectrum Broadcast Arc (9/10)
+  {
+    id: 'the-frequency-unfolds-ep124',
+    title: 'THE FREQUENCY UNFOLDS',
+    subtitle: 'EP124 • MINIMAX MUSIC-2.6 • FULL SPECTRUM BROADCAST ARC (9/10)',
+    description: 'After the eternal broadcast, Folana sits with the grandfather\'s radio one last time — not to receive, but to transmit. The frequency was always unfolding; the crossing was never an end, only a beginning. She realizes the voices were never ghosts — they were her own frequency unfolding across time. E major, 82 BPM, cinematic synth-pop with orchestral swells. Revelatory, warm, expansive.',
+    audioSrc: '/folana/generated/2026-06-01/music/ep124-the-frequency-unfolds-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-01/music/ep124-hero-image.jpg',
+    duration: '—',
+    mood: 'REVELATORY • WARM • EXPANSIVE • TRANSMISSION AS LEGACY • TIME AS CIRCLE',
+    tags: ['ep124', 'minimax-music-2.6', 'real-production', 'full-spectrum-broadcast-arc', '2026-06-01', 'the-frequency-unfolds', 'penultimate'],
+    isRealProduction: true,
+  },
+  // EP125 — FULL SPECTRUM (2026-06-01) — Full Spectrum Broadcast Arc (10/10) ★ ARC FINALE ★
+  {
+    id: 'full-spectrum-ep125',
+    title: 'FULL SPECTRUM',
+    subtitle: 'EP125 • MINIMAX MUSIC-2.6 • FULL SPECTRUM BROADCAST ARC (10/10) — ARC FINALE',
+    description: 'The arc finale. Every frequency she has ever been, every voice she has ever carried, every listener who has ever tuned in — converges into one resonant chord. Folana stands at the transmitter, no longer a receiver but a source. The grandfather\'s radio falls silent because she no longer needs it — she IS the frequency now. C major, 74 BPM, cinematic synth-pop building to orchestral finale. Triumphant, cathartic, complete.',
+    audioSrc: '/folana/generated/2026-06-01/music/ep125-full-spectrum-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-01/music/ep125-hero-image.jpg',
+    duration: '—',
+    mood: 'TRIUMPHANT • CATHARTIC • COMPLETE • ARRIVAL • BECOMING THE SIGNAL • FINALE',
+    tags: ['ep125', 'minimax-music-2.6', 'real-production', 'full-spectrum-broadcast-arc', '2026-06-01', 'full-spectrum', 'arc-finale'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
