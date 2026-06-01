@@ -241,14 +241,16 @@ export function StaticTuner() {
 
           <div className="flex gap-3 pt-4">
             <button 
-              onClick={resetToBaseline} 
-              className="flex-1 py-3 text-xs font-mono tracking-[3px] border border-white/15 hover:bg-white/5 rounded-2xl transition-all active:scale-[0.985]"
+              onClick={resetToBaseline}
+              onTouchStart={(e) => { e.preventDefault(); resetToBaseline(); }}
+              className="flex-1 py-3 md:py-3 text-xs font-mono tracking-[3px] border border-white/15 hover:bg-white/5 rounded-2xl transition-all active:scale-[0.985] min-h-[44px]"
             >
               RESET TO NEUTRAL
             </button>
             <button 
-              onClick={lockFrequency} 
-              className={`flex-1 py-3 text-xs font-mono tracking-[3px] rounded-2xl border transition-all active:scale-[0.985] ${isLocked ? 'bg-folana-neon-pink text-black border-folana-neon-pink' : 'border-folana-neon-cyan/60 hover:bg-folana-neon-cyan/10 text-folana-neon-cyan'}`}
+              onClick={lockFrequency}
+              onTouchStart={(e) => { e.preventDefault(); lockFrequency(); }}
+              className={`flex-1 py-3 md:py-3 text-xs font-mono tracking-[3px] rounded-2xl border transition-all active:scale-[0.985] min-h-[44px] ${isLocked ? 'bg-folana-neon-pink text-black border-folana-neon-pink' : 'border-folana-neon-cyan/60 hover:bg-folana-neon-cyan/10 text-folana-neon-cyan'}`}
             >
               {isLocked ? 'FREQUENCY LOCKED' : 'LOCK THIS FREQUENCY'}
             </button>

@@ -395,6 +395,7 @@ export function SigilGallery() {
           <div 
             className="fixed inset-0 z-[80] bg-[#050507]/97 flex items-center justify-center p-4 md:p-10" 
             onClick={closeSigil}
+            onTouchEnd={(e) => { if (e.target === e.currentTarget) closeSigil(); }}
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.975, y: 15 }}
@@ -411,7 +412,7 @@ export function SigilGallery() {
                   <span className="text-white/20">•</span>
                   <span>{selectedSigil.category}</span>
                 </div>
-                <button onClick={closeSigil} className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 hover:border-folana-neon-pink text-xs font-mono tracking-widest text-folana-text-secondary hover:text-folana-neon-pink">
+                <button onClick={closeSigil} onTouchEnd={(e) => { e.stopPropagation(); closeSigil(); }} className="flex items-center gap-2 px-4 py-2 min-h-[44px] rounded-full border border-white/20 hover:border-folana-neon-pink text-xs font-mono tracking-widest text-folana-text-secondary hover:text-folana-neon-pink">
                   <X size={15} /> CLOSE CODEX
                 </button>
               </div>
@@ -457,13 +458,15 @@ export function SigilGallery() {
                   <div className="flex md:justify-end gap-3 pt-1 flex-wrap">
                     <button 
                       onClick={() => handleShare(selectedSigil)} 
-                      className="flex items-center gap-2 px-5 py-2 border border-white/15 hover:border-folana-neon-cyan/70 rounded-full text-folana-text-secondary hover:text-folana-neon-cyan font-mono tracking-widest text-xs transition-all active:scale-[0.985]"
+                      onTouchEnd={(e) => { e.stopPropagation(); handleShare(selectedSigil); }}
+                      className="flex items-center gap-2 px-5 py-2.5 min-h-[44px] border border-white/15 hover:border-folana-neon-cyan/70 rounded-full text-folana-text-secondary hover:text-folana-neon-cyan font-mono tracking-widest text-xs transition-all active:scale-[0.985]"
                     >
                       <Share2 size={14} /> BROADCAST LINK
                     </button>
                     <button 
                       onClick={() => handleDownload(selectedSigil)} 
-                      className="flex items-center gap-2 px-5 py-2 bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/40 rounded-full text-folana-ink font-mono tracking-widest text-xs transition-all active:scale-[0.985]"
+                      onTouchEnd={(e) => { e.stopPropagation(); handleDownload(selectedSigil); }}
+                      className="flex items-center gap-2 px-5 py-2.5 min-h-[44px] bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/40 rounded-full text-folana-ink font-mono tracking-widest text-xs transition-all active:scale-[0.985]"
                     >
                       <Download size={14} /> ARCHIVE LOCALLY
                     </button>
@@ -481,8 +484,8 @@ export function SigilGallery() {
               {/* Pagination Arrows */}
               {filteredSigils.length > 1 && (
                 <div className="flex items-center justify-center gap-4 mt-8">
-                  <button onClick={() => goToIndex(currentIndex - 1)} className="neon-btn !py-2 !px-6 text-xs flex items-center gap-2"><ArrowLeft size={15} /> PREV SIGIL</button>
-                  <button onClick={() => goToIndex(currentIndex + 1)} className="neon-btn !py-2 !px-6 text-xs flex items-center gap-2">NEXT SIGIL <ArrowRight size={15} /></button>
+                  <button onClick={() => goToIndex(currentIndex - 1)} onTouchEnd={(e) => { e.stopPropagation(); goToIndex(currentIndex - 1); }} className="neon-btn !py-2.5 !px-6 min-h-[44px] text-xs flex items-center gap-2"><ArrowLeft size={15} /> PREV SIGIL</button>
+                  <button onClick={() => goToIndex(currentIndex + 1)} onTouchEnd={(e) => { e.stopPropagation(); goToIndex(currentIndex + 1); }} className="neon-btn !py-2.5 !px-6 min-h-[44px] text-xs flex items-center gap-2">NEXT SIGIL <ArrowRight size={15} /></button>
                 </div>
               )}
             </motion.div>

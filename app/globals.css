@@ -83,6 +83,50 @@ body {
 
 /* ═══ GLOBAL CYBERPUNK / DARK FAIRY GRUNGE EFFECTS ═══ */
 
+/* ═══ MOBILE TOUCH OPTIMIZATIONS ═══ */
+/* Ensure all interactive elements respond properly to touch on iOS/Android */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, 
+a, 
+[role="button"],
+input[type="range"],
+select,
+label,
+summary {
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+/* Disable double-tap zoom on interactive areas */
+input, textarea, select, button, a {
+  touch-action: manipulation;
+}
+
+/* Safe area padding for fixed/absolute elements on notched devices */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .safe-area-left {
+    padding-left: env(safe-area-inset-left, 0px);
+  }
+  .safe-area-right {
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+}
+
+/* Prevent text selection on interactive elements during tap */
+button, a, [role="button"] {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 /* Enhanced analog film grain + subtle VHS — made more visible for kick-ass atmosphere */
 .film-grain {
   position: fixed;

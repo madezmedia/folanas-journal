@@ -385,6 +385,13 @@ export function SonicVault() {
     setIsPlaying(!isPlaying);
   };
 
+  // Touch-compatible play/pause handler
+  const handlePlayTouch = (e: React.TouchEvent | React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    togglePlay();
+  };
+
   const toggleMute = () => {
     const video = videoRef.current;
     if (!video) return;
@@ -394,6 +401,24 @@ export function SonicVault() {
 
   const toggleGlitch = () => {
     setGlitchMode(!glitchMode);
+  };
+
+  // Seek handler — works for both mouse and touch
+  const seek = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
+    const video = videoRef.current;
+    if (!video) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const pct = (clientX - rect.left) / rect.width;
+    video.currentTime = pct * video.duration;
+  };
+
+  // Close player with touch safety
+  const handleBackdropTouch = (e: React.TouchEvent | React.MouseEvent) => {
+    // Only close if tapping the backdrop itself, not inner elements
+    if (e.target === e.currentTarget) {
+      closePlayer();
+    }
   };
 
   // Progress tracking
@@ -537,15 +562,6 @@ export function SonicVault() {
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
   }, [selectedTrack, showVisualizer, glitchMode, isPlaying]);
-
-  // Seek handler
-  const seek = (e: React.MouseEvent<HTMLDivElement>) => {
-    const video = videoRef.current;
-    if (!video) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const pct = (e.clientX - rect.left) / rect.width;
-    video.currentTime = pct * video.duration;
-  };
 
   return (
     <div id="sonic" className="space-y-10">
@@ -693,7 +709,7 @@ export function SonicVault() {
       {/* Player Modal — Full Holographic Cyber Experience */}
       <AnimatePresence>
         {selectedTrack && (
-          <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/95 p-4 md:p-8" onClick={closePlayer}>
+          <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/95 p-4 md:p-8" onClick={handleBackdropTouch} onTouchEnd={handleBackdropTouch}>
             <motion.div 
               initial={{ opacity: 0, scale: 0.96, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -703,7 +719,7 @@ export function SonicVault() {
               onClick={e => e.stopPropagation()}
             >
               {/* Close */}
-              <button onClick={closePlayer} className="absolute -top-3 -right-3 z-10 w-11 h-11 rounded-full bg-folana-void border border-white/20 flex items-center justify-center text-folana-text-secondary hover:text-white hover:border-folana-neon-pink transition-all">
+              <button onClick={closePlayer} onTouchEnd={(e) => { e.stopPropagation(); closePlayer(); }} className="absolute -top-3 -right-3 z-10 w-12 h-12 rounded-full bg-folana-void border border-white/20 flex items-center justify-center text-folana-text-secondary hover:text-white hover:border-folana-neon-pink transition-all">
                 <X size={19} />
               </button>
 
@@ -793,20 +809,22 @@ export function SonicVault() {
                 <div className="video-controls p-5 flex flex-col gap-4 border-t border-white/10">
                   <div className="flex items-center gap-5">
                     <button 
-                      onClick={togglePlay} 
-                      className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-black hover:bg-folana-neon-pink hover:text-white active:scale-[0.96] transition-all"
+                      onClick={handlePlayTouch} 
+                      onTouchStart={handlePlayTouch}
+                      className="w-14 h-14 md:w-12 md:h-12 rounded-2xl bg-white flex items-center justify-center text-black hover:bg-folana-neon-pink hover:text-white active:scale-[0.96] transition-all"
                     >
                       {isPlaying ? <Pause size={21} /> : <Play size={22} className="ml-0.5" />}
                     </button>
 
-                    <button onClick={toggleMute} className="text-folana-text-secondary hover:text-folana-ink p-2 transition-colors">
+                    <button onClick={toggleMute} onTouchStart={(e) => { e.stopPropagation(); toggleMute(); }} className="text-folana-text-secondary hover:text-folana-ink p-2 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors">
                       {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
                     </button>
 
                     {/* Progress Bar */}
                     <div 
-                      className="flex-1 h-px bg-white/20 relative cursor-pointer group" 
+                      className="flex-1 h-1 md:h-px bg-white/20 relative cursor-pointer group min-h-[44px] md:min-h-0 flex items-center" 
                       onClick={seek}
+                      onTouchEnd={seek}
                     >
                       <div 
                         className="absolute top-1/2 -translate-y-1/2 h-[3px] bg-gradient-to-r from-folana-neon-pink via-folana-neon-cyan to-folana-neon-magenta transition-all rounded" 
@@ -855,7 +873,10 @@ export function SonicVault() {
                     ].map((ch, i) => (
                       <button key={i} onClick={() => {
                         const v = videoRef.current; if (v) { v.currentTime = ch.t; v.play(); setIsPlaying(true); }
-                      }} className="px-2.5 py-0.5 text-[10px] font-mono tracking-widest border border-white/20 hover:border-folana-neon-pink/60 rounded-full text-folana-text-secondary hover:text-folana-neon-pink transition-all active:scale-[0.985]">
+                      }} onTouchEnd={(e) => {
+                        e.stopPropagation();
+                        const v = videoRef.current; if (v) { v.currentTime = ch.t; v.play(); setIsPlaying(true); }
+                      }} className="px-3 py-1.5 md:px-2.5 md:py-0.5 text-[10px] font-mono tracking-widest border border-white/20 hover:border-folana-neon-pink/60 rounded-full text-folana-text-secondary hover:text-folana-neon-pink transition-all active:scale-[0.985] min-h-[36px] md:min-h-0">
                         {ch.label}
                       </button>
                     ))}
@@ -867,8 +888,8 @@ export function SonicVault() {
                     <div className="pt-3 mt-1 border-t border-white/10 flex items-center gap-2 flex-wrap">
                       <div className="text-[10px] font-mono tracking-[2px] text-folana-neon-cyan mr-1">PLAYLIST:</div>
                       <span className="font-mono text-xs text-folana-ink">{activePlaylist.name}</span>
-                      <button onClick={() => navigatePlaylist(-1)} className="px-2.5 py-0.5 text-[10px] border border-white/20 hover:border-folana-neon-pink rounded-full">◀ PREV</button>
-                      <button onClick={() => navigatePlaylist(1)} className="px-2.5 py-0.5 text-[10px] border border-white/20 hover:border-folana-neon-pink rounded-full">NEXT ▶</button>
+                      <button onClick={() => navigatePlaylist(-1)} onTouchEnd={(e) => { e.stopPropagation(); navigatePlaylist(-1); }} className="px-3 py-1.5 md:px-2.5 md:py-0.5 text-[10px] border border-white/20 hover:border-folana-neon-pink rounded-full min-h-[36px] md:min-h-0">◀ PREV</button>
+                      <button onClick={() => navigatePlaylist(1)} onTouchEnd={(e) => { e.stopPropagation(); navigatePlaylist(1); }} className="px-3 py-1.5 md:px-2.5 md:py-0.5 text-[10px] border border-white/20 hover:border-folana-neon-pink rounded-full min-h-[36px] md:min-h-0">NEXT ▶</button>
                       <span className="text-[10px] text-folana-text-muted font-mono ml-1">{playlistIndex + 1} / {activePlaylist.trackIds.length}{isShuffled ? ' (SHUF)' : ''}</span>
                       <button onClick={() => {
                         const corr = `ez-harness-${Date.now()}-produce-mv-ep31`;

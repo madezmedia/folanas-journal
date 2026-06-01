@@ -86,7 +86,8 @@ export function HarnessDispatchConsole() {
           <p className="text-sm text-folana-text-secondary/90 font-serif italic flex-1">{item.desc}</p>
           <button
             onClick={() => handleDispatch(item)}
-            className="mt-5 w-full py-3 text-xs font-mono tracking-[3px] border border-white/20 hover:border-folana-neon-magenta hover:text-folana-neon-magenta rounded-2xl transition active:scale-[0.985]"
+            onTouchStart={(e) => { e.preventDefault(); handleDispatch(item); }}
+            className="mt-5 w-full py-3 min-h-[44px] text-xs font-mono tracking-[3px] border border-white/20 hover:border-folana-neon-magenta hover:text-folana-neon-magenta rounded-2xl transition active:scale-[0.985]"
           >
             DISPATCH TO PIPELINE INTEGRATOR →
           </button>

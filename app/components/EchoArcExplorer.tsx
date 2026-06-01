@@ -61,6 +61,7 @@ export function EchoArcExplorer() {
         <button
           key={idx}
           onClick={() => handleSceneClick(scene)}
+          onTouchStart={(e) => { e.preventDefault(); handleSceneClick(scene); }}
           className="group holo-frame rounded-3xl overflow-hidden text-left bg-folana-surface block focus:outline-none focus-visible:ring-1 focus-visible:ring-folana-neon-cyan hover:border-folana-neon-pink/50 transition-all active:scale-[0.985]"
         >
           <div className="relative aspect-[16/10] bg-black">
