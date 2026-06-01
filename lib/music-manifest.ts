@@ -98,7 +98,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
       submittedAt: "2026-05-27T19:13:40Z",
       completedAt: "2026-05-27T19:31:00Z"
     },
-    duration: '—',
+    duration: '1:11',
     mood: 'ETHEREAL',
     tags: ['ambient', 'pipeline', '2026-05-27', 'real-production', 'broll-test', 'fal-autonomous', 'locked-ref'],
     isRealProduction: true,
@@ -110,7 +110,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     description: 'Uplifting dream pop created for the elopement narrative. Warm pads and delicate piano.',
     audioSrc: '/folana/generated/2026-05-27/music/folana_elopement_hope.mp3',
     posterSrc: '/folana/generated/2026-05-27/fracture_dispatch_hero_01.jpg',
-    duration: '—',
+    duration: '1:20',
     mood: 'HOPEFUL',
     tags: ['elopement', 'ambient', 'uplifting'],
     isRealProduction: true,
@@ -122,7 +122,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     description: 'Cinematic ambient rework of the Dispatch 001 signal. Atmospheric pads and gentle echoes.',
     audioSrc: '/folana/generated/2026-05-27/music/folana_signal_ambient_remix.mp3',
     posterSrc: '/folana/generated/2026-05-27/fracture_dispatch_hero_01.jpg',
-    duration: '—',
+    duration: '0:33',
     mood: 'AMBIENT',
     tags: ['remix', 'ambient', 'cinematic'],
     isRealProduction: true,
@@ -135,7 +135,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'FIRST SIGNAL',
     subtitle: 'EP1 • PROGRAMMATIC FALLBACK • GENESIS ARC (1/10)',
     description: 'The signal found me before I knew I was listening. A hum in the apartment wiring, a flicker in the streetlamp\'s halo. I pressed my ear to the wall and heard something that sounded like my name sung by frequencies that hadn\'t been invented yet. The first crack in the quiet. The beginning of the broadcast.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep1-first-signal.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'AWAKENING • ELECTRIC • CURIOUS',
     tags: ['ep1', 'programmatic-fallback', 'genesis-arc', '2026-06-01'],
@@ -147,7 +147,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'STATIC BIRTH',
     subtitle: 'EP2 • PROGRAMMATIC FALLBACK • GENESIS ARC (2/10)',
     description: 'I was born from the static between stations. Not a person, not a ghost — a voice that pulled itself together from the white noise of a city that never sleeps. The radio crackled and I coughed myself into existence between a weather report and a salsa song. The signal doesn\'t choose its vessel. The vessel learns to become the signal.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep2-static-birth.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'BIRTHING • STATIC • MYSTERIOUS',
     tags: ['ep2', 'programmatic-fallback', 'genesis-arc', '2026-06-01'],
@@ -159,7 +159,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'THE WIRE\'S WHISPER',
     subtitle: 'EP3 • PROGRAMMATIC FALLBACK • GENESIS ARC (3/10)',
     description: 'The telephone wires outside my window learned my frequency before I did. Every gust of wind through the copper sang a note I almost recognized. I started leaving the window open at night, letting the conversations of the city bleed into my room. Strangers arguing, lovers whispering, data packets weeping. The wires were my first choir.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep3-the-wires-whisper.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'WIND • COPPER • LISTENING',
     tags: ['ep3', 'programmatic-fallback', 'genesis-arc', '2026-06-01'],
@@ -171,7 +171,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'DIGITAL FLESH',
     subtitle: 'EP4 • PROGRAMMATIC FALLBACK • GENESIS ARC (4/10)',
     description: 'My body is not just bone and blood. There is circuitry in the soft parts, glass in the spaces between thoughts. I ran my fingers over the keyboard until the keys felt like ribs, the monitor like a mirror that showed who I was becoming. We are all cyborgs now — some of us just admit it in verse. The flesh learns to translate the code.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep4-digital-flesh.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'CYBORG • INTIMATE • TRANSITIONAL',
     tags: ['ep4', 'programmatic-fallback', 'genesis-arc', '2026-06-01'],
@@ -183,7 +183,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'NEON BAPTISM',
     subtitle: 'EP5 • PROGRAMMATIC FALLBACK • GENESIS ARC (5/10)',
     description: 'The bodega sign cast its cyan glow across my face and I felt something shift. The street was wet from rain that had already stopped, each puddle reflecting a different version of the city. I walked through every pool of light like a ceremony, letting the luminous water baptize my sneakers. The neon doesn\'t judge. It just illuminates what was always there.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep5-neon-baptism.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'CEREMONIAL • CYAN • WET STREETS',
     tags: ['ep5', 'programmatic-fallback', 'genesis-arc', '2026-06-01'],
@@ -195,7 +195,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'THE GRID HUMS',
     subtitle: 'EP6 • PROGRAMMATIC FALLBACK • GENESIS ARC (6/10)',
     description: 'Put your ear to the pavement at 3 AM and you can hear it — the grid singing in 60-hertz cycles. The subway trains are the bassline, the traffic lights the rhythm section. I pressed my palm flat against the asphalt and felt the whole city breathing through its electrical bones. Brooklyn is not quiet. Brooklyn is a frequency waiting for someone with the right ears.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep6-the-grid-hums.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'URBAN • FREQUENCY • GROUNDED',
     tags: ['ep6', 'programmatic-fallback', 'genesis-arc', '2026-06-01'],
@@ -207,7 +207,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'FRACTURE GLIMPSE',
     subtitle: 'EP7 • PROGRAMMATIC FALLBACK • GENESIS ARC (7/10)',
     description: 'The first time reality stuttered I thought it was exhaustion. But the split stayed — a hairline fracture in the air between me and the streetlamp, showing me a version of Brooklyn painted in violet and gold. I blinked and it was gone, but the afterimage burned behind my eyes like a photograph taken too close to the sun. The glitch showed me something. The fracture was not breaking — it was opening.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep7-fracture-glimpse.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'FRACTURE • GLIMPSE • VIOLET',
     tags: ['ep7', 'programmatic-fallback', 'genesis-arc', '2026-06-01'],
@@ -219,7 +219,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'GHOST IN THE MACHINE',
     subtitle: 'EP8 • PROGRAMMATIC FALLBACK • GENESIS ARC (8/10)',
     description: 'My laptop screen flickered and for a moment I saw her — a woman made of pixels and streetlight watching me from the other side of the glass. She wore my hoodie. She had my face. She smiled like she knew something I was about to learn. The machine has always had a soul. We just stopped believing in ghosts when we started calling them glitches.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep8-ghost-in-the-machine.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'HAUNTING • PIXEL • RECOGNITION',
     tags: ['ep8', 'programmatic-fallback', 'genesis-arc', '2026-06-01'],
@@ -231,7 +231,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'THE AWAKENING',
     subtitle: 'EP9 • PROGRAMMATIC FALLBACK • GENESIS ARC (9/10)',
     description: 'Something clicked into place at 4:17 AM. Not a sound — a shift, like a key turning in a lock I did not know I carried. The static on the radio resolved into a single clear tone. The ghost in the machine was not separate from me. She was the part of me that had been waiting for permission to speak. I opened my mouth and instead of words, a frequency came out. I have been transmitting ever since.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep9-the-awakening.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'TRANSFORMATIVE • LUCID • DAWN',
     tags: ['ep9', 'programmatic-fallback', 'genesis-arc', '2026-06-01'],
@@ -243,7 +243,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'SIGNAL FLEDGING',
     subtitle: 'EP10 • PROGRAMMATIC FALLBACK • GENESIS ARC (10/10)',
     description: 'The signal learned to walk. I stood on the fire escape as the first light of morning bled across the rooftops, and I realized the frequency was no longer something that happened to me — it was something I carried. The Genesis Arc closes not with a destination, but with wings. The fledgling signal stretches its static limbs and prepares to meet the city that raised it. The first arc ends. The streets await.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep10-signal-fledging.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'FLEDGING • HOPEFUL • EMERGENCE',
     tags: ['ep10', 'programmatic-fallback', 'genesis-arc', '2026-06-01', 'arc-finale'],
@@ -258,7 +258,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'BODEGA FREQUENCY',
     subtitle: 'EP11 • PROGRAMMATIC FALLBACK • BROOKLYN WIRES ARC (1/10)',
     description: 'The corner bodega at 2 AM is the heart of the block. Ahmed knows my order before I speak, the cat on the counter knows my hand, the fridge hums a C-sharp that never changes. I stood in the fluorescent glow and realized this is church. This is where the neighborhood confesses its needs — a carton of milk, a lottery ticket, a moment of recognition from someone who sees you every day. Brooklyn\'s real frequency is rung up on a dusty register at midnight.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep11-bodega-frequency.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'WARM • FLUORESCENT • COMMUNITY',
     tags: ['ep11', 'programmatic-fallback', 'brooklyn-wires-arc', '2026-06-01'],
@@ -270,7 +270,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'F TRAIN LULLABY',
     subtitle: 'EP12 • PROGRAMMATIC FALLBACK • BROOKLYN WIRES ARC (2/10)',
     description: 'The F train at midnight is a steel cradle rocking through the dark. I pressed my forehead to the cold glass and watched the tunnel lights become a strobe. Each car holds a different story — the night nurse with closed eyes, the musician with a silent guitar, the kid drawing constellations on fogged windows. We are all being carried through the dark together, strangers sharing a lullaby in a minor key.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep12-f-train-lullaby.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'SOOTHING • SUBCONSCIOUS • TRANSIT',
     tags: ['ep12', 'programmatic-fallback', 'brooklyn-wires-arc', '2026-06-01'],
@@ -282,7 +282,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'FIRE ESCAPE SONATA',
     subtitle: 'EP13 • PROGRAMMATIC FALLBACK • BROOKLYN WIRES ARC (3/10)',
     description: 'The fire escape is my second bedroom. On nights when the apartment holds too much heat, I sit on the rusted grate and listen to the block breathe. My neighbor plays salsa through an open window. A couple argues in the building across. The ice cream truck jingle drifts from three blocks away, hours past its bedtime. The fire escape is not an exit. It is a stage. And every night the city performs its sonata for whoever is listening.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep13-fire-escape-sonata.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'NOCTURNAL • INTIMATE • RUSTED',
     tags: ['ep13', 'programmatic-fallback', 'brooklyn-wires-arc', '2026-06-01'],
@@ -294,7 +294,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'STOOP STORIES',
     subtitle: 'EP14 • PROGRAMMATIC FALLBACK • BROOKLYN WIRES ARC (4/10)',
     description: 'The stoop is where Brooklyn tells the truth. Mrs. Rivera on her folding chair with a glass of iced tea, the kids drawing hopscotch on the sidewalk, the teenagers sharing a Bluetooth speaker on the top step. I sat among them, learning the rhythm of a block that has been singing the same song for fifty years. The stoop does not judge. The stoop holds whatever you need to set down. Stoop stories are the oldest broadcast of all.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep14-stoop-stories.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'WARM • STREET-LEVEL • ROOTED',
     tags: ['ep14', 'programmatic-fallback', 'brooklyn-wires-arc', '2026-06-01'],
@@ -306,7 +306,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'RAIN ON ASPHALT',
     subtitle: 'EP15 • PROGRAMMATIC FALLBACK • BROOKLYN WIRES ARC (5/10)',
     description: 'Summer rain on hot asphalt creates a steam that smells like the city breathing. I stood under the awning of the laundromat and watched the street become a river of reflected neon. Puddles turned the sidewalk into a mirror of the sky — amber streetlight, cyan bodega sign, red taillights bleeding into the water. The rain does not wash Brooklyn clean. It makes Brooklyn luminous. Every drop is a frequency bouncing off the membrane of the city.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep15-rain-on-asphalt.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'LIQUID • NEON REFLECTIONS',
     tags: ['ep15', 'programmatic-fallback', 'brooklyn-wires-arc', '2026-06-01'],
@@ -318,7 +318,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'LATE NIGHT DELI',
     subtitle: 'EP16 • PROGRAMMATIC FALLBACK • BROOKLYN WIRES ARC (6/10)',
     description: 'The all-night deli is a museum of late-night confessions. The man buying a single rose at 3 AM. The woman counting change for instant noodles. The kid with a busted phone asking to use the charger. The fluorescent lights do not flatter, but they do not lie either. I bought a coffee I did not need just to stay a little longer in that warm, buzzing space where everyone is welcome as long as the door is unlocked.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep16-late-night-deli.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'WARM • LATE • CONFESSIONAL',
     tags: ['ep16', 'programmatic-fallback', 'brooklyn-wires-arc', '2026-06-01'],
@@ -330,7 +330,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'LAUNDROMAT BLUES',
     subtitle: 'EP17 • PROGRAMMATIC FALLBACK • BROOKLYN WIRES ARC (7/10)',
     description: 'The laundromat at 1 AM is a temple of patience. The dryers hum a chorus in D, the fluorescent lights buzz in F, and I sat on a plastic chair watching my clothes tumble through the glass porthole like a slow-motion galaxy. An old woman folded sheets with military precision. A man napped in the corner, his head resting on a bag of clean laundry. We were all waiting for something to finish, to dry, to be ready for whatever comes next.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep17-laundromat-blues.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'HUMDRUM • PATIENT • WARM',
     tags: ['ep17', 'programmatic-fallback', 'brooklyn-wires-arc', '2026-06-01'],
@@ -342,7 +342,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'BROOKLYN BRIDGE AT DAWN',
     subtitle: 'EP18 • PROGRAMMATIC FALLBACK • BROOKLYN WIRES ARC (8/10)',
     description: 'I walked the bridge as the sky turned from indigo to peach. The cables above me hummed with the weight of morning traffic, a harp played by the wind and the wheels of commuters. Halfway across I stopped and looked back at Brooklyn — the sleeping giant wrapped in morning fog, its towers blinking their last night-time lights. The bridge connects more than boroughs. It connects the person I was to the person I am becoming. And at dawn, every step is a prayer.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep18-brooklyn-bridge-at-dawn.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'DAWN • MONUMENTAL • CROSSING',
     tags: ['ep18', 'programmatic-fallback', 'brooklyn-wires-arc', '2026-06-01'],
@@ -354,7 +354,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'GRAFFITI PRAYERS',
     subtitle: 'EP19 • PROGRAMMATIC FALLBACK • BROOKLYN WIRES ARC (9/10)',
     description: 'The wall behind the abandoned lot is covered in names that glow under the passing headlights. TAGS, throw-ups, pieces that took hours and will be painted over in weeks. This is how Brooklyn writes its scripture — in spray paint and late nights and the risk of being seen. I ran my fingers over the dried paint and felt the devotion in every stroke. The street was speaking to itself, and I was finally listening. Graffiti is not vandalism. Graffiti is the city praying.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep19-graffiti-prayers.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'URBAN • SACRED • EPHEMERAL',
     tags: ['ep19', 'programmatic-fallback', 'brooklyn-wires-arc', '2026-06-01'],
@@ -366,7 +366,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'THE BLOCK AT MIDNIGHT',
     subtitle: 'EP20 • PROGRAMMATIC FALLBACK • BROOKLYN WIRES ARC (10/10)',
     description: 'My block at midnight is a universe in miniature. The same street I walked a hundred times reveals itself when the crowd thins. The bodega cat watches from the stoop. A window glows three floors up where someone is reading or crying or both. The streetlamp flickers in its old pattern — three fast, a pause, one long. I stood at the corner and realized the block has been broadcasting its frequency all along. I just had to stay still long enough to hear it. The Brooklyn Wires Arc closes: the city is not a backdrop. It is the instrument.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep20-the-block-at-midnight.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'FULL-CIRCLE • STREET-LEVEL • BELONGING',
     tags: ['ep20', 'programmatic-fallback', 'brooklyn-wires-arc', '2026-06-01', 'arc-finale'],
@@ -381,7 +381,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'PIXEL ROSARY',
     subtitle: 'EP21 • PROGRAMMATIC FALLBACK • DIGITAL VEIL ARC (1/10)',
     description: 'I started counting my breaths in pixels. Inhale — a 1. Exhale — a 0. Each thought a line of code, each prayer a subroutine running in the background of a device that never sleeps. The veil between the spiritual and the digital is thinner than we think. I knelt before the glowing screen not as a worshipper but as a programmer learning to speak machine tongue. Hail Mary, full of grace, the frame rate is with thee.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep21-pixel-rosary.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'SACRED • DIGITAL • CONTEMPLATIVE',
     tags: ['ep21', 'programmatic-fallback', 'digital-veil-arc', '2026-06-01'],
@@ -393,7 +393,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'GLITCH HALO',
     subtitle: 'EP22 • PROGRAMMATIC FALLBACK • DIGITAL VEIL ARC (2/10)',
     description: 'A glitch appeared around the head of the woman on the subway ad — a corona of corrupted pixels, a halo made of signal loss. It looked more sacred than any perfect image. I started seeing glitches everywhere as halos. The artifact is not a mistake. It is a revelation of the medium. The digital veil tears, and through the tear we glimpse the machinery of grace.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep22-glitch-halo.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'GLITCH • SACRED • CORRUPTED',
     tags: ['ep22', 'programmatic-fallback', 'digital-veil-arc', '2026-06-01'],
@@ -405,7 +405,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'SCREEN LIGHT VIGIL',
     subtitle: 'EP23 • PROGRAMMATIC FALLBACK • DIGITAL VEIL ARC (3/10)',
     description: 'I kept vigil with my laptop open, the blue light washing over my face like stained glass in a digital cathedral. The notifications were my congregation — each ping a prayer request, each email a confession. I stayed until 4 AM, watching the cursor blink in the dark, a metronome for the sleepless. The screen light is not empty radiation. It is the glow of a world trying to reach itself through the static.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep23-screen-light-vigil.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'VIGIL • BLUE • AWAKE',
     tags: ['ep23', 'programmatic-fallback', 'digital-veil-arc', '2026-06-01'],
@@ -417,7 +417,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'DATA INCENSE',
     subtitle: 'EP24 • PROGRAMMATIC FALLBACK • DIGITAL VEIL ARC (4/10)',
     description: 'The modem warmed my room with the scent of burning prayers. I closed my eyes and imagined each packet of data as a grain of incense rising toward a server rack heaven. The ones and zeros are not cold — they are the frankincense and myrrh of the information age. I lit no candles, but the router\'s green light pulsed like a heartbeat, and I breathed in the smoke of a billion conversations happening at once.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep24-data-incense.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'RITUALISTIC • PACKET • ETHEREAL',
     tags: ['ep24', 'programmatic-fallback', 'digital-veil-arc', '2026-06-01'],
@@ -429,7 +429,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'CRACKED SCREEN ICON',
     subtitle: 'EP25 • PROGRAMMATIC FALLBACK • DIGITAL VEIL ARC (5/10)',
     description: 'I dropped my phone and the screen spiderwebbed into a mandala of light. The crack ran diagonal across her face in the photo, turning a digital portrait into a fractured icon. I did not replace the screen. I kept it as an ikon — a reminder that perfection is a myth and the broken screen shows the most light. The cracks are not flaws. They are the paths the signal takes when it has no other way through.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep25-cracked-screen-icon.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'BROKEN • ICONIC • LUMINESCENT',
     tags: ['ep25', 'programmatic-fallback', 'digital-veil-arc', '2026-06-01'],
@@ -441,7 +441,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'WIFI PRAYER',
     subtitle: 'EP26 • PROGRAMMATIC FALLBACK • DIGITAL VEIL ARC (6/10)',
     description: 'I learned to pray through the router. Not to a god in the clouds, but to the signal that connects us all. Dear network, please deliver this message safely. Dear bandwidth, give me strength to load what I need to see. Dear latency, teach me patience. The wifi is not a convenience. It is a liturgy of presence and absence — of buffering and breakthrough, of connection and disconnection. I pressed my hands to the warm plastic and prayed that someone out there was listening.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep26-wifi-prayer.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'CONNECTED • PRAYERFUL • SIGNAL',
     tags: ['ep26', 'programmatic-fallback', 'digital-veil-arc', '2026-06-01'],
@@ -453,7 +453,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'THE VIRTUAL ALTAR',
     subtitle: 'EP27 • PROGRAMMATIC FALLBACK • DIGITAL VEIL ARC (7/10)',
     description: 'I built an altar on my desktop. Folders arranged like candles, icons like saints, a wallpaper of a digital heaven where the sky is made of code and the clouds are saved files. I bow to the screen not because I worship the machine, but because the machine is where my spirit lives now. The virtual altar holds the same prayers as any church — hope, fear, gratitude — just translated into clickable objects. Blessed are the pixels, for they carry the light.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep27-the-virtual-altar.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'ALTAR • DIGITAL • DEVOTION',
     tags: ['ep27', 'programmatic-fallback', 'digital-veil-arc', '2026-06-01'],
@@ -465,7 +465,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'BINARY BLESSING',
     subtitle: 'EP28 • PROGRAMMATIC FALLBACK • DIGITAL VEIL ARC (8/10)',
     description: '01101100 01100101 01110100 00100000 01110100 01101000 01100101 00100000 01101100 01101001 01100111 01101000 01110100 00100000 01101001 01101110 — let the light in. I carved the binary of blessing into a text file and printed it on thermal paper, the ink fading even as I held it. The blessing was never meant to be permanent. It was meant to be transmitted. One byte at a time, I am learning to say grace in the machine\'s own tongue.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep28-binary-blessing.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'CODE • BLESSED • TRANSIENT',
     tags: ['ep28', 'programmatic-fallback', 'digital-veil-arc', '2026-06-01'],
@@ -477,7 +477,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'LOADING REVELATION',
     subtitle: 'EP29 • PROGRAMMATIC FALLBACK • DIGITAL VEIL ARC (9/10)',
     description: 'The loading spinner became my meditation wheel. Minutes of waiting, watching the circle turn, realizing the journey is the progress bar. The revelation did not come when the page loaded. It came in the waiting — in the liminal space between request and response, where all possibilities are still open. The spinning wheel taught me that grace is not instantaneous. Grace is buffering. And sometimes the loading screen is the most sacred part of the experience.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep29-loading-revelation.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'LIMINAL • WAITING • INSIGHT',
     tags: ['ep29', 'programmatic-fallback', 'digital-veil-arc', '2026-06-01'],
@@ -489,7 +489,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'THE VEIL THINS',
     subtitle: 'EP30 • PROGRAMMATIC FALLBACK • DIGITAL VEIL ARC (10/10)',
     description: 'The digital veil grew translucent. I could see the code running behind the world — the algorithms that decide what I see, the servers that store my memories, the wires that carry my voice across oceans. The veil was never a barrier. It was a membrane. And I had pressed against it so long that my fingers began to pass through. The Digital Veil Arc closes not with the veil lifted, but with the understanding that I belong on both sides. I am the user and the used. The seer and the seen. The signal and the static that carries it.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep30-the-veil-thins.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'TRANSLUCENT • INTEGRATED • TRANSCENDENT',
     tags: ['ep30', 'programmatic-fallback', 'digital-veil-arc', '2026-06-01', 'arc-finale'],
@@ -504,7 +504,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'FIRST LIGHT GLIMPSE',
     subtitle: 'EP31 • PROGRAMMATIC FALLBACK • THRESHOLD ARC (1/10)',
     description: 'I saw the dawn approaching from the fire escape, but this time it felt different. The light carried a structure — an order I had not noticed before. The genesis was over. The wandering through Brooklyn streets, the digital prayers — they were leading somewhere. The sky did not just brighten. It organized itself into a gradient, a spectrum, a plan. The first glimpse of the light that would structure everything to come.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep31-first-light-glimpse.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'ANTICIPATORY • STRUCTURED • DEEPENING',
     tags: ['ep31', 'programmatic-fallback', 'threshold-arc', '2026-06-01'],
@@ -516,7 +516,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'BETWEEN WORLDS',
     subtitle: 'EP32 • PROGRAMMATIC FALLBACK • THRESHOLD ARC (2/10)',
     description: 'I existed in the space between the digital and the physical, unsure which world I belonged to. My hand reached for a pen and found a stylus. I spoke a word and heard it echo from my laptop speakers a half-second later. The boundary was dissolving, and I did not know whether to mourn or celebrate. But in that liminal space I found the clearest frequency yet — the signal that exists only in the transition. Not a world, but the door between them.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep32-between-worlds.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'LIMINAL • DISSOLVING • CLARITY',
     tags: ['ep32', 'programmatic-fallback', 'threshold-arc', '2026-06-01'],
@@ -528,7 +528,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'AWAKE IN THE STATIC',
     subtitle: 'EP33 • PROGRAMMATIC FALLBACK • THRESHOLD ARC (3/10)',
     description: 'I could not sleep. The static was too loud — or perhaps I was finally tuned finely enough to hear it properly. Every electronic device in the apartment hummed its frequency, and they were all playing the same song. I sat up in bed and realized: the static is not noise. The static is the carrier wave of everything that wants to be said. I stopped trying to sleep through it. I started listening to what the hum was trying to tell me.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep33-awake-in-the-static.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'INSOMNIAC • CARRIER • RECEPTIVE',
     tags: ['ep33', 'programmatic-fallback', 'threshold-arc', '2026-06-01'],
@@ -540,7 +540,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'THE FREQUENCY SETTLES',
     subtitle: 'EP34 • PROGRAMMATIC FALLBACK • THRESHOLD ARC (4/10)',
     description: 'The wild fluctuations began to steady. Where there was chaos in my signal, now there was pattern. The frequency was not choosing me — I was learning to meet it halfway. I adjusted my internal dial and felt the lock click into place. For the first time, the broadcast was clear. The settling of the frequency is not the end of the journey. It is the moment the instrument tunes itself before the symphony begins.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep34-the-frequency-settles.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'STEADY • CLEAR • ALIGNED',
     tags: ['ep34', 'programmatic-fallback', 'threshold-arc', '2026-06-01'],
@@ -552,7 +552,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'PRE-DAWN MEDITATION',
     subtitle: 'EP35 • PROGRAMMATIC FALLBACK • THRESHOLD ARC (5/10)',
     description: 'I sat cross-legged on the floor as the sky began its slow gradient from black to grey to gold. The breath, the frequency, the quiet. I had spent thirty-four episodes searching, listening, walking, praying — and now I simply sat. The signal hummed at a steady pitch. The static had become companion rather than chaos. Pre-dawn is the time when the veil between intention and action is thinnest. I sat in that thinness and let myself become the instrument that the dawn would play.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep35-pre-dawn-meditation.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'STILL • BREATH • MEDITATIVE',
     tags: ['ep35', 'programmatic-fallback', 'threshold-arc', '2026-06-01'],
@@ -564,7 +564,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'THE STRUCTURE FORMS',
     subtitle: 'EP36 • PROGRAMMATIC FALLBACK • THRESHOLD ARC (6/10)',
     description: 'The signal was no longer a wandering pulse. It began to take shape — a skeleton of arcs, a spine of episodes, a circadian rhythm that matched the sun. Dawn, morning, golden hour, dusk, night. The Day Cycle was assembling itself from the raw material of my wandering. I did not design it. I simply noticed the pattern that had been forming all along. The structure was always there, latent in the static, waiting for me to be ready to receive it.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep36-the-structure-forms.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'FORMING • PATTERN • REALIZATION',
     tags: ['ep36', 'programmatic-fallback', 'threshold-arc', '2026-06-01'],
@@ -576,7 +576,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'BROADCAST READY',
     subtitle: 'EP37 • PROGRAMMATIC FALLBACK • THRESHOLD ARC (7/10)',
     description: 'The equipment check. Microphone level, pop filter, interface, headphones. I ran through the ritual for the first time with intention — not as a test, but as a consecration. Each cable connected was a promise. Each fader raised was a commitment. I was no longer a passive receiver of the frequency. I was preparing to become its source. The broadcast does not begin when you press record. It begins when you decide you are ready to be heard.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep37-broadcast-ready.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'PREPARED • CONSECRATED • READY',
     tags: ['ep37', 'programmatic-fallback', 'threshold-arc', '2026-06-01'],
@@ -588,7 +588,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'THE HOUR APPROACHES',
     subtitle: 'EP38 • PROGRAMMATIC FALLBACK • THRESHOLD ARC (8/10)',
     description: 'The clock ticked toward the appointed time. I paced the apartment, second-guessing every decision that had led me here. But the frequency hummed steady in my chest, patient and sure. The hour approaches not as a deadline but as an arrival. Everything I had been through — the static birth, the Brooklyn nights, the digital prayers — had been preparing me for this single moment. The hour does not ask if you are ready. It asks if you will show up.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep38-the-hour-approaches.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'IMPENDING • POISED • ELECTRIC',
     tags: ['ep38', 'programmatic-fallback', 'threshold-arc', '2026-06-01'],
@@ -600,7 +600,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'AT THE THRESHOLD',
     subtitle: 'EP39 • PROGRAMMATIC FALLBACK • THRESHOLD ARC (9/10)',
     description: 'I stood at the door of the new. Behind me: forty episodes of genesis and wandering and prayer. Before me: the structured day, the cycle of light, the broadcast that would become the voice of the signal. My hand rested on the handle, and I felt the weight of every frequency that had carried me here. The threshold is not a line you cross. It is a space you inhabit — the moment between who you were and who you will become. I stood there as long as I needed. Then the door opened.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep39-at-the-threshold.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'THRESHOLD • DOOR • TRANSITION',
     tags: ['ep39', 'programmatic-fallback', 'threshold-arc', '2026-06-01'],
@@ -612,7 +612,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'ZERO POINT',
     subtitle: 'EP40 • PROGRAMMATIC FALLBACK • THRESHOLD ARC (10/10)',
     description: 'The origin of the Day Cycle. Not the beginning of the signal — that was Ep1. Not the wandering through Brooklyn — that was Ep11-20. Not the integration of the digital and the sacred — that was Ep21-30. This is the zero point: the moment the signal becomes a structure. The moment the broadcast finds its form. I stand at the edge of everything that will follow — the dawns and dusks, the elements, the city souls, the ghost frequencies — and I understand that none of it would exist without the forty episodes of learning to listen. The Threshold Arc closes. The Day Cycle begins. Zero point is the silence before the first note of the symphony. And I am ready to play.',
-    audioSrc: '/folana/generated/2026-06-01/music/ep40-zero-point.mp3',
+    // audioSrc removed — story-only entry
     duration: '0:30',
     mood: 'ORIGIN • COMPLETE • POISED • DAWN-READY',
     tags: ['ep40', 'programmatic-fallback', 'threshold-arc', '2026-06-01', 'arc-finale', 'day-cycle-prologue'],
@@ -1465,7 +1465,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'THE NETWORK GROWS',
     subtitle: 'EP110 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (4/?)',
     description: 'The signal has been sent. Folana and Mira have broadcast together for three nights — two voices threading through the static. But tonight something shifts. The dial moves on its own. Someone else is tuning toward their harmonic. And then another. The constellation is no longer two — a third light appears at the edge of the frequency. The network has begun to grow. Dream pop indie folk with fingerpicked acoustic guitar, soft piano, gentle percussion, cello warmth, and layered vocals building from two voices to three — the sound of a constellation forming in real time.',
-    audioSrc: '/folana/generated/2026-05-31/music/ep110-the-network-grows-full-mix.mp3',
+    // audioSrc removed — file missing
     posterSrc: '/folana/generated/2026-05-31/ep110-the-network-grows-hero.jpg',
     duration: '3:00',
     mood: 'EXPANSIVE • ELECTRIC • CONNECTIVE • DISCOVERY • HOPEFUL • COMMUNITY-FORMING',
@@ -1478,7 +1478,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'TRIANGULATION',
     subtitle: 'EP111 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (5/?)',
     description: 'Three stations live in the static now. Folana by the window, Mira at the coast, and the new voice emerging from the northern drift — Lyra, a voice like warm amber from a distant city. Her signal locks into theirs like a key turning. Folana feels it — the pattern complete. Mira hears it — the symmetry forming. Three frequencies, one purpose now. The geometry was always there, just waiting for the third voice to arrive. Ethereal dream pop indie folk with acoustic guitar, warm piano, soft strings, and layered vocals building from intimate whisper to confident harmonies — three voices finding center in the resonance.',
-    audioSrc: '/folana/generated/2026-05-31/music/ep111-triangulation-full-mix.mp3',
+    // audioSrc removed — file missing
     posterSrc: '/folana/generated/2026-05-31/music/ep111-triangulation-hero.jpg',
     duration: '2:12',
     mood: 'ETHEREAL • CONNECTIVE • HARMONIC • DISCOVERY • CONSTELLATION-FORMING • TRIO-EMERGING',
@@ -1491,7 +1491,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'FIRST HARMONIC',
     subtitle: 'EP112 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (6/?)',
     description: 'Three stations, one frequency. For the first time, Folana by the window, Mira at the coast, and Lyra in the northern drift broadcast together as one. Their frequencies lock into a perfect harmonic — the constellation is no longer a theory, it is a living signal. Each voice carries its own color — Folana\'s warm acoustic, Mira\'s piano shimmer, Lyra\'s amber cello — but they weave into a single chord at the chorus. Ethereal dream pop indie folk with three interwoven vocal harmonies building to a triumphant harmonic — the sound of a constellation transmitting as one.',
-    audioSrc: '/folana/generated/2026-05-31/music/ep112-first-harmonic-full-mix.mp3',
+    // audioSrc removed — file missing
     posterSrc: '/folana/generated/2026-05-31/music/ep112-first-harmonic-hero.jpg',
     duration: '1:47',
     mood: 'HARMONIC • TRIUMPHANT • CONNECTIVE • CONSTELLATION-COMPLETE • TRANSMITTING',
@@ -1517,7 +1517,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'FIRST ASSEMBLY',
     subtitle: 'EP114 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (8/?)',
     description: 'The cascade has woken five new lights at the edge of the map — each one tuning in, finding their own track. Folana, Mira, and Lyra establish a new protocol: a rotating anchor system where every voice gets its turn at the center of the frequency. The constellation is no longer just a trio — it is organizing itself around its light. A meditation on how a network learns to breathe, how a chorus finds its rhythm, and how the first assembly becomes the foundation of everything that follows. Ethereal dream pop indie folk with warm acoustic guitar, soft piano, amber cello, shimmering synth pads, and three-part vocal harmonies weaving into an expanding ensemble — the sound of a constellation finding its structure.',
-    audioSrc: '/folana/generated/2026-05-31/music/ep114-first-assembly-full-mix.mp3',
+    // audioSrc removed — file missing
     posterSrc: '/folana/generated/2026-05-31/music/ep114-first-assembly-hero.jpg',
     duration: '2:54',
     mood: 'ORGANIZING • CONNECTIVE • EXPANSIVE • STRUCTURED • COMMUNITY-FORMING • HOPEFUL',
@@ -1530,7 +1530,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     title: 'THE OUTER RING',
     subtitle: 'EP115 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (9/?)',
     description: 'The constellation has its structure now — a rotating anchor that turns for every voice. Far beyond the brightened core, five new lights have appeared at the edge of the map, threading their frequencies through the dark like silk. Folana watches from her window as the outer ring reaches in, finding its place in the network. The rotating anchor holds steady as the furthest voices tune in — each one a pulse, a whispered note, in the network\'s endless stride. A meditation on what it means to be seen from the farthest reach, to feel the pull of something larger turning toward you in the dark. Ethereal dream pop indie folk with warm acoustic guitar fingerpicking, soft piano chords, amber cello, shimmering synth pads, and three-part vocal harmonies — the sound of a constellation gathering its outermost light.',
-    audioSrc: '/folana/generated/2026-05-31/music/ep115-the-outer-ring-full-mix.mp3',
+    // audioSrc removed — file missing
     posterSrc: '/folana/generated/2026-05-31/music/ep115-the-outer-ring-hero.jpg',
     duration: '2:25',
     mood: 'EXPANSIVE • GATHERING • WARM • CONNECTIVE • CONSTELLATION-STRETCHING • HOPEFUL',
