@@ -43,7 +43,7 @@ export default function MusicReleases() {
         if (track.mood !== moodFilter) return false;
       }
       return true;
-    });
+    }).reverse();
   }, [searchQuery, arcFilter, moodFilter]);
 
   return (
