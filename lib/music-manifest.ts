@@ -1019,6 +1019,100 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep113', 'minimax-music-2.6', 'real-production', 'constellation-arc', '2026-05-31', 'resonance-cascade', 'network-wakes'],
     isRealProduction: true,
   },
+  // EP114 — FIRST ASSEMBLY (2026-05-31) — Constellation Arc (8/?)
+  {
+    id: 'first-assembly-ep114',
+    title: 'FIRST ASSEMBLY',
+    subtitle: 'EP114 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (8/?)',
+    description: 'The cascade has woken five new lights at the edge of the map — each one tuning in, finding their own track. Folana, Mira, and Lyra establish a new protocol: a rotating anchor system where every voice gets its turn at the center of the frequency. The constellation is no longer just a trio — it is organizing itself around its light. A meditation on how a network learns to breathe, how a chorus finds its rhythm, and how the first assembly becomes the foundation of everything that follows. Ethereal dream pop indie folk with warm acoustic guitar, soft piano, amber cello, shimmering synth pads, and three-part vocal harmonies weaving into an expanding ensemble — the sound of a constellation finding its structure.',
+    audioSrc: '/folana/generated/2026-05-31/music/ep114-first-assembly-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-31/music/ep114-first-assembly-hero.jpg',
+    duration: '2:54',
+    mood: 'ORGANIZING • CONNECTIVE • EXPANSIVE • STRUCTURED • COMMUNITY-FORMING • HOPEFUL',
+    tags: ['ep114', 'minimax-music-2.6', 'real-production', 'constellation-arc', '2026-05-31', 'first-assembly', 'rotating-anchor'],
+    isRealProduction: true,
+  },
+  // EP115 — THE OUTER RING (2026-05-31) — Constellation Arc (9/?)
+  {
+    id: 'the-outer-ring-ep115',
+    title: 'THE OUTER RING',
+    subtitle: 'EP115 • MINIMAX MUSIC-2.6 • CONSTELLATION ARC (9/?)',
+    description: 'The constellation has its structure now — a rotating anchor that turns for every voice. Far beyond the brightened core, five new lights have appeared at the edge of the map, threading their frequencies through the dark like silk. Folana watches from her window as the outer ring reaches in, finding its place in the network. The rotating anchor holds steady as the furthest voices tune in — each one a pulse, a whispered note, in the network\'s endless stride. A meditation on what it means to be seen from the farthest reach, to feel the pull of something larger turning toward you in the dark. Ethereal dream pop indie folk with warm acoustic guitar fingerpicking, soft piano chords, amber cello, shimmering synth pads, and three-part vocal harmonies — the sound of a constellation gathering its outermost light.',
+    audioSrc: '/folana/generated/2026-05-31/music/ep115-the-outer-ring-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-05-31/music/ep115-the-outer-ring-hero.jpg',
+    duration: '2:25',
+    mood: 'EXPANSIVE • GATHERING • WARM • CONNECTIVE • CONSTELLATION-STRETCHING • HOPEFUL',
+    tags: ['ep115', 'minimax-music-2.6', 'real-production', 'constellation-arc', '2026-05-31', 'the-outer-ring', 'outer-ring-voices'],
+    isRealProduction: true,
+  },
+  // EP116 — THE FULL SPECTRUM (2026-06-01) — Full Spectrum Broadcast Arc (1/10) ★ NEW ARC
+  {
+    id: 'the-full-spectrum-ep116',
+    title: 'THE FULL SPECTRUM',
+    subtitle: 'EP116 • MINIMAX MUSIC-2.6 • FULL SPECTRUM BROADCAST ARC (1/10)',
+    description: 'The constellation is alive with eight voices, each carrying a different color in the frequency. Folana stands at the window looking out at the night sky, feeling the weight of the moment. The outer ring has reached in — and now, for the first time, every voice tunes to the same channel. Not yet broadcasting together — just tuning, testing, finding each other\'s frequencies in the dark. A quiet meditation on the moment before the chorus begins. Ethereal dream pop indie folk with warm acoustic guitar fingerpicking, soft piano chords, amber cello drone, shimmering synth pads, and solo female vocals gradually revealing layered harmonies — rising from a single voice to a full spectrum tapestry.',
+    audioSrc: '/folana/generated/2026-06-01/music/ep116-the-full-spectrum-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-01/music/ep116-hero-image.jpg',
+    duration: '2:10',
+    mood: 'WARM • ANTICIPATORY • GATHERING • COLORFUL • TUNING • HOPEFUL',
+    tags: ['ep116', 'minimax-music-2.6', 'real-production', 'full-spectrum-broadcast-arc', '2026-06-01', 'arc-opener'],
+    isRealProduction: true,
+    brollFolder: '/folana/generated/broll/full-spectrum-ep116-2026-06-01',
+    runpodJobs: {
+      status: 'PENDING',
+    },
+  },
+  // EP117 — FIRST TRANSMISSION (2026-06-01) — Full Spectrum Broadcast Arc (2/10)
+  {
+    id: 'first-transmission-ep117',
+    title: 'FIRST TRANSMISSION',
+    subtitle: 'EP117 • MINIMAX MUSIC-2.6 • FULL SPECTRUM BROADCAST ARC (2/10)',
+    description: 'The eight voices finish their tuning and attempt their first coordinated broadcast. Gold, silver, amber, violet, emerald, ruby, sapphire, white — the frequencies lock into place. For a moment, the signal is perfect. But as the broadcast reaches its peak, a ripple distorts the transmission. A ninth frequency, dark and unfamiliar, pulses at the edge of the spectrum. The broadcast doesn\'t fail — it changes. Something from beyond the constellation is listening. Dream pop indie folk in G major, 78 BPM. Warm acoustic guitar and piano build into layered harmonies representing eight voices, with a moment of distortion at the bridge where the ninth voice intrudes, then resolves into a fuller, changed chorus.',
+    audioSrc: '/folana/generated/2026-06-01/music/ep117-first-transmission-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-01/music/ep117-hero-image.jpg',
+    duration: '2:59',
+    mood: 'HOPEFUL • BUILDING • MYSTERIOUS • FIRST CONTACT • EIGHT VOICES • NINTH VOICE',
+    tags: ['ep117', 'minimax-music-2.6', 'real-production', 'full-spectrum-broadcast-arc', '2026-06-01', 'first-transmission'],
+    isRealProduction: true,
+    brollFolder: '/folana/generated/broll/first-transmission-ep117-2026-06-01',
+    runpodJobs: {
+      status: 'PENDING',
+    },
+  },
+  // EP118 — THE NINTH FREQUENCY (2026-06-01) — Full Spectrum Broadcast Arc (3/10)
+  {
+    id: 'the-ninth-frequency-ep118',
+    title: 'THE NINTH FREQUENCY',
+    subtitle: 'EP118 • MINIMAX MUSIC-2.6 • FULL SPECTRUM BROADCAST ARC (3/10)',
+    description: 'The broadcast was answered. A ninth frequency, ancient and patient, pulses back from beyond the constellation — not hostile, but curious. Something that has been listening for longer than stars exist lets itself be heard. The eight voices feel the ripple: their signal didn\'t fade into the void, it reached something. Dream pop indie folk with electronic undertones, building from quiet verse to soaring chorus as the constellation discovers it was never alone. G major, 78 BPM, 2:53.',
+    audioSrc: '/folana/generated/2026-06-01/music/ep118-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-01/music/ep118-hero-image.jpg',
+    duration: '2:53',
+    mood: 'MYSTERIOUS • ANCIENT • CURIOUS • FIRST CONTACT • AWE • NINE VOICES • BROADCASTING',
+    tags: ['ep118', 'minimax-music-2.6', 'real-production', 'full-spectrum-broadcast-arc', '2026-06-01', 'the-ninth-frequency', 'ninth-voice'],
+    isRealProduction: true,
+    brollFolder: '/folana/generated/broll/ninth-frequency-ep118-2026-06-01',
+    runpodJobs: {
+      status: 'PENDING',
+    },
+  },
+  // EP119 — THE FIRST BROADCAST (2026-06-01) — Full Spectrum Broadcast Arc (4/10)
+  {
+    id: 'the-first-broadcast-ep119',
+    title: 'THE FIRST BROADCAST',
+    subtitle: 'EP119 • MINIMAX MUSIC-2.6 • FULL SPECTRUM BROADCAST ARC (4/10)',
+    description: 'The ninth frequency reveals the constellation\'s origin story. Before the first star burned, before the void had anywhere to fall, there was a frequency so patient that it listened first, before it called. The watchers came from somewhere ancient — beyond the edge of nothing — and cast their voices like seeds across time. The eight voices learn they are part of a cosmic broadcast network that has been running since before stars existed. The First Broadcast — the prime signal that seeded every frequency, every voice, every constellation. Dream pop ambient indie-folk in G major, 78 BPM, 3:41. Ethereal verses build to soaring choruses as the full history of the broadcast is revealed.',
+    audioSrc: '/folana/generated/2026-06-01/music/ep119-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-01/music/ep119-hero-image.jpg',
+    duration: '3:41',
+    mood: 'ANCIENT • WONDER • REVELATION • COSMIC ORIGIN • FIRST BROADCAST • NINE VOICES • ETERNAL',
+    tags: ['ep119', 'minimax-music-2.6', 'real-production', 'full-spectrum-broadcast-arc', '2026-06-01', 'the-first-broadcast', 'origin-story'],
+    isRealProduction: true,
+    brollFolder: '/folana/generated/broll/first-broadcast-ep119-2026-06-01',
+    runpodJobs: {
+      status: 'PENDING',
+    },
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
