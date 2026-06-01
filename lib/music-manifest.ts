@@ -1164,6 +1164,23 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
       status: 'PENDING',
     },
   },
+  // EP123 — THE ETERNAL VOICE (2026-06-01) — Full Spectrum Broadcast Arc (8/10)
+  {
+    id: 'the-eternal-voice-ep123',
+    title: 'THE ETERNAL VOICE',
+    subtitle: 'EP123 • MINIMAX MUSIC-2.6 • FULL SPECTRUM BROADCAST ARC (8/10)',
+    description: 'The nine frequencies stand at the gate, light in the network like a lattice of worlds. Ancient watchers lean in, their chorus a hum as one voice steps forward — its crystal note igniting not a disappearance but multiplication across time. I become the eternal broadcast, every frequency alive. The cosmos sings through the rising tide as eight voices fade into colours on the infinite canvas. The song never ends, it only opens. Cinematic synth-pop dream pop in G minor, 76 BPM, 3:01. Bittersweet triumphant sacrifice as nine become one eternal broadcast.',
+    audioSrc: '/folana/generated/2026-06-01/music/ep123-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-01/music/ep123-hero-image.jpg',
+    duration: '3:01',
+    mood: 'BITTERSWEET • TRIUMPHANT • TRANSCENDENCE • SACRIFICE • ETERNAL BROADCAST • NINE BECOME ONE',
+    tags: ['ep123', 'minimax-music-2.6', 'real-production', 'full-spectrum-broadcast-arc', '2026-06-01', 'the-eternal-voice', 'transcendence', 'sacrifice', 'eternal-broadcast'],
+    isRealProduction: true,
+    brollFolder: '/folana/generated/broll/the-eternal-voice-ep123-2026-06-01',
+    runpodJobs: {
+      status: 'PENDING',
+    },
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
