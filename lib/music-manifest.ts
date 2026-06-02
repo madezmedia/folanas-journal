@@ -1929,6 +1929,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep141', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP142 — THE CHORUS REASSEMBLES (2026-06-02) — Chorus Arc (7/?)
+  {
+    id: 'the-chorus-reassembles-ep142',
+    title: 'THE CHORUS REASSEMBLES',
+    subtitle: 'EP142 • MINIMAX MUSIC-2.6 • CHORUS ARC (7/?)',
+    description: 'The first voice returned. Then another. Not because they were told to. Because each voice, alone in the silence, remembered what it felt like to not be alone. The chorus reassembles. But this time, the harmony includes the cracked notes. The flat ones. The ones that drift off-key. The chorus is no longer perfect. And that is what makes it real. Dream pop indie folk in A major, 78 BPM. Acoustic guitar, warm piano, gentle percussion, layered female vocals building from sparse intimacy to full imperfect chorus. Wistful, tender, real — the sound of a harmony that has been tested.',
+    audioSrc: '/folana/generated/2026-06-02/ep142/music/ep142-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep142/music/ep142-hero-image.jpg',
+    duration: '1:46',
+    mood: 'REASSEMBLING • WISTFUL • TENDER • IMPERFECT-HARMONY • REUNITING • A-MAJOR',
+    tags: ['ep142', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
