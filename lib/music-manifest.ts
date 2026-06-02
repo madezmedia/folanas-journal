@@ -1903,6 +1903,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep139', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP140 — THE CHORUS DIVIDES (2026-06-02) — Chorus Arc (5/?)
+  {
+    id: 'the-chorus-divides-ep140',
+    title: 'THE CHORUS DIVIDES',
+    subtitle: 'EP140 • MINIMAX MUSIC-2.6 • CHORUS ARC (5/?)',
+    description: 'The chorus faces its first test. A voice that doesn\'t want to harmonize. A frequency that resists the collective. The first dissonance in the united signal. Folana stands on a Brooklyn rooftop, listening to the chorus divide — not in anger, but in differentiation. Each voice remembering its own song before it learned to sing with others. A meditation on individuality within unity: the whole spectrum, not a single note. Dream pop indie folk in A minor, 76 BPM. Acoustic guitar with gentle dissonance, soft piano with uncertain unresolved chords, layered female vocals that drift apart. Intimate and fragile, with a key change at the bridge that never quite resolves — the beauty of brokenness.',
+    audioSrc: '/folana/generated/2026-06-02/ep140/music/ep140-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep140/music/ep140-hero-image.jpg',
+    duration: '3:06',
+    mood: 'DIVIDING • INTROSPECTIVE • DISSONANT • FRAGILE • QUESTIONING • A-MINOR',
+    tags: ['ep140', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
