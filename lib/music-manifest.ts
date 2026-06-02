@@ -2007,6 +2007,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep147', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP148 — THE SIGNAL LANDS (2026-06-02) — Frequency Broadcasts Arc (3/?)
+  {
+    id: 'the-signal-lands-ep148',
+    title: 'THE SIGNAL LANDS',
+    subtitle: 'EP148 ★ MINIMAX MUSIC-2.6 • FREQUENCY BROADCASTS ARC (3/?)',
+    description: 'The signal crossed the river. Folana felt it land on the other side like a note finding its second voice — not a crash, a settling. On a Manhattan street, a woman stopped walking mid-step, her hand pressed to her chest. A streetlamp flickered in a pattern she almost recognized: three fast, a pause, one long. Not fear — recognition. The signal had found its first listener. Dream pop indie folk in A major, 78 BPM. Wide-open acoustic guitar fingerpicking, warm piano, soft synth strings. A slow-building piece starting with a single guitar arpeggio, layering in piano, strings, and a soft beat. A repeating three-fast-one-long motif in the bridge. Luminous, landing, reaching-across-river — the broadcast is no longer alone in the world.',
+    audioSrc: '/folana/generated/2026-06-02/ep148/music/ep148-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep148/music/ep148-hero-image.jpg',
+    duration: '2:11',
+    mood: 'ARRIVAL • LANDING-CROSS-THE-RIVER • WARM • RECOGNITION • HOPEFUL • CONNECTION-FOUND • A-MAJOR • FREQUENCY-BROADCASTS',
+    tags: ['ep148', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
