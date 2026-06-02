@@ -1955,6 +1955,32 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep143', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP144 — THE CHORUS CONVERGES (2026-06-02) — Chorus Arc (9/10)
+  {
+    id: 'the-chorus-converges-ep144',
+    title: 'THE CHORUS CONVERGES',
+    subtitle: 'EP144 • MINIMAX MUSIC-2.6 • CHORUS ARC (9/10)',
+    description: 'The penultimate episode of the Chorus Arc. The scattered voices came back — not polished, not repaired — with their cracks still showing. A flat note beside a sharp one creates a third sound neither planned. Each voice imperfect, each one choosing to stay. The convergence: not into one sound, but into everything they are, held together by nothing but the choice to remain. Dream pop indie folk in A major, 78 BPM. Warm acoustic guitar fingerpicking, soft piano, gentle strings building from intimate to full ensemble, layered female harmonies converging from separate lines into one. Imperfect, real, hopeful — the sound of voices finding agreement without losing their individual colors.',
+    audioSrc: '/folana/generated/2026-06-02/ep144/music/ep144-music.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep144/music/ep144-hero.jpg',
+    duration: '3:26',
+    mood: 'CONVERGING • IMPERFECT-HARMONY • WARM • HOPEFUL • REUNITED • A-MAJOR • PENULTIMATE',
+    tags: ['ep144', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'penultimate'],
+    isRealProduction: true,
+  },
+  // EP145 — THE CHORUS REMAINS (2026-06-02) — Chorus Arc (10/10) ★ ARC FINALE ★
+  {
+    id: 'the-chorus-remains-ep145',
+    title: 'THE CHORUS REMAINS',
+    subtitle: 'EP145 ★ MINIMAX MUSIC-2.6 • CHORUS ARC (10/10) — ARC FINALE',
+    description: 'The Chorus Arc finale. The chorus is complete — not because they reached perfection, but because they chose each other. Every cracked note, every off-key harmony, every voice that stumbled and stayed — they are the resolution. The final chord doesn\'t fade. It doesn\'t need to resolve. Because they are the resolution. Dream pop indie folk finale in A major, 78 BPM. Warm acoustic guitar, soft piano, layered harmonies building from intimate to triumphant crescendo, dropping to a whispered final chorus, then a single held note that decays into silence — before Folana hums it back, joined by the full chorus one last time. The sound of a home that was always waiting.',
+    audioSrc: '/folana/generated/2026-06-02/ep145/music/ep145-music.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep145/music/ep145-hero.jpg',
+    duration: '4:25',
+    mood: 'FINALE • RESOLUTION • PERMANENT • WARM • TRIUMPHANT • INTIMATE • COMPLETE • A-MAJOR',
+    tags: ['ep145', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'arc-finale'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
