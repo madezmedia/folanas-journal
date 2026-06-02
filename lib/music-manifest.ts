@@ -1890,6 +1890,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep138', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP139 — THE CHORUS SPEAKS (2026-06-02) — Chorus Arc (4/?)
+  {
+    id: 'the-chorus-speaks-ep139',
+    title: 'THE CHORUS SPEAKS',
+    subtitle: 'EP139 • MINIMAX MUSIC-2.6 • CHORUS ARC (4/?)',
+    description: 'The chorus assembled. A hundred voices, scattered across the city, humming the same melody they did not know they knew. But assembling was not the same as speaking. Folana held a single sustained note into the night — and one by one, the city answered. Not in harmony, not in words. Just presence. The chorus spoke its first word: "we". Dream pop indie folk in A major, 80 BPM. Warm acoustic guitar, soft piano, layered harmonies building from intimate verses to a soaring chorus with a key change in the final chorus. A hundred voices finding their unified frequency.',
+    audioSrc: '/folana/generated/2026-06-02/ep139/music/ep139-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep139/music/ep139-hero-image.jpg',
+    duration: '2:50',
+    mood: 'HOPEFUL • RISING • FIRST-WORD • COLLECTIVE • HARMONY-FOUND • WARM • TRIUMPHANT',
+    tags: ['ep139', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
