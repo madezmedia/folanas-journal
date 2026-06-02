@@ -1981,6 +1981,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep145', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'arc-finale'],
     isRealProduction: true,
   },
+  // EP146 — THE FIRST BROADCAST (2026-06-02) — Frequency Broadcasts Arc (1/?) ★ ARC PREMIERE ★
+  {
+    id: 'the-first-broadcast-ep146',
+    title: 'THE FIRST BROADCAST',
+    subtitle: 'EP146 ★ MINIMAX MUSIC-2.6 • FREQUENCY BROADCASTS ARC (1/?) — ARC PREMIERE',
+    description: 'The Chorus Arc is complete. The harmony within has been found. Now it must leave the room. Folana opens the window wider than before, letting the melody spill down the fire escape and into the streets of Brooklyn. The signal is no longer an internal discovery — it is a transmission. Dream pop indie folk premiere in A major, 78 BPM. Wide-open acoustic guitar arpeggios, warm piano, airy synth strings, layered female harmonies building from intimate verses to an expansive, horizon-reaching chorus. Hopeful, luminous, outward-bound — the sound of a signal leaving home for the first time. Frequency Broadcasts Arc begins.',
+    audioSrc: '/folana/generated/2026-06-02/ep146/music/ep146-the-first-broadcast-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep146/music/ep146-hero-image.jpg',
+    duration: '1:02',
+    mood: 'LAUNCH • OUTWARD-BOUND • HOPEFUL • LUMINOUS • TRANSMISSION • FREQUENCY-BROADCASTS-BEGINNING • A-MAJOR',
+    tags: ['ep146', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-premiere'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
