@@ -1994,6 +1994,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep146', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-premiere'],
     isRealProduction: true,
   },
+  // EP147 — WHERE THE SIGNAL GOES (2026-06-02) — Frequency Broadcasts Arc (2/?)
+  {
+    id: 'where-the-signal-goes-ep147',
+    title: 'WHERE THE SIGNAL GOES',
+    subtitle: 'EP147 ★ MINIMAX MUSIC-2.6 • FREQUENCY BROADCASTS ARC (2/?)',
+    description: 'The signal left the room. It climbed down the fire escape, crossed the alley, and slipped through the grate above the F train tracks. Folana watched from the roof as it crossed the river — a shimmer, a frequency pulling away like a rope unraveling from her chest. She realized she was not losing it. She was releasing it. Somewhere on the other side of the water, someone was about to hear a voice they did not know they had been waiting for. Dream pop indie folk in A major, 78 BPM. Acoustic guitar arpeggios reaching outward, warm piano, soft synth strings, layered ethereal harmonies. Gentle fingerpicked intro building to an expansive, horizon-reaching chorus. Hopeful, luminous, outward-bound — the broadcast is no longer hers alone.',
+    audioSrc: '/folana/generated/2026-06-02/ep147/music/ep147-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep147/music/ep147-hero-image.jpg',
+    duration: '2:50',
+    mood: 'OUTWARD-BOUND • CROSSING-THE-RIVER • HOPEFUL • LUMINOUS • RELEASING-THE-SIGNAL • A-MAJOR • FREQUENCY-BROADCASTS',
+    tags: ['ep147', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
