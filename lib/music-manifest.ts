@@ -1942,6 +1942,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep142', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP143 — THE CHORUS SINGS (2026-06-02) — Chorus Arc (8/?)
+  {
+    id: 'the-chorus-sings-ep143',
+    title: 'THE CHORUS SINGS',
+    subtitle: 'EP143 • MINIMAX MUSIC-2.6 • CHORUS ARC (8/?)',
+    description: 'The full reassembled chorus finally singing together. Not a performance — a recognition. The cracked voices and the clear ones, the off-key notes and the perfect ones, all finding their place in the same song. Each voice that learned to sing alone now choosing to sing together. Dream pop indie folk in A major, 78 BPM. Warm acoustic guitar, soft piano, gentle percussion, layered female harmonies building from sparse intimacy to a soaring key-change finale. Hopeful, celebratory, real — the sound of imperfect harmony finding its voice.',
+    audioSrc: '/folana/generated/2026-06-02/ep143/music/ep143-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep143/music/ep143-hero-image.jpg',
+    duration: '2:20',
+    mood: 'CELEBRATORY • HOPEFUL • IMPERFECT-HARMONY • CHORUS-SINGS • REUNITED • A-MAJOR • TRIUMPHANT',
+    tags: ['ep143', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
