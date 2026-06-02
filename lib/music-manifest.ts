@@ -2020,6 +2020,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep148', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP149 — THE LISTENER ANSWERS (2026-06-02) — Frequency Broadcasts Arc (4/?)
+  {
+    id: 'the-listener-answers-ep149',
+    title: 'THE LISTENER ANSWERS',
+    subtitle: 'EP149 ★ MINIMAX MUSIC-2.6 • FREQUENCY BROADCASTS ARC (4/?)',
+    description: 'The signal came back wearing someone else\'s name. Folana felt it arrive — the listener\'s voice, folded into the returning frequency, crossing the East River on the same bridges the signal had ridden away. A woman on a Manhattan street answered the three-fast-one-long flicker, and her song crossed back to Brooklyn. Two radios tuning to the same impossible frequency. Dream pop indie folk in A major, 78 BPM. A conversation in melody: warm acoustic guitar fingerpicking with soft delay, piano answering like an echo, airy synth pad shimmering underneath. The original voice reaches out and a second voice replies from across the water. Gentle, wondering, intimate — the broadcast becomes a dialogue. The silence that follows is not empty.',
+    audioSrc: '/folana/generated/2026-06-02/ep149/music/ep149-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep149/music/ep149-hero-image.jpg',
+    duration: '1:53',
+    mood: 'CALL-AND-RESPONSE • CONVERSATION-ACROSS-THE-RIVER • TWO-VOICES • WARM • HOPEFUL • CONNECTION-BECOMING-DIALOGUE • A-MAJOR • FREQUENCY-BROADCASTS',
+    tags: ['ep149', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
