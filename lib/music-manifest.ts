@@ -1916,6 +1916,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep140', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP141 — THE DISSONANCE THAT BECAME A NOTE (2026-06-02) — Chorus Arc (6/?)
+  {
+    id: 'the-dissonance-that-became-a-note-ep141',
+    title: 'THE DISSONANCE THAT BECAME A NOTE',
+    subtitle: 'EP141 • MINIMAX MUSIC-2.6 • CHORUS ARC (6/?)',
+    description: 'The chorus divided. Each voice wandered back to its own song. But alone, they heard something they could not hear together — the silence where the others used to be. One by one, they stopped humming their solo lines and listened for the frequency they left behind. The dissonance was not the end — it was the contrast that made the harmony visible. Light needs shadow. A chord needs space between its notes. The first voice to return does not apologize. It just starts singing the old melody. Dream pop indie folk in A major, 76 BPM. Acoustic guitar, soft piano, gentle percussion, layered harmonies beginning separate and slowly converging. The key change from the unresolved ending of EP140 resolves here — the beauty of dissonance transforming into richer harmony.',
+    audioSrc: '/folana/generated/2026-06-02/ep141/music/ep141-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep141/music/ep141-hero-image.jpg',
+    duration: '2:56',
+    mood: 'RESOLVING • REUNITING • DISSONANCE-BECOMING-HARMONY • FINDING-EACH-OTHER • WARM • HOPEFUL • A-MAJOR',
+    tags: ['ep141', 'minimax-music-2.6', 'real-production', 'chorus-arc', '2026-06-02', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
