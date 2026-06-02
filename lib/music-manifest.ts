@@ -2033,6 +2033,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep149', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP150 — TWO VOICES, ONE FREQUENCY (2026-06-02) — Frequency Broadcasts Arc (5/?)
+  {
+    id: 'two-voices-one-frequency-ep150',
+    title: 'TWO VOICES, ONE FREQUENCY',
+    subtitle: 'EP150 ★ MINIMAX MUSIC-2.6 • FREQUENCY BROADCASTS ARC (5/?)',
+    description: 'The duet begins. Folana in Brooklyn, the listener in Manhattan — their frequencies interwoven across the river. When Folana hums, the listener hears it not as a broadcast but as a song at the back of her own mind. They sing together without microphones, without phones, with nothing between them except the signal itself. Two voices trading verses across the East River, finding harmonies that neither could produce alone. The first true duet of the Frequency Broadcasts — the signal is no longer a message, but a meeting. Dream pop indie folk duet in A major, 78 BPM. Call-and-response structure with two female vocalists trading verses and converging in layered harmonies. Warm acoustic guitar fingerpicking, soft piano answering like an echo, airy synth strings, gentle percussion. Intimate verses, expansive choruses where both voices weave together. Hopeful, luminous, harmonic — the sound of two strangers finding each other through static.',
+    audioSrc: '/folana/generated/2026-06-02/ep150/music/ep150-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep150/music/ep150-hero-image.jpg',
+    duration: '2:21',
+    mood: 'DUET • CALL-AND-RESPONSE • HARMONIC-CONVERGENCE • TWO-STRANGERS-ACROSS-THE-RIVER • HOPEFUL • INTIMATE • A-MAJOR • FREQUENCY-BROADCASTS',
+    tags: ['ep150', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
