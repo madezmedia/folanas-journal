@@ -29,6 +29,8 @@ export interface RealTrack {
   falBrollNote?: string;
   runpodJobs?: {
     job_id?: string;
+    job_v1_id?: string;
+    promptSource?: string;
     front_3_4?: string;
     side_profile?: string;
     status?: string;
@@ -115,13 +117,16 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     duration: '1:20',
     mood: 'HOPEFUL',
     tags: ['elopement', 'ambient', 'uplifting'],
-    videoSrc: '/folana/generated/2026-06-03/videos/elopement-hope.mp4',
+    videoSrc: '/folana/generated/2026-06-03/videos/elopement-hope-v2.mp4',
     runpodJobs: {
-      job_id: '401887cd-66d5-48ec-84cc-60f8bf528105-u2',
+      job_v1_id: '401887cd-66d5-48ec-84cc-60f8bf528105-u2',
+      job_id: '87736c59-bdf7-436b-89be-8d4d6ca349f3-u2',
       status: 'COMPLETED',
-      submittedAt: '2026-06-03T19:47:00Z',
+      imageRef: 'editorial.jpg (warm studio neon portrait, pensive→hopeful transition)',
+      promptSource: 'mmx vision describe on editorial.jpg — vision-analyzed image details incorporated',
+      submittedAt: '2026-06-03T20:04:00Z',
       completedAt: new Date().toISOString(),
-      frontVideo: '/folana/generated/2026-06-03/videos/elopement-hope.mp4',
+      frontVideo: '/folana/generated/2026-06-03/videos/elopement-hope-v2.mp4',
     },
     isRealProduction: true,
   },
@@ -135,13 +140,16 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     duration: '0:33',
     mood: 'AMBIENT',
     tags: ['remix', 'ambient', 'cinematic'],
-    videoSrc: '/folana/generated/2026-06-03/videos/signal-ambient-remix.mp4',
+    videoSrc: '/folana/generated/2026-06-03/videos/signal-ambient-remix-v2.mp4',
     runpodJobs: {
-      job_id: '756e653e-b2ff-47f1-b358-e7d7529f707b-u1',
+      job_v1_id: '756e653e-b2ff-47f1-b358-e7d7529f707b-u1',
+      job_id: 'ce840a27-11e8-4cee-933e-e5d04f0f28b5-u2',
       status: 'COMPLETED',
-      submittedAt: '2026-06-03T19:47:00Z',
+      imageRef: 'fracture_dispatch_hero_01.jpg (rooftop glitch veil, digital rain, melancholic)',
+      promptSource: 'mmx vision describe on fracture_dispatch_hero_01.jpg — vision-analyzed image details incorporated',
+      submittedAt: '2026-06-03T20:04:00Z',
       completedAt: new Date().toISOString(),
-      frontVideo: '/folana/generated/2026-06-03/videos/signal-ambient-remix.mp4',
+      frontVideo: '/folana/generated/2026-06-03/videos/signal-ambient-remix-v2.mp4',
     },
     isRealProduction: true,
   },
