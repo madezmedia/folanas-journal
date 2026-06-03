@@ -2059,6 +2059,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep151', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP152 — THE SIGNAL SPREADS (2026-06-02) — Frequency Broadcasts Arc (7/?)
+  {
+    id: 'the-signal-spreads-ep152',
+    title: 'THE SIGNAL SPREADS',
+    subtitle: 'EP152 ★ MINIMAX MUSIC-2.6 • FREQUENCY BROADCASTS ARC (7/?)',
+    description: 'The duet across the river has become something larger. From Folana\'s rooftop in Brooklyn to the listener in Manhattan, the signal did not stop — it spread. Late-night diners, taxi radios, sixth-floor walk-ups — the city began to tune in one window at a time. The private conversation became a city-wide frequency. Every new listener a new note. Every open window a new verse. Dream pop indie folk duet in A major, 78 BPM. Warm acoustic guitar fingerpicking, soft piano, airy synth strings, gentle percussion. Two voices interweaving as the signal spreads outward, building from intimate verses to an expansive, hopeful chorus where a third and fourth harmony join — the sound of a city beginning to sing together.',
+    audioSrc: '/folana/generated/2026-06-02/ep152/music/ep152-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep152/music/ep152-hero-image.jpg',
+    duration: '1:03',
+    mood: 'HOPEFUL • EXPANSIVE • WARM • CITY-WIDE • CONNECTIVE • SPREADING • A-MAJOR • FREQUENCY-BROADCASTS',
+    tags: ['ep152', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
