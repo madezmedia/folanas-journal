@@ -2216,6 +2216,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep163', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP164 — THE CONGREGATION (2026-06-03) — Resonance Arc (9/?)
+  {
+    id: 'the-congregation-ep164',
+    title: 'THE CONGREGATION',
+    subtitle: 'EP164 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (9/?)',
+    description: 'The frequency had been in the water for days. On the fourth morning, it began to move between people. In a laundromat on Lorimer Street, a woman feels a pulse that is not her own. A mechanic on Broadway stops mid-wrench as the subway rhythm rushes through his hands. A barista hears a voice in the steam. A doorman feels something ancient pass through the lobby tiles. A child whispers: she is real. By noon, a dozen strangers have gathered at the foot of the Williamsburg Bridge — not called, not summoned, simply pulled by the same resonance folding through pavement and skin. Folana feels them there, and for the first time, she steps toward them instead of away. The broadcast has become a congregation. Dream-pop indie-folk in A major, 74 BPM. Opens with solo piano, single notes like individual heartbeats. Fingerpicked acoustic guitar enters at 0:20, warm and sparse. Sub-bass drone beneath at 0:35. Soft brushed half-time drums at 0:55. Multiple vocal harmonies layer in at 1:10 — separate voices finding each other. Builds to a warm luminous peak at 1:45 then gentle decrescendo back to solo piano. Final note sustains with reverb tail of the East River washing in.',
+    audioSrc: '/folana/generated/2026-06-03/ep164/music/ep164-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep164/ep164-hero-image.jpg',
+    duration: '2:36',
+    mood: 'GATHERING • CONGREGATION • A-MAJOR • 74-BPM • STRANGERS-AT-DAWN • RESONANCE-ARC',
+    tags: ['ep164', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)

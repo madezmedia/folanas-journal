@@ -1,0 +1,21 @@
+Ep164 Music Prompt — "The Congregation"
+Genre: Dream pop indie folk with gathering choral elements
+Key: A major
+Tempo: 74 BPM
+Duration: ~180 seconds (3:00)
+
+Narrative context: A dozen strangers gather at the foot of the Williamsburg Bridge, drawn by the same frequency. Folana steps toward them instead of away. The broadcast becomes a congregation.
+
+Musical direction:
+- Opens with solo piano, single notes in the upper register like individual heartbeats
+- Fingerpicked acoustic guitar enters at 0:20, warm and sparse like footsteps
+- Sub-bass drone (D-A root) beneath at 0:35 — the city's foundation hum
+- Soft brushed drums enter at 0:55, half-time rhythm like walking
+- Multiple vocal harmonies layer in starting at 1:10 — not a choir, but separate voices finding each other
+- Build to a warm, luminous peak at 1:45 where all layers are present — the congregation has formed
+- Gentle decrescendo from 2:15 as Folana steps forward, voices thinning back to solo piano
+- Final piano note sustains with reverb tail of footsteps and the East River washing in
+
+Instrumentation: solo piano, fingerpicked acoustic guitar, soft brushed drums/percussion, warm analog synth pads, layered vocal harmonies (not choral — individuals singing), sub-bass drone
+Mood: Gathering, sacred, intimate, awakening, pre-dawn
+Emotional arc: Isolation → recognition → convergence → congregation → stillness
