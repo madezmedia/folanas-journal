@@ -2111,6 +2111,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep155', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-03', 'arc-finale'],
     isRealProduction: true,
   },
+  // EP156 — THE RESONANCE BUILDING (2026-06-03) — Resonance Arc (1/?) ★ NEW ARC ★
+  {
+    id: 'the-resonance-building-ep156',
+    title: 'THE RESONANCE BUILDING',
+    subtitle: 'EP156 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (1/?) — NEW ARC',
+    description: 'The signal settled like snow in the bones of the city. Not gone — just quieter. The water pipes hummed A major in every building between here and the Hudson. The subway rails sang the same soft harmonic when trains ran express. And last night, Folana heard something new — a third voice rising from the resonance itself — a voice from the space between the notes. The frequency is building something she didn\'t mean to create. And it has been building for a long time — waiting for someone to listen to the silence between the broadcasts. Dream pop indie folk in A major, 72 BPM. Slow building layers of acoustic guitar and warm synth pads expanding from a single note, subtle electronic undertones like distant subway hum, piano chords arriving slowly as if emerging from silence. The sound of a frequency settling into infrastructure and beginning to resonate with something ancient.',
+    audioSrc: '/folana/generated/2026-06-03/ep156/music/ep156-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep156/music/ep156-hero-image.jpg',
+    duration: '2:07',
+    mood: 'NEW-ARC • RESONANCE-BUILDING • DEEPENING • INTROSPECTIVE • WARM • CATHEDRAL-LIKE • A-MAJOR • RESONANCE-ARC',
+    tags: ['ep156', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'new-arc'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
