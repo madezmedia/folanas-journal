@@ -28,6 +28,7 @@ export interface RealTrack {
   falAutonomousBroll?: string[];
   falBrollNote?: string;
   runpodJobs?: {
+    job_id?: string;
     front_3_4?: string;
     side_profile?: string;
     status?: string;
@@ -114,6 +115,14 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     duration: '1:20',
     mood: 'HOPEFUL',
     tags: ['elopement', 'ambient', 'uplifting'],
+    videoSrc: '/folana/generated/2026-06-03/videos/elopement-hope.mp4',
+    runpodJobs: {
+      job_id: '401887cd-66d5-48ec-84cc-60f8bf528105-u2',
+      status: 'COMPLETED',
+      submittedAt: '2026-06-03T19:47:00Z',
+      completedAt: new Date().toISOString(),
+      frontVideo: '/folana/generated/2026-06-03/videos/elopement-hope.mp4',
+    },
     isRealProduction: true,
   },
   {
@@ -126,6 +135,14 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     duration: '0:33',
     mood: 'AMBIENT',
     tags: ['remix', 'ambient', 'cinematic'],
+    videoSrc: '/folana/generated/2026-06-03/videos/signal-ambient-remix.mp4',
+    runpodJobs: {
+      job_id: '756e653e-b2ff-47f1-b358-e7d7529f707b-u1',
+      status: 'COMPLETED',
+      submittedAt: '2026-06-03T19:47:00Z',
+      completedAt: new Date().toISOString(),
+      frontVideo: '/folana/generated/2026-06-03/videos/signal-ambient-remix.mp4',
+    },
     isRealProduction: true,
   },
   // ─── PREQUEL: GENESIS ARC (EP1-10) — The signal awakens, first transmissions ───
