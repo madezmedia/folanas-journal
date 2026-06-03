@@ -145,11 +145,18 @@ export function ArchiveGrid() {
                 </div>
               )}
               <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black/95" />
-              <div className={`absolute top-3 left-3 px-3 py-px text-[9px] font-mono tracking-[2px] border rounded-full ${typeBadge(item.type)}`}>
-                <span className="flex items-center gap-1.5">
-                  {typeIcon(item.type)}
-                  {item.type === 'music-audio' ? 'AUDIO' : item.type === 'music-video' ? 'VIDEO' : 'CODEX'}
-                </span>
+              <div className="absolute top-3 left-3 flex gap-1.5">
+                <div className={`px-3 py-px text-[9px] font-mono tracking-[2px] border rounded-full ${typeBadge(item.type)}`}>
+                  <span className="flex items-center gap-1.5">
+                    {typeIcon(item.type)}
+                    {item.type === 'music-audio' ? 'AUDIO' : item.type === 'music-video' ? 'VIDEO' : 'CODEX'}
+                  </span>
+                </div>
+                {item.needsVideo && (
+                  <div className="px-2 py-px text-[9px] font-mono tracking-[1.5px] border rounded-full bg-amber-500/10 text-amber-400 border-amber-500/30">
+                    NEEDS VIDEO
+                  </div>
+                )}
               </div>
             </div>
             <div className="p-4 space-y-2">

@@ -21,6 +21,8 @@ export interface ArchiveItem {
   category?: string;
   relatedTrackIds: string[];
   relatedSigilIds: number[];
+  hasAudio: boolean;
+  needsVideo: boolean;
 }
 
 function normalizeDate(dateStr: string): string {
@@ -93,12 +95,14 @@ function sigilToArchiveItem(sigil: Sigil, allTracks: RealTrack[]): ArchiveItem {
     category: sigil.category,
     relatedTrackIds: computeRelatedTrackIds(sigil, allTracks),
     relatedSigilIds: [sigil.id],
+    hasAudio: false,
+    needsVideo: false,
   };
 }
 
 function trackToArchiveItem(track: RealTrack, allSigils: Sigil[]): ArchiveItem {
   const hasVideo = !!track.videoSrc;
-  const hasAudio = !!track.audioSrc;
+  const hasAudio = !!track.audioSrc && !track.audioSrc.includes('removed');
   return {
     id: track.id,
     title: track.title,
@@ -116,6 +120,8 @@ function trackToArchiveItem(track: RealTrack, allSigils: Sigil[]): ArchiveItem {
     duration: track.duration,
     relatedTrackIds: [track.id],
     relatedSigilIds: computeRelatedSigilIds(track, allSigils),
+    hasAudio,
+    needsVideo: hasAudio && !hasVideo,
   };
 }
 
