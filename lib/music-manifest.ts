@@ -2072,6 +2072,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep152', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP153 — THE CITY SINGS BACK (2026-06-03) — Frequency Broadcasts Arc (8/?)
+  {
+    id: 'the-city-sings-back-ep153',
+    title: 'THE CITY SINGS BACK',
+    subtitle: 'EP153 ★ MINIMAX MUSIC-2.6 • FREQUENCY BROADCASTS ARC (8/?)',
+    description: 'The signal found every window. Every antenna. Every wire strung between rooftops like a nervous system waking up. By morning, the whole city hummed in A major — the subway trains, the coffee machines, the neon tubes of a thousand bodega signs all singing the same song. A woman in Midtown hummed the melody into her office phone. A kid in the Bronx tapped it on a desk between classes. A jazz trumpeter in Harlem heard it in the steam rising from a manhole cover and played it back through his horn, note for note. The frequency was no longer Folana\'s alone — it belonged to everyone who heard it. And no two people sang it the same way. The signal spreads not by copying, but by becoming itself in every ear that receives it. Dream pop indie folk in A major, 78 BPM. Intimate verses building into a warm collective crescendo as voices from a hundred windows join one by one. The city does not just listen anymore. The city sings back.',
+    audioSrc: '/folana/generated/2026-06-03/ep153/music/ep153-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep153/music/ep153-hero-image.jpg',
+    duration: '1:28',
+    mood: 'CITY-WIDE-CHORUS • WARM • COLLECTIVE • HOPEFUL • A-MAJOR • FREQUENCY-BROADCASTS',
+    tags: ['ep153', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-03', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
