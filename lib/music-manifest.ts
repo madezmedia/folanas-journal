@@ -2286,6 +2286,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep167', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP168 — BROOKLYN SINGS AT DAWN (2026-06-03) — Resonance Arc (13/?)
+  {
+    id: 'brooklyn-sings-at-dawn-ep168',
+    title: 'BROOKLYN SINGS AT DAWN',
+    subtitle: 'EP168 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (13/?)',
+    description: 'Dawn breaks over Brooklyn and the borough is humming at a single frequency — water pipes, pavement, subway tunnels, every faucet from Bushwick to Bay Ridge vibrating with the chorus that never stopped. A single wordless voice continues from Ep167, floating over the waking city. Fingerpicked acoustic guitar shimmers like first light across the East River. Padded synths haze like morning mist. The music moves through distinct neighborhoods — Bushwick\'s mechanical pulse, Prospect Park\'s open air, Red Hook\'s industry, Bay Ridge\'s quiet — all resonating at the same frequency. Dream-pop indie-folk in A major, 76 BPM. Opens with ambient subway drone. A single wordless voice floats in at 0:10, carrying the sustained note from Ep167. Fingerpicked acoustic guitar enters at 0:45. Padded synths wash in at 1:00. Sub-bass drone supports throughout. Build crescendo at 1:30 as neighborhood layers accumulate. Full borough resonance peaks at 2:15. Gentle decrescendo at 3:00. Ending sustained chord fades into the dawn.',
+    audioSrc: '/folana/generated/2026-06-03/ep168/music/ep168-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep168/ep168-hero-image.jpg',
+    duration: '5:42',
+    mood: 'BOROUGH-RESONANCE • DAWN-CHORUS • SINGLE-FREQUENCY • A-MAJOR • 76-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep168', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
