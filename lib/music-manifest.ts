@@ -2190,6 +2190,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep161', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01'],
     isRealProduction: true,
   },
+  // EP162 — THE SHORE HUMMING (2026-06-03) — Resonance Arc (7/?)
+  {
+    id: 'the-shore-humming-ep162',
+    title: 'THE SHORE HUMMING',
+    subtitle: 'EP162 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (7/?)',
+    description: 'The river accepted her frequency. From her hands at the water\'s edge, the song flows downstream — past the Brooklyn Bridge, through the harbor, around the island. The water molecules carry her voice. Every shore she touches begins to hum. The city hears a new sound — not from above (the grid) or below (the aquifer), but from the liminal space where water meets land. The tide itself becomes a carrier wave. Dream-pop indie-folk in A major, 75 BPM. Opens with drifting fingerpicked arpeggios shimmering like dawn light on the East River. Deep sub-bass drone pulses like water moving beneath the city. Warm analog pads swell like tidal currents entering the harbor. Soft brushed drums enter in the second half like a distant heartbeat. Builds to a luminous, expansive peak then dissolves into fading ripples as her voice is carried past every shore.',
+    audioSrc: '/folana/generated/2026-06-03/ep162/music/ep162-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep162/ep162-hero-image.jpg',
+    duration: '2:15',
+    mood: 'TIDAL • EXPANSIVE • CARRIER-WAVE • DAWN-HARBOR • A-MAJOR • 75-BPM • SHORE-LINE • RESONANCE-ARC',
+    tags: ['ep162', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
