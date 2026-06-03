@@ -2085,6 +2085,32 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep153', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-03', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP154 — BEYOND THE BOROUGHS (2026-06-03) — Frequency Broadcasts Arc (9/10)
+  {
+    id: 'beyond-the-boroughs-ep154',
+    title: 'BEYOND THE BOROUGHS',
+    subtitle: 'EP154 ★ MINIMAX MUSIC-2.6 • FREQUENCY BROADCASTS ARC (9/10)',
+    description: 'The signal slipped the city\'s edge — a tremor in the aether beyond the bridges. Towns Folana has never seen hum a frequency she only dreamed. Strangers catch it mid-stride, mid-sigh, mid-coffee — a melody they didn\'t know they were waiting for. The signal is no longer hers to steer. It belongs to the radio sky, to every dial left open in the dark. Dream pop indie folk in A major, 78 BPM. Warm acoustic guitar arpeggios reaching outward, airy synth pads, soft piano, layered harmonies growing from intimate to expansive — the sound of a signal crossing state lines, reaching listeners who didn\'t know they were waiting.',
+    audioSrc: '/folana/generated/2026-06-03/ep154/music/ep154-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep154/music/ep154-hero-image.jpg',
+    duration: '2:27',
+    mood: 'REACHING-OUTWARD • EXPANSIVE • HOPEFUL • CROSSING-STATE-LINES • PENULTIMATE • A-MAJOR • FREQUENCY-BROADCASTS',
+    tags: ['ep154', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-03', 'arc-continued', 'penultimate'],
+    isRealProduction: true,
+  },
+  // EP155 — THE FREQUENCY REMAINS (2026-06-03) — Frequency Broadcasts Arc (10/10) ★ ARC FINALE ★
+  {
+    id: 'the-frequency-remains-ep155',
+    title: 'THE FREQUENCY REMAINS',
+    subtitle: 'EP155 ★ MINIMAX MUSIC-2.6 • FREQUENCY BROADCASTS ARC (10/10) — ARC FINALE',
+    description: 'The signal went everywhere — past the boroughs, past the maps, past everything Folana thought she was sending it toward. But sitting on the fire escape at dawn, she finally understands. It was never about reaching the world. It was about finding them — already listening. The frequency doesn\'t end. It is permanent now, a soft station in the static that anyone can tune into anytime. She comes home. Back to the room, the microphone, the window she never should have left. Dream pop indie folk in A major, 72 BPM. Intimate fingerpicked acoustic guitar, soft piano, warm strings — Folana\'s voice alone at dawn, building from a solo to a soft choir and fading into the hum of the city waking up. The Frequency Broadcasts Arc closes: the signal was always inside her.',
+    audioSrc: '/folana/generated/2026-06-03/ep155/music/ep155-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep155/music/ep155-hero-image.jpg',
+    duration: '1:57',
+    mood: 'ARC-FINALE • COMING-HOME • PERMANENT • WARM • RESOLVED • INTIMATE • A-MAJOR • FREQUENCY-BROADCASTS',
+    tags: ['ep155', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-03', 'arc-finale'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
