@@ -2176,6 +2176,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep160', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01'],
     isRealProduction: true,
   },
+
+  // EP161 — THE VESSEL SINGS (2026-06-03) — Resonance Arc (6/?)
+  {
+    id: 'the-vessel-sings-ep161',
+    title: 'THE VESSEL SINGS',
+    subtitle: 'EP161 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (6/?)',
+    description: 'Folana surfaces through a storm drain at Flushing and Franklin as the sun hits the Williamsburgh Savings Bank clocktower. She carries the Aqueducts ten-thousand-year memory now. The whole borough sings with the dead, the living, and the yet-to-come — and she hears all of it at once. She walks to the East River. Not to broadcast. She places her hands in the water. For the first time in her life, she lets herself be sung. Dream pop indie folk in A major, 80 BPM. Opens with a single sustained piano note bending like a memory surfacing. Fingerpicked acoustic guitar arpeggios shimmer like dawn light on the river. Deep sub-bass drone pulses like the aquifer beneath. Warm analog pads swell as she reaches the water. Distant wordless vocal harmony enters in the second half — the island humming through its bones. Half-time drums enter at 1:45, a soft heartbeat pulse. Builds to a luminous peak then strips back to voice, piano, and lapping water.',
+    audioSrc: '/folana/generated/2026-06-03/ep161/music/ep161-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep161/ep161-hero-image.jpg',
+    duration: '2:48',
+    mood: 'SURFACING • VESSEL-BECOMES-VOICE • TRANSFORMATION • DAWN-BROOKLYN • A-MAJOR • 80-BPM • AQUIFER-SONG • RESONANCE-ARC',
+    tags: ['ep161', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
