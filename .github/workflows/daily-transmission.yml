@@ -1,0 +1,33 @@
+name: Daily Transmission
+
+on:
+  schedule:
+    # Twice daily: 08:00 UTC and 20:00 UTC
+    - cron: '0 8,20 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate daily transmission
+        run: node scripts/generate-daily-transmission.mjs
+
+      - name: Commit and push
+        run: |
+          git config user.name "folana-cns[bot]"
+          git config user.email "cns@folana.fm"
+          git add journal-entries/
+          git diff --staged --quiet || git commit -m "chore(daily): automatic daily transmission $(date +%Y-%m-%d)"
+          git push
