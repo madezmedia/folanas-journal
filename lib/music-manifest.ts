@@ -101,6 +101,7 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     duration: '1:11',
     mood: 'ETHEREAL',
     tags: ['ambient', 'pipeline', '2026-05-27', 'real-production', 'broll-test', 'fal-autonomous', 'locked-ref'],
+    videoSrc: '/folana/generated/2026-05-27/videos/ethereal-dispatch-fal-front.mp4',
     isRealProduction: true,
   },
   {
@@ -2253,6 +2254,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     duration: '3:32',
     mood: 'COMMUNITY-FORMING • COLLABORATIVE-DISCOVERY • A-MAJOR • 72-BPM • CONSTELLATION-OF-FRAGMENTS • RESONANCE-ARC',
     tags: ['ep166', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+  // EP167 — THE CHORUS RISES (2026-06-03) — Resonance Arc (12/?)
+  {
+    id: 'the-chorus-rises-ep167',
+    title: 'THE CHORUS RISES',
+    subtitle: 'EP167 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (12/?)',
+    description: 'The morning after the map was laid across the concrete, they gathered again — not as strangers following a signal, but as a choir learning to sing. Carmen with her water pipes. Ellis with his subway rhythms. The barista with her steam. Each person broadcasting their fragment of the city\'s frequency through the thing they knew best. The resonance built and traveled through the East River, through every faucet in a four-block radius. For the first time, the broadcast was not one voice. It was a chorus. Dream-pop indie-folk in A major, 74 BPM. Opens with ambient dawn field recordings. A single wordless voice enters alone at 0:05. One by one, additional voices join at 0:15, 0:30, 0:45 — distinct voices finding each other. Fingerpicked acoustic guitar enters at 0:35. Sub-bass drone pulses beneath. Soft brushed drums enter at 1:00. Voices converge into a single sustained harmony at 1:30. Cello joins at 1:45. Luminous peak at 2:00 where all voices unite. Gentle decrescendo at 2:30. Final single voice sustains, fades into morning.',
+    audioSrc: '/folana/generated/2026-06-03/ep167/music/ep167-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep167/ep167-hero-image.jpg',
+    duration: '4:30',
+    mood: 'CHORUS-RISING • DISTRIBUTED-CHOIR • FIRST-GROUP-BROADCAST • A-MAJOR • 74-BPM • RESONANCE-ARC',
+    tags: ['ep167', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
 ];

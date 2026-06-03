@@ -1,0 +1,12 @@
+=== Ep167 Full Mix Music Track Generation ===
+Date: 2026-06-03 19:46 UTC
+CLI: /opt/homebrew/bin/mmx
+Model: music-2.6
+Mode: instrumental
+Duration: 180s
+Prompt source: ep167-music-prompt.txt
+Output file: ep167-full-mix.mp3
+Original filename: music_2026-06-03-19-46-50.mp3 (renamed)
+Exit code: 0
+Errors: none
+API key source: ~/clawd/.env
