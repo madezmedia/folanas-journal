@@ -2203,6 +2203,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep162', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP163 — THE SURFACE HEARS (2026-06-03) — Resonance Arc (8/?)
+  {
+    id: 'the-surface-hears-ep163',
+    title: 'THE SURFACE HEARS',
+    subtitle: 'EP163 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (8/?)',
+    description: 'The frequency had been traveling through the city\'s water for days. On the Williamsburg Bridge, a woman stops walking — something in her chest has shifted. A truck driver on the BQE pulls over, kills his engine, sits in silence. In Greenpoint, a barista opens the back window and the whole block inhales. Every faucet in a four-block radius is running. The city has become a choir without sheet music. Folana stands at the edge of the East River and feels them all — each fluttering heart, each sudden pause — and whispers: I hear you. The surface has woken up. Dream-pop indie-folk in A major, 76 BPM. Opens with a single sustained piano note and water dripping through pipes. Fingerpicked acoustic arpeggios enter like water finding its way through copper. Warm analog pads swell as the city wakes. At 1:15, layered voices and instruments enter representing different boroughs — trumpet for Brooklyn, brushed drums for Lower Manhattan, cello for Queens — converging into a single chorus. Builds to a luminous peak then dissolves into the sound of a single faucet running in an empty room.',
+    audioSrc: '/folana/generated/2026-06-03/ep163/music/ep163-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep163/ep163-hero-image.jpg',
+    duration: '3:10',
+    mood: 'AWAKENING • CITY-WIDE • BONE-CONDUCTION • A-MAJOR • 76-BPM • FAUCET-CHOIR • RESONANCE-ARC',
+    tags: ['ep163', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
