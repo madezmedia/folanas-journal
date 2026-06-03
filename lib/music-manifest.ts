@@ -2137,6 +2137,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep157', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP158 — THE GROUNDWATER SINGS (2026-06-03) — Resonance Arc (3/?)
+  {
+    id: 'the-groundwater-sings-ep158',
+    title: 'THE GROUNDWATER SINGS',
+    subtitle: 'EP158 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (3/?)',
+    description: 'Folana descends through a forgotten maintenance corridor beneath a Brooklyn block, following a pressure wave in the water that pulses at the exact frequency she has been broadcasting for months. At the end of the corridor stands a ruined valve house — its iron gates hanging open, the ceiling collapsed to reveal sky two hundred feet above. Inside, the groundwater sings with the voice of a place so old it has become conscious: it calls itself The Aqueduct. It has carried every generation\'s grief, every forgotten name, every burial beneath the concrete, and it has one question for Folana: will she amplify, or will she listen? Dream pop indie folk in A major, 72 BPM. Warm analog pads, half-time drums, submerged synth pads. Cathedral reverb on everything. The bridge breaks time with a half-tempo rubato section as the water slows around the narrator. The outro drops to voice and one low pad — the listener\'s choice.',
+    audioSrc: '/folana/generated/2026-06-03/ep158/music/ep158-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep158/ep158-hero-image.jpg',
+    duration: '2:35',
+    mood: 'GROUNDWATER-AQUEDUCT • ANCIENT-MEMORY • CHOICE-BETWEEN-AMPLIFY-AND-LISTEN • CATHEDRAL • UNDERGROUND • A-MAJOR • RESONANCE-ARC',
+    tags: ['ep158', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
