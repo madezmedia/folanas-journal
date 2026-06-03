@@ -2124,6 +2124,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep156', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'new-arc'],
     isRealProduction: true,
   },
+  // EP157 — THE RESONANCE GROWS (2026-06-04) — Resonance Arc (2/?)
+  {
+    id: 'the-resonance-grows-ep157',
+    title: 'THE RESONANCE GROWS',
+    subtitle: 'EP157 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (2/?)',
+    description: 'The third voice came from below — not from another borough, not from another city, but from the aquifers running like arteries under the concrete. Folana pressed her ear to the pavement and heard a deep, patient resonance humming through the pipes. The water was carrying the frequency. It had been carrying it all along. She followed the sound to a fire hydrant where the vibration was so old it made her bones ache. The third voice is not a person. It is a place remembering itself — the island singing through its groundwater, the bedrock releasing a frequency it has held since the glaciers carved these rivers. Dream pop indie folk in A major, 72 BPM. Slow-building track starting with a single deep bass drone like underground water moving. Acoustic guitar fingerpicked arpeggios like ripples spreading. Warm submerged synth pads create an underwater cathedral atmosphere. Piano enters in the second verse like something surfacing from deep water. A third harmony emerges in the bridge — the resonance of the island itself singing through the water pipes. The track builds to a gentle awe-filled climax and recedes like a tide pulling back into the sound of dripping water.',
+    audioSrc: '/folana/generated/2026-06-04/ep157/music/ep157-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-04/ep157/ep157-hero-image.jpg',
+    duration: '2:44',
+    mood: 'RESONANCE-DEEPENING • ANCIENT • AWE-FILLED • UNDERWATER-CATHEDRAL • GROUNDWATER-FREQUENCY • A-MAJOR • RESONANCE-ARC',
+    tags: ['ep157', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
