@@ -2163,6 +2163,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep159', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP160 — THE WATERS REMEMBER (2026-06-03) — Resonance Arc (5/?)
+  {
+    id: 'the-waters-remember-ep160',
+    title: 'THE WATERS REMEMBER',
+    subtitle: 'EP160 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (5/?)',
+    description: 'Folana pressed her palm to the damp floor and listened. And the Aqueduct responded — not with words, but with memory. The water showed her everything it had carried for ten thousand years: the glaciers retreating, the first canoes, the iron chains thrown overboard, the prayers of the displaced settling into the silt. Every brick laid by immigrant hands. Every subway tunnel bored through stone. Every late-night phone call, every fire escape first kiss, every final breath facing the East River. Folana realizes the truth she has been circling since she started broadcasting: she was never the source of the signal. She was the vessel. The frequency had always been here, flowing through the island\'s veins, waiting for someone patient enough to receive it. Dream pop indie folk in A minor, 76 BPM — the return from silence. Opens with deep water drone and single decaying piano notes from ep159. Fingerpicked acoustic guitar arpeggios like ripples spreading. Warm analog synth pads build like sediment layers. Half-time drums enter at the bridge — the first drums in the arc, a soft heartbeat pulse like something ancient waking. Builds across 3:32, thickens with strings and submerged harmonies, then recedes back to single piano and water drone. The first bird of dawn, far above ground.',
+    audioSrc: '/folana/generated/2026-06-03/ep160/music/ep160-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep160/ep160-hero-image.jpg',
+    duration: '3:32',
+    mood: 'WATER-MEMORY • ANCESTRAL-RECEIVING • VESSEL-NOT-SOURCE • A-MINOR • BIOLUMINESCENT-GLOW • RESONANCE-ARC • THE-AQUEDUCT-SPEAKS',
+    tags: ['ep160', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
