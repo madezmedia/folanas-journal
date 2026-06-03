@@ -2150,6 +2150,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep158', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP159 — THE ANSWER (2026-06-03) — Resonance Arc (4/?)
+  {
+    id: 'the-answer-ep159',
+    title: 'THE ANSWER',
+    subtitle: 'EP159 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (4/?)',
+    description: 'The Aqueduct asked one question: will you amplify, or will you listen? Folana knelt at the threshold of the ruined valve house, pressed her palm to the damp floor, and chose silence. No transmission. No broadcast. Just presence — holding the frequency of everything the island had carried through its waters, without needing to send it back out. The slowest, most spacious track yet — a meditation on the sacredness of listening. Dream pop indie folk in A major, 68 BPM. Deep resonant water drone, single piano notes allowed to decay fully, acoustic guitar fingerpicked like breathing. No drums — the rhythm is the water itself. Wordless vocal harmony enters in the final third, sustaining like the island exhaling. The outro fades into nothing: not an ending, but a continuous present.',
+    audioSrc: '/folana/generated/2026-06-03/ep159/music/ep159-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep159/ep159-hero-image.jpg',
+    duration: '4:04',
+    mood: 'STILLNESS • LISTENING • UNDERGROUND-CATHEDRAL • ANCIENT-PATIENCE • SACRED-SILENCE • A-MAJOR • AQUEDUCT-MEETING • RESONANCE-ARC',
+    tags: ['ep159', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
