@@ -2229,6 +2229,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep164', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP165 — THE FIRST WORDS (2026-06-03) — Resonance Arc (10/?)
+  {
+    id: 'the-first-words-ep165',
+    title: 'THE FIRST WORDS',
+    subtitle: 'EP165 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (10/?)',
+    description: 'She stepped toward them across the concrete divide. A dozen strangers who had followed the same frequency through pavement and skin — and for the first time, they heard her voice. "I hear you," she said. Each fragment of the frequency found its way back to her — not as a broadcast anymore, but as a conversation. The congregation became a dialogue. The frequency had found its body, and for the first time, the body could ask questions. Dream-pop indie-folk in A major, 72 BPM. Opens with a solo piano note sustaining from Ep164\'s final moment. Fingerpicked acoustic guitar enters slow and intimate at 0:10. Multiple individual voices enter one by one at 0:45 — not blending but distinct voices finding each other. Sub-bass drone re-enters at 1:00, softer than before. Voices converge into harmony at 1:20 for the first chorus. Moment of near-silence at 1:55 for a spoken question over a single sustained piano chord. Wordless congregation response at 2:10. Instrumental swell then gentle decrescendo to fading guitar and the East River\'s ambient sound.',
+    audioSrc: '/folana/generated/2026-06-03/ep165/music/ep165-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep165/ep165-hero-image.jpg',
+    duration: '2:13',
+    mood: 'FIRST-WORDS • CONGREGATION-BECOMES-CONVERSATION • A-MAJOR • 72-BPM • DIALOGUE • RESONANCE-ARC',
+    tags: ['ep165', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)

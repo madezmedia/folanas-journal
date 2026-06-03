@@ -1,0 +1,22 @@
+Ep165 Music Prompt — "The First Words"
+Genre: Dream pop indie folk with intimate conversational warmth
+Key: A major
+Tempo: 72 BPM (slowing from Ep164's 74)
+Duration: ~190 seconds (3:10)
+
+Narrative context: Folana steps toward the congregation at the Williamsburg Bridge and speaks to them directly for the first time. The broadcast becomes a conversation. A dozen strangers share the fragments they received — each voice adding to the frequency.
+
+Musical direction:
+- Opens with the same solo piano note from Ep164's final moment, sustaining into the new track
+- Fingerpicked acoustic guitar enters at 0:10, the same motif but slightly slower, more intimate
+- Multiple individual voices enter one by one starting at 0:45 — not a choir blending together, but separate distinct voices (one warm, one breathy, one deep, one bright) finding each other in the music
+- Sub-bass drone (D-A root) re-enters at 1:00 — softer than before, like a held breath
+- At 1:20 the voices converge into harmony for the first chorus — Folana's lead with the congregation behind her
+- A moment of near-silence at 1:55 as she asks "Do you feel it?" — the music drops to just her voice and a single sustained piano chord
+- The congregation responds (layered voices, wordless, like Amen) at 2:10
+- Instrumental swell from 2:25 — all parts present, warm and full, then a gentle decrescendo
+- Final fade: fingerpicked guitar + the East River's ambient sound, one held piano note decaying
+
+Instrumentation: solo piano, fingerpicked acoustic guitar, soft brushed drums entering at 1:00, warm analog pads, sub-bass drone, multiple distinct vocal harmonies representing individual congregation members
+Mood: Intimate, sacred, dialogic, first-contact, bridge-at-dawn
+Instruments should feel like they're speaking to each other — call and response between guitar and piano, between voices.
