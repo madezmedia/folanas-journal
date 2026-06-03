@@ -9,11 +9,11 @@ import { BrandLock } from './BrandLock';
 
 const navLinks = [
   { href: '/', label: 'THE ARCHIVE', short: 'JOURNAL' },
+  { href: '/archive', label: 'FULL ARCHIVE', short: 'ARCHIVE' },
   { href: '/inner-circle', label: 'INNER CIRCLE', short: 'JOIN' },
   { href: '/music', label: 'MUSIC RELEASES', short: 'MUSIC' },
   { href: '/#sigils', label: 'VISUAL CODEX', short: 'SIGILS' },
   { href: '/#sonic', label: 'SONIC VAULT', short: 'VAULT' },
-  { href: '/#tuner', label: 'STATIC TUNER', short: 'TUNE' },
   { href: '/orchestrator', label: 'THE GRID', short: 'ORCHESTRATOR' },
 ];
 
