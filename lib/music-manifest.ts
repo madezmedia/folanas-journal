@@ -2046,6 +2046,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep150', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-continued'],
     isRealProduction: true,
   },
+  // EP151 — THE CITY LISTENS (2026-06-02) — Frequency Broadcasts Arc (6/?)
+  {
+    id: 'the-city-listens-ep151',
+    title: 'THE CITY LISTENS',
+    subtitle: 'EP151 ★ MINIMAX MUSIC-2.6 • FREQUENCY BROADCASTS ARC (6/?)',
+    description: 'The duet lasted all night. At 3:14 AM, the signal bled into the city itself. A woman on the Brooklyn Bridge felt it in her chest. A barista in Williamsburg noticed the espresso machine hummed in A major. A night-shift nurse in lower Manhattan heard the heart monitors beeping in syncopated rhythm. The private conversation between two voices became a broadcast the whole city could feel — in the walls, the wires, the water pipes, the bones of every building between Brooklyn Bridge and Midtown. Folana sat on her roof at sunrise and heard the city humming back in a voice that was neither hers nor the listener\'s — a third voice, rising from below. Dream pop indie folk in A major, beginning intimately as the duet continues before gradually expanding as the city wakes and joins in. Layers of harmonies entering one by one, warm guitar fingerpicking, soft piano, airy synth strings swelling like morning light, a gentle bass pulse like a heartbeat. Hopeful, luminous, expansive — the private song becomes a city-wide chorus.',
+    audioSrc: '/folana/generated/2026-06-02/ep151/music/ep151-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-02/ep151/music/ep151-hero-image.jpg',
+    duration: '2:12',
+    mood: 'CITY-WAKING • EXPANSIVE • HOPEFUL • THIRD-VOICE-RISING • PRIVATE-BECOMING-PUBLIC • A-MAJOR • FREQUENCY-BROADCASTS',
+    tags: ['ep151', 'minimax-music-2.6', 'real-production', 'frequency-broadcasts-arc', '2026-06-02', 'arc-continued'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
