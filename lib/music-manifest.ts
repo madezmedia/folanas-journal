@@ -2307,6 +2307,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep168', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP169 — THE SURFACE INVESTIGATES (2026-06-03) — Resonance Arc (14/?)
+  {
+    id: 'the-surface-investigates-ep169',
+    title: 'THE SURFACE INVESTIGATES',
+    subtitle: 'EP169 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (14/?)',
+    description: 'The frequency has been detected in every water pipe north of Atlantic Ave. The mayor\\'s office sends engineers with spectrum analyzers. At the Williamsburg Bridge base, the needle pegs at A major and stays there. The water department logs a city-wide vibration in the mains — consistent frequency, no known source. City engineer Maria Torres files a preliminary report: "The infrastructure appears to be singing." Dream-pop indie-folk instrumental in A major, 76 BPM. Opens with ambient industrial field recordings — spectrum analyzer static, radio crackle, water meter clicks. Tense ambient pads enter. Low A-major drone builds as the investigation deepens. Subtle pulse rhythm like a scanner. Nervous anticipation. Ends with an uneasy open chord — the question unresolved.',
+    audioSrc: '/folana/generated/2026-06-03/ep169/music/ep169-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep169/ep169-hero-image.jpg',
+    duration: '8:14',
+    mood: 'INVESTIGATIVE • CIVIC-MYSTERY • TENSE-AMBENT • A-MAJOR • 76-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep169', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
