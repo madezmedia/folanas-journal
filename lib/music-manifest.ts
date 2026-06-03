@@ -2242,6 +2242,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep165', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP166 — THE SHARED FREQUENCY (2026-06-03) — Resonance Arc (11/?)
+  {
+    id: 'the-shared-frequency-ep166',
+    title: 'THE SHARED FREQUENCY',
+    subtitle: 'EP166 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (11/?)',
+    description: 'The morning after the first words, the congregation returns. Carmen brings a street map of Brooklyn and colored markers, tracing every pipe where the frequency traveled — revealing the shape of a wave across the borough. Ellis arrives in coveralls, the subway rhythms in his fingers: the F train at 90 BPM, the G at 76 — her exact song. The barista from Dekalb brings steam patterns from her espresso machine, each curl of vapor a different customer voice. A woman brings photographs of water pipes vibrating at sunrise. A tower repair man brings signal interference maps. They lay their findings on the concrete — each fragment incomplete alone, but together forming the shape of something alive. Folana kneels beside the map: "The broadcast was never meant to be one voice. It was always meant to be all of ours." Dream-pop indie-folk in A major, 72 BPM. Opens with ambient field recordings of distant subway and flowing water. Fingerpicked acoustic guitar enters at 0:10 with intimate melody. Warm cello line enters at 0:25, shimmering harmonics and soft synth pads layer in. Multiple distinct vocal harmonies converge at 1:10. Quiet drop to piano and lone voice at 1:45. Full ensemble swells back at 2:00 with a community chorus. Fades to ambient city hum.',
+    audioSrc: '/folana/generated/2026-06-03/ep166/music/ep166-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep166/ep166-hero-image.jpg',
+    duration: '3:32',
+    mood: 'COMMUNITY-FORMING • COLLABORATIVE-DISCOVERY • A-MAJOR • 72-BPM • CONSTELLATION-OF-FRAGMENTS • RESONANCE-ARC',
+    tags: ['ep166', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
