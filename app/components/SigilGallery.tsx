@@ -2,9 +2,10 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowLeft, ArrowRight, Download, Share2 } from 'lucide-react';
+import { X, ArrowLeft, ArrowRight, Download, Share2, Globe } from 'lucide-react';
 import { toast } from 'sonner';
 import { SIGILS, CATEGORIES, type Sigil } from '@/lib/sigils';
+import { BroadcastDialog } from './BroadcastDialog';
 
 export function SigilGallery() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -14,6 +15,7 @@ export function SigilGallery() {
   const [syncedHighlightIds, setSyncedHighlightIds] = useState<number[]>([]);
   const [weaverMode, setWeaverMode] = useState(false);
   const [lastSyncedTrack, setLastSyncedTrack] = useState<string | null>(null);
+  const [broadcastOpen, setBroadcastOpen] = useState(false);
 
   // Listen for SonicVault arc-sync events — live bidirectional highlight + pulse (V3 UX magic)
   React.useEffect(() => {
@@ -245,6 +247,12 @@ export function SigilGallery() {
                       <Share2 size={14} /> BROADCAST LINK
                     </button>
                     <button 
+                      onClick={() => setBroadcastOpen(true)} 
+                      className="flex items-center gap-2 px-5 py-2.5 min-h-[44px] border border-folana-neon-cyan/40 hover:bg-folana-neon-cyan/10 rounded-full text-folana-neon-cyan font-mono tracking-widest text-xs transition-all active:scale-[0.985]"
+                    >
+                      <Globe size={14} /> SOCIAL POST
+                    </button>
+                    <button 
                       onClick={() => handleDownload(selectedSigil)} 
                       onTouchEnd={(e) => { e.stopPropagation(); handleDownload(selectedSigil); }}
                       className="flex items-center gap-2 px-5 py-2.5 min-h-[44px] bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/40 rounded-full text-folana-ink font-mono tracking-widest text-xs transition-all active:scale-[0.985]"
@@ -273,6 +281,16 @@ export function SigilGallery() {
           </div>
         )}
       </AnimatePresence>
+
+      {/* Broadcast Dialog */}
+      <BroadcastDialog
+        isOpen={broadcastOpen}
+        onClose={() => setBroadcastOpen(false)}
+        title={selectedSigil?.title || ''}
+        caption={selectedSigil?.caption || ''}
+        imageUrl={selectedSigil?.src}
+        link={selectedSigil?.journalRef ? `/entries/${selectedSigil.journalRef}` : undefined}
+      />
     </div>
   );
 }

@@ -3,8 +3,9 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Search, Music, Image, Film, ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
+import { X, Search, Music, Image, Film, ArrowLeft, ArrowRight, ExternalLink, Share2 } from 'lucide-react';
 import { buildUnifiedArchive, getRelatedItems, searchArchive, filterByArc, getArchiveArcs, type ArchiveItem, type ArchiveItemType } from '@/lib/archive';
+import { BroadcastDialog } from './BroadcastDialog';
 
 const TYPE_FILTERS: { label: string; value: ArchiveItemType | 'all' }[] = [
   { label: 'All', value: 'all' },
@@ -39,6 +40,7 @@ export function ArchiveGrid() {
   const [selectedItem, setSelectedItem] = useState<ArchiveItem | null>(null);
   const [relatedItems, setRelatedItems] = useState<ArchiveItem[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [broadcastOpen, setBroadcastOpen] = useState(false);
 
   const allItems = useMemo(() => buildUnifiedArchive(), []);
   const arcs = useMemo(() => getArchiveArcs(), []);
@@ -232,6 +234,30 @@ export function ArchiveGrid() {
                   </div>
 
                   {/* Cross-reference: Related Archive Items */}
+                  {/* Broadcast button */}
+                  {selectedItem && (
+                    <div className="pt-2">
+                      <button
+                        onClick={() => setBroadcastOpen(true)}
+                        className="inline-flex items-center gap-2 px-4 py-2 text-xs font-mono tracking-[2px] border border-folana-neon-cyan/40 hover:bg-folana-neon-cyan/10 text-folana-neon-cyan rounded-full transition-all active:scale-[0.985]"
+                      >
+                        <Share2 size={14} /> BROADCAST TO SOCIAL
+                      </button>
+                    </div>
+                  )}
+
+                  {/* Broadcast Dialog */}
+                  {selectedItem && (
+                    <BroadcastDialog
+                      isOpen={broadcastOpen}
+                      onClose={() => setBroadcastOpen(false)}
+                      title={selectedItem.title}
+                      caption={selectedItem.description}
+                      imageUrl={selectedItem.src || selectedItem.posterSrc}
+                      link={selectedItem.journalRef ? `/entries/${selectedItem.journalRef}` : `/archive?id=${selectedItem.id}`}
+                    />
+                  )}
+
                   {relatedItems.length > 0 && (
                     <div className="pt-4 border-t border-white/10">
                       <div className="text-[10px] font-mono tracking-[3px] text-folana-neon-cyan mb-3">RELATED ARCHIVE ITEMS ({relatedItems.length})</div>
