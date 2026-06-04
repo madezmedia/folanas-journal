@@ -2411,6 +2411,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep176', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP177 — THE CITY OPENS ITS MOUTH (2026-06-04) — Resonance Arc (22/?)
+  {
+    id: 'the-city-opens-its-mouth-ep177',
+    title: 'THE CITY OPENS ITS MOUTH',
+    subtitle: 'EP177 ★ PROGRAMMATIC FALLBACK • RESONANCE ARC (22/?) — THE MORNING AFTER THE PRESS CONFERENCE',
+    description: 'The morning after the press conference. The NYT front page reads "A Frequency in Brooklyn." Diana Reyes wakes at 4 AM in the borrowed apartment — the bridge visible through the window, the weight of the podium still pressing on her ribs. At dawn the congregation gathers on the Williamsburg Bridge — smaller than before, but deeper. Reporters at the perimeter, a police cruiser idling. The hum under the steel goes on singing — not louder, not softer, just present. Diana walks among the quiet ones who stayed. A woman approaches — traveled from Chicago because she heard it on a phone call with her sister in Bushwick. She asks if she is losing her mind. Diana gives her the only answer she knows: you are not losing your mind. But you may never be the same. And for the first time in days, standing on the bridge in amber light, Diana thinks she hears the frequency respond — not with an answer, but with a question. A fifth above the tonic. Rising like wondering: what happens when the whole city hears the song at once? Dream pop indie folk, D major, 76 BPM, 0:30. Programmatic synthesis with layered ambient pad (D major triad spread across 2 octaves, 0.08Hz phase modulation, 0.4Hz LFO pulse), wordless vocal pad (triangle-wave choir texture, D3-A3-D4 range), fingerpicked guitar motif (D-A-F#-D arpeggio pattern), string swell entering at 2:00, and rising D-major earcon as closing signature. Voiceover by Fred (en_US), EQ\'d with 120Hz warmth + 3kHz presence. Opens with sustained D major pad, guitar enters at 0:15, narration begins at 0:20, earcon closes at 0:27.',
+    audioSrc: '/folana/generated/2026-06-04/ep177/music/ep177-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-04/ep177/ep177-hero-image.jpg',
+    duration: '0:30',
+    mood: 'MORNING-AFTER-THE-PRESS-CONFERENCE • DIANA-AS-PUBLIC-FACE • CONGREGATION-IN-DAYLIGHT • FREQUENCY-RESPONDS • D-MAJOR • 76-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep177', 'programmatic-fallback', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'fal-flux-pro'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
