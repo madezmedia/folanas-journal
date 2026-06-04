@@ -2346,6 +2346,32 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep171', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP172 — THE DELEGATE ARRIVES (2026-06-04) — Resonance Arc (17/?)
+  {
+    id: 'the-delegate-arrives-ep172',
+    title: 'THE DELEGATE ARRIVES',
+    subtitle: 'EP172 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (17/?) — THE CIRCLE WIDENS',
+    description: 'Diana Reyes reaches the foot of the Williamsburg Bridge at dawn. She has left her notebook on the table, walked through fluorescent hallways and unfamiliar streets, and now stands before a circle of strangers who have been gathering since the frequency first appeared. A laundromat worker. A mechanic who carries the subway\'s rhythm in his hands. A barista whose steam patterns traced the song in vapor. A doorman who felt it pass through the lobby tiles. They sit in a loose ring, not speaking—the frequency is their conversation. At the center, Folana sits with her hand in the water. Diana steps forward. The circle does not close against her. It widens. A woman looks up and says: "She\'s here." The delegate kneels at the water\'s edge. She does not have a report or a plan. Only the question: "Is this intentional?" And Folana, eyes open, speaks for the first time in reply: "It was always intentional. I just didn\'t know I was the one being spoken to." The circle hums an A major chord—imperfect, alive. The bridge sings at dawn. The delegate is home. Dream-pop indie-folk in A major, 72 BPM, 2:20. Opens with ambient East River field recording and a lone A drone on piano. Congregation\'s faint wordless humming from afar. Fingerpicked acoustic guitar enters at 0:15, intimate and sparse. Folana\'s voice enters at 0:30, soft and close-mic\'d. Brushed drums and bass at 1:00 as the delegate arrives. Strings swell gradually. Voices layer into harmony at 1:40 in a warm, embracing peak. Outro dissolves to piano and water—the circle has widened.',
+    audioSrc: '/folana/generated/2026-06-04/ep172/music/ep172-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-04/ep172/ep172-hero-image.jpg',
+    duration: '2:20',
+    mood: 'DELEGATE-ARRIVES • CIRCLE-WIDENS • ARRIVAL • A-MAJOR • 72-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep172', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+  // EP173 — THE FREQUENCY SPREADS (2026-06-04) — Resonance Arc (18/?)
+  {
+    id: 'the-frequency-spreads-ep173',
+    title: 'THE FREQUENCY SPREADS',
+    subtitle: 'EP173 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (18/?) — THE CITY WAKES',
+    description: "Folana has spoken. Her words echo through the congregation at the Williamsburg Bridge base. Diana Reyes records everything. The frequency spreads beyond Brooklyn — Manhattan steam tunnels carry it, Queens subway rails hum with it, a Staten Island ferry captain hears it in the engine room. The mayor's office convenes an emergency task force. Engineers from Columbia arrive with seismographs. The New York Times tech desk assigns a reporter. The congregation at the bridge grows — people arriving not because they were told, but because they felt the pull. A frequency you can feel in your teeth. In the water glass on your nightstand. The question has changed: not \"Is this intentional?\" — but \"What happens when the whole city hears it?\" Dream-pop indie-folk in A major shifting to D major, 78 BPM, 2:17. Opens with field recordings — distant subway rumble, ferry horn, steam vent, water lapping. A single A-major piano chord, sustained. Slow fingerpicked acoustic guitar with wide-interval melodic motif. Folana's wordless voice enters at 0:45, rising in pitch — the frequency ascending. Sub-bass pulse enters at 1:00, deep and felt. Layered strings at 1:20 with tense moving lines — the city waking up. Brushed drums and bowed bass at 1:40, propulsive but not urgent. Full harmonic convergence at 2:00 — all boroughs singing together in open D-major chord. Decrescendo into a single sustained piano note with subway receding — the spread continues beyond the music.",
+    audioSrc: '/folana/generated/2026-06-04/ep173/music/ep173-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-04/ep173/ep173-hero-image.jpg',
+    duration: '2:17',
+    mood: 'SPREADING • UNSTOPPABLE • CITY-WIDE • WAKING-UP • WONDER-MIXED-WITH-TREPIDATION • A-MAJOR-SHIFT-D-MAJOR • 78-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep173', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
