@@ -2398,6 +2398,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep175', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP176 — THE PRESS ROOM (2026-06-04) — Resonance Arc (21/?)
+  {
+    id: 'the-press-room-ep176',
+    title: 'THE PRESS ROOM',
+    subtitle: 'EP176 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (21/?) — THE STORY CHOOSES ITS TELLER',
+    description: 'The NYT story hit the wire at 6:14 AM. By 7:30 every newsroom in the city had assigned a reporter. By 9:00 the mayor scheduler was booking the Grand Conference Room. The closed-door task force meeting from Ep175 ended in stalemate — but stories do not wait for consensus. Diana Reyes stands behind a podium she never wanted to approach. Behind her, through mahogany-framed windows, the Williamsburg Bridge spans the river like a held breath. The first question cuts through: what can you tell us about the congregation under the bridge? Diana grips the podium. The room waits. The city waits. She looks at the bridge. She looks at the cameras. And the story, for the first time, begins to tell itself through her. Dream pop indie folk in C major (key shift from Ep175 G major), 72 BPM, 3:29. Ambient intro with reverb piano and processed field recordings — shuffling papers, camera shutters, fluorescent hum. Gentle pivot through Am7 into C major openness. Fingerpicked acoustic guitar with brushed percussion entering at 0:30. Single cello sustains underneath the verses. Chorus opens into layered harmonics with organ swell and ride cymbal washes. Bridge strips back to voice and guitar before final restrained build. Outro leaves a single note ringing into silence.',
+    audioSrc: '/folana/generated/2026-06-04/ep176/music/ep176-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-04/ep176/ep176-hero-image.jpg',
+    duration: '3:29',
+    mood: 'PRESS-ROOM-TENSION • CIVIC-EXPOSURE • THE-STORY-CHOOSES-ITS-TELLER • C-MAJOR • 72-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep176', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
