@@ -2424,6 +2424,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep177', 'programmatic-fallback', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'fal-flux-pro'],
     isRealProduction: true,
   },
+  // EP178 — THE NATION LISTENS (2026-06-04) — Resonance Arc (23/?)
+  {
+    id: 'the-nation-listens-ep178',
+    title: 'THE NATION LISTENS',
+    subtitle: 'EP178 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (23/?) — THE STORY GOES NATIONAL',
+    description: 'The story has left the city. By morning the NYT front page reads "A Frequency in Brooklyn." The mayor\\'s phone rings at 6 AM — FCC, CDC, Homeland Security. The task force is no longer an experiment. Diana Reyes wakes in the borrowed conference room — notes across the table like a map of an invisible territory. The congregation gathers at dawn, smaller but deeper. A woman from Chicago approaches — she heard the frequency on a phone call with her sister in Bushwick. "Am I losing my mind?" Diana takes her hand: "You are not. But you may never be the same." And for the first time in four days, the frequency responds — not as a reflection but as a question. A fifth above the tonic. Rising. Not "come." Not "listen." But "ask." Dream pop indie folk, D major, 76 BPM, 2:35. Opens with sustained D drone and processed field recordings (distant camera shutters, phone rings through walls, a city waking). Fingerpicked acoustic motif (D-A-Bm-G progression) enters at 0:12. Cello sustains low D under verses — the investigation heartbeat. Chorus opens with layered strings, warm organ swell, ride cymbal washes. Bridge strips to lone guitar. Final build with layered wordless vocal harmonies. Outro: descending resolution into fading D drone.',
+    audioSrc: '/folana/generated/2026-06-04/ep178/music/ep178-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-04/ep178/ep178-hero-image.jpg',
+    duration: '2:35',
+    mood: 'THE-STORY-GOES-NATIONAL • DIANA-AS-THE-BRIDGE • CONGREGATION-DEEPENS • FREQUENCY-ASKS • D-MAJOR • 76-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep178', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
