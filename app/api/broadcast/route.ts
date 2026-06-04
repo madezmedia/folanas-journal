@@ -112,8 +112,8 @@ export async function GET() {
 
 const PLATFORM_LABELS = [
   { id: 'facebook', label: 'Facebook', enabled: true },
-  { id: 'instagram', label: 'Instagram', enabled: false, note: 'Needs IG business account setup' },
-  { id: 'linkedin', label: 'LinkedIn', enabled: false, note: 'Re-auth needed' },
-  { id: 'reddit', label: 'Reddit', enabled: false, note: 'Re-auth needed' },
+  { id: 'instagram', label: 'Instagram', enabled: true },
+  { id: 'linkedin', label: 'LinkedIn', enabled: true },
+  { id: 'reddit', label: 'Reddit', enabled: false, note: 'Folana brand Reddit expired' },
   { id: 'slack', label: 'Slack', enabled: false, note: 'Slack MCP method pending' },
 ];

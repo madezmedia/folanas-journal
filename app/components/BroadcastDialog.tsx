@@ -7,9 +7,9 @@ import { toast } from 'sonner';
 
 const PLATFORMS = [
   { id: 'facebook', label: 'Facebook', icon: '📘', enabled: true },
-  { id: 'instagram', label: 'Instagram', icon: '📷', enabled: false, note: 'Setup needed' },
-  { id: 'linkedin', label: 'LinkedIn', icon: '💼', enabled: false, note: 'Re-auth needed' },
-  { id: 'reddit', label: 'Reddit', icon: '🧑‍💻', enabled: false, note: 'Re-auth needed' },
+  { id: 'instagram', label: 'Instagram', icon: '📷', enabled: true, note: 'Image posts' },
+  { id: 'linkedin', label: 'LinkedIn', icon: '💼', enabled: true },
+  { id: 'reddit', label: 'Reddit', icon: '🧑‍💻', enabled: false, note: 'Folana brand Reddit expired' },
   { id: 'slack', label: 'Slack', icon: '💬', enabled: false, note: 'Setup needed' },
 ];
 
