@@ -2450,6 +2450,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep179', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP180 — THE MEASUREMENT FAILS (2026-06-04) — Resonance Arc (25/?)
+  {
+    id: 'the-measurement-fails-ep180',
+    title: 'THE MEASUREMENT FAILS',
+    subtitle: 'EP180 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (25/?) — THE FREQUENCY CANNOT BE CONTAINED',
+    description: 'The FBI/DHS team from Ep179 sets up a mobile command center at the base of the Williamsburg Bridge. Seismographs, spectrum analyzers, acoustic sensors — every instrument registers the same reading: A major, 72 BPM, consistent across all five boroughs. But the source is untraceable. The lead engineer from Columbia stares at his data and says: \"This isn\'t a transmission. This is a property of the city itself. It\'s always been here. We just built instruments sensitive enough to hear it.\" Diana watches the congregation on the bridge. They have not moved. They do not need instruments. The frequency cannot be measured because it is not a sound. It is a relationship. Dream pop indie folk, A major, 72 BPM, 2:25. Opens with processed field recordings — electromagnetic scanner static, radio frequency sweeps, scientific instrument clicks. A sustained cello drone enters beneath — patient, ancient. Fingerpicked acoustic guitar with a G–C–Em–D motif enters, hesitant and searching. Brushed drums and upright bass enter like a slow heartbeat. A single wordless female voice enters at 1:00, floating above. Layered wordless voices and warm organ build the chorus. Strings swell as Diana realizes the truth. Outro strips back to cello and single piano note, sustained, unresolved — the measurement has failed, but the listening has just begun. Narration delivered by MiniMax Speech 2.8 voice English_expressive_narrator.',
+    audioSrc: '/folana/generated/2026-06-04/ep180/music/ep180-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-04/ep180/ep180-hero-image.jpg',
+    duration: '2:25',
+    mood: 'THE-MEASUREMENT-FAILS • GOVERNMENT-INVESTIGATION • FREQUENCY-CANNOT-BE-CONTAINED • A-MAJOR • 72-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep180', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
