@@ -62,7 +62,7 @@ export default function InnerCirclePage() {
         <div className="flex items-center gap-6 text-xs font-mono tracking-[2px]">
           <span className="text-folana-neon-cyan">INNER CIRCLE</span>
           <a
-            href="https://whop.com/checkout/plan_2Tz2QipTSn0O9"
+            href="https://whop.com/ez-influencer-360-c5b3/folana-s-inner-circle-dd/"
             target="_blank"
             className="px-4 py-1.5 bg-folana-neon-pink text-black font-semibold rounded-full hover:bg-folana-neon-cyan transition-colors text-[11px] tracking-[1px]"
           >
@@ -74,11 +74,16 @@ export default function InnerCirclePage() {
       {/* Hero */}
       <section className="relative min-h-[90dvh] flex items-center justify-center pt-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/folana/inner-circle/hero.jpg"
-            alt="Folana — Rooftop Signal"
-            className="absolute inset-0 w-full h-full object-cover opacity-70 scale-[1.06]"
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/folana/generated/2026-06-03/ep-inner-circle-launch-hero.jpg"
+            className="absolute inset-0 w-full h-full object-cover opacity-60 scale-[1.06]"
+          >
+            <source src="/folana/generated/2026-06-03/ep-inner-circle-launch-video.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-folana-void via-folana-void/85 to-folana-paper" />
         </div>
 
@@ -97,7 +102,7 @@ export default function InnerCirclePage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://whop.com/checkout/plan_2Tz2QipTSn0O9"
+              href="https://whop.com/ez-influencer-360-c5b3/folana-s-inner-circle-dd/"
               target="_blank"
               className="neon-btn text-sm px-10 py-4 text-base tracking-wide"
             >
@@ -115,6 +120,20 @@ export default function InnerCirclePage() {
             <span>✦ 5 songs / month</span>
             <span>✦ Weekly dispatches</span>
             <span>✦ Full stem access</span>
+          </div>
+
+          {/* Video toggle — unmute for sound */}
+          <div className="mt-6">
+            <button
+              onClick={() => {
+                const vid = document.querySelector('video');
+                if (vid) vid.muted = !vid.muted;
+              }}
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 hover:border-folana-neon-cyan/50 text-[10px] font-mono tracking-[2px] text-folana-text-muted hover:text-folana-neon-cyan transition-all"
+            >
+              <span>♫</span>
+              <span>TOGGLE VOICEOVER</span>
+            </button>
           </div>
         </div>
       </section>
@@ -317,7 +336,7 @@ export default function InnerCirclePage() {
             </ul>
 
             <a
-              href="https://whop.com/checkout/plan_2Tz2QipTSn0O9"
+              href="https://whop.com/ez-influencer-360-c5b3/folana-s-inner-circle-dd/"
               target="_blank"
               className="block w-full text-center py-4 rounded-xl bg-folana-neon-pink text-black font-semibold text-sm tracking-wide hover:bg-folana-neon-cyan transition-colors"
             >
@@ -377,7 +396,7 @@ export default function InnerCirclePage() {
             One price. Full access. Cancel anytime.
           </p>
           <a
-            href="https://whop.com/checkout/plan_2Tz2QipTSn0O9"
+            href="https://whop.com/ez-influencer-360-c5b3/folana-s-inner-circle-dd/"
             target="_blank"
             className="inline-block px-12 py-4 rounded-full bg-folana-neon-pink text-black font-semibold text-sm tracking-wide hover:bg-folana-neon-cyan transition-colors"
           >

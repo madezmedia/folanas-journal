@@ -2320,6 +2320,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep169', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP170 — THE CIVIL QUESTION (2026-06-03) — Resonance Arc (15/?)
+  {
+    id: 'the-civil-question-ep170',
+    title: 'THE CIVIL QUESTION',
+    subtitle: 'EP170 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (15/?)',
+    description: 'Maria Torres\' report reached the city planner at 8:14 AM. By noon, a public works meeting was called. Spectrum analyzers mapped the frequency across every pipe. The needle pegged at A major. Someone asked: "Is this intentional?" The room went silent. Dream-pop indie-folk in A minor, 76 BPM, 174s. Opens with subtle civic field recordings — fluorescent hum, paper shuffling, distant traffic. A lone sustained A drone enters. Slow fingerpicked guitar enters hesitantly. Padded synths wash in like cold institutional light. A rhythmic pulse like scanning equipment builds. Cellos with sustained notes of unease. Ends unresolved — a lone chord fading into silence.',
+    audioSrc: '/folana/generated/2026-06-03/ep170/music/ep170-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-03/ep170/ep170-hero-image.jpg',
+    duration: '2:54',
+    mood: 'CIVIC-MYSTERY • BUREAUCRATIC-TENSION • A-MINOR • 76-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep170', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-03', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)

@@ -42,7 +42,7 @@ Two new episodes generated, deployed, and cross-posted to Facebook in this cycle
 
 ## Inner Circle Status
 
-- ✅ Whop product live (prod_R8s7BVkUBNyeR)
+- ✅ Whop product live (prod_R8s7BVkUBNyeR) → migrated to prod_ZxbMknnrGahpQ on EZ Influencer 360
 - ✅ All 4 pricing tiers live with checkout links
 - ✅ Inner Circle landing page at /inner-circle (200)
 - ✅ Community seed content ready (5-day calendar, guidelines, Fanvue cross-sell copy)

@@ -51,7 +51,7 @@ Two new episodes completing the day-through-night arc of the City Souls series.
 
 ## Inner Circle Status
 
-- ✅ Whop product live (prod_R8s7BVkUBNyeR)
+- ✅ Whop product live (prod_R8s7BVkUBNyeR) → migrated to prod_ZxbMknnrGahpQ on EZ Influencer 360
 - ✅ All 4 pricing tiers live with checkout links
 - ✅ Inner Circle landing page at /inner-circle (200)
 - ✅ Community seed content ready

@@ -11,6 +11,7 @@ import { HarnessDispatchConsole } from './components/HarnessDispatchConsole';
 import { EchoArcExplorer } from './components/EchoArcExplorer';
 import { StableHero } from './components/StableHero';
 import { BrandLock } from './components/BrandLock';
+import { AcmiLiveFeed } from './components/AcmiLiveFeed';
 
 export default async function FolanasJournal() {
   let allEntries: any[] = [];
@@ -107,6 +108,13 @@ export default async function FolanasJournal() {
         {/* ═══ SONIC VAULT — MUSIC VIDEO PROTOTYPES (Interactive) ═══ */}
         <section>
           <SonicVault />
+        </section>
+
+        {/* ═══ THE GRID — ACMI LIVE FEED ═══ */}
+        <section id="grid">
+          <div className="max-w-5xl mx-auto">
+            <AcmiLiveFeed />
+          </div>
         </section>
 
         {/* ═══ THE PIPELINE CHRONICLES — STORYTELLING ═══ */}
