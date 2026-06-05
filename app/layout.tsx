@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   title: "Folana's Journal | Signals from the Static",
   description: "The holographic chronicle of Folana Lanez — AI music producer, visual alchemist, and dark fairy of the wires. Brooklyn node. Neon transmissions. Locked signatures.",
   icons: {
-    icon: '/brand/favicon-32.png',
-    apple: '/brand/favicon-48.png',
+    icon: '/brand/png/favicon-32.png',
+    apple: '/brand/png/favicon-48.png',
   },
   openGraph: {
     title: "Folana's Journal — Cyberpunk Chronicles",
     description: "Thoughts, sigils, and sonic transmissions from the wires. Dark fairy grunge. Holographic neon. The pipeline breathes.",
-    images: [{ url: '/brand/og-card-neutral.png' }],
+    images: [{ url: '/brand/png/og-card-neutral.png' }],
   },
   alternates: {
     types: {
