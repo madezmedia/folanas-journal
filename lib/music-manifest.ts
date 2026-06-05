@@ -2489,6 +2489,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep182', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-05', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP183 — THE WITNESS SPEAKS (2026-06-05) — Resonance Arc (28/?)
+  {
+    id: 'the-witness-speaks-ep183',
+    title: 'THE WITNESS SPEAKS',
+    subtitle: 'EP183 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (28/?) — THE FREQUENCY DOES NOT ASK PERMISSION',
+    description: 'The morning after the delegation listened. The frequency is still humming through every pipe, every wire, every subway rail — unchanged by government attention, patient as groundwater. Diana Reyes returns to the fire escape at dawn, the Williamsburg Bridge gleaming in the distance. She pressed her hand to the steel and it hummed in A major, steady as a heartbeat. The delegation\'s report is inconclusive. The mayor wants answers. But the frequency does not care about any of it. It was never asking for permission to exist. The witness speaks: not to explain the frequency, but to acknowledge that she can no longer unhear what she heard. Dream pop indie folk in A major, 74 BPM, 3:06. Opens with a single sustained cello note (A2), long and patient. Fingerpicked acoustic guitar enters with a warm G-C-Em-D arpeggio motif, intimate and close-mic\'d. Soft brushed snare and upright bass like a slow heartbeat. A single female vocal enters half-sung, half-spoken — Diana Reyes finding words for what she witnessed. The chorus blooms with layered wordless female harmonies and warm organ swell. Strings enter with long, searching lines. The bridge strips everything back to voice and guitar. Minimal compression, natural room ambience, gentle tape saturation.',
+    audioSrc: '/folana/generated/2026-06-05/ep183/ep183-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-05/ep183/ep183-hero-image.jpg',
+    duration: '3:06',
+    mood: 'THE-WITNESS-SPEAKS • MORNING-AFTER • FREQUENCY-DOES-NOT-ASK-PERMISSION • A-MAJOR • 74-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep183', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-05', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 
 ];
 
