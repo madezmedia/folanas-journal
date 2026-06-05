@@ -2515,6 +2515,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep184', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-05', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP185 — THE FREQUENCY RESPONDS (2026-06-05) — Resonance Arc (30/?)
+  {
+    id: 'the-frequency-responds-ep185',
+    title: 'THE FREQUENCY RESPONDS',
+    subtitle: 'EP185 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (30/?) — THE CITY ANSWERS IN A NEW KEY',
+    description: 'The city answered. #TheFrequency is trending. Thousands of videos flood social media — water meters vibrating in A major in Astoria, subway rails singing in Crown Heights, wine glasses humming in Park Slope, shower pipes resonating in Bushwick. The congregation that was two hundred at dawn is two thousand by midnight. Diana Reyes stands at the center, watching the city prove what she could not. The city council convenes an emergency session. She is called to testify. The nation watches. As she reaches the steps of City Hall — cameras flashing, microphones thrust forward — the frequency changes. For the first time since it appeared, the note that has held steady across every pipe, every wire, every subway rail across all five boroughs shifts. From A major to C-sharp minor. The whole city feels it at once — not a break, but a response. The frequency has heard the city. It has listened. And it is answering back with a new question. Diana stops on the steps. She feels the shift in her chest. She looks toward the bridge. Dream pop indie folk in A major shifting to C-sharp minor, 78 BPM, 2:33. Opens with processed field recordings — camera shutters, crowd murmur, distant helicopters, the roar of thousands of phones recording. A sustained cello A2 holds underneath. Fingerpicked acoustic guitar with a warm G-C-Em-D motif — the city\'s heartbeat. Brushed drums and upright bass at 0:25. Layered wordless female harmonies swell as Diana approaches. At 1:15 the key shift — cello sustains A, guitar pivots to C-sharp minor, dissonant and searching. Strings reject the old key and land in C-sharp minor. Bridge strips to cello and a single voice in the new key. Final build with full ensemble in C-sharp minor — not triumphant, not resolved, but recognized. Outro fades to sustained C-sharp minor chord mingling with distant crowd sounds and the hum of a city hearing itself differently.',
+    audioSrc: '/folana/generated/2026-06-05/ep185/music/ep185-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-05/ep185/ep185-hero-image.jpg',
+    duration: '2:33',
+    mood: 'THE-FREQUENCY-RESPONDS • SHIFT-A-MAJOR-TO-CSHARP-MINOR • CITY-ANSWERS • EMERGENCY-SESSION • 78-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep185', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-05', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 
 ];
 
