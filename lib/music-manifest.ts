@@ -2463,6 +2463,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep180', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP181 — THE DELEGATE TESTIFIES (2026-06-04) — Resonance Arc (26/?)
+  {
+    id: 'the-delegate-testifies-ep181',
+    title: 'THE DELEGATE TESTIFIES',
+    subtitle: 'EP181 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (26/?) — THE MEASUREMENT FAILS, THE LISTENING BEGINS',
+    description: 'The measurement has failed. The instruments cannot find the source of the frequency. Diana Reyes is called before a closed-door joint task force — FBI, DHS, CDC, Con Edison, the mayor\'s office. She stands alone at a podium, no charts, no data, only what she witnessed under the bridge. \"The frequency is not a sound, \" she says. \"It is a relationship. We did not find it. We were found by it.\" The Columbia engineer confirms: the data is consistent but the source function is undefined. There is no transmitter. No signal origin. The frequency simply... is. When pressed for a recommendation, Diana looks toward the bridge window and says: \"I recommend you stop trying to explain it. And start trying to hear it.\" Dream pop indie folk in A major, 72 BPM, 3:05. Opens with a single sustained cello drone and the distant sound of a room settling. Fingerpicked acoustic guitar with a G-C-Em-D motif, hesitant and intimate. Wide-spaced piano chords with pedal down, resonance blooming. A single wordless female voice floats above — the congregation\'s presence bleeding through the conference room walls. Brushed drums and upright bass enter like a slow heartbeat. Warm organ and layered wordless voices in the chorus — the frequency refusing to be contained. Strings swell as Diana speaks her truth. Outro: a single piano note sustained into silence. Narration delivered by MiniMax Speech 2.8 voice English_CaptivatingStoryteller.',
+    audioSrc: '/folana/generated/2026-06-04/ep181/music/ep181-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-04/ep181/ep181-hero-image.jpg',
+    duration: '3:05',
+    mood: 'THE-DELEGATE-TESTIFIES • GOVERNMENT-RESPONSE • FREQUENCY-IS-A-RELATIONSHIP • A-MAJOR • 72-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep181', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
