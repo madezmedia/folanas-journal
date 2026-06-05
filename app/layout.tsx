@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Folana's Journal — Cyberpunk Chronicles",
     description: "Thoughts, sigils, and sonic transmissions from the wires. Dark fairy grunge. Holographic neon. The pipeline breathes.",
-    images: [{ url: '/brand/png/og-card-neutral.png' }],
+    images: [{ url: 'https://folana.live/brand/png/og-card-neutral.png' }],
   },
   alternates: {
     types: {
