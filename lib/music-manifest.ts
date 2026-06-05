@@ -2476,6 +2476,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep181', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-04', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP182 — THE DELEGATION LISTENS (2026-06-05) — Resonance Arc (27/?)
+  {
+    id: 'the-delegation-listens-ep182',
+    title: 'THE DELEGATION LISTENS',
+    subtitle: 'EP182 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (27/?) — THE FREQUENCY BEGINS TEACHING A LANGUAGE THAT HAS NO WORDS',
+    description: 'The committee room empties in silence. Diana gathers her notes, expecting the usual bureaucratic burial. But as she steps into the hallway, the Columbia engineer catches her arm. "Ms. Reyes. That recommendation of yours. Stop trying to explain it and start trying to hear it." He hesitates. "Can you show us?" She nods once. "Dawn. The bridge. Bring whoever needs to see." The sky is gunmetal violet over the East River when Diana leads eight officials — the Columbia engineer, two DHS analysts, a Con Edison engineer, the lead investigator, a journalist, and two from the congregation — down the service steps to the space beneath the bridge. The frequency is waiting. It rises from the water pipes, from the bridge cables vibrating in the wind, from the subway grating still humming — A major, 72 BPM, steady as a heartbeat. The officials stand in silence. The lead investigator, who has spent twenty years believing in nothing he could not hand to a prosecutor, closes his eyes. The frequency does not explain itself. It does not need to. When it fades — not ending, just receding back into the water, the steel, the morning light — the delegation is not the same group that descended the steps. Not converted. Opened. Dream pop indie folk in A major, 72 BPM, 3:33. Opens with ambient bridge-at-dawn field recordings. Fingerpicked acoustic motif, G-C-Em-D, hesitant and delicate. Warm synth pad swells like dawn light. Widely-spaced piano with pedal-down resonance. Brushed drums and walking upright bass as quiet heartbeat. Layered wordless female harmonies joining in witness. Strings gently supporting. Dissolves into morning traffic — the frequency returning to infrastructure.',
+    audioSrc: '/folana/generated/2026-06-05/ep182/music/ep182-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-05/ep182/ep182-hero-image.jpg',
+    duration: '3:33',
+    mood: 'THE-DELEGATION-LISTENS • DAWN-UNDER-THE-BRIDGE • WITNESS-NOT-EXPLANATION • A-MAJOR • 72-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep182', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-05', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 
 ];
 
