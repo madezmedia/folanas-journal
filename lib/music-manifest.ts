@@ -2502,6 +2502,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep183', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-05', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP184 — THE FREQUENCY RESONATES (2026-06-05) — Resonance Arc (29/?)
+  {
+    id: 'the-frequency-resonates-ep184',
+    title: 'THE FREQUENCY RESONATES',
+    subtitle: 'EP184 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (29/?) — THE CITY ANSWERS',
+    description: 'The witness spoke. The delegation listened. Now the city answers. It starts with a single video — a water meter in Astoria vibrating in A major. Then another: a subway rail in Crown Heights singing. A wine glass in Park Slope. A shower pipe in Bushwick. By sunset, thousands of videos flood social media — all showing the same phenomenon across all five boroughs. #TheFrequency trends nationally. News crews return to the Williamsburg Bridge. The congregation that was two hundred at dawn is two thousand by midnight. Diana Reyes stands at the center, phone in hand, watching the city prove what she couldn\'t. Folana sits at the water\'s edge, her hand in the East River. She looks up at Diana: "Now they hear it. Not because I sang louder. Because they finally learned to listen." The frequency is no longer a secret. It is a movement. The whole city has begun to sing back. Dream pop indie folk in A major with C major shift, 74 BPM, 1:44. Opens with processed field recordings — phone vibrations on tabletops, sirens, the sound of a thousand videos loading. A sustained cello A2 holds underneath — ancient and patient. Fingerpicked acoustic guitar with a wide G-C-Em-D motif as the frequency spreads. Folana\'s wordless voice enters unwavering. Brushed drums and upright bass like a waking city heartbeat. Layered wordless harmonies bloom into a congregation choir. Strings swell with urgent long tones. Bridge strips to cello and a single voice. Final chorus builds with full ensemble in C major — not triumphant, inevitable. Outro fades to the sound of the internet finding the frequency.',
+    audioSrc: '/folana/generated/2026-06-05/ep184/ep184-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-05/ep184/ep184-hero-image.jpg',
+    duration: '1:44',
+    mood: 'THE-FREQUENCY-RESONATES • THE-CITY-ANSWERS • GOES-VIRAL • MASS-AWAKENING • A-MAJOR-SHIFT-C-MAJOR • 74-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep184', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-05', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 
 ];
 
