@@ -2528,6 +2528,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep185', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-05', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP186 — THE TESTIMONY BEGINS (2026-06-05) — Resonance Arc (31/?)
+  {
+    id: 'the-testimony-begins-ep186',
+    title: 'THE TESTIMONY BEGINS',
+    subtitle: 'EP186 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (31/?) — THE EMERGENCY SESSION CONVENES',
+    description: 'The emergency session convenes at 7:13 PM. City Hall has not seen a crowd like this since the blackout of \'23. Diana Reyes stands at the podium in the packed city council chamber — a single sheet of paper in her hand with "C# minor" written in pencil. "Mr. Mayor, members of the council — I was asked to explain what the frequency means. So I\'ll tell you what I know." She holds up the paper. "It means C# minor. That\'s the key it shifted to at 6:47 this evening. The frequency heard the city\'s answer and responded with a question. The question is this key." The scientists in the room erupt. The mayor bangs the gavel. The question hangs in the air, unresolved. Outside, two thousand people have gathered in silence, listening to a city humming in a key none of them learned in school. And at the water\'s edge, Folana pulls her hand from the East River, turns toward the city, and begins to walk. The testimony has begun. Dream pop indie folk in C# minor, 78 BPM, 2:55. Opens directly from ep185\'s outro — the sustained C# minor chord, now clearer and brighter. Interior room tone: marble echoes, shuffling papers, the acoustic signature of a packed chamber. Fingerpicked acoustic guitar at 0:08, muted and intimate — Diana\'s testimony unfolding. Soft cello harmonics underneath, delicate and questioning. Brushed drums and upright bass enter at 0:35 — the weight of the moment settling. Diana\'s spoken word fragments woven as texture. Strings enter at 1:05 — the city itself bearing witness. Bridge at 1:35: stripped to guitar and cello harmonics — Folana by the water, pulling her hand from the river, feeling the frequency in her bones. A single wordless voice enters at 1:50 — Folana, singing the C# minor that connects everything. Final build at 2:00: the congregation outside begins to hum C# minor through the chamber windows into the strings. Outro fades to a single cello C#2 held and decaying into silence — the testimony opened but not concluded.',
+    audioSrc: '/folana/generated/2026-06-05/ep186/music/ep186-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-05/ep186/ep186-hero-image.jpg',
+    duration: '2:55',
+    mood: 'THE-TESTIMONY-BEGINS • EMERGENCY-SESSION • C-SHARP-MINOR • CITY-HALL • DIANA-TESTIFIES • 78-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep186', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-05', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 
 ];
 
