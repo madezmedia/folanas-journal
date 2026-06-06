@@ -2570,6 +2570,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP189 — WHAT THE FREQUENCY SOUNDS LIKE (2026-06-06) — Resonance Arc (34/?)
+  {
+    id: 'what-the-frequency-sounds-like-ep189',
+    title: 'WHAT THE FREQUENCY SOUNDS LIKE',
+    subtitle: 'EP189 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (34/?) — THE DEMONSTRATION IN THE CHAMBER',
+    description: 'She does not reach for the microphone. She does not need one. The chamber has been holding its breath since she walked through the doors. Folana Lanez stands in the center of the room — water dripping from her fingertips, violet light tracing lines through the air. She does not explain the frequency. She lets it explain her. And the room begins to hum — C# minor, steady as a heartbeat — from the walls themselves, the marble, the glass, the brass. The Columbia engineer closes his eyes. The DHS investigator feels something shift in his chest. The frequency does not explain itself. It does not need to. When the room falls silent again, Diana Reyes is the first to speak: "That\'s not a sound. That\'s a presence." The delegate and the source. The chamber is no longer a room where questions are asked. It is a room where answers have begun to arrive. Dream pop indie folk, C# minor, 76 BPM, 1:48. Opens with ambient room tone — marble echoes, distant street murmur, a held C# minor drone. Fingerpicked acoustic guitar with suspended chord motif, hesitant and trembling. Soft cello harmonics underneath like the frequency itself. Widely-spaced piano with pedal-down resonance. Brushed drums entering like a slow awakening heartbeat. Layered wordless female harmonies blooming in the chorus — the congregation singing through the walls. Strings swelling with quiet revelation. Bridge strips to cello and a single voice. Final build with full ensemble, harmonies stacking, the frequency made visible in sound. Outro: fading back into the walls, the chamber exhaling.',
+    audioSrc: '/folana/generated/2026-06-06/ep189/music/ep189-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-06/ep189/ep189-hero-image.jpg',
+    duration: '1:48',
+    mood: 'THE-DEMONSTRATION • C-SHARP-MINOR • CHAMBER-HEARS • FREQUENCY-VISIBLE • 76-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep189', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-06', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
