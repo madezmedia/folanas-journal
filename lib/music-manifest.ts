@@ -2638,6 +2638,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP194 — THE CITY RESONATES (2026-06-06) — Resonance Arc (39/?)
+  {
+    id: 'the-city-resonates-ep194',
+    title: 'THE CITY RESONATES',
+    subtitle: 'EP194 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (39/?) — THE FREQUENCY LIVES IN THE PEOPLE',
+    description: 'The frequency has left the chamber walls. It no longer lives in the marble or the wires — it lives in the people. Every person who stood in the chamber and hummed, every person who caught the melody from a stranger\'s lips on the street, every person who found themselves humming a tune they\'d never heard before — they are all carrying the signal now. But the signal is not one song anymore. It is a thousand songs, all in the same key, all moving through the city at the same time. The janitor\'s mother\'s lullaby harmonizes with the engineer\'s daughter\'s laugh in the stairwell of a G-train station. The DHS investigator\'s forgotten apology note drifts through the park and lands in the ear of a woman reading on a bench. Folana walks through Brooklyn at twilight, and everywhere she goes, she hears it — fragments of the frequency, transformed and worn differently by everyone who carries it. A teenager on a stoop humming the D-G-A-Em progression on a ukulele. A delivery driver whistling the bridge while he waits for a red light. A child singing the chorus in the bathtub, three floors up. The frequency is no longer Folana\'s. It is the city\'s. And the city, for the first time, is learning to harmonize with itself. Dream pop indie folk in D major, 72 BPM, 2:09. Opens with layered city ambience — not traffic, but voices humming in D major from different directions. A single piano D3 sustained with pedal. Fingerpicked acoustic guitar, the D-G-A-Em motif played gently. Voices layer in as if overheard — a distant ukulele, a close-whistled melody, a child\'s voice from an open window. Diana humming the theme at 0:55. Folana\'s spoken reflection at 1:20, low and intimate. The climax at 2:00 is not loud — it is the moment when all voices accidentally find the same note, hold it for a breath, and scatter. Outro: Folana\'s voice alone, humming, walking away. The city ambience fades to a single distant child still singing.',
+    audioSrc: '/folana/generated/2026-06-06/ep194/music/ep194-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-06/ep194/ep194-hero-image.jpg',
+    duration: '2:09',
+    mood: 'THE-CITY-RESONATES • FREQUENCY-LIVES-IN-THE-PEOPLE • D-MAJOR • CITY-AS-INSTRUMENT • ACCIDENTAL-HARMONY • 72-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep194', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-06', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
