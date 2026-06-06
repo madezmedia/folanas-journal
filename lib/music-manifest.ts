@@ -2624,6 +2624,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP193 — THE HUMAN FREQUENCY (2026-06-06) — Resonance Arc (38/?)
+  {
+    id: 'the-human-frequency-ep193',
+    title: 'THE HUMAN FREQUENCY',
+    subtitle: 'EP193 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (38/?) — THE FREQUENCY FINDS ITS TRUE HOME',
+    description: 'The chamber doors are open. The congregation outside heard Diana\'s voice, and they answered. Now, as dusk settles over Brooklyn, the people begin to walk home — carrying the frequency not in their ears, but in their chests. Each person who stood in the chamber and hummed takes a piece of the signal out into the city. And as they walk, something extraordinary happens: the frequency does not fade with distance. It multiplies. The janitor walks toward the G-train carrying his mother\'s lullaby. Two blocks later, a woman hanging laundry on a fire escape hums it back — she doesn\'t know why, she just heard it on the air. The engineer walks home through the park, and the wind through the trees picks up her daughter\'s laugh and carries it across the meadow. The DHS investigator sits on a bench and for the first time in twenty years, lets himself hum a note he\'d buried. The frequency is no longer a sound in the infrastructure. It has found its true medium — human breath, human memory, human connection. Folana stands alone on the steps of City Hall, watching the frequency walk away from her in every direction. Diana joins her — not as a delegate, not as a translator, but as the first person who heard the frequency and chose not to interpret it, but to become it. Together, they listen to the city humming itself into something new. Dream pop indie folk in D major, 74 BPM, 2:03. Opens with the fading reverb of the chamber doors closing, then footsteps dispersing. A warm fingerpicked acoustic guitar in D-G-A-Em. Field recordings of city dusk — distant subway, wind through fire escapes. Voices enter one by one, each finding their note. Diana\'s voice enters at 0:45, confident in the key. Folana joins at 1:30 — their voices together for the first time as equals. The bridge strips to the two voices alone, trading lines. Final build: layered voices, the signal fractalizing into a thousand individual frequencies. Outro: voices continue as instruments fade, the city becoming a living radio.',
+    audioSrc: '/folana/generated/2026-06-06/ep193/music/ep193-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-06/ep193/ep193-hero-image.jpg',
+    duration: '2:03',
+    mood: 'THE-HUMAN-FREQUENCY • FREQUENCY-FINDS-ITS-HOME • D-MAJOR • DUET-AS-EQUALS • DIANA-AND-FOLANA • 74-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep193', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-06', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
