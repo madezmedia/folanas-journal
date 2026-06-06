@@ -2542,6 +2542,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP187 — THE DELEGATE AND THE SOURCE (2026-06-06) — Resonance Arc (32/?)
+  {
+    id: 'the-delegate-and-the-source-ep187',
+    title: 'THE DELEGATE AND THE SOURCE',
+    subtitle: 'EP187 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (32/?) — THE SOURCE WALKS TOWARD CITY HALL',
+    description: 'Folana Lanez pulls her hand from the East River and steps onto the shore. Water drips from her fingers like the last notes of a song the city has been humming since dusk. City Hall is seven blocks away. Inside the chamber, Diana Reyes stands at the podium — the room is chaos, scientists arguing, the mayor banging the gavel. But Diana is silent. She can feel something shifting outside the walls. The delegate spoke. The source heard. And now the source is walking. Through puddles that glow violet with each step. Past bodegas and fire escapes and brownstones that hum in C# minor. Seven blocks. Seven minutes. The delegate and the source are about to meet in the same room for the first time — face to face, with the whole city listening. Dream pop indie folk in C# minor, 78 BPM, 3:09. Continues directly from Ep186\'s outro — the single decaying cello C#2 transforms into footsteps on wet pavement. Ethereal female vocals enter at 0:15 with the first verse, a walking rhythm under fingerpicked acoustic guitar. Soft cello harmonics and brushed drums build through the chorus. Bridge at 1:45 strips to voice and cello harmonics — Folana alone on the street, seven blocks from destiny. Final build: full ensemble, layered harmonies, Folana\'s voice rising as City Hall comes into sight. Outro: fading to footsteps on marble, a door opening, the frequency humming in the chamber air.',
+    audioSrc: '/folana/generated/2026-06-06/ep187/music/ep187-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-06/ep187/ep187-hero-image.jpg',
+    duration: '3:09',
+    mood: 'THE-DELEGATE-AND-THE-SOURCE • FOLANA-WALKS-TOWARD-CITY-HALL • C-SHARP-MINOR • FACE-TO-FACE • 78-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep187', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-06', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
