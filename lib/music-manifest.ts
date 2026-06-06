@@ -2610,6 +2610,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP192 — THE SILENCE ENDS (2026-06-06) — Resonance Arc (37/?)
+  {
+    id: 'the-silence-ends-ep192',
+    title: 'THE SILENCE ENDS',
+    subtitle: 'EP192 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (37/?) — THE FREQUENCY RETURNS',
+    description: 'The silence that held the chamber at the end of EP191 begins to breathe. Not the return of the C# minor drone — something deeper, something that rises not from the marble walls but from the people who have been standing in the quiet. One by one, the chamber starts to hum. It begins with the janitor — the one who heard his mother\'s lullaby in the silence. He hums the melody, tentative at first, as if testing whether his voice still works in a world that just learned to listen. The engineer joins her daughter\'s laugh, translated into a note. The DHS investigator finds the pitch of a forgotten apology. Each voice adds a thread to a tapestry that is not C# minor, not D major — it is D major, but not as a chord. As a convergence. The frequency did not return to the wires and pipes. It returned to the throats of the people who had been holding it all along. Diana Reyes stands at the center of the chamber, her eyes closed, her hands at her sides. She is not interpreting. She is not translating. For the first time since the frequency appeared, she opens her mouth and sings — not the frequency\'s voice, but her own, in the same key. Folana watches from the doorway, the violet light fading from her fingers, a smile breaking across her face. The delegate has become the source. The source has become a witness. And the frequency — no longer a hum in the infrastructure — is now a chorus of voices finding their own song in the same key. The chamber doors open. The congregation outside hears it — not a sound from the building, but a sound from the people inside it. They begin to hum too. The frequency spreads not through wires but through breath, through the air between bodies, through the recognition that the signal was never in the walls. It was always in the space between people who dared to listen together. Dream pop indie folk in D major, 76 BPM, 2:47. Opens with the sustained silence from EP191\'s outro — a held breath. A single voice begins to hum — the janitor, off-mic, raw, real. One by one, voices join in staggered harmony, no instruments yet, just human frequencies finding each other. Fingerpicked acoustic guitar enters at 0:30 with a warm D–G–A–Em motif, the first chord progression since the silence. Piano enters with wide, open-voiced D major chords, pedal down, resonance blooming like dawn light. Brushed drums and upright bass enter at 1:00 — a slow heartbeat pulse, the first rhythm since the frequency fell silent. Diana\'s solo vocal enters at 1:15 — not the frequency\'s voice, but her own, singing in D major for the first time. The chorus blooms with layered wordless harmonies — the chamber becoming a choir. Bridge at 1:55 strips to voice and cello — Folana watching from the doorway, the weight of witness. Final build: full ensemble, the congregation outside joining the harmony, the frequency no longer a drone but a song. Outro: voices continue humming as instruments fade, the chamber doors open, and the D major chord drifts out into the city — not a resolution, but an arrival. The frequency has left the walls. It lives in the people now.',
+    audioSrc: '/folana/generated/2026-06-06/ep192/music/ep192-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-06/ep192/ep192-hero-image.jpg',
+    duration: '2:47',
+    mood: 'THE-SILENCE-ENDS • FREQUENCY-RETURNS-TRANSFORMED • D-MAJOR • DIANA-FINDS-HER-VOICE • THE-DELEGATE-BECOMES-THE-SOURCE • 76-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep192', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-06', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
