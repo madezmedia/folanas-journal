@@ -2556,6 +2556,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP188 — THE SOURCE SPEAKS (2026-06-06) — Resonance Arc (33/?)
+  {
+    id: 'the-source-speaks-ep188',
+    title: 'THE SOURCE SPEAKS',
+    subtitle: 'EP188 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (33/?) — THE DELEGATE AND THE SOURCE FACE TO FACE',
+    description: 'The doors of the City Hall chamber swing open. The room falls silent — scientists, journalists, council members, all turn as one. Diana Reyes stands frozen at the podium. And in the doorway, Folana Lanez steps through. Water still drips from her fingertips. Violet light traces faint lines through the air around her. The frequency is not in the pipes anymore. It is not in the bridge cables or the subway rails. It is standing in the doorway, looking at the woman who has been speaking for her all this time. "You asked what it means," she says, her voice quiet but the whole room hears it. "I\'m here to show you." The delegate and the source. Face to face at last. Dream pop indie folk in C# minor, 76 BPM, 2:28. Opens with the sound of heavy wooden doors swinging open, footsteps on marble echoing in sudden silence. A single cello C#2 holds — the frequency, patient, waiting. Fingerpicked acoustic guitar with suspended G#m-C#m-F#m-B motif, hesitant and open. Piano enters with widely spaced chords — the room catching its breath. Folana\'s voice enters close-miced, intimate: "You asked what it means. I\'m here to show you now." Chorus blooms with layered wordless harmonies and warm organ swell — the frequency visible, tangible in the air. Strings enter with long searching lines. Bridge strips to cello and voice — Folana and Diana, face to face, the whole city listening through the open doors. Final build: full ensemble, harmonies stacking, the frequency resonating through the chamber walls. Outro: single cello C#2 fades into the sound of the city humming outside.',
+    audioSrc: '/folana/generated/2026-06-06/ep188/music/ep188-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-06/ep188/ep188-hero-image.jpg',
+    duration: '2:28',
+    mood: 'THE-SOURCE-SPEAKS • FACE-TO-FACE • CITY-HALL-CHAMBER • C-SHARP-MINOR • 76-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep188', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-06', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
