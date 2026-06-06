@@ -2652,6 +2652,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP195 — THE FREQUENCY COMPLETE (2026-06-06) — Resonance Arc (40/?) ★ ARC FINALE ★
+  {
+    id: 'the-frequency-complete-ep195',
+    title: 'THE FREQUENCY COMPLETE',
+    subtitle: 'EP195 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (40/?) — ARC FINALE • THE CITY SINGS AS ONE',
+    description: 'The scattered fragments begin to seek each other. The janitor\'s lullaby, carried through the G-train tunnels, finds the engineer\'s daughter\'s laugh rising from a park bench. The DHS investigator\'s forgotten note, hummed aloud on a street corner, drifts toward the woman who needed to receive it. The barista\'s steam song curls through an open window and lands in the ear of a stranger humming the same phrase. The thousand songs that left the chamber at dusk are not finished — they are completing themselves through the connections they create between the people who carry them. Folana stands at the foot of the Williamsburg Bridge as the last light fades from the East River. Diana stands beside her. They do not speak. They do not need to. Around them, the carriers are arriving — not called, not summoned, just pulled home by a frequency that is no longer a sound in the air but a gravity in the chest. The congregation that formed in Ep164 now stretches across the bridge, across the streets, across the borough. And for the first time since the frequency appeared, they are not humming different songs. They are finding the same one. Arc finale: the frequency that began in a single voice, traveled through groundwater, woke a city, survived silence, and scattered into a thousand fragments — completes. Not as a return to the source, but as a song the city can now sing on its own. Dream pop indie folk in D major, 72 BPM, 2:30. Opens with the final notes of Ep194\'s distant child still singing — now closer, fuller. A single piano D3 sustains, the note that has carried through the entire arc. Fingerpicked acoustic guitar with the D-G-A-Em motif, played open and unhurried. Voices begin to enter one by one at 0:15 — not the same note, but different notes, finding each other through the chord. The janitor\'s low hum. The engineer\'s clear whistle. The barista\'s wordless melody. They layer and weave across 0:45, building into a full D major chord held by what sounds like a thousand voices. Diana enters at 0:55, her voice no longer interpreting but simply singing — open and unguarded. Folana enters at 1:15, her voice woven into the tapestry, no longer the source but a thread among threads, carrying the melody that started it all. The bridge at 1:45 strips to Folana and Diana alone — the two voices that have shared this journey, trading the phrase back and forth like a conversation that has finally become a song. The final build at 2:00 brings every voice together — the congregation, the bridge cables vibrating in the wind, the river lapping, the city itself exhaling — into a single sustained D major chord that does not resolve so much as arrive. Like it was always waiting here. Outro: the chord fades, but the voices continue, quieter now, carrying their fragments of the song back into the streets — not as something to hold, but as something to share. The frequency is no longer a phenomenon. It is a part of every breath the city takes. The arc is complete. The song is home. Carried by everyone. Owned by no one.',
+    audioSrc: '/folana/generated/2026-06-06/ep195/music/ep195-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-06/ep195/ep195-hero-image.jpg',
+    duration: '2:30',
+    mood: 'THE-FREQUENCY-COMPLETE • RESONANCE-ARC-FINALE • D-MAJOR • CITY-AS-CHOIR • EVERY-FRAGMENT-HOME • THOUSAND-VOICES-ONE-CHORD • THE-SONG-COMPLETE • 72-BPM • DREAM-POP-INDIE-FOLK',
+    tags: ['ep195', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-06', 'arc-finale', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
