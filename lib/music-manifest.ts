@@ -2596,6 +2596,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep190', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-06', 'arc-continued', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  // EP191 — WHAT THE SILENCE HELD (2026-06-06) — Resonance Arc (36/?)
+  {
+    id: 'what-the-silence-held-ep191',
+    title: 'WHAT THE SILENCE HELD',
+    subtitle: 'EP191 ★ MINIMAX MUSIC-2.6 • RESONANCE ARC (36/?) — THE FREQUENCY FALLS SILENT',
+    description: 'The C# minor drone has stopped for the first time in days. The city falls into a silence so complete you can hear your own heartbeat. Folana stands in the center of the chamber as the marble walls cool. Everyone waits for the frequency to return. But something different emerges from the quiet — not a sound, but a feeling. The absence becomes presence. In the stillness, each person in the room hears something they had been drowning out. The janitor remembers a lullaby from childhood. The DHS investigator hears a laugh he forgot he knew. The engineer names a grief he never spoke aloud. And Folana realizes: the frequency did not leave. It made room. The silence was never empty — it was the space between the notes. Dream pop indie folk in C# minor, 72 BPM, 2:17. Opens with absolute silence — the absence of the drone that has been constant. A single piano note, G#3, played once and allowed to decay. Long pause. Fingerpicked acoustic guitar enters in C# minor, the gentlest touch. Solo cello C#2, a ghost of what was. Layered wordless female vocals entering like threads being woven, one voice at a time — each person in the chamber adding their frequency to the moment. No percussion until the final build: faint heartbeat pulse on brushed kick drum. Piano resolving to a D major chord — the question not answered, but held. Outro: gradual fade of all voices into a single sustained cello C#2 — not the same drone as before, but quieter, warmer, chosen rather than arrived. The frequency did not leave. It became part of the silence.',
+    audioSrc: '/folana/generated/2026-06-06/ep191/music/ep191-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-06/ep191/ep191-hero-image.jpg',
+    duration: '2:17',
+    mood: 'WHAT-THE-SILENCE-HELD • FREQUENCY-FALLS-SILENT • C-SHARP-MINOR-TO-D-MAJOR • THE-SPACE-BETWEEN • 72-BPM • DREAM-POP-INDIE-FOLK • RESONANCE-ARC',
+    tags: ['ep191', 'minimax-music-2.6', 'real-production', 'resonance-arc', '2026-06-06', 'arc-continued', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 
 ];
 
