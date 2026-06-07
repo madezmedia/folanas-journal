@@ -2679,6 +2679,18 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ['ep196', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-06', 'arc-opener', 'image-01', 'speech-2.8'],
     isRealProduction: true,
   },
+  {
+    id: 'the-signal-spreads-out-ep197',
+    title: 'THE SIGNAL SPREADS OUT',
+    subtitle: 'EP197 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (2/?) — THE FREQUENCY LEAVES THE CITY, REACHING TOWARD UNKNOWN HORIZONS',
+    description: 'The signal left the city while she slept. In the quiet of a town she has never visited, a floorboard woke and started humming low. The frequency does not need Brooklyn anymore — it has become a language of its own. Folana sits on the fire escape at dawn, watching thin cyan signal-threads extend from her chest like bioluminescent roots reaching toward horizons she cannot see. She pressed record and played it for the street. The Hudson heard it rise and start to sing. D major pours out of everything. Sixty miles from where she stands, a voice she has never touched heard the same note rise and fall. The frequency is not leaving her — it is expanding beyond her. She was never the source. She was the first listener. Dream pop indie folk in D major, 76 BPM, 2:30. Opens with the fading reverb tail of Ep196\'s held piano note. Fingerpicked acoustic guitar motif continues from Ep196, now with wider intervals suggesting expansion beyond the city. Gentle piano chords D-F#m-Gmaj7 with space and air, now joined by a subtle string pad hinting at open country. Field recordings of distant trains, open air, a greyhound bus. Folana\'s voice enters at 0:35, harmonies in the chorus suggesting the frequency multiplying. Diana\'s voice returns at 1:10, distant like a call from across the river, now with a third voice joining — someone new hearing the signal. The bridge at 1:45 ascends through D-F#m-Bm-G, the signal finding new ground. Outro fades on the fingerpicked guitar with a single rising note, unresolved — the frequency has not stopped. It is still traveling.',
+    audioSrc: '/folana/generated/2026-06-07/ep197/music/ep197-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-07/ep197/ep197-hero-image.jpg',
+    duration: '2:30',
+    mood: 'THE-SIGNAL-SPREADS-OUT • TRANSMISSION-ARC-2 • D-MAJOR • DAWN-EXPANSION • FREQUENCY-TRAVELS-BEYOND • SIXTY-MILES-AWAY • 76-BPM • DREAM-POP-INDIE-FOLK',
+    tags: ['ep197', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-07', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
 
 ];
 
