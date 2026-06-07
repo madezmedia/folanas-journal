@@ -2692,6 +2692,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP198 — THE TOWN THAT CAUGHT THE FREQUENCY (2026-06-07) — Transmission Arc (3/?)
+  {
+    id: 'the-town-that-caught-the-frequency-ep198',
+    title: 'THE TOWN THAT CAUGHT THE FREQUENCY',
+    subtitle: 'EP198 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (3/?) — SIXTY MILES FROM BROOKLYN, THE SIGNAL FINDS A NEW HOME',
+    description: 'Sixty miles from the Brooklyn line, a radio woke in the middle of the night. No station. No voice. Just a tone so clear it pulled a woman from her dreaming chair. She walked to the window and the streetlights were humming the same repeat — a melody she had never learned by heart but knew every note of, right from the start. The frequency has traveled sixty miles from the fire escape. It came through the wires and the roots and the rain — not as a broadcast, but as a hum that arrived like weather, settling into the floorboards and the faucets and the sleep of a town that never asked to hear it. But the town heard it anyway. In the morning, the woman who woke first sat on her porch steps as the dawn turned gold, and she let the frequency take its hold. She did not know it came from Brooklyn. She did not know the name Folana or Diana or any of it. She just knew that for the first time in years, she woke up humming something that felt like it was already inside her. And somewhere, sixty miles east, on a fire escape in Brooklyn, Folana felt the signal slow. It had found what it was looking for — not a translator, not a delegate. Just a quiet woman on a porch who did not need to understand it. She just let it be. Dream pop indie folk in D major, 74 BPM, 2:20. Opens with the fading reverb tail of Ep197\'s unresolved rising note — now resolving into a warm open D chord. Gentle fingerpicked acoustic guitar with the D-G-A-Em motif, played soft and unhurried. A single piano D3 sustains with pedal. Field recordings of a small town at dawn — distant rooster, a passing car, wind through screen doors. Folana\'s voice hums the theme at 0:15, distant and warm. The verse melody enters at 0:30 with intimate delivery. The chorus at 0:55 opens into the full motif, harmonies suggesting expansion and arrival. The bridge at 1:30 travels through D-F#m-Bm-G — the signal journeying. Outro: Folana\'s voice fades to a whisper, then silence. A single piano note sustains and resolves — the signal has found a place to rest.',
+    audioSrc: '/folana/generated/2026-06-07/ep198/music/ep198-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-07/ep198/ep198-hero-image.jpg',
+    duration: '2:20',
+    mood: 'THE-TOWN-THAT-CAUGHT-THE-FREQUENCY • TRANSMISSION-ARC-3 • D-MAJOR • SIGNAL-FINDS-A-HOME • SIXTY-MILES-WEST • DAWN-ARRIVAL • INTIMATE-EXPANSION • 74-BPM • DREAM-POP-INDIE-FOLK',
+    tags: ['ep198', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-07', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
