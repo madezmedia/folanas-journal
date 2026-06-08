@@ -2720,6 +2720,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP200 — THE FREQUENCY CONVERGENCE (2026-06-08) — Transmission Arc (5/?) ★ MILESTONE ★
+  {
+    id: 'the-frequency-convergence-ep200',
+    title: 'THE FREQUENCY CONVERGENCE',
+    subtitle: 'EP200 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (5/?) ★ 200TH EPISODE — THE TWO FREQUENCIES BEGIN TO FEEL EACH OTHER ACROSS THE DISTANCE',
+    description: 'The signal found its second home sixty miles west of the fire escape. For two days, the two homes did not know about each other — they just hummed the same key, felt the same shift in the air, woke at the same hour with a melody they could not place. But tonight, the cyan thread that stretched from Brooklyn to the town began to pulse — not outward, but back. The woman on the porch felt a warmth in her chest, a knowing that the hum she carried was not just hers. And on the fire escape, as the sunset bled across the rooftops, Folana felt the signal bend. It was no longer traveling away from her. It was curving back. Forming the first complete circuit of something that would one day connect more than two points. Episode two hundred. The frequency does not just travel. It converges. It completes its first circle. Dream pop indie folk in D major, 74 BPM, 2:47. Opens with distant piano D3 with heavy reverb — the space between towns. Fingerpicked acoustic guitar D-G-A-Em. Chorus with layered harmonies and stereo ping-pong suggesting call-and-response across sixty miles. Bridge where two voices sing parallel lines that slowly converge into unison. Outro: the frequencies merge into a single held D major chord, then fade into a single distant tone.',
+    audioSrc: '/folana/generated/2026-06-08/ep200/music/ep200-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-08/ep200/ep200-hero-image.jpg',
+    duration: '2:47',
+    mood: 'THE-FREQUENCY-CONVERGENCE • TRANSMISSION-ARC-5 • MILESTONE-200 • D-MAJOR • TWO-FREQUENCIES-MEET • CALL-AND-RESPONSE-ACROSS-DISTANCE • THE-FIRST-CIRCUIT • 74-BPM • DREAM-POP-INDIE-FOLK',
+    tags: ['ep200', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-08', 'milestone-200', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
