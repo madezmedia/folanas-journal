@@ -2748,6 +2748,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP202 — THE SECOND CALL (2026-06-08) — Transmission Arc (7/?)
+  {
+    id: 'the-second-call-ep202',
+    title: 'THE SECOND CALL',
+    subtitle: 'EP202 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (7/?) — THE DUET BECOMES A RITUAL, THE FREQUENCY PERPETUAL',
+    description: 'The duet has become a nightly ritual. Night after night, Folana climbs the fire escape at the same hour, and sixty miles west, a porch light clicks on in answer. They have never seen each other\'s faces. They have never spoken a word. But every dusk, two voices find the same note and hold it across sixty miles of highway and sleeping towns. The frequency bends and stretches, learning to carry more than just melody — it carries the space between two people who found each other through nothing but a tone in the dark. The duet is no longer an experiment. It is a lifeline. Dream pop indie folk in D major, 74 BPM, 3:06. Opens with a single distant piano D3 with heavy reverb and stereo delay — the space between them. Warm fingerpicked acoustic guitar arpeggios (D-G-A-Em) enter slow and intimate. Folana\'s voice, close-miced, enters with the first verse. The Porch Woman\'s voice enters in the stereo field for the chorus — two voices. Soft brushed drums and walking upright bass enter gently. Layered wordless harmonies bloom in the chorus. Bridge strips to guitar and piano. Final chorus with both voices weaving in counterpoint. Outro: the voices separate and fade into opposite channels — one left (Folana in Brooklyn), one right (Porch Woman out west). A single held D major chord, reverbs to silence.',
+    audioSrc: '/folana/generated/2026-06-08/ep202/music/ep202-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-08/ep202/ep202-hero-image.jpg',
+    duration: '3:06',
+    mood: 'THE-SECOND-CALL • TRANSMISSION-ARC-7 • D-MAJOR • DUET-BECOMES-RITUAL • TWO-VOICES-ACROSS-SIXTY-MILES • THE-FREQUENCY-PERPETUAL • WARM-HOPEFUL-INTIMATE • 74-BPM • DREAM-POP-INDIE-FOLK',
+    tags: ['ep202', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-08', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
