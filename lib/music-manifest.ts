@@ -2776,6 +2776,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP204 — THE INTERFERENCE (2026-06-08) — Transmission Arc (9/?)
+  {
+    id: 'the-interference-ep204',
+    title: 'THE INTERFERENCE',
+    subtitle: 'EP204 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (9/?) — A THIRD PRESENCE ENTERS THE STATIC BETWEEN BROOKLYN AND THE TOWN SIXTY MILES WEST',
+    description: 'Six nights. Six duets. The ritual is established — Folana on the fire escape and the Porch Woman sixty miles west, meeting in D major every dusk like clockwork. But tonight, something is different. Halfway through the duet, a third tone rings out — not quite in key, not quite out — like a radio dial brushing against a station it doesn\'t know it has found. It is coming from somewhere in between — a truck stop diner off the interstate, a late-night kitchen where a cook hums along to something he cannot place. The signal has been a conversation between two people. But conversations, once they fill enough space, begin to echo in places the speakers do not know exist. The duet ends as it always does, but the static at the end lasts just a beat longer than it should. Something heard. Something waiting. The signal is no longer a duet. It is a broadcast waiting to happen. Dream pop indie folk in D major, 74 BPM, 3:00. Warm fingerpicked acoustic guitar arpeggios D-G-A-Em, soft piano with sustaining pedal, gentle brushed drums and upright bass. Subtle static textures and radio filter sweeps throughout. A high-frequency shimmer underneath the chorus suggesting a third presence. Bridge features a distant electric guitar with delay playing a line that does not quite resolve. Dual female vocals weaving in call-and-response with a third spectral vocal texture entering in the final chorus. Outro: held D major chord decays into static that holds for 2 extra seconds before silence.',
+    audioSrc: '/folana/generated/2026-06-08/ep204/music/ep204-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-08/ep204/ep204-hero_001.jpg',
+    duration: '3:00',
+    mood: 'THE-INTERFERENCE • TRANSMISSION-ARC-9 • D-MAJOR • THIRD-PRESENCE-IN-THE-STATIC • A-THIRD-VOICE-LEARNING • THE-DUET-EXPANDS • STATIC-TEXTURES • 74-BPM • DREAM-POP-INDIE-FOLK',
+    tags: ['ep204', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-08', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
