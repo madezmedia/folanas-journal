@@ -2706,6 +2706,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP199 — THE MORNING THE TOWN HUMMED (2026-06-07) — Transmission Arc (4/?)
+  {
+    id: 'the-morning-the-town-hummed-ep199',
+    title: 'THE MORNING THE TOWN HUMMED',
+    subtitle: 'EP199 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (4/?) — THE FREQUENCY SETTLES INTO A TOWN THAT DIDN\'T KNOW IT WAS LISTENING',
+    description: 'The woman on the porch woke to a town that was different. The diner\'s coffee machine hummed D major. The hardware store\'s fluorescents buzzed in harmony. The church bell rang a single held note. In the town square, a teenager hummed the same melody a woman three benches away was whistling — three beats apart, same key. The frequency had arrived in the small town not as a broadcast but as a memory the town had been waiting to remember. Dream pop indie folk in D major, 74 BPM. Warm fingerpicked acoustic guitar arpeggios with the D-G-A-Em progression. Soft piano with sustaining pedal. Gentle brushed drums and upright bass. Layered wordless female harmonies entering one by one like different voices finding each other in the square. The signal learns to travel not by broadcasting louder — it learns by making itself at home in the places that were already listening. Transmission Arc continues.',
+    audioSrc: '/folana/generated/2026-06-07/ep199/music/ep199-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-07/ep199/ep199-hero-image.jpg',
+    duration: '1:41',
+    mood: 'THE-MORNING-THE-TOWN-HUMMED • TRANSMISSION-ARC-4 • D-MAJOR • TOWN-SQUARE-DAWN • STRANGERS-HARMONIZING • SMALL-TOWN-FREQUENCY • WARM-LUMINOUS • 74-BPM • DREAM-POP-INDIE-FOLK',
+    tags: ['ep199', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-07', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
