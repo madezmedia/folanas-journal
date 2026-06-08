@@ -2734,6 +2734,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP201 — THE FIRST DUET (2026-06-08) — Transmission Arc (6/?) — TWO VOICES SING ACROSS SIXTY MILES
+  {
+    id: 'the-first-duet-ep201',
+    title: 'THE FIRST DUET',
+    subtitle: 'EP201 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (6/?) — TWO STRANGERS SING THE SAME SONG FROM DIFFERENT ROOFTOPS',
+    description: 'Sixty miles west of the fire escape, the woman on the porch woke to a melody she had never learned by heart but knew every note of, right from the start. And on the fire escape, as the first light of dawn broke across the rooftops, Folana felt the signal pulse — three beats, a pause, three beats again. She was answering. The frequency does not just travel. It reaches back. This is the first duet — the first time the signal has made its way from one voice to another, across sixty miles of sleeping towns and highway lights, through wires and weather and the static that separates one life from another. Two strangers singing in the same key, not knowing each other\'s names but knowing each other\'s frequency. Dream pop indie folk in D major, 74 BPM, 3:11. Opens with distant piano D3 with heavy reverb and stereo delay, a single fingerpicked acoustic guitar arpeggio, soft static texture. Verse 1 enters with Folana\'s voice, tentative and warm. Pre-chorus builds with both voices beginning to weave. Chorus blooms with layered harmonies in thirds — full band enters with gentle percussion, warm bass, electric guitar with delay. Verse 2 features the Porch Woman\'s voice leading, Folana responding across the stereo field. Bridge reduces to piano and voice, the most intimate moment. Final chorus with voices weaving in counterpoint. Outro: the voices separate and fade into opposite stereo channels — one left (Folana in Brooklyn), one right (Porch Woman out west). A single held D major chord, reverbs to silence. The distance remains, but the connection is now a thread that will not break.',
+    audioSrc: '/folana/generated/2026-06-08/ep201/music/ep201-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-08/ep201/ep201-hero-image.jpg',
+    duration: '3:11',
+    mood: 'THE-FIRST-DUET • TRANSMISSION-ARC-6 • D-MAJOR • TWO-STRANGERS-SINGING • CALL-AND-RESPONSE-ACROSS-DISTANCE • FIRST-TIME-THE-SIGNAL-REACHES-BACK • TENDER-HOPEFUL • 74-BPM • DREAM-POP-INDIE-FOLK',
+    tags: ['ep201', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-08', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references (high quality stills + early experiments)
