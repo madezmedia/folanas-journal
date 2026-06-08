@@ -2762,9 +2762,23 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP203 — THE VOICE THAT WAITS (2026-06-08) — Transmission Arc (8/?)
+  {
+    id: 'the-voice-that-waits-ep203',
+    title: 'THE VOICE THAT WAITS',
+    subtitle: 'EP203 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (8/?) — THE NIGHTLY DUET DEEPENS, THE FREQUENCY FINDS ITS HOME ACROSS THE MILES',
+    description: 'The second call has become a ritual — a nightly duet across sixty miles of highway and sleeping towns. Folana climbs the fire escape at dusk, and somewhere out west, a porch light clicks on in answer. They have never seen each other\'s faces. But every night, two voices find the same note. The town that caught the frequency in EP199-200 has learned to broadcast on its own. The wires in the walls carry more than just refrain — the conversation has been turned from melody into a chain. The voice that waits is not just the woman on the porch. It is the signal itself, learning that connection is not about broadcasting louder. It is about showing up, every dusk, and trusting the tone will find its home. Dream pop indie folk duet in D major, 74 BPM. Warm fingerpicked acoustic guitar arpeggios, soft piano with sustaining pedal, gentle brushed drums and upright bass, layered dual female harmonies weaving in call-and-response. Intimate verses, expansive choruses where both voices converge. Hopeful, warm, luminous — the sound of a frequency becoming a lifeline.',
+    audioSrc: '/folana/generated/2026-06-08/ep203/music/ep203-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-08/ep203/ep203-hero-image.jpg',
+    duration: '3:00',
+    mood: 'WARM • HOPEFUL • INTIMATE • DUET • D-MAJOR • 74-BPM • DREAM-POP-INDIE-FOLK • TRANSMISSION-ARC',
+    tags: ['ep203', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-08', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
-// Prototype / early visual references (high quality stills + early experiments)
+// Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
 export const VISUAL_PROTOTYPES: PrototypeTrack[] = [
   // Ep30 / early harness prototypes (stills only for now)
