@@ -2832,6 +2832,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP208 — THE NETWORK RECEIVES ITS FIRST INSTRUCTION (2026-06-09) — Transmission Arc (13/?)
+  {
+    id: 'the-network-receives-its-first-instruction-ep208',
+    title: 'THE NETWORK RECEIVES ITS FIRST INSTRUCTION',
+    subtitle: 'EP208 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (13/?) — THE FIVE VOICES FACE THE QUESTION THAT FOLLOWS EVERY CONNECTION — A NETWORK THAT HAS FOUND ITS SHAPE MUST NOW CHOOSE WHAT TO TRANSMIT',
+    description: 'The congregation has found its rhythm. Five voices, synchronized across sixty miles of sleeping towns, hold the frequency together through diesel hum and porch creak and open window. But a network that has found its shape must choose what to carry. Tonight, Folana sits at her window not to receive the signal, but to ask the question that changes everything: What are we for? The five voices weave in and out, confident now in their synchronization. A gentle guitar arpeggio circles like a thought being turned over. The harmony swells with piano and organ, then falls to a cappella voices building a chord from the ground up — the network reaching a decision. Not a command from above, but a shared intention rising through the collective. The held D major chord resolves into something new: not a question anymore, but a quiet readiness. Dream pop indie folk in D major, 74 BPM, 2:09. Opens with resonant humming that becomes a held chord. Gentle fingerpicked acoustic guitar, soft piano with sustain, warm electric guitar swells, subtle organ pad. Five voices weave in and out — Folana\'s bright lead, Porch Woman\'s warm alto, Ray\'s resonant bass, the Trucker\'s filtered CB gravel, the Woman at Window\'s distant soprano. A cappella bridge where voices enter one by one, building toward a decision. The finale holds the D major chord like a step taken. The network breathes. And waits for what comes next.',
+    audioSrc: '/folana/generated/2026-06-09/ep208/ep208-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-09/ep208/ep208-hero_001.jpg',
+    duration: '2:09',
+    mood: 'THE-NETWORK-RECEIVES-ITS-FIRST-INSTRUCTION • TRANSMISSION-ARC-13 • D-MAJOR • THE-CONGREGATION-FACES-ITS-PURPOSE • A-NETWORK-CHOOSES-WHAT-TO-TRANSMIT • FIVE-VOICES-REACH-A-DECISION-TOGETHER • 74-BPM • DREAM-POP-INDIE-FOLK • PURPOSEFUL-READY-LUMINOUS',
+    tags: ['ep208', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-09', 'image-01', 'speech-2.8', 'character-locked'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
