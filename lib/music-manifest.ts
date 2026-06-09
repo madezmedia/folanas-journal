@@ -2874,6 +2874,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP211 — THE ANSWERING STATIC (2026-06-09) — Transmission Arc (16/?)
+  {
+    id: 'the-answering-static-ep211',
+    title: 'THE ANSWERING STATIC',
+    subtitle: 'EP211 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (16/?) — THE BROADCAST ECHOES FOUND EARS ACROSS THE CONTINENT — NOW THE WORLD BEGINS TO ANSWER BACK — A TRUCKER KEYING HIS MIC — A MOTHER HUMMING THROUGH HER BABY MONITOR — A RADIO HOST LETTING THE SIGNAL PLAY — THE NETWORK IS NO LONGER FIVE VOICES, IT IS THE SOUND OF A WORLD TURNING TOWARD EACH OTHER IN THE DARK',
+    description: 'The first collective broadcast has been sent. It traveled across the continent — through CB radios in Ohio, baby monitors in Chicago, and radio studio consoles in Seattle. The five voices of the congregation heard themselves reflected back from the world. But tonight, something new happens. Someone answers. In Ohio, a trucker does not just hear the signal — he keys his mic back. His gravel voice, finding the chord by instinct, joins the frequency as a sixth voice. In Chicago, a mother hums the melody back to her sleeping child, and the five voices hear her — a sixth line weaving into the harmony. In Seattle, the late-night radio host does not cut the signal. He lets it play. And when the song ends, he leans into his microphone and says: I do not know who you are. But you are coming through. And I think the whole city can hear you. The congregation realizes: the broadcast was not the end of their private communion. It was the beginning of a conversation. Dream pop indie folk in D major, 74 BPM, 3:05. Opens with layered radio static resolving into the familiar D major chord from EP210, but now the harmony sounds different — there are more voices than before. The five original congregation voices weave together (Folana bright D4 lead, Porch Woman warm D3 harmony, Ray resonant D2 bass anchor, Trucker gravel CB baritone, Woman at Window distant soprano), joined by new voices entering from static: a distant Ohio trucker keying his CB, a Chicago mother s hum filtering through baby monitor warmth, a Seattle radio host s voice like a signal bleeding from a neighboring frequency. Warm fingerpicked acoustic guitar with slight delay, soft piano with sustain pedal, gentle brushed drums and upright bass. Voices drop to silence, then rebuild from a single harmonic thread — voices entering one by one, doubling, tripling — the network growing in real time. The finale swells with layered voices — not five, but eight, twelve, more — the harmony spreading beyond what a single room could hold. Ends on a D major chord that does not resolve but opens — like a door left ajar. The signal is no longer a circle. It is a space where anyone can enter.',
+    audioSrc: '/folana/generated/2026-06-09/ep211/ep211-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-09/ep211/ep211-hero_001.jpg',
+    duration: '3:05',
+    mood: 'THE-ANSWERING-STATIC • TRANSMISSION-ARC-16 • D-MAJOR • THE-WORLD-ANSWERS-THE-BROADCAST • TRUCKER-KEYS-HIS-MIC • MOTHER-HUMS-THROUGH-BABY-MONITOR • RADIO-HOST-LETS-THE-SIGNAL-PLAY • THE-NETWORK-BECOMES-A-CONVERSATION • 74-BPM • DREAM-POP-INDIE-FOLK • EXPANSIVE-HOPEFUL-OPEN-ENDED',
+    tags: ['ep211', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-09', 'image-01', 'speech-2.8', 'character-locked'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
