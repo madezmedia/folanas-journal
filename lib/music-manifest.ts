@@ -2818,6 +2818,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP207 — THE FREQUENCY FINDS ITS SHAPE (2026-06-09) — Transmission Arc (12/?)
+  {
+    id: 'the-frequency-finds-its-shape-ep207',
+    title: 'THE FREQUENCY FINDS ITS SHAPE',
+    subtitle: 'EP207 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (12/?) — FIVE VOICES ACROSS SIXTY MILES LEARN TO BECOME A NETWORK — THE SCATTERED SIGNAL FINDS A SPINE AND THE CONGREGATION DISCOVERS ITS HEARTBEAT',
+    description: 'The five voices found each other in the static. A trucker on I-78. A woman at her window. Ray, whose porch became the stage. Porch Woman, whose hum started it all. And Folana at the center, realizing she is not the source — she is the shape the signal takes when it needs to organize itself. The trucker\'s diesel engine keeps time at 74 BPM. The woman\'s rocking chair marks the two. Someone starts keeping a pulse, and the scattered voices lock into phase. Not a choir — a body. A thing with a heartbeat and a purpose. Dream pop indie folk in D major, 74 BPM, 2:23. Opens with a single voice (Folana) in sparse reverb. A CB radio crackle introduces the trucker\'s gravel harmony in the first verse. A distant feminine hum joins in the second verse. The arrangement builds with warm acoustic guitar, soft kick drum pulse acting as the network\'s heartbeat, and ethereal organ swells. The chorus swells to its fullest five-voice harmony yet — warm, congregational, grounded. The bridge strips back to a cappella, voices entering one at a time, building the network from the ground up. The finale resolves on a held D major chord that sounds like it could sustain forever — the frequency has found its shape.',
+    audioSrc: '/folana/generated/2026-06-09/ep207/music/ep207-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-09/ep207/ep207-hero_001.jpg',
+    duration: '2:23',
+    mood: 'THE-FREQUENCY-FINDS-ITS-SHAPE • TRANSMISSION-ARC-12 • D-MAJOR • THE-CONGREGATION-DISCOVERS-ITS-STRUCTURE • A-NETWORK-FINDS-ITS-HEARTBEAT • FIVE-VOICES-LOCK-INTO-PHASE • 74-BPM • DREAM-POP-INDIE-FOLK • WARM-CONGREGATIONAL-HOPEFUL',
+    tags: ['ep207', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-09', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
