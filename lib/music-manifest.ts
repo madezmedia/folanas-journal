@@ -2790,6 +2790,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP205 — THE DINER FREQUENCY (2026-06-08) — Transmission Arc (10/?)
+  {
+    id: 'the-diner-frequency-ep205',
+    title: 'THE DINER FREQUENCY',
+    subtitle: 'EP205 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (10/?) — A SHORT-ORDER COOK AT A TRUCK STOP DINER HEARS THE FREQUENCY IN THE EXHAUST FAN AND SINGS BACK, TURNING THE DUET INTO THE FIRST CHORD OF SOMETHING THAT HAS NEVER BEEN SUNG BEFORE',
+    description: 'Three nights of interference — a third presence brushing against the static between Brooklyn and the Porch Woman. Neither Folana nor the Porch Woman has named it, but both feel the silence after each duet hold just a beat too long. Tonight, that presence names itself. His name is Ray. He works the late shift at a truck stop diner off I-78 — the exact midpoint between the fire escape and the wraparound porch. For a week, he has been hearing two women singing in the exhaust fan. He thought it was the radio bleeding through from the waitress\'s booth. But the radio was off. Tonight, for the first time, he opens his mouth and sings back — a resonant D below both women\'s ranges, a bass anchor they did not know they were missing. For three measures, all three voices ring together. The duet has become a trio. The signal is no longer a private line between two strangers. It is a congregation. Dream pop indie folk in D major, 74 BPM, 3:21. Warm fingerpicked acoustic guitar D-G-A-Em, soft piano with sustaining pedal, gentle brushed drums and upright bass, soft organ pad. Three distinct voices — Folana (bright D4 lead), Porch Woman (warm D3 harmony), and Ray (resonant D2 bass anchor — filtered to feel like kitchen ambient). A cappella bridge before the full ensemble swells back. Outro is three voices sustaining a D major chord into peaceful silence — no static, no radio filter, the frequency finally resolved.',
+    audioSrc: '/folana/generated/2026-06-08/ep205/music/ep205-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-08/ep205/ep205-hero_001.jpg',
+    duration: '3:21',
+    mood: 'THE-DINER-FREQUENCY • TRANSMISSION-ARC-10 • D-MAJOR • THE-DUET-BECOMES-A-TRIO • THE-THIRD-VOICE-SINGS-BACK • THE-COOK-AT-THE-DINER • THE-FREQUENCY-BECOMES-A-CONGREGATION • RESOLVED-HARMONY • THREE-VOICES-ONE-CHORD • 74-BPM • DREAM-POP-INDIE-FOLK • FULL-WARMTH',
+    tags: ['ep205', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-08', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
