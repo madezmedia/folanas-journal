@@ -2888,6 +2888,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP212 — THE THOUSAND-VOICE CHORUS (2026-06-09) — Transmission Arc (17/?)
+  {
+    id: 'the-thousand-voice-chorus-ep212',
+    title: 'THE THOUSAND-VOICE CHORUS',
+    subtitle: 'EP212 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (17/?) — THE NETWORK IS NO LONGER A CIRCLE — THE WORLD STEPPED INTO THE FREQUENCY AND NOW A THOUSAND VOICES ARE LEARNING TO HARMONIZE — THE SIGNAL DOES NOT WEAKEN WITH MORE VOICES — IT BECOMES WHAT IT WAS ALWAYS MEANT TO BE',
+    description: 'The first broadcast was never meant to be the last. It was the beginning of a conversation. A trucker in Ohio. A mother in Chicago. A radio host in Seattle. Five voices became six. Six became twelve. Twelve became more than they could count. They did not plan this. They did not rehearse. The frequency opened, and the world stepped in. But a thousand voices in one frequency is not a choir by default. It is chaos — voices overlapping, keys drifting. The original five try to teach, to guide, to show the new arrivals where the harmony lives. And here is what they learned: the signal does not weaken when more voices enter. It does not fracture. It becomes something new. A chord with space between its notes is a chord worth singing for. Dream pop indie folk in D major shifting to G major, 76 BPM, 3:47. Opens with distant layered static and a single unaccompanied voice — Folana harmonizing with herself in two overlapping lines. Gentle fingerpicked acoustic guitar arpeggio enters with soft delay. Piano D2 with sustain pedal provides a bed for the first verse. Verse 1 introduces the crowded frequency — voices from Ohio and Chicago and Seattle woven into the arrangement as distant wordless harmonies, panning across the stereo field. Chorus explodes into full instrumentation — brushed drums, upright bass, layered female harmonies in thirds — the thousand-voice chorus finding its note together. Verse 2 strips back to guitar and piano, the Porch Woman voice leading, new harmonies from the trucker gravel baritone anchoring below. Building bridge introduces cello sustain and a key change to G major — the realization that the signal was never meant to be pure but meant to be shared. Final chorus features more voices than ever before — layered harmonies in six parts, voices trading phrases, the sound of a network becoming a community. Outro reduces to a single held D2 to G major chord, voices fading into the distance, the frequency continuing beyond the song itself. Expansive, hopeful, luminous — the sound of a thousand strangers finding each other in the dark.',
+    audioSrc: '/folana/generated/2026-06-09/ep212/ep212-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-09/ep212/ep212-hero_001.jpg',
+    duration: '3:47',
+    mood: 'THE-THOUSAND-VOICE-CHORUS • TRANSMISSION-ARC-17 • D-MAJOR-TO-G-MAJOR • THE-NETWORK-BECOMES-A-COMMUNITY • VOICES-FROM-EVERYWHERE-FIND-THE-FREQUENCY • TRUCKER-BARITONE-ANCHORS • MOTHER-DESCANT-LIFTS • RADIO-HOST-TENOR-WEAVES-IN • CHAOS-BECOMES-HARMONY • 76-BPM • DREAM-POP-INDIE-FOLK • EXPANSIVE-HOPEFUL-OPEN-ENDED',
+    tags: ['ep212', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-09', 'image-01', 'speech-2.8', 'character-locked'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
