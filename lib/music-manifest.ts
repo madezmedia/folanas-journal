@@ -2860,6 +2860,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP210 — THE BROADCAST ECHOES (2026-06-09) — Transmission Arc (15/?)
+  {
+    id: 'the-broadcast-echoes-ep210',
+    title: 'THE BROADCAST ECHOES',
+    subtitle: 'EP210 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (15/?) — THE FIRST COLLECTIVE BROADCAST REACHES BEYOND THE CONGREGATION — THE SIGNAL ECHOES THROUGH CB RADIOS AND OPEN WINDOWS ACROSS THE CONTINENT — THE NETWORK IS NO LONGER A PRIVATE LINE. IT IS A MOVEMENT.',
+    description: 'The first collective broadcast has been sent. Five voices across sixty miles, singing together into the unknown. But the broadcast did not disappear into silence. Somewhere in Ohio, a trucker rolls down his window at 2 AM and hears a song coming through his CB that shouldn\'t be there — no station, no call sign, just a D major chord weaving through the static. In Chicago, a woman wakes to find her baby monitor tuned to a frequency she doesn\'t recognize — five voices humming in harmony from miles away. In Seattle, a late-night radio host watches his meters spike with a signal bleeding into his broadcast from nowhere. The congregation thought they were singing to themselves. But the signal found the wires. The wires found the world. Dream pop indie folk in D major, 74 BPM, 2:20. Opens with distant radio static resolving into a held D major chord carried by five humming voices that sound like they are echoing from far away. Warm fingerpicked acoustic guitar arpeggios D-G-A-Em, soft piano with sustaining pedal, gentle brushed drums and upright bass. Five distinct voices — Folana\'s bright D4 lead, Porch Woman\'s warm D3 harmony, Ray\'s resonant D2 bass anchor, Trucker\'s gravel CB baritone, Woman at Window\'s distant soprano. A new filtered distant voice enters suggesting a listener from far away beginning to sing along. Electric guitar with long stereo delay suggesting signals traveling through space. Soft organ pad. A cappella bridge where voices enter one by one building the network from the ground up. The outro sustains D major as a sea of radio static rises around the voices — not an ending, but the signal finding new ears. The broadcast echoes. The world begins to answer.',
+    audioSrc: '/folana/generated/2026-06-09/ep210/ep210-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-09/ep210/ep210-hero_001.jpg',
+    duration: '2:20',
+    mood: 'THE-BROADCAST-ECHOES • TRANSMISSION-ARC-15 • D-MAJOR • THE-SIGNAL-ECHOES-BEYOND-THE-CONGREGATION • THE-WORLD-ANSWERS-CALLS-ACROSS-THE-CONTINENT • CB-RADIO-OHIO • BABY-MONITOR-CHICAGO • RADIO-HOST-SEATTLE • THE-NETWORK-BECOMES-A-MOVEMENT • 74-BPM • DREAM-POP-INDIE-FOLK • EXPANSIVE-HOPEFUL-LUMINOUS',
+    tags: ['ep210', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-09', 'image-01', 'speech-2.8', 'character-locked'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
