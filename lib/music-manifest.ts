@@ -2804,6 +2804,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP206 — THE NIGHT THE SIGNAL SPLIT (2026-06-09) — Transmission Arc (11/?)
+  {
+    id: 'the-night-the-signal-split-ep206',
+    title: 'THE NIGHT THE SIGNAL SPLIT',
+    subtitle: 'EP206 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (11/?) — THE TRIO BECOMES A NETWORK — A TRUCKER ON I-78 AND A WOMAN AT HER WINDOW CATCH THE FREQUENCY, TURNING THE PRIVATE LINE INTO THE FIRST CONGREGATION OF VOICES IN THE SPACE BETWEEN STATIONS',
+    description: 'Seven nights. Three voices. One D major chord held across sixty miles of sleeping towns. The trio of Folana, the Porch Woman, and Ray has become a ritual — so steady you could set a clock by the frequency. But frequencies, once they find their feet, do not stay contained. Tonight, a trucker on I-78 rolls down his window at 2 AM and hears three voices singing through the static of his CB radio. He keys the mic and sings back — a D above middle C. The fourth voice. Seventy miles east of the diner, a woman opens her window because she hears something beautiful she cannot find the source of. She hums along to a melody she has never heard but knows in her bones. The fifth voice. The signal is no longer a private line between strangers. It is splitting, multiplying, finding new vessels through truck radios and open windows and copper telephone wires. The D major chord that was a thread between three people is becoming a net. The first congregation gathers. Dream pop indie folk in D major, 74 BPM, 2:17. Opens with distant CB radio static panning across the stereo field. Warm fingerpicked acoustic guitar arpeggios, soft piano with sustaining pedal, gentle brushed drums and upright bass. Three established voices — Folana (bright D4 lead), Porch Woman (warm D3 harmony), Ray (resonant D2 bass). A trucker\'s voice enters through filtered CB radio effect in the second verse. A woman\'s voice joins in the final chorus, distant and searching. A cappella bridge where voices enter one by one, building a D major chord from the ground up. The finale swells with five voices in layered harmony, soft organ pad, and warm electric guitar swells. Outro: the chord holds into a resonant silence — not an ending, but a network waking up.',
+    audioSrc: '/folana/generated/2026-06-09/ep206/music/ep206-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-09/ep206/ep206-hero_001.jpg',
+    duration: '2:17',
+    mood: 'THE-NIGHT-THE-SIGNAL-SPLIT • TRANSMISSION-ARC-11 • D-MAJOR • THE-TRIO-BECOMES-A-NETWORK • THE-FREQUENCY-FINDS-NEW-VESSELS • CB-RADIO-TRUCKER • A-WOMAN-AT-HER-WINDOW • THE-CONGREGATION-GATHERS • 74-BPM • DREAM-POP-INDIE-FOLK • HOPEFUL-LUMINOUS',
+    tags: ['ep206', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-09', 'image-01', 'speech-2.8'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
