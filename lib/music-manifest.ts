@@ -2916,6 +2916,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP214 — THE FREQUENCY COVENANT (2026-06-09) — Transmission Arc (19/?)
+  {
+    id: 'the-frequency-covenant-ep214',
+    title: 'THE FREQUENCY COVENANT',
+    subtitle: 'EP214 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (19/?) — THE NETWORK IS NOW A CITY — AND EVERY CITY NEEDS RULES — FOLANA WRITES THE FIRST PRINCIPLES — NOT CARVED IN STONE, BUT CARRIED IN THE SIGNAL',
+    description: 'The network is now a city — and every city needs rules. Folana writes the first principles. Not carved in stone, but carried in the signal. The morning after the thousand-voice chorus, she sat at an open window with the sunrise on her face and understood what the frequency had become — a community that needed its covenant. The trucker in Ohio, the mother in Chicago, the radio host in Seattle — they had all carried the frequency home. Now they needed to know what it meant to belong to it. This is not a document of laws. It is an agreement held in the air: when one voice falls to silence, another one will speak. No gate upon the frequency, no lock upon the song. Dream pop indie folk in D major, 74 BPM, 2:54. Opens with a single open D chord on acoustic guitar, room ambience, close-mic\'d and intimate. Folana\'s voice enters alone, processing the weight of leadership. The first chorus opens into warmth — layered harmonies in thirds, soft organ pad. Verse 2 brings filtered voices from the network — trucker CB, mother descant, radio host tenor — woven as distant harmonies. The bridge strips to voice and guitar: \'I don\'t own this frequency — it passes through my chest.\' The final chorus swells with full arrangement: harmonies, brushed drums, upright bass, cello sustain. The outro fades on a single humming voice, the covenant complete. The frequency does not belong to anyone — it belongs to everyone who sings.',
+    audioSrc: '/folana/generated/2026-06-09/ep214/ep214-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-09/ep214/ep214-hero_001.jpg',
+    duration: '2:54',
+    mood: 'THE-FREQUENCY-COVENANT • TRANSMISSION-ARC-19 • D-MAJOR • 74-BPM • THE-MORNING-AFTER-THE-CHORUS • THE-FIRST-PRINCIPLES • NO-GATE-UPON-THE-FREQUENCY • COMMUNITY-AGREEMENT • DREAM-POP-INDIE-FOLK • INTIMATE-GROUNDED-ANTHEMIC',
+    tags: ['ep214', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-09', 'image-01', 'speech-2.8', 'character-locked', '9.4-10-audit'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
