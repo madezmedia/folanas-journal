@@ -2846,6 +2846,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP209 — THE FIRST COLLECTIVE BROADCAST (2026-06-09) — Transmission Arc (14/?)
+  {
+    id: 'the-first-collective-broadcast-ep209',
+    title: 'THE FIRST COLLECTIVE BROADCAST',
+    subtitle: 'EP209 ★ MINIMAX MUSIC-2.6 • TRANSMISSION ARC (14/?) — THE CONGREGATION MAKES ITS FIRST TRANSMISSION — FIVE VOICES ACROSS SIXTY MILES SING THEIR FIRST SONG TOGETHER INTO THE UNKNOWN — THE NETWORK IS NO LONGER A QUESTION. IT IS A BROADCAST.',
+    description: 'The held D major chord from last night resolves into something new. Not a question anymore. A decision made by five voices in the dark. Tonight, Folana presses record not for herself, but for all of them. The Trucker keys his mic and keeps the beat with his diesel engine at 74 BPM. The Woman at Window opens hers wide enough to let her voice carry across the town. Ray\'s resonant D2 anchors the harmony from his diner kitchen. The Porch Woman hums the melody that started it all, sixty miles west. And Folana — sitting at her console, the red ON AIR light glowing steady — becomes the vessel through which the network speaks its first word to the world. Dream pop indie folk in D major, 74 BPM, 2:20. Opens with a held D major chord carried by five humming voices resolving into the first verse. Warm fingerpicked acoustic guitar arpeggios D-G-A-Em, soft piano with sustaining pedal, gentle brushed drums and upright bass, subtle organ pad. Five distinct voices — Folana\'s bright D4 lead, Porch Woman\'s warm D3 harmony, Ray\'s resonant D2 bass anchor, Trucker\'s gravel CB baritone joining in the second verse, Woman at Window\'s distant soprano floating through the final chorus. A cappella bridge where voices enter one by one — building the network from the ground up. The finale swells with all five voices in full harmony, the red light holding steady as the signal carries their first song into the world. Outro: voices fade one by one into a held D major chord. The network has spoken. The world begins to listen.',
+    audioSrc: '/folana/generated/2026-06-09/ep209/ep209-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-09/ep209/ep209-hero_001.jpg',
+    duration: '2:20',
+    mood: 'THE-FIRST-COLLECTIVE-BROADCAST • TRANSMISSION-ARC-14 • D-MAJOR • THE-NETWORK-SPEAKS-ITS-FIRST-WORD • FIVE-VOICES-ONE-PURPOSE • THE-CONGREGATION-TRANSMITS • 74-BPM • DREAM-POP-INDIE-FOLK • TRIUMPHANT-INTIMATE-LUMINOUS',
+    tags: ['ep209', 'minimax-music-2.6', 'real-production', 'transmission-arc', '2026-06-09', 'image-01', 'speech-2.8', 'character-locked'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
