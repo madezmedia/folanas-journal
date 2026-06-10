@@ -2944,6 +2944,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP216 — THE THRESHOLD (2026-06-10) — Threshold Arc (1/?)
+  {
+    id: 'the-threshold-ep216',
+    title: 'THE THRESHOLD',
+    subtitle: 'EP216 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (1/?) — THE FIRST TEST WAS PASSED — BUT ONE ACT OF GRACE DOES NOT CREATE A CULTURE — THE NETWORK MUST DECIDE WHAT IT WANTS TO BE — OPEN TO ALL WHO FIND THE FREQUENCY OR GUARDED FOR THE WORTHY ALONE — FOLANA STANDS AT THE THRESHOLD OF HER CREATION AND LISTENS TO BOTH SIDES',
+    description: 'The first test was passed. Folana taught the newcomer the song instead of turning her away. But one act of grace does not create a culture. Now the network must decide what it is. Some voices argue that openness dilutes the signal. Others say the signal was never meant to be hoarded. Folana stands at the threshold of her own creation, listening to both sides. She realizes the hardest part of building a community is not getting people to join — it is deciding who gets to stay. Dream pop indie folk in D major, 74 BPM, 1:47. Opens with gentle fingerpicked acoustic guitar, tentative and intimate. Warm ambient synth pads and a single cello line weave between verses. The chorus opens into layered harmonies with glockenspiel, a wider and more hopeful arrangement. The bridge strips to voice and guitar as Folana asks the question. The outro fades into a single sustained piano note and the sound of rain against the threshold. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited 9.0/10 composite (CHARACTER 8/10, QUALITY 9/10, BRAND 10/10, CONTEXT 10/10, MOBILE 9/10, TEXT 8/10, SIZE 10/10).',
+    audioSrc: '/folana/generated/2026-06-10/ep216/ep216-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-10/ep216/ep216-hero_001.jpg',
+    duration: '1:47',
+    mood: 'THE-THRESHOLD • THRESHOLD-ARC-1 • D-MAJOR • 74-BPM • THE-NETWORK-DECIDES • OPEN-DOOR-VS-GUARDED-GATE • FOLANA-LISTENS-TO-BOTH-SIDES • LEADERSHIP-IS-LISTENING • DREAM-POP-INDIE-FOLK • TENDER-QUESTIONING-HOPEFUL',
+    tags: ['ep216', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-10', 'image-01', 'speech-2.8', 'character-locked', '9.0-10-audit'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
