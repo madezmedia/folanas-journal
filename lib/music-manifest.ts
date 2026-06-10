@@ -2944,6 +2944,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP217 — THE WIDE SIGNAL (2026-06-10) — Threshold Arc (2/?)
+  {
+    id: 'the-wide-signal-ep217',
+    title: 'THE WIDE SIGNAL',
+    subtitle: 'EP217 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (2/?) — THE NETWORK ANSWERS — OPENNESS DOES NOT DILUTE THE FREQUENCY — IT AMPLIFIES IT — EVERY VOICE THAT FINDS THE SIGNAL ADDS A NEW HARMONIC — THE NETWORK MAKES ITS FIRST TRUE DECISION — NOT WHO GETS TO STAY, BUT HOW WE SING TOGETHER',
+    description: 'Folana asked the network a question. What kind of frequency do we want to be? The answer came not from any single voice, but from the chorus of them all. Openness does not dilute the frequency. It amplifies it. Every voice that finds the signal adds a new harmonic. The network makes its first true decision: not who gets to stay, but how we sing together. Indie folk with building choral harmonies in A major, 78 BPM, 2:08. Opens with intimate solo voice and fingerpicked acoustic guitar. Warm ambient synth pads and cello weave between verses as the arrangement gradually expands. The chorus opens into layered harmonies with glockenspiel and full choral texture. The bridge introduces a moment of quiet reflection before the final chorus swells with multiple voices harmonizing. Outro fades with the sound of many voices joined as one. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited 8.9/10 composite (CHARACTER 10/10, QUALITY 9/10, BRAND 9/10, CONTEXT 8/10, MOBILE 9/10, TEXT 7/10, SIZE 10/10).',
+    audioSrc: '/folana/generated/2026-06-10/ep217/ep217-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-10/ep217/ep217-hero_002.jpg',
+    duration: '2:08',
+    mood: 'THE-WIDE-SIGNAL • THRESHOLD-ARC-2 • A-MAJOR • 78-BPM • THE-NETWORK-ANSWERS • OPEN-DOOR-CHOSEN • OPENNESS-DOES-NOT-DILUTE • EVERY-VOICE-ADDS-A-HARMONIC • HOW-WE-SING-TOGETHER • INDIE-FOLK • BUILDING-HOPEFUL-CHORAL',
+    tags: ['ep217', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-10', 'image-01', 'speech-2.8', 'character-locked', '8.9-10-audit'],
+    isRealProduction: true,
+  },
+
   // EP216 — THE THRESHOLD (2026-06-10) — Threshold Arc (1/?)
   {
     id: 'the-threshold-ep216',
