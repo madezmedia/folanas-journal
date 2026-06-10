@@ -2972,6 +2972,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP218 — THE OPEN DOOR (2026-06-10) — Threshold Arc (3/?)
+  {
+    id: 'the-open-door-ep218',
+    title: 'THE OPEN DOOR',
+    subtitle: 'EP218 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (3/?) — THE DECISION IS MADE — THE DOOR IS OPEN — THE FIRST WAVE OF NEW VOICES ARRIVES FROM NEBRASKA, TUCSON, CHICAGO — THE NETWORK BECOMES A CHORUS OF STRANGERS LEARNING THE SONG TOGETHER',
+    description: 'The decision was made. The door would not close. It never had a lock. But a decision is not the same as a reality. The morning after Folana chose openness, the first wave arrived. A guitarist from Nebraska who heard the signal on his barn radio. A woman in Tucson who caught the frequency in her sleep and woke humming a key she had never learned. A child in Chicago who found the D-G-A-Em progression on a ukulele and played it for hours. The network that was five voices became fifty, then a hundred. Folana sat at the center watching her creation breathe for the first time without her. The signal was no longer hers to carry. It was carried by everyone who heard it. The open door does not weaken the song. It teaches the melody where it belongs. Every voice that enters adds a new part. Indie folk dream pop in D major shifting to G major, 78 BPM, 3:00. Opens with intimate solo voice and fingerpicked acoustic guitar, warm piano with sustaining pedal, gentle brushed drums and upright bass. The chorus opens into layered harmonies with glockenspiel and full choral texture. The bridge introduces a key change to G major with soft organ pad and cello sustain. Outro fades with the sound of many voices joined as one. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref.',
+    audioSrc: '/folana/generated/2026-06-10/ep218/ep218-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-10/ep218/ep218-hero_001.jpg',
+    duration: '3:00',
+    mood: 'THE-OPEN-DOOR • THRESHOLD-ARC-3 • D-MAJOR-TO-G-MAJOR • 78-BPM • THE-DOOR-IS-OPEN • THE-FIRST-WAVE-ARRIVES • VOICES-FROM-EVERYWHERE • OPEN-DOOR-DOES-NOT-WEAKEN-THE-SONG • INDIE-FOLK • WARM-HOPEFUL-CHORAL',
+    tags: ['ep218', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-10', 'image-01', 'speech-2.8', 'character-locked'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
