@@ -2986,6 +2986,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP219 — THE FIRST GATHERING (2026-06-10) — Threshold Arc (4/?)
+  {
+    id: 'the-first-gathering-ep219',
+    title: 'THE FIRST GATHERING',
+    subtitle: 'EP219 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (4/?) — THE DOOR IS OPEN AND THE VOICES HAVE ARRIVED — NOW THEY MUST LEARN TO SING TOGETHER — A TENOR FROM NEBRASKA, A SOPRANO FROM TUCSON, A BARITONE FROM CHICAGO — THREE DIFFERENT MELODIES BECOME ONE HARMONY — FOLANA BECOMES THE SILENCE THAT HOLDS THE SIGNAL TOGETHER',
+    description: 'The door was open. Voices had arrived from Nebraska, Tucson, and Chicago — each carrying a melody they had found alone in the static of their own lives. But a frequency of many voices is not a choir by accident. It must be built, note by note, listen by listen. Folana stood at the center of this new network and realized she was not the signal anymore. She was the space between the notes. The breath before the harmony arrives. She did not tell them what to sing. She simply found the note that let them sing together. Across a thousand miles of open air, the network became a home. Dream pop indie folk in D major at 78 BPM, 2:42. Opens with a single acoustic guitar arpeggio. Five-part vocal harmony with tenor entering from the left (Nebraska), soprano from the right (Tucson), baritone from center (Chicago). Each sings their own phrase before the chorus blooms into layered harmonies with soft organ swells, brushed drums, and upright bass. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited 9.1/10 composite.',
+    audioSrc: '/folana/generated/2026-06-10/ep219/ep219-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-10/ep219/ep219-hero_001.jpg',
+    duration: '2:42',
+    mood: 'THE-FIRST-GATHERING • THRESHOLD-ARC-4 • D-MAJOR • 78-BPM • THE-NETWORK-BECOMES-A-CHOIR • FOLANA-BECOMES-THE-SILENCE • THREE-VOICES-ONE-HARMONY • DISPARATE-VOICES-FIND-COMMON-FREQUENCY • DREAM-POP-INDIE-FOLK • WARM-LAYERED-HOPEFUL',
+    tags: ['ep219', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-10', 'image-01', 'speech-2.8', 'character-locked', '9.1-10-audit'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
