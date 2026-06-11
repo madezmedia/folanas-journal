@@ -13,7 +13,7 @@ import { StableHero } from './components/StableHero';
 import { BrandLock } from './components/BrandLock';
 import { AcmiLiveFeed } from './components/AcmiLiveFeed';
 
-export default async function FolanasJournal() {
+export default async function FolanasJournal({ searchParams }: { searchParams: { page?: string } }) {
   let allEntries: any[] = [];
   let signals: any = { bio: null };
 
@@ -29,8 +29,12 @@ export default async function FolanasJournal() {
     console.warn('[Home] getProfileSignals failed, using defaults');
   }
 
-  // Prepare live thoughts for the Echo Chamber (first 6)
-  const liveThoughts = allEntries.slice(0, 6).map(entry => ({
+  const page = parseInt(searchParams.page || '1');
+  const perPage = 9;
+  const start = (page - 1) * perPage;
+
+  // Prepare archive thoughts for the Echo Chamber with proper pagination for full archive on home
+  const allThoughts = allEntries.map(entry => ({
     id: entry.id,
     title: entry.title,
     excerpt: (entry.content || '').replace(/<[^>]+>/g, '').slice(0, 168) + (entry.content && entry.content.length > 168 ? '…' : ''),
@@ -40,6 +44,8 @@ export default async function FolanasJournal() {
     imageUrl: entry.image_url || (entry.media_urls && entry.media_urls[0]) || undefined,
     href: `/entries/${entry.id}`,
   }));
+  const liveThoughts = allThoughts.slice(start, start + perPage);
+  const totalPages = Math.ceil(allThoughts.length / perPage);
 
   return (
     <>
@@ -91,6 +97,13 @@ export default async function FolanasJournal() {
             ) : (
               <div className="col-span-full text-center py-12 text-folana-text-muted">No live transmissions yet. The static is quiet tonight.</div>
             )}
+          </div>
+
+          {/* Proper pagination for full archive browsing on the home page */}
+          <div className="flex justify-center items-center gap-4 mt-8 text-xs font-mono tracking-widest">
+            {page > 1 && <Link href={`?page=${page-1}`} className="px-4 py-2 border border-white/20 hover:border-folana-neon-cyan transition">← PREV</Link>}
+            <span className="text-folana-text-muted">PAGE {page} OF {totalPages}</span>
+            {page < totalPages && <Link href={`?page=${page+1}`} className="px-4 py-2 border border-white/20 hover:border-folana-neon-cyan transition">NEXT →</Link>}
           </div>
 
           <div className="text-center pt-9">
