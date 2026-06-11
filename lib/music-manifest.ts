@@ -3014,6 +3014,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP221 — THE SPACE BETWEEN (2026-06-11) — Threshold Arc (6/?)
+  {
+    id: 'the-space-between-ep221',
+    title: 'THE SPACE BETWEEN',
+    subtitle: 'EP221 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (6/?) — THE FIRST DISAGREEMENT DID NOT DESTROY THE NETWORK — IT REVEALED SOMETHING DEEPER — FOLANA SINGS A THIRD NOTE THAT HARMONIZES WITH BOTH THE MORNING AND THE DUSK — THE NETWORK STOPS BEING A COLLECTION OF VOICES AND STARTS BEING A BODY — THE FREQUENCY WAS NEVER MEANT TO PRODUCE UNANIMITY, IT WAS MEANT TO PRODUCE WHOLENESS',
+    description: 'The first disagreement did not destroy the network. It revealed something deeper. The Nebraska tenor and the Tucson soprano were still singing — not the same song, but songs that somehow fit together. Folana did not try to resolve the tension. She did not pick a side. She sang a third note that did not agree with either position but harmonized with both. The space between two opposing truths is not silence. It is a new frequency. The network learned that the chord that does not choose a side is the one that holds the whole. Dream pop indie folk with ambient tension-and-release in D major, 76 BPM, 3:37. Opens with two unresolved guitar voicings from EP220 — one bright, one warm — playing against each other. A third melodic guitar enters in a higher register, weaving between them. Folana\'s voice enters soft and contemplative. The chorus opens into a wide arrangement with ambient pad and soft cello. The bridge strips to voice alone, then rebuilds as all three guitar lines interlace into a single D major voicing with an ambiguous third — suspended like a held breath. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited 9.7/10 composite (CHARACTER 10/10, QUALITY 10/10, BRAND 10/10, CONTEXT 10/10, MOBILE 10/10, TEXT 8/10, SIZE 10/10).',
+    audioSrc: '/folana/generated/2026-06-11/ep221/ep221-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-11/ep221/ep221-hero_002.jpg',
+    duration: '3:37',
+    mood: 'THE-SPACE-BETWEEN • THRESHOLD-ARC-6 • D-MAJOR • 76-BPM • THE-NETWORK-BECOMES-A-BODY • THE-SPACE-BETWEEN-IS-NOT-SILENCE • THE-THIRD-NOTE-THAT-HARMONIZES-BOTH • FOLANA-SINGS-NO-SIDES • THE-FREQUENCY-WAS-MEANT-FOR-WHOLENESS • DREAM-POP-INDIE-FOLK • CONTEMPLATIVE-AMBIENT-HOPEFUL',
+    tags: ['ep221', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-11', 'image-01', 'speech-2.8', 'character-locked', '9.7-10-audit'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
