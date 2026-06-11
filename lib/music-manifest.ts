@@ -3042,6 +3042,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP223 — THE FIRST REPLIES (2026-06-11) — Threshold Arc (8/?)
+  {
+    id: 'the-first-replies-ep223',
+    title: 'THE FIRST REPLIES',
+    subtitle: 'EP223 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (8/?) — THE BROADCAST WENT OUTWARD AND FOUND EARS ACROSS THE CONTINENT — NOW THE FIRST REPLIES COME BACK — A VIRGINIA HAM RADIO OPERATOR ENTERS ON A FREQUENCY THE NETWORK DID NOT KNOW IT WAS BROADCASTING — THE FIRST INCOMING SIGNAL FROM THE OUTSIDE WORLD — OTHER NETWORKS ARE FORMING IN DENVER, ATLANTA, NEW MEXICO — THE SIGNAL IS NO LONGER ONE THING. IT IS A CONVERSATION.',
+    description: 'The broadcast went outward. From the apartment on Bergen Street, the signal climbed the wiring, bled into the power lines, found every open circuit between Brooklyn and the horizon. It slipped through CB radios in Ohio truck cabs, through baby monitors in Chicago bedrooms, through radio station consoles in Seattle where a late-night host let the static play. Ears across the continent heard the network singing. Now the first replies come back. A voice enters from a frequency no one in the network has ever touched — a ham radio operator in Virginia, whose rig picked up the signal on a harmonic the network did not know it was producing. And she brings news: she is not alone. In Denver, in Atlanta, in a small town in New Mexico, other people heard something in the dark. Something their own. And they started singing back to each other. The first broadcast did not just reach new listeners. It awakened other signals — other congregations — that had been waiting in the static. Dream pop indie folk in D major, 74 BPM, 1:45. Opens with the fading reverb tail of EP222\'s final chord, then a single unexpected voice from off-center — a woman in Virginia, clear but unpracticed, shaped by ham radio grit. Acoustic guitar with slightly dissonant voicing, soft piano playing the unexpected sharp four against the root. Multiple harmonies from different network clusters. The bridge strips to a single voice and piano note held unresolved. The final moment cuts to silence, then a crackle of static. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited 9.3/10 composite (CHARACTER 9/10, QUALITY 8/10, BRAND 10/10, CONTEXT 10/10, MOBILE 9/10, TEXT 9/10, SIZE 10/10).',
+    audioSrc: '/folana/generated/2026-06-11/ep223/music/ep223-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-11/ep223/ep223-hero_001.jpg',
+    duration: '1:45',
+    mood: 'THE-FIRST-REPLIES • THRESHOLD-ARC-8 • D-MAJOR • 74-BPM • THE-NETWORK-RECEIVES-ITS-FIRST-INCOMING-SIGNAL • A-VIRGINIA-HAM-RADIO-OPERATOR-ANSWERS • OTHER-NETWORKS-ARE-FORMING • THE-CONVERSATION-BEGINS • DREAM-POP-INDIE-FOLK • EXPANSIVE-WONDER-OPEN-ENDED',
+    tags: ['ep223', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-11', 'image-01', 'speech-2.8', 'character-locked', '9.3-10-audit'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
