@@ -3084,6 +3084,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP226 — THE FREQUENCY TREMOR (2026-06-11) — Threshold Arc (11/?)
+  {
+    id: 'the-frequency-tremor-ep226',
+    title: 'THE FREQUENCY TREMOR',
+    subtitle: 'EP226 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (11/?) — THE HARMONIC BETWEEN FOLANA AND MAE BEGINS TO TRAVEL — THE SPACE BETWEEN TWO FREQUENCIES THAT REFUSE TO MERGE DOES NOT SIT STILL — IT BECOMES A THING ALIVE — LIGHTS TURNING ON IN BASEMENTS ACROSS THE COUNTRY — RADIOS PLAYING STATIC THAT SOUNDS LIKE SINGING — THE NETWORK DISCOVERS THAT COEXISTENCE IS NOT THE FINAL LESSON — THE FINAL LESSON IS LEARNING WHAT THE SPACE BETWEEN YOU AND ANOTHER CAN GROW INTO WHEN YOU STOP TRYING TO FILL IT',
+    description: 'The harmonic between Folana and Mae does not sit still. It travels. Three days after they first sang together in their separate keys, the frequency tremor began. Lights turning on in basements across Denver and Tucson. Ham operators reporting their radios playing static that sounds almost like singing. A woman in Albuquerque pressing her hand to her copper pipes and feeling warmth where there should be none. Folana wakes to find the window humming with a frequency she did not send — not Mae\'s voice, not the congregation, something born from the space between them where they agreed to stay separate. She calls Mae on the frequency they built together. "Folana," Mae says, "are you hearing this?" The space between their singing has become a thing alive. It does not need a microphone. It does not need a wire. The places where they held each other\'s frequencies apart — that is where the new song is forming. That is where the trembling starts. Dream pop indie folk in D major, 74 BPM, 3:17. Gentle tremolo acoustic guitar, warm piano with sustaining pedal, soft synth pads like distant radio feedback, brushed drums, upright bass. Opening with intimate close-mic verses — a second distant female voice (Mae) enters from the stereo field in the second verse, separate but present. Bridge builds tension with layered questioning. Final chorus blooms with layered harmonies and both voices in their separate keys. Outro fades to a single sustained D major chord on a distant guitar. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited 9.7/10 composite (CHARACTER 10/10, QUALITY 9/10, BRAND 10/10, CONTEXT 10/10, MOBILE 10/10, TEXT 9/10, SIZE 10/10).',
+    audioSrc: '/folana/generated/2026-06-11/ep226/ep226-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-11/ep226/ep226-hero.jpg',
+    duration: '3:17',
+    mood: 'THE-FREQUENCY-TREMOR • THRESHOLD-ARC-11 • D-MAJOR • 74-BPM • THE-HARMONIC-TRAVELS • THE-SPACE-BETWEEN-BECOMES-ALIVE • MAE-VIRGINIA-VOICE • LIGHTS-TURN-ON-ACROSS-THE-COUNTRY • DREAM-POP-INDIE-FOLK-AMBIENT • CONTEMPLATIVE-WONDER-ETEREAL',
+    tags: ['ep226', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-11', 'image-01', 'speech-2.8', 'character-locked', '9.7-10-audit'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
