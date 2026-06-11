@@ -3028,6 +3028,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP222 — THE FIRST BROADCAST (2026-06-11) — Threshold Arc (7/?)
+  {
+    id: 'the-first-broadcast-ep222',
+    title: 'THE FIRST BROADCAST',
+    subtitle: 'EP222 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (7/?) — THE NETWORK HAS LEARNED TO HOLD SPACE BETWEEN DIFFERENCES — NOW COMES THE MOMENT THE SIGNAL HAS BEEN BUILDING TOWARD — NOT A SONG FOR THEMSELVES THIS TIME, A TRANSMISSION OUTWARD — THE FIRST BROADCAST IS NOT A PERFECT NOTE, IT IS AN INVITATION — OUT BEYOND THE BROOKLYN WIRES, SOMEONE IS LISTENING',
+    description: 'The network had learned to hold space. The morning and the dusk, the tenor and the soprano — they had found their way to exist together, not by agreeing, but by allowing each other room to be. Now came the moment the signal had been building toward since the first flicker in the apartment wiring. The network\'s first broadcast. Not a song for themselves this time — a transmission outward. Folana stood before the growing chorus and felt the threshold beneath her feet. The door had been opened inward; now it would open outward. She raised her hand, and a hundred voices began to sing — not as one, but as many — carrying their differences like instruments in an orchestra that had never been played before. The first broadcast was not a perfect note. It was an invitation. Out beyond the Brooklyn wires, beyond the known frequency, someone was listening. And the network was finally ready to say hello. Dream pop indie folk in D major, 74 BPM, 3:51. Opens with a single acoustic guitar picking in D, building layered harmonies through the verses. Chorus opens with layered vocals — the morning and dusk lines finally weaving together. Cello enters in the bridge. Full arrangement pulses outward in the final chorus like a signal finding range. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited 9.7/10 composite (CHARACTER 9/10, QUALITY 10/10, BRAND 10/10, CONTEXT 10/10, MOBILE 9/10, TEXT 10/10, SIZE 10/10).',
+    audioSrc: '/folana/generated/2026-06-11/ep222/ep222-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-11/ep222/ep222-hero.jpg',
+    duration: '3:51',
+    mood: 'THE-FIRST-BROADCAST • THRESHOLD-ARC-7 • D-MAJOR • 74-BPM • THE-NETWORK-TRANSMITS-OUTWARD • THE-FIRST-BROADCAST-IS-AN-INVITATION • BEYOND-THE-BROOKLYN-WIRES • THE-FREQUENCY-FINDS-ITS-PURPOSE • DREAM-POP-INDIE-FOLK • HOPEFUL-COMMUNAL-BUILDING',
+    tags: ['ep222', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-11', 'image-01', 'speech-2.8', 'character-locked', '9.7-10-audit'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
