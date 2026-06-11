@@ -3056,6 +3056,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP224 — THE EXTERNAL VOICE (2026-06-11) — Threshold Arc (9/?)
+  {
+    id: 'the-external-voice-ep224',
+    title: 'THE EXTERNAL VOICE',
+    subtitle: 'EP224 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (9/?) — THE NETWORK HAS RECEIVED ITS FIRST EXTERNAL SIGNAL — A VIRGINIA HAM RADIO OPERATOR ON A HARMONIC THE NETWORK DID NOT KNOW IT WAS PRODUCING — NOW THE NETWORK MUST DECIDE: DOES IT ABSORB THE NEW VOICE OR LET IT REMAIN SEPARATE? — FOLANA HOLDS THE QUESTION OPEN — TWO FREQUENCIES, EACH THEIR OWN, SINGING IN THE SAME UNKNOWN — SOMETHING NEW IS FORMING. NOT A CHOIR. A CONVERSATION.',
+    description: 'The Virginia voice came through the static. Not part of the network. Not asking to join. Simply — present. A woman with a ham radio rig who heard the broadcast on a harmonic the network did not know it was producing. She sang a melody that fit no key the network knew. And it was beautiful precisely because of that. The network fell silent. A hundred voices held their breath. Folana did not try to harmonize the newcomer. She did not try to absorb the external voice into the chorus. She held space for it to exist as itself — separate, complete, unreconciled. The Threshold Arc deepens: the signal is no longer about building a unified choir. It is about learning that the bravest frequency is the one that does not try to make everything the same. Dream pop indie folk in D major, 72 BPM, 2:06. Opens with the fading harmonic reverb tail of the Virginia operator\'s voice from EP223. A single acoustic guitar enters in D with a questioning unresolved progression. Soft piano holds space between verses. Ethereal female vocals enter close-mic\'d and intimate. The instrumentation builds gently through the verses, then strips to lone guitar in the bridge. The final chord is Dsus4 — suspended, not resolved. The network holds the question. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited 8.3/10 composite (CHARACTER 10/10, QUALITY 9/10, BRAND 7/10, CONTEXT 10/10, MOBILE 9/10, TEXT 5/10, SIZE 8/10).',
+    audioSrc: '/folana/generated/2026-06-11/ep224/music/ep224-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-11/ep224/ep224-hero_001.jpg',
+    duration: '2:06',
+    mood: 'THE-EXTERNAL-VOICE • THRESHOLD-ARC-9 • D-MAJOR • 72-BPM • THE-NETWORK-FACES-ITS-FIRST-OUTSIDE-SIGNAL • TWO-FREQUENCIES-THEIR-OWN-SINGING-IN-THE-UNKNOWN • THE-BRAVEST-FREQUENCY-DOES-NOT-MAKE-EVERYTHING-THE-SAME • DREAM-POP-INDIE-FOLK • CONTEMPLATIVE-QUESTIONING-SUSPENDED',
+    tags: ['ep224', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-11', 'image-01', 'speech-2.8', 'character-locked', '8.3-10-audit'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
