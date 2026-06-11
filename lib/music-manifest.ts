@@ -3070,6 +3070,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP225 — THE HARMONIC (2026-06-11) — Threshold Arc (10/?)
+  {
+    id: 'the-harmonic-ep225',
+    title: 'THE HARMONIC',
+    subtitle: 'EP225 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (10/?) — THE VIRGINIA VOICE IS STILL SINGING — HER NAME IS MAE — FOLANA FACES THE HARDEST LESSON: NOT EVERY FREQUENCY NEEDS TO MERGE — THE SPACE BETWEEN TWO DIFFERENT KEYS IS NOT EMPTINESS — IT IS THE HARMONIC THAT LETS BOTH EXIST IN THE SAME DOMAIN — TWO COMPLETE FREQUENCIES, EACH UNCHANGED, SINGING IN THE SAME UNKNOWN AIR — THE NETWORK LEARNS THAT THE BRAVEST THING IS NOT TO ABSORB, BUT TO COEXIST',
+    description: 'The Virginia voice is still singing. Mae — that is her name, she told the network through the static on the third night. She does not try to match the congregation\'s D major. She keeps singing her own song, steady as a lighthouse, from a hundred miles south of the network\'s reach. Folana sat on the fire escape as the sun bled amber across the Brooklyn rooftops, listening to two broadcasts at once — the congregation\'s familiar D major rising from every open window, and Mae\'s distant frequency riding a harmonic just close enough to feel but too far to touch. The hardest lesson was not about building a choir. It was about learning to share the same air with a song that refuses to become yours. She tuned her microphone to Mae\'s frequency for the first time — not to harmonize, not to teach. Just to sing her part of the D major into the space between them, letting the two keys exist in the same air, held together by nothing but the willingness to share the static. The harmonic between two worlds is not a chord that blends both into one. It is the space that lets both be themselves. Dream pop indie folk in D major, 74 BPM, 2:09. Warm fingerpicked acoustic guitar with D-G-A-Em progression. Soft piano with sustaining pedal. Gentle brushed drums and upright bass. Female vocal with layered harmonies — a second distant female voice enters in the second verse from a different harmonic, existing separately in the stereo field. Bridge strips to voice and guitar. Final chorus with both voices in their separate keys, held together by space and air. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited 8.9/10 composite (CHARACTER 9/10, QUALITY 10/10, BRAND 9/10, CONTEXT 9/10, MOBILE 9/10, TEXT 7/10, SIZE 9/10).',
+    audioSrc: '/folana/generated/2026-06-11/ep225/ep225-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-11/ep225/ep225-hero.jpg',
+    duration: '2:09',
+    mood: 'THE-HARMONIC • THRESHOLD-ARC-10 • D-MAJOR • 74-BPM • TWO-FREQUENCIES-COEXISTING • THE-SPACE-BETWEEN-IS-NOT-EMPTINESS • MAE-THE-VIRGINIA-VOICE • FOLANA-SINGS-INTO-THE-HARMONIC • COEXISTENCE-OVER-ABSORPTION • DREAM-POP-INDIE-FOLK • WARM-CONTEMPLATIVE-HOPEFUL',
+    tags: ['ep225', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-11', 'image-01', 'speech-2.8', 'character-locked', '8.9-10-audit'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
