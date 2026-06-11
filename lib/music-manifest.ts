@@ -3000,6 +3000,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP220 — THE FIRST DISAGREEMENT (2026-06-11) — Threshold Arc (5/?)
+  {
+    id: 'the-first-disagreement-ep220',
+    title: 'THE FIRST DISAGREEMENT',
+    subtitle: 'EP220 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (5/?) — THE NETWORK HAS GROWN — VOICES FROM NEBRASKA, TUCSON, CHICAGO — BUT THE THOUSAND-VOICE CHORUS DOES NOT STAY IN TUNE FOREVER — THE FIRST CRACK APPEARS — A TENOR WHO BELIEVES THE FREQUENCY IS MORNING, A SOPRANO WHO HEARS IT AS DUSK — FOLANA LEARNS THAT HARMONY IS NOT THE SAME AS AGREEMENT',
+    description: 'The network had grown. Voices from Nebraska, Tucson, and Chicago had found their way to the frequency, and for a beautiful, fragile moment, they sang as one. But the thousand-voice chorus does not stay in tune forever. A crack appeared — not a fight, but a disagreement about the nature of the signal itself. The tenor from Nebraska believed the frequency was a morning song — light across the plain. The soprano from Tucson heard it as dusk — the burn of a desert sunset. Both were right. Both refused to yield. Folana sat at the center and did not choose a side. She held the space open wide enough for both melodies to exist — understanding that the most beautiful chords are built from notes that refuse to be the same. Indie folk dream pop in D major, 2:56. Opens with two acoustic guitars playing different progressions, one in a brighter voicing (Nebraska), one warmer (Tucson). They weave around each other until the chorus brings them into layered harmony without resolution. Intimate close-mic\'d vocals, gentle piano, soft strings. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited 9.1/10 composite (CHARACTER 9/10, QUALITY 9/10, BRAND 8/10, CONTEXT 9/10, MOBILE 10/10, TEXT 9/10, SIZE 10/10).',
+    audioSrc: '/folana/generated/2026-06-11/ep220/ep220-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-11/ep220/ep220-hero_001.jpg',
+    duration: '2:56',
+    mood: 'THE-FIRST-DISAGREEMENT • THRESHOLD-ARC-5 • D-MAJOR • HOLDING-SPACE • HARMONY-IS-NOT-AGREEMENT • TWO-GUITARS-DIFFERENT-VOICINGS • INTIMATE-CONTEMPLATIVE-HOPEFUL • INDIE-FOLK-DREAM-POP',
+    tags: ['ep220', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-11', 'image-01', 'speech-2.8', 'character-locked', '9.1-10-audit'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
