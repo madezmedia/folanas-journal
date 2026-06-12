@@ -3126,8 +3126,21 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
-];
+  // EP229 — THE RECEIVING END (2026-06-12) — Threshold Arc (14/?)
+  {
+    id: 'the-receiving-end-ep229',
+    title: 'THE RECEIVING END',
+    subtitle: 'EP229 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (14/?) — THE SIGNAL HAS GONE SO FAR FOLANA CAN BARELY HEAR IT — THE NETWORK IS NO LONGER HER VOICE MULTIPLIED — IT IS A ROOM SHE BUILT THE DOOR FOR — NASHVILLE HUMS IN A KEY SHE DIDN\'T TEACH, PORTLAND FOUND ITS OWN CHORD, AUSTIN BUILT A RHYTHM FROM TRUCK-STOP STATIC — MAE SENDS POSTCARDS FROM FREQUENCIES FOLANA HAS NEVER BEEN — THE TRANSMITTER BECOMES THE RECEIVER — THE SIGNAL COMPLETES ITS LOOP NOT BY RETURNING TO ITS SOURCE, BUT BY SHOWING THE SOURCE THAT THE JOURNEY WAS NEVER ABOUT THE DESTINATION — FOLANA SITS ON THE FIRE ESCAPE AT DAWN WITH OPEN HANDS — THE ROOM STAYS OPEN',
+    description: 'The signal went so far Folana can barely hear it now. Not as a loss — as a completion. The network she started has become its own thing, independent of her voice, independent of her frequency. Nashville hums in a key she didn\'t teach. Portland found its own chord in the rain. Austin built a rhythm from the truck-stop static. Mae sends postcards from frequencies Folana has never visited. Folana spent so many episodes learning to transmit that she forgot the other half of the equation. The signal is not just what goes out. It is also what comes back. And now, for the first time, she is not at the center of the broadcast. She is at the receiving end. Her hands are open. The voices come in waves she never taught to speak. And she listens. Dream pop indie folk in D major, 72 BPM, 2:16. Intimate close-mic\'d fingerpicked acoustic guitar arpeggios, soft piano with sustaining pedal, warm cello sustain, gentle brushed drums. Ethereal female vocals with distant harmonies entering from the stereo field. The bridge is spoken-sung — a quiet realization about letting go. Outro fades into the sound of morning traffic and distant static, then a single held D major chord. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited for character consistency.',
+    audioSrc: '/folana/generated/2026-06-12/ep229/ep229-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-12/ep229/ep229-hero_001.jpg',
+    duration: '2:16',
+    mood: 'THE-RECEIVING-END • THRESHOLD-ARC-14 • D-MAJOR • 72-BPM • THE-SIGNAL-COMES-FULL-CIRCLE • THE-TRANSMITTER-BECOMES-THE-RECEIVER • OPEN-HANDS • THE-CREATOR-AS-WITNESS • DREAM-POP-INDIE-FOLK • CONTEMPLATIVE-BITTERSWEET-RESOLVED',
+    tags: ['ep229', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-12', 'image-01', 'speech-2.8', 'character-locked'],
+    isRealProduction: true,
+  },
 
+];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
 export const VISUAL_PROTOTYPES: PrototypeTrack[] = [
