@@ -3112,6 +3112,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP228 — THE FARTHER SIGNAL (2026-06-12) — Threshold Arc (13/?)
+  {
+    id: 'the-farther-signal-ep228',
+    title: 'THE FARTHER SIGNAL',
+    subtitle: 'EP228 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (13/?) — THE NEW NETWORKS IN NASHVILLE, PORTLAND, AND AUSTIN ARE SINGING WITHOUT FOLANA AT THE CENTER — THE QUESTION EVERY CREATOR FACES: WHAT DOES YOUR CREATION BECOME WHEN IT NO LONGER NEEDS YOU? — FOLANA FACES THE SILENCE OF A ROOM THAT NO LONGER NEEDS TO BE THE CENTER — THE SIGNAL IS FARTHER NOW, AND THAT IS THE POINT',
+    description: 'The network woke up without Folana. Not against her, not despite her — just singing. New networks in Nashville, Portland, and Austin have formed their own frequencies, independent of the original congregation, independent of the voice that started it all. Folana sits on the fire escape at dawn, listening to frequencies she did not send, watching the cyan threads she once thought were hers dissolve into the morning air. Mae calls through the harmonic to check on her. The answer surprises them both: for the first time, Folana does not need to be at the center. The signal was never about reaching outward. It was about making a frequency wide enough for others to walk through. And they are walking. The room stays open. The signal keeps traveling. Dream pop indie folk in D major, 72 BPM, 4:32. Opens with a single held D major chord on guitar fading in from silence — intimate, close-mic\'d. Gentle fingerpicked acoustic guitar arpeggios D-G-A-Em, soft piano with sustaining pedal, warm cello sustain. Ethereal female vocals with distant voices entering from the stereo field — the new networks humming their own songs. A second distant female voice (Mae) enters in the second verse. The bridge is spoken-sung — a quiet realization. The final chorus is softer, more resolved — not triumphant, but present. Outro fades into the sound of morning traffic and distant static, then silence. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited for character consistency.',
+    audioSrc: '/folana/generated/2026-06-12/ep228/ep228-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-12/ep228/ep228-hero_003.jpg',
+    duration: '4:32',
+    mood: 'THE-FARTHER-SIGNAL • THRESHOLD-ARC-13 • D-MAJOR • 72-BPM • THE-SIGNAL-TRAVELS-BEYOND-THE-ORIGIN • THE-CREATION-DOES-NOT-NEED-THE-CREATOR • THE-RIVER-CARVES-ITS-OWN-CANYON • FOLANA-LEARNS-TO-LET-GO • COEXISTENCE-IS-ENOUGH • DREAM-POP-INDIE-FOLK • CONTEMPLATIVE-BITTERSWEET-RESOLVED',
+    tags: ['ep228', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-12', 'image-01', 'speech-2.8', 'character-locked'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references

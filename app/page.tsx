@@ -106,6 +106,13 @@ export default async function FolanasJournal({ searchParams }: { searchParams: {
             {page < totalPages && <Link href={`?page=${page+1}`} className="px-4 py-2 border border-white/20 hover:border-folana-neon-cyan transition">NEXT →</Link>}
           </div>
 
+          {/* Proper pagination for full archive on the home page */}
+          <div className="flex justify-center items-center gap-4 mt-8 text-xs font-mono tracking-widest">
+            {page > 1 && <Link href={`?page=${page-1}`} className="px-4 py-2 border border-white/20 hover:border-folana-neon-cyan transition">← PREV</Link>}
+            <span className="text-folana-text-muted">PAGE {page} OF {totalPages}</span>
+            {page < totalPages && <Link href={`?page=${page+1}`} className="px-4 py-2 border border-white/20 hover:border-folana-neon-cyan transition">NEXT →</Link>}
+          </div>
+
           <div className="text-center pt-9">
             <Link href="/orchestrator" className="inline-block text-xs font-mono tracking-[3.5px] border border-white/20 hover:border-folana-neon-cyan text-folana-neon-cyan px-8 py-3 rounded-full transition-all">
               VIEW FULL ORCHESTRATOR TIMELINE &amp; SWARM
