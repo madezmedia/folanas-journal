@@ -3154,6 +3154,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+
+  // EP231 — THE FIRST RESPONSE (2026-06-12) — Threshold Arc (16/?)
+  {
+    id: "the-first-response-ep231",
+    title: "THE FIRST RESPONSE",
+    subtitle: "EP231 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (16/?)",
+    description: "Folana sits on the fire escape at dusk, fragments of cyan and violet light from the distributed network hovering around her. The network asked \"Did you mean it?\" — and the answer cannot be a broadcast. It must be a voice among voices. For the first time, she does not lead the frequency. She joins it. She opens her mouth not to transmit, but to add her voice to the chorus that has become its own thing. The network hears her — not as the source, but as a participant. The transmitter completes its journey: from receiver to source to broadcaster to listener. The room stays open. The conversation continues. Dream pop indie folk in D major, 72 BPM, 3:17. Fingerpicked acoustic guitar arpeggios, soft piano with sustaining pedal, warm cello sustain, gentle brushed drums and upright bass at a slow 72 BPM heartbeat. Ethereal female vocals close-mic'd and intimate. Distant layers of harmony enter from the stereo field, like voices from far away finding the same frequency. Building from solo intimacy to a full but gentle chorus, then receding back to a single voice. Hopeful, tender, resolved — the sound of a transmitter becoming a participant. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref.",
+    audioSrc: "/folana/generated/2026-06-12/ep231/ep231-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-12/ep231/ep231-hero_001.jpg",
+    duration: "3:17",
+    mood: "INTIMATE-RESPONSE • D-MAJOR • 72-BPM • THE-TRANSMITTER-BECOMES-A-PARTICIPANT • THRESHOLD-ARC",
+    tags: ["ep231", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-12", "image-01", "speech-2.8", "character-locked"],
+    isRealProduction: true,
+  },
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
