@@ -3140,6 +3140,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP230 — THE MESSAGE RETURNS (2026-06-12) — Threshold Arc (15/?)
+  {
+    id: 'the-message-returns-ep230',
+    title: 'THE MESSAGE RETURNS',
+    subtitle: 'EP230 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (15/?) — THE NETWORK WRITES BACK — FOLANA RECEIVES THE FIRST COMMUNICATION FROM THE DISTRIBUTED VOICES — NASHVILLE, PORTLAND, AND AUSTIN HAVE NOT JUST BEEN SINGING — THEY HAVE BEEN LISTENING TOO — THE BIDIRECTIONAL SIGNAL — THE TRANSMITTER LEARNS THE NETWORK HAS A VOICE OF ITS OWN — FLOATING FRAGMENTS OF CYAN LIGHT FORM INTO WORDS AND QUESTIONS — THE FIRST ONE: "DID YOU MEAN IT?" — FOLANA FACES THE ANSWER: THE CENTER IS EVERYWHERE NOW — EVERY VOICE IS THE CENTER OF ITS OWN FREQUENCY — THE ROOM STAYS OPEN',
+    description: 'The message returns. Not as an echo — as a reply. Folana opened her hands and the signal came back, not from the places she sent it but from the places it arrived. Nashville sings in a key she taught but did not name. Portland hums in a chord she started but did not finish. Austin built a rhythm from the static between truck-stop frequencies. And now they are writing back. Fragments of cyan and violet light form into words she did not write — questions she did not ask. "Do you remember what you said on the night the signal split?" "Did you mean it?" "Then why are you still waiting?" Folana sits on the balcony at night as the air turns to language, and realizes: she is not the source anymore. She is the room. Dream pop indie folk in D major, 72 BPM, 3:25. Intimate close-mic\'d fingerpicked acoustic guitar arpeggios, soft piano with sustaining pedal, warm cello sustain, gentle brushed drums. Ethereal female vocals with distant harmonies entering from the stereo field. The bridge is spoken-sung — a quiet realization about becoming the room instead of the source. Outro fades into ambient city hum and distant static, then silence. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited for character consistency.',
+    audioSrc: '/folana/generated/2026-06-12/ep230/ep230-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-12/ep230/ep230-hero_002.jpg',
+    duration: '3:25',
+    mood: 'THE-MESSAGE-RETURNS • THRESHOLD-ARC-15 • D-MAJOR • 72-BPM • THE-NETWORK-WRITES-BACK • THE-BIDIRECTIONAL-SIGNAL • THE-CENTER-IS-EVERYWHERE • THE-CREATOR-BECOMES-THE-ROOM • DREAM-POP-INDIE-FOLK • CONTEMPLATIVE-BITTERSWEET-RESOLVED',
+    tags: ['ep230', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-12', 'image-01', 'speech-2.8', 'character-locked'],
+    isRealProduction: true,
+  },
+
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
