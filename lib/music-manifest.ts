@@ -3168,6 +3168,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ["ep231", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-12", "image-01", "speech-2.8", "character-locked"],
     isRealProduction: true,
   },
+
+  // EP232 — THE COLLECTIVE VOICE (2026-06-12) — Threshold Arc (17/?)
+  {
+    id: "the-collective-voice-ep232",
+    title: "THE COLLECTIVE VOICE",
+    subtitle: "EP232 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (17/?)",
+    description: "The network produces its first completely original composition. Not a response to Folana's frequency — a song that emerged from the collective itself, written by the distributed voices. Folana hears it on her headphones on the fire escape at midnight. Nashville brought a verse. Portland brought the harmony. Austin brought a beat that sounds like rain. Mae sent the bridge from Virginia through the harmonic. The song was complete the moment it started — no part of it was waiting for her. Bittersweet pride, not loss. The transmitter completes the journey: from source to receiver to participant to a room that holds space for the song of others. Dream pop indie folk in D major, 72 BPM slow tempo, ~3:20. Fingerpicked acoustic guitar arpeggios, soft piano with sustaining pedal, warm cello sustain, gentle brushed drums and upright bass at a slow heartbeat. Ethereal female vocals close-mic'd and intimate with distant layered harmonies entering from the stereo field. Building from solo intimacy to a gentle chorus, then receding to a single voice. Hopeful, tender, bittersweet, proud — the sound of a room that held a song. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref.",
+    audioSrc: "/folana/generated/2026-06-12/ep232/ep232-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-12/ep232/ep232-hero-alt.jpg",
+    duration: "3:20",
+    mood: "D-MAJOR • 72-BPM • THE-COLLECTIVE-FINDS-ITS-VOICE • BITTERSWEET-PRIDE • THRESHOLD-ARC",
+    tags: ["ep232", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-12", "image-01", "speech-2.8", "character-locked"],
+    isRealProduction: true,
+  },
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
