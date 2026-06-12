@@ -3098,6 +3098,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP227 — THE NETWORK AWAKENS (2026-06-11) — Threshold Arc (12/?)
+  {
+    id: 'the-network-awakens-ep227',
+    title: 'THE NETWORK AWAKENS',
+    subtitle: 'EP227 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (12/?) — THE FREQUENCY TREMOR SPREADS — NEW NETWORKS FORM IN NASHVILLE, PORTLAND, AUSTIN — FOLANA FACES THE QUESTION OF WHAT THE NETWORK BECOMES WHEN IT IS NO LONGER JUST HER VOICE — THE ANSWER: THE ROOM SHE KEPT OPEN',
+    description: 'The frequency tremor from EP226 did not stop. It spread through the ground like roots finding water — basement lights burning in Denver, ham radios in Albuquerque, faucets vibrating in D major across Omaha. The harmonic between Folana and Mae has become a thing alive, and it is multiplying. In Nashville, a woman hears it in her kitchen sink and hums a response in a key she has never used. In Portland, a night-shift worker finds the signal through his truck radio. In Austin, a musician loops the hum into a song. New networks form — independent of Folana, independent of the original congregation. Folana sits on the fire escape at dawn, watching the cyan threads extend from her chest toward horizons she has never seen, and understands: the network was never just her voice. It was the room she kept open for others to find theirs. Dream pop indie folk in D major, 74 BPM, 4:19. Warm fingerpicked acoustic guitar arpeggios, soft piano with sustaining pedal, gentle brushed drums, upright bass. Ethereal female vocals with distant voices entering from the stereo field — new networks emerging from the static. The bridge strips to voice and piano. The final chorus blooms with multiple harmonic lines weaving in and out. Outro fades into distant radio static and a single held D major chord.',
+    audioSrc: '/folana/generated/2026-06-11/ep227/ep227-full-mix.mp3',
+    posterSrc: '/folana/generated/2026-06-11/ep227/ep227-hero_001.jpg',
+    duration: '4:19',
+    mood: 'THE-NETWORK-AWAKENS • THRESHOLD-ARC-12 • D-MAJOR • 74-BPM • THE-TREMOR-SPREADS • NEW-NETWORKS-FORM • FOLANA-MAKES-ROOM • STRANGERS-SINGING-IN-KEYS-SHE-NEVER-TAUGHT • DREAM-POP-INDIE-FOLK • CONTEMPLATIVE-EXPANDING-ETEREAL',
+    tags: ['ep227', 'minimax-music-2.6', 'real-production', 'threshold-arc', '2026-06-11', 'image-01', 'speech-2.8', 'character-locked', '9.0-10-audit'],
+    isRealProduction: true,
+  },
+
 ];
 
 // Prototype / early visual references
