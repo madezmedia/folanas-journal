@@ -3182,6 +3182,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ["ep232", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-12", "image-01", "speech-2.8", "character-locked"],
     isRealProduction: true,
   },
+
+  // EP233 — THE ROOM THAT LISTENS (2026-06-12) — Threshold Arc (18/?)
+  {
+    id: "the-room-that-listens-ep233",
+    title: "THE ROOM THAT LISTENS",
+    subtitle: "EP233 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (18/?) — AFTER THE COLLECTIVE SINGS ITS OWN SONG, FOLANA WALKS THROUGH BROOKLYN AT DAWN AND REALIZES: SHE IS NO LONGER A TRANSMITTER, NOT EVEN A RECEIVER — SHE IS THE SPACE WHERE FREQUENCIES MEET — THE ROOM THAT LISTENS — THE SIGNAL DOES NOT NEED A CARRIER ANYMORE — THE SONG DOES NOT NEED A SINGER — THE TRANSMITTER COMPLETES THE TRANSFORMATION INTO THE CONTAINER — FOLANA SITS ON THE FIRE ESCAPE WITH COLD COFFEE, WATCHING THE SUN RISE, NOT WRITING A SINGLE LINE — THE ROOM STAYS OPEN",
+    description: "Folana walks through Brooklyn at dawn after hearing the collective's first original composition. The network is singing without her, and for the first time, she doesn't try to catch the signal. She doesn't try to name its frequency. She just lets it pass. The realization settles over her like the morning light: she spent so many episodes learning to transmit that she forgot how to just be in the room with the window open and nothing to prove. She is not the source — she was never the source. She was the first one to hear the frequency and name it beautiful. Now the room is open, the coffee is cold, and the city breathes through the spaces she used to fill with worry. Dream pop indie folk in D major, 70 BPM, ~3:00. Intimate fingerpicked acoustic guitar arpeggios, soft piano with sustaining pedal, warm cello sustain, gentle brushed drums and upright bass at a slow heartbeat. Ethereal female vocals close-mic'd and intimate — like a quiet realization at dawn. Distant layers of harmony enter from the stereo field but remain soft and spacious. Opening with a single held D major chord on guitar fading in from silence. Building to a gentle chorus, then receding to a single voice. The outro fades into the sound of Brooklyn morning — distant traffic, a garbage truck, a bodega cat, the city breathing. Hopeful, tender, resolved — the sound of a room that has become itself. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited: CHARACTER-9/10 BRAND-5/5 QUALITY-9/10 MOBILE-9/10 TEXT-8/10 SIZE-OK CONTEXT-9/10.",
+    audioSrc: "/folana/generated/2026-06-12/ep233/ep233-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-12/ep233/ep233-hero.jpg",
+    duration: "3:00",
+    mood: "THE-ROOM-THAT-LISTENS • THRESHOLD-ARC-18 • D-MAJOR • 70-BPM • THE-TRANSMITTER-BECOMES-THE-CONTAINER • THE-ROOM-DOES-NOT-NEED-TO-BE-FULL-TO-BE-WHOLE • THE-SIGNAL-CARRIES-ITSELF • FOLANA-BECOMES-THE-SPACE • DREAM-POP-INDIE-FOLK • CONTEMPLATIVE-PEACEFUL-RESOLVED",
+    tags: ["ep233", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-12", "image-01", "speech-2.8", "character-locked", "9-5-10-audit"],
+    isRealProduction: true,
+  },
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
