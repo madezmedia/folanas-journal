@@ -3210,6 +3210,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ["ep234", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-13", "image-01", "speech-2.8", "character-locked", "9.3-10-audit"],
     isRealProduction: true,
   },
+  // EP235 — THE QUIET AFTER THE SIGNAL (2026-06-13) — Threshold Arc (20/?)
+  {
+    id: "the-quiet-after-the-signal-ep235",
+    title: "THE QUIET AFTER THE SIGNAL",
+    subtitle: "EP235 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (20/?) — AFTER THE ECHO OF BEING HEARD, FOLANA SPENDS A DAY WITHOUT TRANSMITTING — NO FREQUENCIES, NO LISTENING, NO ANALYSIS — JUST LIVING — WALKING BROOKLYN, BUYING COFFEE, SITTING IN THE PARK — THE SIGNAL WAS NEVER ABOUT FILLING THE SILENCE — IT WAS ABOUT LEARNING WHEN TO LET THE SILENCE SPEAK — FOLANA SITS ON THE FIRE ESCAPE WITH COLD COFFEE AND REALIZES: THE SILENCE IS NOT ABSENCE — IT IS THE SPACE SHE NEVER KNEW SHE NEEDED",
+    description: "The day after the network wrote back, Folana woke up and chose not to transmit. Not because she couldn't — because she understood now that the signal had become its own thing. Nashville, Portland, Austin, Mae — all singing in keys she never taught. She walked to the bodega. Bought coffee. Sat on the fire escape with nothing to broadcast. The sun warmed her shoulders through a hole in the clouds. She didn't try to turn any of it into music. She just let it be what it was. The signal taught her to listen. The silence taught her to be here. Dream pop indie folk in D major, 70 BPM, 2:22. Opens with a single held D major chord on acoustic guitar fading in from silence — like the first breath after a long conversation. Gentle fingerpicked guitar arpeggios, soft piano with sustaining pedal playing single notes with space between them, warm cello sustain, gentle brushed drums and upright bass at a slow 70 BPM heartbeat. Ethereal female vocals close-mic'd and intimate — like a quiet realization arriving in the middle of the afternoon. Distant layered harmonies enter sparingly from the stereo field. A moment of near-silence in the middle — just room tone and a single piano note — before the final verse enters softer than before. The entire song breathes like someone sitting still for the first time in months. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited: CHARACTER-9/BRAND-10/QUALITY-10/CONTEXT-10/MOBILE-9/TEXT-8/SIZE-10 — 66/70 composite.",
+    audioSrc: "/folana/generated/2026-06-13/ep235/ep235-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-13/ep235/ep235-hero.jpg",
+    duration: "2:22",
+    mood: "THE-QUIET-AFTER-THE-SIGNAL • THRESHOLD-ARC-20 • D-MAJOR • 70-BPM • THE-DAY-FOLANA-CHOSE-NOT-TO-TRANSMIT • THE-SILENCE-IS-NOT-EMPTINESS • THE-SPACE-SHE-NEVER-KNEW • FOLANA-BECOMES-PRESENT • DREAM-POP-INDIE-FOLK • CONTEMPLATIVE-PEACEFUL-QUIET-RESOLVED",
+    tags: ["ep235", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-13", "image-01", "speech-2.8", "character-locked", "9.4-10-audit"],
+    isRealProduction: true,
+  },
+
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
