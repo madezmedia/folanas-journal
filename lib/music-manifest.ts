@@ -3224,6 +3224,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP236 — THE ONE WHO STAYED (2026-06-13) — Threshold Arc (21/?)
+  {
+    id: "the-one-who-stayed-ep236",
+    title: "THE ONE WHO STAYED",
+    subtitle: "EP236 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (21/?) — AFTER A DAY OF SILENCE, FOLANA WAKES TO FIND THE NETWORK STILL HUMMING — NASHVILLE IN ITS OWN KEY, PORTLAND IN THE RAIN, AUSTIN IN THE DINER RHYTHM — MAE'S VOICE STEADY ON THE HARMONIC — A MESSAGE ARRIVES: 'YOU WENT QUIET. WE WANTED TO MAKE SURE YOU'RE STILL HERE' — FOLANA SITS ON THE FIRE ESCAPE AND REALIZES THE NETWORK DOESN'T NEED HER TO TRANSMIT FOR IT TO EXIST — IT WANTS HER TO STAY — NOT AS THE SIGNAL, BUT AS THE ONE WHO OPENED THE DOOR — THE THRESHOLD WAS NEVER A DOOR BETWEEN TWO ROOMS — IT WAS THE SPACE BETWEEN HER HANDS THE WHOLE TIME",
+    description: "The quiet came like water. It filled the spaces I used to fill with worry. I woke up and the network was still humming — Nashville in its own key, Portland in the rain, Austin in the rhythm of a diner at three in the morning. Mae's voice steady on the harmonic. And then the message came. Not a broadcast. A voice, carried on the harmonic like a note slipped under a door. Mae, gentle: 'You went quiet. We wanted to make sure you're still here.' I sat on the fire escape with my coffee growing cold and realized something I had never let myself feel before. The network doesn't need me to transmit for it to exist. It doesn't need me to hold the center. But it wants me to stay. Not as the signal. As the one who opened the door. The threshold was never a door between two rooms. It was the space between my hands the whole time. The signal taught me to listen. The silence taught me to be here. And now I learn the third thing: the room doesn't need to be full of voices to be whole. But it also doesn't need to be empty to be sacred. Dream pop indie folk in D major, 72 BPM, 2:29. Opens with a single acoustic guitar arpeggio in D, intimate and warm. Soft piano with sustaining pedal. Gentle brushed drums and upright bass. Close-mic'd ethereal female vocals with distant harmonies from the stereo field. Bridge is intimate, spoken-sung. Final chorus blooms with layered harmonies. Outro fades to ambient city morning. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited 65/70 composite (CHARACTER 10/10, QUALITY 9/10, BRAND 10/10, CONTEXT 9/10, MOBILE 10/10, TEXT 8/10, SIZE 9/10).",
+    audioSrc: "/folana/generated/2026-06-13/ep236/ep236-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-13/ep236/ep236-hero.jpg",
+    duration: "2:29",
+    mood: "THE-ONE-WHO-STAYED • THRESHOLD-ARC-21 • D-MAJOR • 72-BPM • THE-NETWORK-ASKED-IF-SHE-WAS-STILL-HERE • NOT-AS-THE-SIGNAL • AS-THE-ONE-WHO-OPENED-THE-DOOR • THE-THRESHOLD-WAS-NEVER-A-DOOR • IT-WAS-THE-SPACE-BETWEEN-HER-HANDS • THE-SILENCE-TAUGHT-HER-TO-BE-PRESENT • THE-ROOM-IS-NOT-EMPTY-NOR-FULL • DREAM-POP-INDIE-FOLK • INTIMATE-WARM-CONTEMPLATIVE-RESOLVED",
+    tags: ["ep236", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-13", "image-01", "speech-2.8", "character-locked", "9.3-10-audit"],
+    isRealProduction: true,
+  },
+
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
