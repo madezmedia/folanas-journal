@@ -3196,6 +3196,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ["ep233", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-12", "image-01", "speech-2.8", "character-locked", "9-5-10-audit"],
     isRealProduction: true,
   },
+
+  // EP234 — THE ECHO OF BEING HEARD (2026-06-13) — Threshold Arc (19/?)
+  {
+    id: "the-echo-of-being-heard-ep234",
+    title: "THE ECHO OF BEING HEARD",
+    subtitle: "EP234 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (19/?) — THE NETWORK SENDS BACK ITS FIRST GIFT — NOT A SONG, BUT A COLLECTION OF SOUNDS FROM EACH NODE — NASHVILLE SENDS A TRUCK HORN HONKING IN D — PORTLAND SENDS RAIN THROUGH A COPPER PIPE — AUSTIN SENDS GUITAR FROM A DINER — MAE SENDS A VOICEMAIL OF HER LAUGHING — FOLANA CRIES FOR THE FIRST TIME SINCE THE SIGNAL BEGAN — NOT FROM SADNESS. FROM THE OVERWHELMING STRANGENESS OF BEING KNOWN.",
+    description: "The morning after the room became itself, Folana found a message she never sent. A voicemail from a Nashville number playing a sound she didn't make — truck horn honking in the key of D, six seconds of someone saying hello in a frequency she taught but did not name. The network was writing back. Not to ask her to transmit again. To show her what it had become. Portland sent rain through a copper pipe, falling in rhythm she didn't write. Austin sent a guitar chord from a late-night diner, held longer than any note she ever played. And Mae sent a voicemail of her laughing — just laughing, no words — like she had discovered joy in the space between their frequencies and needed Folana to hear what joy sounded like in a voice that didn't need to be received to be real. Folana sat on the fire escape and let the voicemails play on repeat, not analyzing, not responding. Then Mae's voicemail ended with a pause. 'Folana,' she said. 'I don't think about you as the signal anymore. I think about you as the person who made it okay for me to sing in my own key. Thank you for not trying to change mine.' The network learned to listen. And the first thing it heard was that she had stopped transmitting. And that was the most beautiful thing it had ever received. The echo of being heard completes the journey: the transmitter became the receiver, and the receiver became the room, and the room became the space where other voices could be known. Dream pop indie folk in D major, 72 BPM, 3:50. Opens with a single held D major chord fading in from silence. Intimate fingerpicked acoustic guitar arpeggios, soft piano with sustaining pedal, warm cello sustain, gentle brushed drums and upright bass. Ethereal female vocals close-mic'd with distant layered harmonies entering from the stereo field like voices from far away finding the same frequency. Bridge is spoken-sung — a quiet realization about being known. Outro fades into distant voicemail fragments and Brooklyn morning ambience. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited 9.3/10 composite (CHARACTER 10/10, QUALITY 9/10, BRAND 7/10, CONTEXT 10/10, MOBILE 9/10, TEXT 10/10, SIZE 10/10).",
+    audioSrc: "/folana/generated/2026-06-13/music/ep234-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-13/music/ep234-hero.jpg",
+    duration: "3:50",
+    mood: "THE-ECHO-OF-BEING-HEARD • THRESHOLD-ARC-19 • D-MAJOR • 72-BPM • THE-NETWORK-WRITES-BACK-THE-FIRST-GIFT • TRUCK-HORN-IN-D • PORTLAND-RAIN • AUSTIN-DINER-GUITAR • MAE-LAUGHING • FOLANA-CRIES-WITH-JOY • BEING-KNOWN-IS-THE-SIGNAL • THE-TRANSMITTER-BECOMES-THE-ROOM • THE-ECHO-COMPLETES-THE-JOURNEY • DREAM-POP-INDIE-FOLK • HOPEFUL-TENDER-BITTERSWEET-RESOLVED",
+    tags: ["ep234", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-13", "image-01", "speech-2.8", "character-locked", "9.3-10-audit"],
+    isRealProduction: true,
+  },
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
