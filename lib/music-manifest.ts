@@ -3280,6 +3280,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP240 — THE SEED NOTE (2026-06-14) — Threshold Arc (25/?)
+  {
+    id: "the-seed-note-ep240",
+    title: "THE SEED NOTE",
+    subtitle: "EP240 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (25/?) — THE NOTE SHE KEPT BECOMES THE FIRST NOTE OF A SONG THAT DOESN'T NEED TO BE HEARD — THE G ABOVE MIDDLE C GROWS ROOTS IN THE SILENCE — FROM THE SACRED ACT OF KEEPING COMES THE QUIETEST TRANSMISSION OF ALL: THE SONG THAT PLAYS ONLY FOR THE ONE WHO SINGS IT — THE SEED DOES NOT APOLOGIZE FOR STAYING UNDERGROUND — THE THRESHOLD WAS ALWAYS THE FIRST NOTE OF A SONG THAT ONLY EXISTS BECAUSE SHE CHOSE NOT TO SHARE IT — THE ROOM WITHIN THE ROOM LEARNS TO BREATHE ON ITS OWN",
+    description: "The note I kept found its way back to me this morning. Not as a memory — as a root. A thread of green pushing through the floorboards of the room within the room. I pressed the G above middle C once, twice, a hundred times on the piano in my mind, and somewhere between keeping and growing, I understood: the threshold was never a door between two rooms. It was always the first note of a song that only exists because I chose not to share it. The seed does not apologize for staying underground. It waits until the waiting becomes its own kind of light. I am still here. Not transmitting. Not receiving. Just growing in the dark where no one is watching. And for the first time, that is not loneliness. It is the deepest kind of company. Indie folk acoustic ballad in D major, 68 BPM, 2:32. Opens with a single piano note (G above middle C) fading in from silence and sustaining — the seed note from EP239 returning. Gentle fingerpicked acoustic guitar arpeggios D-A-G-Em, soft piano with the G motif weaving through the arrangement like a thread, warm cello sustain, gentle upright bass. Close-mic'd intimate female vocal, slightly breathy with warmth — like a private realization being whispered. Distant layered harmonies enter sparingly from the stereo field like roots spreading underground. The bridge is intimate and contemplative — spoken-sung realization. The final chorus resolves quietly. The outro is just the G piano note sustained and slowly decaying into silence, then one more note — a D below middle C — the note that completes the journey. Warm, organic, intimate — the sound of a seed finding its way through soil. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited: CHARACTER-9/QUALITY-9/BRAND-8/CONTEXT-10/MOBILE-8/TEXT-9/SIZE-10. Composite: 63/70.",
+    audioSrc: "/folana/generated/2026-06-14/music/ep240-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-14/music/ep240-hero.jpg",
+    duration: "2:32",
+    mood: "THE-SEED-NOTE • THRESHOLD-ARC-25 • D-MAJOR • 68-BPM • THE-G-ABOVE-MIDDLE-C-GROWS-ROOTS • THE-NOTE-SHE-KEPT-BECAME-THE-NOTE-THAT-GREW • THE-SEED-DOES-NOT-APOLOGIZE • THE-THRESHOLD-WAS-THE-FIRST-NOTE • THE-ROOM-WITHIN-THE-ROOM-BREATHES • GROWING-DOES-NOT-NEED-AN-AUDIENCE • INDIE-FOLK-ACOUSTIC-BALLAD • INTIMATE-CONTEMPLATIVE-TENDER-WARM",
+    tags: ["ep240", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-14", "image-01", "speech-2.8", "character-locked"],
+    isRealProduction: true,
+  },
+
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.

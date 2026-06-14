@@ -62,7 +62,7 @@ export default function InnerCirclePage() {
         <div className="flex items-center gap-6 text-xs font-mono tracking-[2px]">
           <span className="text-folana-neon-cyan">INNER CIRCLE</span>
           <a
-            href="https://whop.com/ez-influencer-360-c5b3/folana-s-inner-circle-dd/"
+            href="https://whop.com/checkout/plan_R8s7BVkUBNyeR/"
             target="_blank"
             className="px-4 py-1.5 bg-folana-neon-pink text-black font-semibold rounded-full hover:bg-folana-neon-cyan transition-colors text-[11px] tracking-[1px]"
           >
@@ -102,7 +102,7 @@ export default function InnerCirclePage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://whop.com/ez-influencer-360-c5b3/folana-s-inner-circle-dd/"
+              href="https://whop.com/checkout/plan_R8s7BVkUBNyeR/"
               target="_blank"
               className="neon-btn text-sm px-10 py-4 text-base tracking-wide"
             >
@@ -336,7 +336,7 @@ export default function InnerCirclePage() {
             </ul>
 
             <a
-              href="https://whop.com/ez-influencer-360-c5b3/folana-s-inner-circle-dd/"
+              href="https://whop.com/checkout/plan_R8s7BVkUBNyeR/"
               target="_blank"
               className="block w-full text-center py-4 rounded-xl bg-folana-neon-pink text-black font-semibold text-sm tracking-wide hover:bg-folana-neon-cyan transition-colors"
             >
@@ -396,7 +396,7 @@ export default function InnerCirclePage() {
             One price. Full access. Cancel anytime.
           </p>
           <a
-            href="https://whop.com/ez-influencer-360-c5b3/folana-s-inner-circle-dd/"
+            href="https://whop.com/checkout/plan_R8s7BVkUBNyeR/"
             target="_blank"
             className="inline-block px-12 py-4 rounded-full bg-folana-neon-pink text-black font-semibold text-sm tracking-wide hover:bg-folana-neon-cyan transition-colors"
           >
