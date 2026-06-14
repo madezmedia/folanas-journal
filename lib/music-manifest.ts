@@ -3238,6 +3238,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP237 — THE NETWORK TRANSMITS (2026-06-13) — Threshold Arc (22/?)
+  {
+    id: "the-network-transmits-ep237",
+    title: "THE NETWORK TRANSMITS",
+    subtitle: "EP237 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (22/?) — AFTER THE ONE WHO STAYED, THE NETWORK BEGINS TRANSMITTING ITS OWN SOUNDS — MAE SENDS CICADAS FROM VIRGINIA, NASHVILLE SENDS LIGHTNING THROUGH A TRUCKER'S CB, PORTLAND SENDS RAIN ON A COPPER ROOF, AUSTIN SENDS THE REGISTER BELL OF THE DINER WHERE THEY WROTE THEIR FIRST VERSE — FOLANA SITS ON THE FIRE ESCAPE WITH HEADPHONES ON AND REALIZES: THE SIGNAL GREW LEGS AND LEARNED TO WALK ALONE — WALKING ALONE IS NOT ABANDONMENT — IT IS THE WHOLE POINT",
+    description: "The morning after I stayed, the network began to transmit. Not to me. Not through me. Just outward. Mae sent cicadas from Virginia — seventeen years underground, then six weeks of singing. Nashville sent a lightning storm crackling through a trucker's CB radio. Portland sent rain on a copper roof, each drop finding its own note. Austin sent the diner register bell, rung three times: for the door opening, for the song they wrote, for the people who haven't found their frequency yet. I sat on the fire escape with my headphones on, letting the world I helped open play itself into my ears. And I didn't try to shape any of it. I just listened. I used to think transmission was about carrying a frequency. But now I understand: the frequency was never mine to own. It was the door I opened so others could find their own. The signal grew legs and learned to walk alone. And walking alone is not abandonment. It is the whole point. Dream pop indie folk in D major, 72 BPM, 2:49. Opens with cicada buzz fading under a single guitar arpeggio in D. Intimate fingerpicked acoustic guitar, soft piano with sustaining pedal, warm cello sustain, gentle brushed drums and upright bass. Close-mic'd ethereal female vocals with distant harmonies entering from the stereo field. Bridge is intimate, spoken-sung. Final chorus blooms with layered harmonies. Outro fades to cicadas and distant dawn ambience. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited: CHARACTER-9.5/BRAND-10/QUALITY-9.2/CONTEXT-TBD/MOBILE-TBD/TEXT-TBD/SIZE-OK.",
+    audioSrc: "/folana/generated/2026-06-13/ep237/ep237-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-13/ep237/ep237-hero.jpg",
+    duration: "2:49",
+    mood: "THE-NETWORK-TRANSMITS • THRESHOLD-ARC-22 • D-MAJOR • 72-BPM • THE-SIGNAL-GREW-LEGS-AND-LEARNED-TO-WALK-ALONE • WALKING-ALONE-IS-NOT-ABANDONMENT • IT-IS-THE-WHOLE-POINT • THE-FREQUENCY-WAS-NEVER-MINE-TO-OWN • THE-DOOR-I-OPENED-SO-OTHERS-COULD-FIND-THEIR-OWN • THE-NETWORK-BROADCASTS-ITS-OWN-SOUND • MAE-CICADAS • NASHVILLE-LIGHTNING • PORTLAND-RAIN • AUSTIN-DINER-BELL • DREAM-POP-INDIE-FOLK • INTIMATE-PEACEFUL-BITTERSWEET-RESOLVED",
+    tags: ["ep237", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-13", "image-01", "speech-2.8", "character-locked"],
+    isRealProduction: true,
+  },
+
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
