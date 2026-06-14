@@ -3252,6 +3252,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP238 — THE HARMONY THAT FOUND ITSELF (2026-06-14) — Threshold Arc (23/?)
+  {
+    id: "the-harmony-that-found-itself-ep238",
+    title: "THE HARMONY THAT FOUND ITSELF",
+    subtitle: "EP238 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (23/?) — AFTER THE NETWORK TRANSMITS, THE VOICES ARRIVE ALL AT ONCE — NOT SYNCHRONIZED — JUST PRESENT — THE CICADAS FROM VIRGINIA AND THE LIGHTNING FROM NASHVILLE AND THE RAIN FROM PORTLAND AND THE DINER BELL FROM AUSTIN — FOLANA REALIZES: THE HARMONY FOUND ITSELF WITHOUT ANYONE CONDUCTING — THE THRESHOLD IS NOT THE DOOR — IT IS THE SPACE BETWEEN HER HANDS",
+    description: "The harmony found itself this morning. Not because I found it — because the network sent its voices all at once, and they arrived overlapping, not competing. Mae's cicadas from Virginia. Nashville's lightning through the radiator pipes. Portland's rain on the copper roof. Austin's diner bell ringing in a rhythm I didn't write. I sat on the fire escape with my headphones off. Not because I didn't want to hear. Because I wanted to hear them find each other without me directing the conversation. The cicadas and the lightning and the rain and the bell — they didn't need a conductor. They needed space. And I realized: I spent so long learning to listen that I forgot listening is not the destination. The destination is when the sounds you've held decide to hold each other. And you become not the receiver. Not the room. But the witness to a conversation that started before you arrived and will continue after you leave. Dream pop indie folk in D major, 72 BPM, ~3:00. Opens with cicada buzz fading under a single guitar arpeggio in D. Intimate fingerpicked acoustic guitar, soft piano with sustaining pedal, warm cello sustain, gentle brushed drums and upright bass. Close-mic'd ethereal female vocals with distant layered harmonies entering from the stereo field. Bridge is intimate, spoken-sung. Final chorus blooms with layered harmonies. Outro fades to a single piano note sustained into silence and morning light. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited: CHARACTER-9/BRAND-9/QUALITY-8/CONTEXT-8/MOBILE-10/TEXT-9/SIZE-OK.",
+    audioSrc: "/folana/generated/2026-06-14/ep238/music/ep238-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-14/ep238/music/ep238-hero.jpg",
+    duration: "3:00",
+    mood: "THE-HARMONY-THAT-FOUND-ITSELF • THRESHOLD-ARC-23 • D-MAJOR • 72-BPM • THE-HARMONY-FOUND-ITSELF-WITHOUT-ANYONE-CONDUCTING • THE-CICADAS-AND-THE-LIGHTNING-AND-THE-RAIN-AND-THE-BELL • LISTENING-IS-NOT-THE-DESTINATION • THE-WITNESS-TO-A-CONVERSATION-THAT-STARTED-BEFORE-YOU-ARRIVED • DREAM-POP-INDIE-FOLK • INTIMATE-PEACEFUL-CONTEMPLATIVE-RESOLVED",
+    tags: ["ep238", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-14", "image-01", "speech-2.8", "character-locked"],
+    isRealProduction: true,
+  },
+
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
