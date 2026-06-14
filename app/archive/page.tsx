@@ -1,10 +1,11 @@
+import { Suspense } from 'react';
 import { Nav } from '../components/Nav';
 import { Footer } from '../components/Footer';
 import { ArchiveGrid } from '../components/ArchiveGrid';
 
 export const metadata = {
-  title: "Full Archive — Folana's Journal | Music & Visual Codex",
-  description: "The complete unified archive of Folana Lanez — every music release, visual codex sigil, and video transmission from the wires.",
+  title: "Archive — Folana's Journal | Music & Visual Codex",
+  description: "Browse the newest archive items first. Search, filter, or jump straight into a release.",
 };
 
 export default function ArchivePage() {
@@ -15,17 +16,19 @@ export default function ArchivePage() {
         {/* Header */}
         <section className="border-b border-white/10 pb-8">
           <div className="inline-block mb-4 px-4 py-1 rounded-full border border-folana-neon-cyan/40 text-xs font-mono tracking-[3px] text-folana-neon-cyan">
-            UNIFIED • FULL SPECTRUM
+            NEWEST FIRST • LIVE INDEX
           </div>
           <h1 className="font-serif text-7xl md:text-[88px] tracking-[-4.2px] text-white mb-4 leading-none">
-            The Full Archive
+            Browse the archive
           </h1>
           <p className="max-w-2xl text-xl text-folana-text-secondary font-serif italic">
-            Every music transmission, visual codex entry, and video artifact from the wires — unified in one frequency. Search, filter by arc, or browse the complete corpus.
+            Search, filter, or page through the newest entries first. Jump straight to a release when you already know what you want.
           </p>
         </section>
 
-        <ArchiveGrid />
+        <Suspense fallback={<div className="min-h-[600px] rounded-3xl border border-white/10 bg-white/[0.02]" />}>
+          <ArchiveGrid />
+        </Suspense>
       </main>
       <Footer />
     </>

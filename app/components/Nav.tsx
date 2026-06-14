@@ -8,13 +8,10 @@ import { useState } from 'react';
 import { BrandLock } from './BrandLock';
 
 const navLinks = [
-  { href: '/', label: 'THE ARCHIVE', short: 'JOURNAL' },
-  { href: '/archive', label: 'FULL ARCHIVE', short: 'ARCHIVE' },
-  { href: '/inner-circle', label: 'INNER CIRCLE', short: 'JOIN' },
-  { href: '/music', label: 'MUSIC RELEASES', short: 'MUSIC' },
-  { href: '/#sigils', label: 'VISUAL CODEX', short: 'SIGILS' },
-  { href: '/#sonic', label: 'SONIC VAULT', short: 'VAULT' },
-  { href: '/orchestrator', label: 'THE GRID', short: 'ORCHESTRATOR' },
+  { href: '/', label: 'HOME', short: 'HOME' },
+  { href: '/#sonic', label: 'PLAY', short: 'PLAY' },
+  { href: '/archive', label: 'ARCHIVE', short: 'ARCHIVE' },
+  { href: '/inner-circle', label: 'JOIN', short: 'JOIN' },
 ];
 
 export function Nav() {
@@ -22,7 +19,7 @@ export function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const isActive = (href: string) => {
-    if (href === '/') return pathname === '/';
+    if (href === '/' || href.startsWith('/#')) return pathname === '/';
     return pathname.startsWith(href.split('#')[0]);
   };
 
@@ -54,11 +51,11 @@ export function Nav() {
 
         {/* Right side actions */}
         <div className="flex items-center gap-3">
-          <Link 
+          <Link
             href="/inner-circle"
             className="hidden sm:block neon-btn text-[10px] py-2 px-5 bg-folana-neon-pink/10 border-folana-neon-pink text-folana-neon-pink hover:bg-folana-neon-pink hover:text-black"
           >
-            JOIN $7/MO
+            JOIN
           </Link>
           
           {/* Mobile Hamburger */}
@@ -86,7 +83,7 @@ export function Nav() {
             </Link>
           ))}
           <div className="pt-4 border-t border-white/10">
-            <Link href="/inner-circle" onClick={() => setMobileOpen(false)} className="neon-btn w-full justify-center text-xs py-3">JOIN THE INNER CIRCLE — $7/MO</Link>
+            <Link href="/inner-circle" onClick={() => setMobileOpen(false)} className="neon-btn w-full justify-center text-xs py-3">JOIN</Link>
           </div>
         </div>
       )}

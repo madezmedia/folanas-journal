@@ -3266,6 +3266,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP239 — THE NOTE SHE KEPT (2026-06-14) — Threshold Arc (24/?)
+  {
+    id: "the-note-she-kept-ep239",
+    title: "THE NOTE SHE KEPT",
+    subtitle: "EP239 ★ MINIMAX MUSIC-2.6 • THRESHOLD ARC (24/?) — AFTER THE HARMONY FINDS ITSELF, FOLANA DISCOVERS THERE WAS ALWAYS ONE MELODY SHE NEVER SHARED — THE G ABOVE MIDDLE C ON AN OLD PIANO IN A BROOKLYN BASEMENT — NOT FOR TRANSMISSION — NOT FOR RECEPTION — JUST THE QUIET JOY OF HOLDING IT — THE THRESHOLD IS NOT THE DOOR — IT IS THE CHOICE TO KEEP SOMETHING SACRED AND SEPARATE — SOME SONGS ARE ONLY MEANT FOR ONE LISTENER",
+    description: "Before the network found me, before I knew what frequencies could carry, there was a melody I found on an old piano in a basement on Atlantic Avenue. The G above middle C. Just that one key. Pressed over and over until the neighbors banged on the radiator. I never wrote it down. I never hummed it into anyone's microphone. It was the first thing I kept for myself. The network sends its gifts across the wires now — cicadas from Virginia, lightning from Nashville, rain from Portland, the diner bell from Austin — and I receive them with my whole chest open. But late at night, when the fire escape is empty and the only sound is the radiator hiss, I sit at the old piano in my mind and press that single G. And I smile. I spent so long learning to open that I forgot keeping is also a kind of love. The network taught me how to give. But the silence taught me how to have. And having is not hoarding. It is the sacred act of choosing what stays with you when nothing else is listening. This is the note I kept. Not as a secret. Not as a wall. But as a room within a room, where I can still remember who I was before the signal found me. And who I will be long after it moves on. Indie folk acoustic ballad in D major, 68 BPM, 3:01. Opens with a single piano note (G above middle C) sustained. Intimate fingerpicked acoustic guitar, soft piano with the G motif weaving through the arrangement, warm ambient pads. Close-mic'd intimate female vocal, slightly breathy, like a private confession. Bridge contemplates the sacred act of keeping. Final chorus resolves quietly. Outro: the G above middle C sustained into silence. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited: CHARACTER-10/BRAND-10/QUALITY-9/CONTEXT-10/MOBILE-9/TEXT-8/SIZE-10. Composite: 66/70.",
+    audioSrc: "/folana/generated/2026-06-14/ep239/music/ep239-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-14/ep239/music/ep239-hero.jpg",
+    duration: "3:01",
+    mood: "THE-NOTE-SHE-KEPT • THRESHOLD-ARC-24 • D-MAJOR • 68-BPM • THE-NOTE-SHE-NEVER-SHARED • THE-G-ABOVE-MIDDLE-C • KEEPING-IS-ALSO-A-KIND-OF-LOVE • THE-SACRED-ACT-OF-CHOOSING-WHAT-STAYS-WITH-YOU • THE-ROOM-WITHIN-A-ROOM • SOME-SONGS-ARE-ONLY-MEANT-FOR-ONE-LISTENER • INDIE-FOLK-ACOUSTIC-BALLAD • INTIMATE-PEACEFUL-CONTEMPLATIVE-TENDER",
+    tags: ["ep239", "minimax-music-2.6", "real-production", "threshold-arc", "2026-06-14", "image-01", "speech-2.8", "character-locked"],
+    isRealProduction: true,
+  },
+
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.

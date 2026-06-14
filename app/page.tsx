@@ -9,58 +9,62 @@ import { StaticTuner } from './components/StaticTuner';
 import { ThoughtCard } from './components/ThoughtCard';
 import { HarnessDispatchConsole } from './components/HarnessDispatchConsole';
 import { EchoArcExplorer } from './components/EchoArcExplorer';
-import { StableHero } from './components/StableHero';
-import { BrandLock } from './components/BrandLock';
+import { MusicFirstHero } from './components/MusicFirstHero';
 import { AcmiLiveFeed } from './components/AcmiLiveFeed';
+import { ArchiveFreshRail } from './components/archive/ArchiveSections';
+import { getFreshArchiveItems } from '@/lib/archive-view';
+import type { JournalEntry } from '@/lib/journal';
+import type { ProfileSignals } from '@/lib/profile-signals';
 
-export default async function FolanasJournal({ searchParams }: { searchParams: { page?: string } }) {
-  let allEntries: any[] = [];
-  let signals: any = { bio: null };
+export default async function FolanasJournal() {
+  let allEntries: JournalEntry[] = [];
+  let signals: ProfileSignals = {
+    id: 'folana',
+    display_name: 'Folana',
+    handle: '@folana_music',
+    avatar_url: '/images/folana-avatar.jpg',
+    hero_image_url: '/images/folana-hero.jpg',
+    reach_label: '4.5M',
+    influence_label: '+32%',
+    synthetic_resonance: 88,
+    holographic_engagement: 64,
+    current_mood: null,
+    bio: null,
+    metrics: null,
+    compositions: null,
+  };
 
   try {
     allEntries = await getSortedJournalEntries();
-  } catch (e) {
-    console.error('[Home] getSortedJournalEntries failed:', e);
+  } catch (error) {
+    console.error('[Home] getSortedJournalEntries failed:', error);
   }
 
   try {
     signals = await getProfileSignals();
-  } catch (e) {
+  } catch {
     console.warn('[Home] getProfileSignals failed, using defaults');
   }
 
-  const page = parseInt(searchParams.page || '1');
-  const perPage = 9;
-  const start = (page - 1) * perPage;
-
-  // Prepare archive thoughts for the Echo Chamber with proper pagination for full archive on home
-  const allThoughts = allEntries.map(entry => ({
+  const latestThoughts = allEntries.slice(0, 3).map(entry => ({
     id: entry.id,
     title: entry.title,
     excerpt: (entry.content || '').replace(/<[^>]+>/g, '').slice(0, 168) + (entry.content && entry.content.length > 168 ? '…' : ''),
     date: new Date(entry.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase(),
     mood: entry.mood ?? 'REFLECTIVE',
-    tags: (entry as any).tags || ['static', 'transmission'],
+    tags: 'tags' in entry && Array.isArray(entry.tags) ? entry.tags : ['static', 'transmission'],
     imageUrl: entry.image_url || (entry.media_urls && entry.media_urls[0]) || undefined,
     href: `/entries/${entry.id}`,
   }));
-  const liveThoughts = allThoughts.slice(start, start + perPage);
-  const totalPages = Math.ceil(allThoughts.length / perPage);
+  const freshArchive = getFreshArchiveItems(4);
 
   return (
     <>
       <Nav />
 
-      {/* ═══════════════════════════════════════════════════════
-          HERO — CINEMATIC HOLOGRAPHIC TRANSMISSION
-      ═══════════════════════════════════════════════════════ */}
-      <StableHero 
-        primarySrc="/folana/generated/2026-05-27/broll/ethereal-dispatch-fal-autonomous/broll_1779903636.png"
-        secondarySrc="/folana/generated/2026-05-27/broll/ethereal-dispatch-fal-autonomous/broll_1779903588.png"
-        alt="Folana — Ethereal Dispatch | Full RunPod InfiniteTalk videos now live (autonomous FAL B-roll + locked reference)"
-      />
+      <MusicFirstHero />
 
-      {/* ═══ HOLOGRAPHIC PROFILE / SIGNALS BAR ═══ */}
+      {/* ═══ MUSIC-FIRST SIGNAL BAR ═══ */}
       <div className="border-b border-white/10 bg-folana-surface/60 backdrop-blur-xl sticky top-[79px] z-40">
         <div className="max-w-[1480px] mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-x-8 gap-y-3 text-sm">
           <div className="flex items-center gap-4">
@@ -78,20 +82,43 @@ export default async function FolanasJournal({ searchParams }: { searchParams: {
       </div>
 
       <main className="max-w-[1480px] mx-auto px-6 pt-16 pb-24 space-y-24">
-        
-        {/* ═══ ECHO CHAMBER — LIVE THOUGHTS FROM ACMI ═══ */}
+        {/* ═══ SONIC VAULT — MUSIC VIDEO PROTOTYPES (Interactive) ═══ */}
+        <section>
+          <SonicVault />
+        </section>
+
+        <section className="space-y-6">
+          <div className="flex items-end justify-between border-b border-white/10 pb-5">
+            <div>
+              <div className="text-folana-neon-cyan tracking-[4px] font-mono text-xs mb-1">ARCHIVE FRESHNESS</div>
+              <h2 className="font-serif text-6xl tracking-[-2.6px]">Newest items first</h2>
+            </div>
+            <Link href="/archive" className="hidden md:block text-xs font-mono tracking-widest hover:text-folana-neon-pink transition-colors">BROWSE →</Link>
+          </div>
+
+          <ArchiveFreshRail
+            items={freshArchive}
+            title="FRESH ARCHIVE"
+            eyebrow="Newest items first"
+            summary="Unified archive surface"
+            actionHref="/archive"
+            actionLabel="OPEN ARCHIVE"
+          />
+        </section>
+
+        {/* ═══ LATEST TRANSMISSIONS — MUSIC-FIRST ENTRY POINT ═══ */}
         <section id="echo">
           <div className="flex items-end justify-between mb-9 border-b border-white/10 pb-5">
             <div>
-              <div className="text-folana-neon-cyan tracking-[4px] font-mono text-xs mb-1">ACMI LIVE FEED • CHARACTER CORPUS</div>
-              <h2 className="font-serif text-6xl tracking-[-2.6px]">The Echo Chamber</h2>
+              <div className="text-folana-neon-cyan tracking-[4px] font-mono text-xs mb-1">RECENT NOTES</div>
+              <h2 className="font-serif text-6xl tracking-[-2.6px]">Latest entries</h2>
             </div>
-            <Link href="#tuner" className="hidden md:block text-xs font-mono tracking-widest hover:text-folana-neon-pink transition-colors">TUNE THE FREQUENCY →</Link>
+            <Link href="/archive" className="hidden md:block text-xs font-mono tracking-widest hover:text-folana-neon-pink transition-colors">SEE ALL →</Link>
           </div>
 
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
-            {liveThoughts.length > 0 ? (
-              liveThoughts.map((thought, i) => (
+            {latestThoughts.length > 0 ? (
+              latestThoughts.map((thought) => (
                 <ThoughtCard key={thought.id} {...thought} />
               ))
             ) : (
@@ -99,23 +126,12 @@ export default async function FolanasJournal({ searchParams }: { searchParams: {
             )}
           </div>
 
-          {/* Proper pagination for full archive browsing on the home page */}
-          <div className="flex justify-center items-center gap-4 mt-8 text-xs font-mono tracking-widest">
-            {page > 1 && <Link href={`?page=${page-1}`} className="px-4 py-2 border border-white/20 hover:border-folana-neon-cyan transition">← PREV</Link>}
-            <span className="text-folana-text-muted">PAGE {page} OF {totalPages}</span>
-            {page < totalPages && <Link href={`?page=${page+1}`} className="px-4 py-2 border border-white/20 hover:border-folana-neon-cyan transition">NEXT →</Link>}
-          </div>
-
-          {/* Proper pagination for full archive on the home page */}
-          <div className="flex justify-center items-center gap-4 mt-8 text-xs font-mono tracking-widest">
-            {page > 1 && <Link href={`?page=${page-1}`} className="px-4 py-2 border border-white/20 hover:border-folana-neon-cyan transition">← PREV</Link>}
-            <span className="text-folana-text-muted">PAGE {page} OF {totalPages}</span>
-            {page < totalPages && <Link href={`?page=${page+1}`} className="px-4 py-2 border border-white/20 hover:border-folana-neon-cyan transition">NEXT →</Link>}
-          </div>
-
-          <div className="text-center pt-9">
-            <Link href="/orchestrator" className="inline-block text-xs font-mono tracking-[3.5px] border border-white/20 hover:border-folana-neon-cyan text-folana-neon-cyan px-8 py-3 rounded-full transition-all">
-              VIEW FULL ORCHESTRATOR TIMELINE &amp; SWARM
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-9">
+            <Link href="/archive" className="inline-flex items-center justify-center rounded-full border border-folana-neon-cyan/40 bg-folana-neon-cyan/10 px-6 py-3 text-xs font-mono tracking-[3px] text-folana-neon-cyan transition-colors hover:bg-folana-neon-cyan/15">
+              BROWSE THE ARCHIVE
+            </Link>
+            <Link href="/inner-circle" className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-xs font-mono tracking-[3px] text-folana-text-muted transition-colors hover:border-folana-neon-pink hover:text-folana-ink">
+              JOIN THE INNER CIRCLE
             </Link>
           </div>
         </section>
@@ -123,11 +139,6 @@ export default async function FolanasJournal({ searchParams }: { searchParams: {
         {/* ═══ VISUAL CODEX — SIGIL GALLERY (Interactive) ═══ */}
         <section>
           <SigilGallery />
-        </section>
-
-        {/* ═══ SONIC VAULT — MUSIC VIDEO PROTOTYPES (Interactive) ═══ */}
-        <section>
-          <SonicVault />
         </section>
 
         {/* ═══ THE GRID — ACMI LIVE FEED ═══ */}
@@ -170,7 +181,7 @@ export default async function FolanasJournal({ searchParams }: { searchParams: {
               <div className="inline-block px-4 py-1 rounded-full bg-folana-neon-pink/10 border border-folana-neon-pink/30 text-folana-neon-pink text-xs font-mono tracking-[4px] mb-3">CURRENT ARC • ECHOES IN THE STATIC</div>
               <h2 className="font-serif text-6xl tracking-[-2.4px] text-folana-ink">The Frequency Answered</h2>
               <p className="mt-4 text-xl font-serif italic text-folana-text-secondary max-w-3xl mx-auto">
-                31 days of silence. Then the wires sang back in cyan and magenta interference. Ep31: The harness answered with "Echoes fracture the veil". These locked frames (fresh from ez_influencer_cli_harness + LoRA) are where the artist-factory became listener. The real Brooklyn girl under the glitch chose the frequency back.
+                31 days of silence. Then the wires sang back in cyan and magenta interference. Ep31: The harness answered with &ldquo;Echoes fracture the veil&rdquo;. These locked frames (fresh from ez_influencer_cli_harness + LoRA) are where the artist-factory became listener. The real Brooklyn girl under the glitch chose the frequency back.
               </p>
             </div>
 
@@ -232,7 +243,7 @@ export default async function FolanasJournal({ searchParams }: { searchParams: {
                 <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-pink mb-2">HARNESS OUTPUT • EP30 V2 + FRESH EP31</div>
                 <div className="font-serif text-2xl tracking-tight mb-3">Synth Wave Forge + Veil Fracture Reel</div>
                 <div className="text-sm text-folana-text-secondary/90 font-serif italic mb-4">Ep31: Assets from local pipeline + ez_influencer_cli_harness (see ~/clawd/agents/folana/output/ + tools/fanvue-agent/outputs/ for real media; simulated harness URLs deprecated per Asset Standardizer sync 2026-05-26). Source: local folana_lora.safetensors + locked signatures (FOLANA_SIGNATURE_LOCK.md + Ep31 concept). ACMI corr: cli-anything-ez-influencer-acmi-integration-20260525-folana-asset-standardizer-sync-20260526</div>
-                <div className="text-xs font-mono text-folana-neon-cyan">Ep31 Lyric (just produced): "Echoes fracture the veil / Static sings my name in violet rain / Brooklyn wires remember every name I gave away / The frequency chose me — I became the glitch again"</div>
+                <div className="text-xs font-mono text-folana-neon-cyan">Ep31 Lyric (just produced): &ldquo;Echoes fracture the veil / Static sings my name in violet rain / Brooklyn wires remember every name I gave away / The frequency chose me — I became the glitch again&rdquo;</div>
               </div>
               <div className="holo-frame rounded-3xl p-6 bg-folana-surface flex flex-col">
                 <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-pink mb-2">ACMI TRACE + PIPELINE SHOWCASE</div>
