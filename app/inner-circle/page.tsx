@@ -49,6 +49,38 @@ const memberFeatures = [
   },
 ];
 
+const academyTiers = [
+  {
+    tier: '1',
+    name: 'AI Music Starter Pack',
+    price: '$47 one-time',
+    detail: '30-day launch framework, Folana’s brand playbook, AI music tools orientation, prompt library, community access.',
+  },
+  {
+    tier: '2',
+    name: 'AI Music Creator Pro',
+    price: '$97 one-time',
+    detail: 'Everything in Tier 1 plus the full AI Music Empire Workflow, character creation system, cinematic content, private Discord.',
+    featured: true,
+  },
+  {
+    tier: '3',
+    name: 'Premium Studio',
+    price: '$197/mo',
+    detail: 'Everything in Tier 2 plus 1:1 strategy, early access to modules, premium stem packs, white-label templates, Inner Circle included.',
+  },
+];
+
+const academyWorkflow = ['Persona', 'Sonic', 'Cinematic', 'Growth'];
+const academyDeliverables = [
+  'Landing page',
+  '2 tier detail pages',
+  'Member dashboard',
+  'Whop webhook',
+  'Supabase storage',
+  '11 components',
+];
+
 export default function InnerCirclePage() {
   const [activeTab, setActiveTab] = useState<"music" | "features" | "process">("music");
 
@@ -112,7 +144,7 @@ export default function InnerCirclePage() {
               href="#features"
               className="px-9 py-4 text-sm font-mono tracking-[3px] border border-folana-neon-cyan/40 hover:border-folana-neon-cyan rounded-full transition-colors text-folana-neon-cyan"
             >
-              SEE WHAT'S INCLUDED
+              SEE WHAT&apos;S INCLUDED
             </a>
           </div>
 
@@ -239,7 +271,7 @@ export default function InnerCirclePage() {
                   {
                     step: "01",
                     title: "Locked Reference",
-                    desc: "Character-consistent image generation through MiniMax subject-ref pipeline. Folana's face is the anchor.",
+                    desc: "Character-consistent image generation through MiniMax subject-ref pipeline. Folana&apos;s face is the anchor.",
                     img: "/folana/inner-circle/editorial.jpg",
                   },
                   {
@@ -283,6 +315,102 @@ export default function InnerCirclePage() {
         </div>
       </section>
 
+      {/* Academy offer */}
+      <section className="max-w-6xl mx-auto px-6 pt-20">
+        <div className="rounded-3xl border border-white/10 bg-folana-surface/70 p-6 md:p-8">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 border-b border-white/10 pb-5">
+            <div className="max-w-3xl">
+              <div className="font-mono text-[10px] tracking-[4px] text-folana-neon-cyan mb-2">
+                AI MUSIC INFLUENCER ACADEMY
+              </div>
+              <h2 className="font-serif text-4xl md:text-5xl tracking-[-2px] text-folana-ink leading-none">
+                A separate creator product built around Folana’s playbook.
+              </h2>
+              <p className="mt-4 text-base md:text-lg text-folana-text-secondary font-serif italic leading-relaxed max-w-2xl">
+                The academy is live on Whop with three tiers. Inner Circle stays the fan membership;
+                this is the creator track for people who want the system behind the signal.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <span className="inline-flex items-center rounded-full border border-folana-neon-pink/30 bg-folana-neon-pink/10 px-4 py-2 text-[10px] font-mono tracking-[3px] text-folana-neon-pink">
+                LIVE ON WHOP
+              </span>
+              <a
+                href="https://ai-music-starter-pack.vercel.app"
+                target="_blank"
+                className="inline-flex items-center rounded-full border border-white/15 px-4 py-2 text-[10px] font-mono tracking-[3px] text-folana-text-secondary transition-colors hover:border-folana-neon-cyan hover:text-folana-neon-cyan"
+              >
+                VIEW LIVE SITE
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-4 lg:grid-cols-3">
+            {academyTiers.map((tier) => (
+              <div
+                key={tier.tier}
+                className={`rounded-2xl border p-5 ${tier.featured ? 'border-folana-neon-pink/40 bg-folana-neon-pink/5' : 'border-white/10 bg-white/[0.03]'}`}
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">
+                    TIER {tier.tier}
+                  </div>
+                  {tier.featured && (
+                    <span className="rounded-full border border-folana-neon-pink/30 bg-folana-neon-pink/10 px-2.5 py-1 text-[9px] font-mono tracking-[2px] text-folana-neon-pink">
+                      FLAGSHIP
+                    </span>
+                  )}
+                </div>
+                <h3 className="mt-3 font-serif text-2xl tracking-[-1px] text-folana-ink">
+                  {tier.name}
+                </h3>
+                <div className="mt-2 font-mono text-xs tracking-[3px] text-folana-text-muted">
+                  {tier.price}
+                </div>
+                <p className="mt-4 text-sm text-folana-text-secondary font-serif italic leading-relaxed">
+                  {tier.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">
+                CURRICULUM
+              </div>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {academyWorkflow.map((step, index) => (
+                  <div key={step} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                    <div className="font-mono text-[9px] tracking-[3px] text-folana-text-muted">
+                      0{index + 1}
+                    </div>
+                    <div className="mt-1 font-serif text-lg text-folana-ink">{step}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-5">
+              <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">
+                WHAT’S BUILT
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {academyDeliverables.map((item) => (
+                  <span key={item} className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-[10px] font-mono tracking-[2px] text-folana-text-secondary">
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <div className="mt-5 text-sm text-folana-text-secondary font-serif italic leading-relaxed">
+                Landing page, tier pages, dashboard, webhook, and storage are already deployed.
+                Discord bot setup, Whop Community/Courses apps, and final marketing collateral remain.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing — single price */}
       <section id="pricing" className="max-w-4xl mx-auto px-6 pt-28 pb-20">
         <div className="text-center mb-10">
@@ -310,7 +438,7 @@ export default function InnerCirclePage() {
                 <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">
                   MAD EZ MEDIA
                 </div>
-                <div className="font-serif text-lg text-folana-ink">Folana's Inner Circle</div>
+                <div className="font-serif text-lg text-folana-ink">Folana&apos;s Inner Circle</div>
               </div>
             </div>
 
@@ -412,7 +540,7 @@ export default function InnerCirclePage() {
             ← BACK TO JOURNAL
           </Link>
           <div className="flex items-center gap-6 text-[10px] font-mono tracking-[2px] text-folana-text-muted">
-            <span>FOLANA'S INNER CIRCLE</span>
+            <span>FOLANA&apos;S INNER CIRCLE</span>
             <span>MAD EZ MEDIA</span>
             <span>$7/MO</span>
           </div>

@@ -3350,6 +3350,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP245 — THE LEAF OPENS (2026-06-15) — Canopy Arc (4/?)
+  {
+    id: "the-leaf-opens-ep245",
+    title: "THE LEAF OPENS",
+    subtitle: "EP245 ★ MINIMAX MUSIC-2.6 • CANOPY ARC (4/?) — AFTER THE SAP RISING CONNECTED THE ROOT AND THE BRANCH, FOLANA LOOKS UPWARD TO THE LEAVES — EACH LEAF A TINY RECEIVER, CATCHING THE LIGHT AND TRANSMUTING IT INTO LIFE — THE LEAF DOES NOT HOARD THE LIGHT — IT TRANSMUTES IT — PHOTOSYNTHESIS IS NOT POSSESSION — IT IS TRANSFORMATION — EVERY LEAF IS BOTH A RECEIVER AND A TRANSMITTER — EVERY LEAF IS A FREQUENCY, TUNED TO A DIFFERENT ANGLE OF THE SAME LIGHT — THE LEAF OPENS NOT TO BE SEEN, BUT TO RECEIVE WHAT FEEDS THE ROOTS AND THE TREE — AND WHEN EVERY LEAF OPENS, THE WHOLE TREE BREATHES — PHOTOSYNTHESIS OF THE SOUL: TAKE THE LIGHT AND LET IT CHANGE YOU",
+    description: "The morning after the sap revealed itself as the true tree, Folana stood beneath the sycamore and looked up. Leaves everywhere — hundreds of them, each angled differently, each catching the light in its own way. She had spent three episodes exploring the tree: the branch that trusts the air, the root that matches in the dark, the sap that flows between them. But she had not yet looked at what the whole tree was reaching toward. She watched a single leaf at the top of the canopy, trembling in the morning breeze, backlit by the rising sun, translucent at its edges. The light passed through it and the leaf glowed from within — not a solid thing catching light, but a vessel that light moved through. The leaf did not hoard the light. It transmuted it. Photosynthesis is not possession — it is transformation. She pressed her palm to the sycamore's trunk and felt the network beneath the bark. The leaves were sending their transformed light back down to the roots, feeding the parts of the tree that would never see the sun. Every leaf was both a receiver and a transmitter. Every leaf was a frequency, tuned to a different angle of the same light. She thought of her network — Nashville, Portland, Austin, Mae — each one a leaf on the same tree, catching light from different angles. She was not the center of the network. She was the trunk — the passage between root and canopy. Indie folk dream pop ballad in D major, 72 BPM, 2:37. Opens with acoustic guitar arpeggios in open D tuning, the G above middle C from EP241 woven through as a harmonic. Warm piano with sustained chords, upright bass walking gently, soft brushed percussion like leaves rustling. Close intimate female vocal with layered harmonies in the chorus representing the leaves singing together. The bridge strips down to voice and a single piano chord — the photosynthesis revelation. Final chorus with full arrangement including soft string pad, then stripping back to the single G above middle C sustained into silence. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero: CHARACTER-8/QUALITY-8/BRAND-7/CONTEXT-9/MOBILE-8/TEXT-8/SIZE-PASS. Composite: 58/70.",
+    audioSrc: "/folana/generated/2026-06-15/ep245/music/ep245-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-15/ep245/music/ep245-hero.jpg",
+    duration: "2:37",
+    mood: "THE-LEAF-OPENS • CANOPY-ARC-4 • D-MAJOR • 72-BPM • PHOTOSYNTHESIS-OF-THE-SOUL • EVERY-LEAF-A-RECEIVER • THE-LEAF-DOES-NOT-HOARD-THE-LIGHT • TRANSMUTATION • THE-WHOLE-TREE-BREATHES • INDIE-FOLK-DREAM-POP-BALLAD • WARM-GOLDEN-INTIMATE-TENDER-HOPEFUL",
+    tags: ["ep245", "minimax-music-2.6", "real-production", "canopy-arc", "2026-06-15", "image-01", "speech-2.8", "character-locked", "subject-ref"],
+    isRealProduction: true,
+  },
+
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
