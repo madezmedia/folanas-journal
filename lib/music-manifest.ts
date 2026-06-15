@@ -3322,6 +3322,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP243 — ROOT DEPTH (2026-06-15) — Canopy Arc (2/?)
+  {
+    id: "root-depth-ep243",
+    title: "ROOT DEPTH",
+    subtitle: "EP243 ★ MINIMAX MUSIC-2.6 • CANOPY ARC (2/?) — AFTER THE FIRST BRANCH TRUSTED THE AIR, FOLANA DISCOVERS THE ROOTS MUST MATCH THE CANOPY IN THE DARK — BENEATH THE SYCAMORE THE CITY HUMS THROUGH CLAY AND PIPE AND BONE AND WIRE — THE BRANCH AND THE ROOT ARE HOLDING THE SAME SONG — ONE IN LIGHT, ONE IN DARK — BOTH REACHING TOWARD A HOME THEY CANNOT SEE BUT KNOW IS THERE — GROWING TALL MEANS GROWING DEEP FIRST",
+    description: "The first branch reached skyward in trust. But the roots had to match it in the dark. Folana sat beneath the sycamore and felt what grows where no one watches — through subway tunnels and fractured pipe, through clay and stone and the bones of old Brooklyn. The branch and the root, she realized, are holding the same song. One in light. One in dark. Both reaching toward a home they cannot see but know is there. The canopy arc continues — not upward this time, but down into the depths that make the reaching possible. The root does not apologize for staying underground. It pushes around what can't be known and finds its own way through the dark.",
+    audioSrc: "/folana/generated/2026-06-15/ep243/music/ep243-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-15/ep243/music/ep243-hero.jpg",
+    duration: "1:53",
+    mood: "ROOT-DEPTH • CANOPY-ARC-2 • D-MAJOR • 68-BPM • THE-ROOT-MATCHES-THE-CANOPY-IN-THE-DARK • THE-BRANCH-AND-THE-ROOT-HOLD-THE-SAME-SONG • ONE-IN-LIGHT-ONE-IN-DARK • GROWING-TALL-MEANS-GROWING-DEEP-FIRST • THE-ROOT-PUSHES-AROUND-WHAT-CANT-BE-KNOWN • INDIE-FOLK-ACOUSTIC-BALLAD • INTIMATE-CONTEMPLATIVE-GROUNDED-TENDER",
+    tags: ["ep243", "minimax-music-2.6", "real-production", "canopy-arc", "2026-06-15", "image-01", "speech-2.8", "character-locked", "subject-ref"],
+    isRealProduction: true,
+  },
+
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
