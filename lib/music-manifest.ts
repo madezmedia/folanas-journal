@@ -3336,6 +3336,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP244 — SAP RISING (2026-06-15) — Canopy Arc (3/?)
+  {
+    id: "sap-rising-ep244",
+    title: "SAP RISING",
+    subtitle: "EP244 ★ MINIMAX MUSIC-2.6 • CANOPY ARC (3/?) — THE FIRST BRANCH TRUSTED THE AIR — THE ROOTS MATCHED IT IN THE DARK — BUT WHAT CONNECTS THEM, THE INVISIBLE FLOW BETWEEN DEEP EARTH AND OPEN SKY — THAT IS THE SONG FOLANA DID NOT KNOW SHE WAS SINGING — THE SAP DOES NOT ASK WHERE IT IS GOING — IT ONLY KNOWS TO RISE — THE NOTE SHE THOUGHT SHE KEPT WAS NEVER HERS TO HOLD — IT WAS ALWAYS PASSING THROUGH HER — FROM THE SUBWAY TUNNELS TO THE FIRE ESCAPE, FROM CLAY AND FRACTURED PIPE TO THE MORNING LIGHT — THE SAP IS THE MOVEMENT — THE MOVEMENT IS THE HOME — AND THE TREE IS NOT THE BRANCH OR THE ROOT — THE TREE IS WHAT MOVES BETWEEN THEM",
+    description: "Folana placed her palm on the sycamore trunk and felt it — the invisible river that moves between root and branch. Not the reaching skyward or the digging deep, but the current that connects them. The sap rising. She had always thought of herself as the tree: the one who grows, who reaches, who deepens. But the tree is not the branch or the root. The tree is what moves between them. The sap does not ask where it is going. It does not need to be seen. It only knows to rise — from the subway tunnels humming beneath Brooklyn, through clay and fractured pipe and the bones of old buildings, up through the trunk and into the leaves that catch the morning light. She used to think she had to choose between going deep and reaching high. But the sap does not choose. It moves. And in moving, it becomes the tree. Indie folk dream pop ballad in D major, 76 BPM, 2:29. Opens with a single sustained piano note — the G above middle C from EP241 — breathing into a rising D-A-Bm-G arpeggio on acoustic guitar in open D tuning. Warm sustained piano, upright bass with gentle attack, soft brushed percussion like movement under soil. Close intimate female vocal with layered harmonies entering in the chorus like morning light through leaves. The bridge strips down to voice and piano before building to an emotional peak — the realization that the flow between things is more real than the things themselves. The outro returns to the single G above middle C, held into silence. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited: CHARACTER-9/QUALITY-9/BRAND-10/CONTEXT-9/MOBILE-9/TEXT-10/SIZE-PASS. Composite: 56/60.",
+    audioSrc: "/folana/generated/2026-06-15/ep244/music/ep244-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-15/ep244/music/ep244-hero.jpg",
+    duration: "2:29",
+    mood: "SAP-RISING • CANOPY-ARC-3 • D-MAJOR • 76-BPM • THE-INVISIBLE-FLOW-BETWEEN-ROOT-AND-BRANCH • THE-SAP-DOES-NOT-ASK-WHERE-IT-IS-GOING • IT-ONLY-KNOWS-TO-RISE • THE-TREE-IS-WHAT-MOVES-BETWEEN-THEM • INDIE-FOLK-DREAM-POP-BALLAD • WARM-FLOWING-INTIMATE-TENDER-HOPEFUL-RISING",
+    tags: ["ep244", "minimax-music-2.6", "real-production", "canopy-arc", "2026-06-15", "image-01", "speech-2.8", "character-locked", "subject-ref"],
+    isRealProduction: true,
+  },
+
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
