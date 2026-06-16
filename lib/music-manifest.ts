@@ -3363,6 +3363,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ["ep245", "minimax-music-2.6", "real-production", "canopy-arc", "2026-06-15", "image-01", "speech-2.8", "character-locked", "subject-ref"],
     isRealProduction: true,
   },
+  // EP246 — THE CROWN EXPANDS (2026-06-16) — Canopy Arc (5/?)
+  {
+    id: "the-crown-expands-ep246",
+    title: "THE CROWN EXPANDS",
+    subtitle: "EP246 • MINIMAX MUSIC-2.6 • CANOPY ARC (5/?)",
+    description: "The crown of the sycamore pushes outward into the morning air — new green at every tip, each branch reaching in a different direction, each leaf a different angle on the same light. Folana presses her palm to the trunk and feels the life moving upward, feeding the edges of the canopy where the tree is becoming something it has never been before. She thinks of Mae, Vince, Tomás — each a branch reaching from the trunk she has become. The crown expands: not to be seen, because the light is there. Indie folk dream pop ballad (3:12, D major, 70 BPM) with warm fingerpicked acoustic guitar, gentle piano, intimate female vocals with layered harmonies — the G above middle C woven through as the connecting motif of the Canopy Arc.",
+    audioSrc: "/folana/generated/2026-06-16/ep246/music/ep246-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-16/ep246/music/ep246-hero_001.jpg",
+    duration: "3:12",
+    mood: "EXPANSIVE • WARM • REACHING",
+    tags: ["ep246", "minimax-music-2.6", "real-production", "canopy-arc", "2026-06-16", "image-01", "speech-2.8", "character-locked", "subject-ref"],
+    isRealProduction: true,
+  },
 
 ];
 // Prototype / early visual references
