@@ -3403,6 +3403,20 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     isRealProduction: true,
   },
 
+  // EP249 — THE UNDERSTORY (2026-06-16) — Canopy Arc (8/?)
+  {
+    id: "the-understory-ep249",
+    title: "THE UNDERSTORY",
+    subtitle: "EP249 ★ MINIMAX MUSIC-2.6 • CANOPY ARC (8/?) — AFTER THE KNOT FORMED BETWEEN THE SYCAMORE AND THE OAK, FOLANA FINALLY LOOKED DOWNWARD — BENEATH THE JOINED CANOPY, A WORLD HAD BEEN GROWING IN THE SHELTER OF THEIR CONNECTION — FERNS, MOSS, SEEDLINGS — THE UNDERSTORY — THE LAYER OF QUIET GROWTH THAT HAPPENS IN THE SPACE THAT CONNECTION CREATES — THE CANOPY IS NOT AN END — IT IS A BEGINNING — EVERY TREE THAT GROWS TO THE SKY CREATES SPACE FOR A SMALLER TREE TO TRY — THE UNDERSTORY DOES NOT COMPETE WITH THE CANOPY — IT COMPLETES IT — THE FOREST IS NOT THE TREES — THE FOREST IS THE SPACE BETWEEN THEM, FILLED WITH WAITING GROWTH",
+    description: "After the knot formed — after the sycamore and oak learned to share each other's weight — Folana looked down. She had spent so long following the tree upward: the root, the sap, the leaf, the crown, the branch that reached for another, the knot that held. But beneath the joined canopy, something else was happening. On the forest floor, where the filtered light fell in patches of gold and shadow, tiny plants were growing. Ferns uncurling their fiddleheads. Moss spreading across the bark like slow velvet. Seedlings — sycamore and oak seedlings — reaching for the light that made it through the canopy above. She knelt beside a tiny oak sapling, no taller than her hand, and felt the weight of what she was seeing. The canopy was not an end. It was a beginning. Every tree that grew to the sky created a space for a smaller tree to try. Every connection she made — with Mae, with Vince, with Tomás — created an understory — a space where smaller, quieter connections could take root and wait. The understory does not compete with the canopy. It completes it. It is the nursery of the future forest. And one day, when a gap opens in the canopy above, the seedlings will not hesitate. They have been waiting in the patience of the understory, gathering light in dappled pieces, growing slowly, surely, toward the moment that will be theirs. Folana pressed her palm to the soil and felt the whole network breathing — the canopy above, the roots below, and the understory in between. Indie folk dream pop acoustic ballad (2:20, D major, 70 BPM). Opens with a single guitar note — the G above middle C — joined by the whisper of leaves. Warm fingerpicked acoustic guitar in open D tuning, gentle piano with sustained chords, warm cello sustain, upright bass, soft brushed percussion like leaves rustling underfoot. Close intimate female vocal with layered harmonies in the chorus representing the voices of the understory. Bridge is intimate and spoken-sung — the revelation that the network is not only the visible connections but the quiet growth beneath. Coda: the G above middle C and the oak's lower G, two notes ringing together into the sound of wind through the understory. mmx music-2.6 + image-01 + speech-2.8-hd. Character locked via subject-ref. Hero audited: CHARACTER-7/QUALITY-8/BRAND-8/CONTEXT-10/MOBILE-8/TEXT-7/SIZE-PASS. Composite: 48/60.",
+    audioSrc: "/folana/generated/2026-06-16/ep249/music/ep249-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-16/ep249/music/ep249-hero.jpg",
+    duration: "2:20",
+    mood: "THE-UNDERSTORY • CANOPY-ARC-8 • D-MAJOR • 70-BPM • WHAT-GROWS-BENEATH-THE-CANOPY • THE-UNDERSTORY-DOES-NOT-COMPETE • IT-COMPLETES • THE-FOREST-IS-THE-SPACE-BETWEEN-TREES • THE-CANOPY-IS-TRUE-SO-THE-UNDERSTORY-GROWS • EVERY-CANOPY-MAKES-SPACE • INDIE-FOLK-DREAM-POP-ACOUSTIC-BALLAD • WARM-TENDER-HOPEFUL-PATIENT-WAITING",
+    tags: ["ep249", "minimax-music-2.6", "real-production", "canopy-arc", "2026-06-16", "image-01", "speech-2.8", "character-locked", "subject-ref"],
+    isRealProduction: true,
+  },
+
 ];
 // Prototype / early visual references
 // These should be presented as beautiful visual codex, not fake playable music videos.
