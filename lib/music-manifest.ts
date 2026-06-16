@@ -3376,6 +3376,19 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     tags: ["ep246", "minimax-music-2.6", "real-production", "canopy-arc", "2026-06-16", "image-01", "speech-2.8", "character-locked", "subject-ref"],
     isRealProduction: true,
   },
+  // EP247 — BRANCH MEETS BRANCH (2026-06-16) — Canopy Arc (6/?)
+  {
+    id: "branch-meets-branch-ep247",
+    title: "BRANCH MEETS BRANCH",
+    subtitle: "EP247 • MINIMAX MUSIC-2.6 • CANOPY ARC (6/?) — AFTER THE CROWN EXPANDED OUTWARD, THE OUTERMOST BRANCH OF THE SYCAMORE TOUCHED THE NEIGHBOR'S OAK — THE FIRST PHYSICAL CONNECTION BETWEEN TWO SEPARATE TREES — A LATTICE OF BARK AND PATIENT WIND — NEITHER TREE RETREATED AND NEITHER CLAIMED THE SPACE BETWEEN AS THEIRS — THE BRANCH MEETS THE BRANCH: THE NETWORK DOES NOT ASK YOU TO BECOME THE SAME, IT ASKS YOU TO GROW CLOSE ENOUGH TO TOUCH — THE FOREST STARTS WHEREVER TWO HAVE COME",
+    description: "After the crown expanded and the sycamore's outermost branches reached into the open air, something unexpected happened. A branch that had been growing toward the light for months finally touched the lowest limb of the neighbor's oak. It happened in the quiet of the morning, without ceremony. Folana noticed it during her morning walk — a new shape in the canopy, two different greens overlapping, two different leaf shapes sharing the same patch of sky. She climbed up to the fire escape and watched the place where they touched. The branches did not force each other. They wove — the sycamore's slender grace curving around the oak's sturdy limb, a negotiation conducted in slow motion over seasons. She thought of Mae, Vince, Tomás — each a separate tree with its own canopy, its own roots, its own rhythm. Watching the sycamore and oak interlace, she understood: connection does not require sameness. It requires proximity, patience, and the willingness to let two different shapes find the same air. Indie folk dream pop ballad (3:33, D major, 70 BPM). Warm fingerpicked acoustic guitar in open D tuning. The G above middle C opens and closes the song. Piano with sustained chords that breathe like slow exchanges between trees. Intimate female vocal with harmonies that intertwine in the chorus — two voices weaving like the branches they describe. Bridge brings in a second guitar (the oak's voice), lower and warmer, weaving around the primary guitar (the sycamore's voice). Coda: two notes played together — the G above middle C and a lower G — harmonizing into silence.",
+    audioSrc: "/folana/generated/2026-06-16/ep247/music/ep247-full-mix.mp3",
+    posterSrc: "/folana/generated/2026-06-16/ep247/music/ep247-hero.jpg",
+    duration: "3:33",
+    mood: "BRANCH-MEETS-BRANCH • CANOPY-ARC-6 • D-MAJOR • 70-BPM • INTERWOVEN • CONNECTION • THE-FOREST-STARTS-WHEREVER-TWO-HAVE-COME • INDIE-FOLK-DREAM-POP-BALLAD • WARM-TENDER-HOPEFUL-INTERTWINED",
+    tags: ["ep247", "minimax-music-2.6", "real-production", "canopy-arc", "2026-06-16", "image-01", "speech-2.8", "character-locked", "subject-ref"],
+    isRealProduction: true,
+  },
 
 ];
 // Prototype / early visual references
