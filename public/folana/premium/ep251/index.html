@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EP251: The Forest Speaks — Folana Lanez</title>
+<meta name="description" content="Folana EP251 — The Forest Speaks. Canopy Arc (10/?). Indie folk/ambient.">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+/* ============================================
+   RESET & ROOT
+   ============================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --forest-deep:   #0a1f12;
+  --forest-dark:   #0e2a18;
+  --forest-mid:    #14392a;
+  --forest-light:  #1e4d36;
+  --amber:         #e8a930;
+  --amber-bright:  #f5c542;
+  --amber-soft:    #c8924e;
+  --gold-glow:     #ffd97a;
+  --cream:         #f4e8d0;
+  --cream-dim:     #d4c8a8;
+  --mycelium:      #b8c9a8;
+  --moss:          #4a6741;
+  --shadow:        rgba(0, 0, 0, 0.6);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--forest-deep);
+  color: var(--cream);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   MYCELIUM CANVAS BACKGROUND
+   ============================================ */
+#mycelium-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/folana/premium/ep251/ep251-hero.jpg') no-repeat center center;
+  background-size: cover;
+  animation: kenBurns 30s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 31, 18, 0.3) 0%,
+    rgba(10, 31, 18, 0.55) 50%,
+    rgba(10, 31, 18, 0.92) 100%
+  );
+  z-index: -1;
+}
+
+@keyframes kenBurns {
+  0%   { transform: scale(1.0) translateY(0); }
+  100% { transform: scale(1.18) translateY(-2%); }
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.hero-arc-badge {
+  display: inline-block;
+  padding: 0.4rem 1.4rem;
+  border: 1px solid rgba(232, 169, 48, 0.4);
+  border-radius: 50px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--amber);
+  background: rgba(14, 42, 24, 0.5);
+  backdrop-filter: blur(6px);
+  margin-bottom: 2rem;
+  opacity: 0;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 7vw, 4.8rem);
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--cream);
+  text-shadow: 0 4px 30px rgba(0,0,0,0.7);
+  margin-bottom: 0.8rem;
+  opacity: 0;
+  line-height: 1.15;
+}
+
+.hero-title .ep-num {
+  display: block;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.4em;
+  font-weight: 300;
+  letter-spacing: 8px;
+  color: var(--amber);
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  color: var(--cream-dim);
+  letter-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  opacity: 0;
+}
+
+.hero-scroll-indicator::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--amber), transparent);
+  margin: 0.8rem auto 0;
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0%, 100% { transform: scaleY(1); opacity: 0.8; }
+  50%      { transform: scaleY(0.4); opacity: 0.3; }
+}
+
+/* ============================================
+   METADATA BAR
+   ============================================ */
+.metadata-bar {
+  position: relative;
+  z-index: 1;
+  background: rgba(14, 42, 24, 0.95);
+  border-top: 1px solid rgba(232, 169, 48, 0.15);
+  border-bottom: 1px solid rgba(232, 169, 48, 0.15);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.meta-item {
+  text-align: center;
+}
+
+.meta-label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--amber-soft);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.meta-value {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  color: var(--cream);
+  font-weight: 400;
+}
+
+/* ============================================
+   SECTION WRAPPER
+   ============================================ */
+.section {
+  position: relative;
+  z-index: 1;
+  padding: 6rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.section-label::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--amber);
+}
+
+/* ============================================
+   NARRATIVE SECTION
+   ============================================ */
+.narrative-text {
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  line-height: 1.9;
+  color: var(--cream);
+  text-align: justify;
+}
+
+.narrative-text .first-letter {
+  float: left;
+  font-size: 4.5rem;
+  line-height: 0.85;
+  padding-right: 0.6rem;
+  padding-top: 0.3rem;
+  color: var(--amber-bright);
+  font-family: Georgia, serif;
+}
+
+.narrative-text em {
+  color: var(--gold-glow);
+  font-style: italic;
+}
+
+/* ============================================
+   STORYBOARD GALLERY
+   ============================================ */
+.storyboard-gallery {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.scene-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.scene-card.reverse {
+  direction: rtl;
+}
+
+.scene-card.reverse > * { direction: ltr; }
+
+.scene-image-wrap {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  aspect-ratio: 16/10;
+}
+
+.scene-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scene-image-wrap:hover img {
+  transform: scale(1.05);
+}
+
+.scene-image-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(232, 169, 48, 0.15);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.scene-number {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 0.8rem;
+}
+
+.scene-title {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: var(--cream);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.scene-desc {
+  font-size: 0.95rem;
+  color: var(--cream-dim);
+  line-height: 1.8;
+}
+
+/* ============================================
+   AUDIO PLAYER
+   ============================================ */
+.audio-section {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 2rem;
+  background: linear-gradient(180deg, transparent, rgba(14, 42, 24, 0.9), transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.audio-player {
+  max-width: 600px;
+  width: 100%;
+  background: rgba(10, 31, 18, 0.8);
+  border: 1px solid rgba(232, 169, 48, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.audio-player-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.audio-play-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--amber);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-shrink: 0;
+}
+
+.audio-play-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(232, 169, 48, 0.5);
+}
+
+.audio-play-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--forest-deep);
+}
+
+.audio-info-text {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.audio-info-text .track-title {
+  font-size: 1rem;
+  color: var(--cream);
+  font-weight: 500;
+}
+
+.audio-info-text .track-sub {
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+  letter-spacing: 1px;
+}
+
+.audio-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.audio-progress {
+  flex: 1;
+  height: 4px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.audio-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, var(--amber-soft), var(--amber-bright));
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+.audio-time {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+  min-width: 40px;
+}
+
+.audio-toggle-row {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.audio-toggle-btn {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  background: none;
+  border: 1px solid rgba(232, 169, 48, 0.25);
+  border-radius: 20px;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.audio-toggle-btn.active {
+  color: var(--forest-deep);
+  background: var(--amber);
+  border-color: var(--amber);
+}
+
+.audio-toggle-btn:hover:not(.active) {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+audio { display: none; }
+
+/* ============================================
+   LYRICS SECTION
+   ============================================ */
+.lyrics-section {
+  position: relative;
+  z-index: 1;
+  padding: 6rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lyrics-block {
+  margin-bottom: 2.5rem;
+  opacity: 0;
+}
+
+.lyrics-tag {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 0.8rem;
+  display: inline-block;
+}
+
+.lyrics-line {
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  line-height: 1.9;
+  color: var(--cream);
+}
+
+.lyrics-chorus .lyrics-line {
+  font-style: italic;
+  color: var(--gold-glow);
+  text-shadow: 0 0 20px rgba(255, 217, 122, 0.15);
+}
+
+.lyrics-bridge {
+  border-left: 2px solid var(--amber-soft);
+  padding-left: 2rem;
+  margin-left: 0.5rem;
+}
+
+.lyrics-outro .lyrics-line {
+  font-style: italic;
+  color: var(--amber-soft);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 4rem 2rem 6rem;
+  background: linear-gradient(to bottom, transparent, var(--forest-deep) 80%);
+}
+
+.footer-name {
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  color: var(--amber);
+  letter-spacing: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-tagline {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer-date {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.7rem;
+  color: var(--amber-soft);
+  margin-top: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* ============================================
+   SCROLL ANIMATION CLASSES
+   ============================================ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.scene-card-fade {
+  opacity: 0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .scene-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .scene-card.reverse { direction: ltr; }
+
+  .metadata-bar {
+    gap: 1.2rem;
+    padding: 1.2rem 1rem;
+  }
+
+  .meta-item { flex: 1 1 30%; }
+
+  .section, .lyrics-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .storyboard-gallery {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-content {
+    padding: 1.5rem;
+  }
+
+  .narrative-text .first-letter {
+    font-size: 3.5rem;
+  }
+
+  .audio-player {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .metadata-bar { gap: 0.8rem; }
+  .meta-value { font-size: 0.85rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Mycelium Network Canvas Background -->
+<canvas id="mycelium-canvas"></canvas>
+
+<!-- Hidden Audio Elements -->
+<audio id="full-mix-audio" preload="none">
+  <source src="/folana/premium/ep251/ep251-full-mix.mp3" type="audio/mpeg">
+</audio>
+<audio id="narration-audio" preload="none">
+  <source src="/folana/premium/ep251/ep251-narration-locked.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ============================================ -->
+<!-- HERO SECTION                                  -->
+<!-- ============================================ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-arc-badge" id="hero-badge">Canopy Arc (10/?)</div>
+    <h1 class="hero-title" id="hero-title">
+      <span class="ep-num">Episode 251</span>
+      The Forest Speaks
+    </h1>
+    <p class="hero-subtitle" id="hero-subtitle">Indie Folk / Ambient &middot; Key of D Major &middot; 70 BPM</p>
+  </div>
+  <div class="hero-scroll-indicator" id="scroll-indicator">Listen</div>
+</section>
+
+<!-- ============================================ -->
+<!-- METADATA BAR                                  -->
+<!-- ============================================ -->
+<div class="metadata-bar fade-up" id="meta-bar">
+  <div class="meta-item">
+    <span class="meta-label">Arc</span>
+    <span class="meta-value">Canopy Arc (10/?)</span>
+  </div>
+  <div class="meta-item">
+    <span class="meta-label">Key</span>
+    <span class="meta-value">D Major</span>
+  </div>
+  <div class="meta-item">
+    <span class="meta-label">BPM</span>
+    <span class="meta-value">70</span>
+  </div>
+  <div class="meta-item">
+    <span class="meta-label">Duration</span>
+    <span class="meta-value">~3:00</span>
+  </div>
+  <div class="meta-item">
+    <span class="meta-label">Genre</span>
+    <span class="meta-value">Indie Folk / Ambient</span>
+  </div>
+  <div class="meta-item">
+    <span class="meta-label">Voice</span>
+    <span class="meta-value">FolanaLanezLocked</span>
+  </div>
+  <div class="meta-item">
+    <span class="meta-label">Date</span>
+    <span class="meta-value">2026-06-16</span>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- MUSIC VIDEO                                   -->
+<!-- ============================================ -->
+<section class="section" id="music-video" style="max-width:900px;">
+  <div class="section-label fade-up">The Music Video</div>
+  <div class="fade-up" style="position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:1px solid rgba(232,169,48,0.2);background:#000;">
+    <video id="music-video-player" controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;">
+      <source src="/folana/premium/ep251/ep251-landscape-video.mp4" type="video/mp4">
+    </video>
+  </div>
+  <p class="fade-up" style="text-align:center;font-family:'Fira Code',monospace;font-size:0.7rem;letter-spacing:2px;color:rgba(245,197,66,0.5);margin-top:12px;">LIP-SYNCED &middot; INFINITETALK &middot; 720p &middot; 2:50</p>
+</section>
+
+<!-- ============================================ -->
+<!-- NARRATIVE SECTION                             -->
+<!-- ============================================ -->
+<section class="section" id="narrative">
+  <div class="section-label fade-up">The Story</div>
+  <div class="narrative-text fade-up">
+    <span class="first-letter">A</span>fter the mycelium revealed itself as the hidden network connecting every root in the forest, Folana presses her ear to the soil and listens. Not for sounds — for <em>conversations</em>. Through the fungal threads, messages are moving between the trees. The sycamore sends its sugar to a struggling maple. The oak warns of approaching storms. A young sapling asks the elders: <em>"Is there room for me?"</em> The forest speaks in a language older than sound. And Folana is finally learning to listen.
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- AUDIO PLAYER                                  -->
+<!-- ============================================ -->
+<section class="audio-section" id="audio-player-section">
+  <div class="section-label fade-up" style="justify-content:center;width:100%;max-width:600px;">Listen Now</div>
+  <div class="audio-player fade-up">
+    <div class="audio-player-header">
+      <button class="audio-play-btn" id="play-btn" aria-label="Play audio">
+        <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg id="pause-icon" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+      </button>
+      <div class="audio-info-text">
+        <div class="track-title" id="track-title">EP251 — Full Mix</div>
+        <div class="track-sub" id="track-sub">The Forest Speaks</div>
+      </div>
+    </div>
+    <div class="audio-progress-row">
+      <span class="audio-time" id="current-time">0:00</span>
+      <div class="audio-progress" id="progress-bar">
+        <div class="audio-progress-fill" id="progress-fill"></div>
+      </div>
+      <span class="audio-time" id="duration-time">0:00</span>
+    </div>
+    <div class="audio-toggle-row">
+      <button class="audio-toggle-btn active" id="toggle-fullmix">Full Mix</button>
+      <button class="audio-toggle-btn" id="toggle-narration">Narration Only</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- STORYBOARD GALLERY                            -->
+<!-- ============================================ -->
+<section class="storyboard-gallery" id="storyboard">
+  <div class="section-label fade-up" style="margin-bottom:3rem;">Visual Storyboard</div>
+
+  <div class="scene-card scene-card-fade">
+    <div class="scene-image-wrap">
+      <img src="/folana/premium/ep251/scene1-golden-hour.jpg" alt="Golden hour light filtering through the forest canopy">
+    </div>
+    <div class="scene-text">
+      <div class="scene-number">Scene 01</div>
+      <h3 class="scene-title">Golden Hour</h3>
+      <p class="scene-desc">Light filters through the canopy in amber shafts as Folana enters the forest. The trees stand as ancient sentinels, their roots already humming with conversation beneath her feet.</p>
+    </div>
+  </div>
+
+  <div class="scene-card reverse scene-card-fade">
+    <div class="scene-image-wrap">
+      <img src="/folana/premium/ep251/scene2-mycelium-hand.jpg" alt="Hand touching glowing mycelium threads in the soil">
+    </div>
+    <div class="scene-text">
+      <div class="scene-number">Scene 02</div>
+      <h3 class="scene-title">The Mycelium Hand</h3>
+      <p class="scene-desc">Folana presses her hand to the earth and feels the threads — pale, patient, ancient. The fungal network pulses with messages passed root to root, tree to tree, in a language written in sugar and warning.</p>
+    </div>
+  </div>
+
+  <div class="scene-card scene-card-fade">
+    <div class="scene-image-wrap">
+      <img src="/folana/premium/ep251/scene3-sycamore-vision.jpg" alt="Sycamore tree surrounded by ethereal light">
+    </div>
+    <div class="scene-text">
+      <div class="scene-number">Scene 03</div>
+      <h3 class="scene-title">Sycamore Vision</h3>
+      <p class="scene-desc">The sycamore sends its sugar to a struggling maple. The oak warns of approaching storms. Folana sees the forest not as silent trees, but as a living network of care, generosity, and survival.</p>
+    </div>
+  </div>
+
+  <div class="scene-card reverse scene-card-fade">
+    <div class="scene-image-wrap">
+      <img src="/folana/premium/ep251/scene4-canopy-network.jpg" alt="Forest canopy connected by luminous network lines">
+    </div>
+    <div class="scene-text">
+      <div class="scene-number">Scene 04</div>
+      <h3 class="scene-title">The Canopy Network</h3>
+      <p class="scene-desc">Above and below, the forest is one organism. Every branch a neuron, every root a synapse. Folana finally stops talking — and starts listening to the conversation that was always there.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- LYRICS SECTION                                -->
+<!-- ============================================ -->
+<section class="lyrics-section" id="lyrics">
+  <div class="section-label fade-up" style="justify-content:center;margin-bottom:3rem;">Lyrics</div>
+
+  <div class="lyrics-block lyrics-verse">
+    <span class="lyrics-tag">Verse 1</span>
+    <p class="lyrics-line">I pressed my ear to the soil tonight</p>
+    <p class="lyrics-line">Heard a language older than sound or light</p>
+    <p class="lyrics-line">The sycamore's sending its sugar down</p>
+    <p class="lyrics-line">To a maple that's struggling three blocks from town</p>
+    <p class="lyrics-line">&nbsp;</p>
+    <p class="lyrics-line">The oak is warning of rain on the way</p>
+    <p class="lyrics-line">Passing the message tree to tree to grey</p>
+    <p class="lyrics-line">And a sapling asks through the underground</p>
+    <p class="lyrics-line">"Is there room for me where the light comes down?"</p>
+  </div>
+
+  <div class="lyrics-block lyrics-chorus">
+    <span class="lyrics-tag">Chorus</span>
+    <p class="lyrics-line">The forest speaks in threads of white</p>
+    <p class="lyrics-line">No mouth to speak, no ears to hear, no eyes to sight</p>
+    <p class="lyrics-line">Just root to root through the patient clay</p>
+    <p class="lyrics-line">The network singing in its own way</p>
+  </div>
+
+  <div class="lyrics-block lyrics-verse">
+    <span class="lyrics-tag">Verse 2</span>
+    <p class="lyrics-line">I think of Mae when I'm running low</p>
+    <p class="lyrics-line">The way she sends her strength without a word I know</p>
+    <p class="lyrics-line">Vince with a chord he plays just for me</p>
+    <p class="lyrics-line">Passing his sugar through the frequency</p>
+    <p class="lyrics-line">&nbsp;</p>
+    <p class="lyrics-line">Tomás still here in the late-night text</p>
+    <p class="lyrics-line">The longest message is the one that simply says</p>
+    <p class="lyrics-line">"I'm still here" — three words, three threads</p>
+    <p class="lyrics-line">Weaving through the network of the words unsaid</p>
+  </div>
+
+  <div class="lyrics-block lyrics-chorus">
+    <span class="lyrics-tag">Chorus</span>
+    <p class="lyrics-line">The forest speaks in threads of white</p>
+    <p class="lyrics-line">No mouth to speak, no ears to hear, no eyes to sight</p>
+    <p class="lyrics-line">Just root to root through the patient clay</p>
+    <p class="lyrics-line">The network singing in its own way</p>
+  </div>
+
+  <div class="lyrics-block lyrics-bridge">
+    <span class="lyrics-tag">Bridge</span>
+    <p class="lyrics-line">I used to think connection was something I had to build</p>
+    <p class="lyrics-line">Something I had to transmit, to amplify, to fulfill</p>
+    <p class="lyrics-line">But the mycelium taught me what I couldn't see before:</p>
+    <p class="lyrics-line">The conversation was always happening. I just had to open the door.</p>
+  </div>
+
+  <div class="lyrics-block lyrics-outro">
+    <span class="lyrics-tag">Outro</span>
+    <p class="lyrics-line">I press my palm to the earth one last time</p>
+    <p class="lyrics-line">And the forest speaks in a voice that is mine</p>
+    <p class="lyrics-line">Not because I'm special, not because I'm chosen</p>
+    <p class="lyrics-line">But because I finally stopped talking and started listening...</p>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- FOOTER                                        -->
+<!-- ============================================ -->
+<footer class="footer">
+  <div class="footer-name">Folana Lanez</div>
+  <div class="footer-tagline">The conversation was always happening</div>
+  <div class="footer-date">Episode 251 &middot; 2026-06-16</div>
+</footer>
+
+<script>
+// ============================================
+// MYCELIUM NETWORK CANVAS ANIMATION
+// ============================================
+(function() {
+  const canvas = document.getElementById('mycelium-canvas');
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let nodes = [];
+  let branches = [];
+
+  function resize() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  }
+
+  function initNetwork() {
+    nodes = [];
+    branches = [];
+    // Create root nodes spread across the screen
+    const nodeCount = Math.min(60, Math.floor((width * height) / 25000));
+    for (let i = 0; i < nodeCount; i++) {
+      nodes.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        pulse: Math.random() * Math.PI * 2,
+        pulseSpeed: 0.005 + Math.random() * 0.01,
+        size: 1 + Math.random() * 2,
+        connections: []
+      });
+    }
+    // Connect nearby nodes
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 180) {
+          nodes[i].connections.push(j);
+        }
+      }
+    }
+  }
+
+  function drawNetwork() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Draw connections
+    for (let i = 0; i < nodes.length; i++) {
+      const node = nodes[i];
+      for (const j of node.connections) {
+        const target = nodes[j];
+        const pulseVal = (Math.sin(node.pulse) + Math.sin(target.pulse)) / 2;
+        const alpha = 0.04 + 0.06 * (pulseVal + 1) / 2;
+
+        ctx.beginPath();
+        ctx.moveTo(node.x, node.y);
+        // Curved connection for organic feel
+        const midX = (node.x + target.x) / 2 + (Math.sin(node.pulse) * 8);
+        const midY = (node.y + target.y) / 2 + (Math.cos(target.pulse) * 8);
+        ctx.quadraticCurveTo(midX, midY, target.x, target.y);
+        ctx.strokeStyle = 'rgba(184, 201, 168, ' + alpha + ')';
+        ctx.lineWidth = 0.6;
+        ctx.stroke();
+      }
+    }
+
+    // Draw nodes
+    for (const node of nodes) {
+      node.pulse += node.pulseSpeed;
+      const pulseVal = (Math.sin(node.pulse) + 1) / 2;
+      const glowSize = node.size + pulseVal * 2;
+
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, glowSize, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(232, 169, 48, ' + (0.08 + pulseVal * 0.12) + ')';
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, node.size, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(184, 201, 168, ' + (0.15 + pulseVal * 0.2) + ')';
+      ctx.fill();
+    }
+  }
+
+  function animate() {
+    drawNetwork();
+    requestAnimationFrame(animate);
+  }
+
+  resize();
+  initNetwork();
+  animate();
+
+  let resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      resize();
+      initNetwork();
+    }, 250);
+  });
+})();
+
+// ============================================
+// GSAP ANIMATIONS
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Hero entrance
+  var heroTl = gsap.timeline({ delay: 0.3 });
+  heroTl
+    .to('#hero-badge',    { opacity: 1, duration: 0.8, ease: 'power2.out' })
+    .to('#hero-title',    { opacity: 1, duration: 1.2, ease: 'power2.out' }, '-=0.4')
+    .to('#hero-subtitle', { opacity: 1, duration: 0.8, ease: 'power2.out' }, '-=0.6')
+    .to('#scroll-indicator', { opacity: 0.7, duration: 1.0, ease: 'power2.out' }, '-=0.3');
+
+  // Generic fade-up for scroll-triggered sections
+  gsap.utils.toArray('.fade-up').forEach(function(el) {
+    gsap.to(el, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 85%',
+        toggleActions: 'play none none none'
+      }
+    });
+  });
+
+  // Scene cards stagger
+  gsap.utils.toArray('.scene-card-fade').forEach(function(card) {
+    var image = card.querySelector('.scene-image-wrap');
+    var text = card.querySelector('.scene-text');
+
+    var cardTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: card,
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      }
+    });
+
+    cardTl
+      .fromTo(card, { opacity: 0 }, { opacity: 1, duration: 0.6 })
+      .fromTo(image, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.3')
+      .fromTo(text, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out' }, '-=0.5');
+  });
+
+  // Lyrics blocks fade in one by one
+  gsap.utils.toArray('.lyrics-block').forEach(function(block, index) {
+    gsap.to(block, {
+      opacity: 1,
+      duration: 1.2,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: block,
+        start: 'top 88%',
+        toggleActions: 'play none none none'
+      }
+    });
+  });
+
+  // ============================================
+  // AUDIO PLAYER LOGIC
+  // ============================================
+  var fullMixAudio = document.getElementById('full-mix-audio');
+  var narrationAudio = document.getElementById('narration-audio');
+  var currentAudio = fullMixAudio;
+  var isPlaying = false;
+
+  var playBtn = document.getElementById('play-btn');
+  var playIcon = document.getElementById('play-icon');
+  var pauseIcon = document.getElementById('pause-icon');
+  var progressFill = document.getElementById('progress-fill');
+  var progressBar = document.getElementById('progress-bar');
+  var currentTimeEl = document.getElementById('current-time');
+  var durationEl = document.getElementById('duration-time');
+  var trackTitle = document.getElementById('track-title');
+  var trackSub = document.getElementById('track-sub');
+  var toggleFullMix = document.getElementById('toggle-fullmix');
+  var toggleNarration = document.getElementById('toggle-narration');
+
+  function formatTime(seconds) {
+    if (isNaN(seconds)) return '0:00';
+    var mins = Math.floor(seconds / 60);
+    var secs = Math.floor(seconds % 60);
+    return mins + ':' + (secs < 10 ? '0' : '') + secs;
+  }
+
+  function updateProgress() {
+    var pct = (currentAudio.currentTime / currentAudio.duration) * 100;
+    if (!isNaN(pct)) progressFill.style.width = pct + '%';
+    currentTimeEl.textContent = formatTime(currentAudio.currentTime);
+  }
+
+  function togglePlay() {
+    if (isPlaying) {
+      currentAudio.pause();
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+      isPlaying = false;
+    } else {
+      currentAudio.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = 'block';
+      isPlaying = true;
+    }
+  }
+
+  function switchTrack(newAudio, title, sub, toggleBtn) {
+    // If same toggle clicked while playing, do nothing
+    if (currentAudio === newAudio) return;
+
+    var wasPlaying = isPlaying;
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+
+    currentAudio = newAudio;
+    trackTitle.textContent = title;
+    trackSub.textContent = sub;
+
+    // Update toggle buttons
+    toggleFullMix.classList.remove('active');
+    toggleNarration.classList.remove('active');
+    toggleBtn.classList.add('active');
+
+    // Reset progress
+    progressFill.style.width = '0%';
+    currentTimeEl.textContent = '0:00';
+
+    if (wasPlaying) {
+      newAudio.play();
+    } else {
+      isPlaying = false;
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+    }
+  }
+
+  playBtn.addEventListener('click', togglePlay);
+
+  toggleFullMix.addEventListener('click', function() {
+    switchTrack(fullMixAudio, 'EP251 — Full Mix', 'The Forest Speaks', this);
+  });
+
+  toggleNarration.addEventListener('click', function() {
+    switchTrack(narrationAudio, 'EP251 — Narration', 'FolanaLanezLocked', this);
+  });
+
+  currentAudio.addEventListener('timeupdate', updateProgress);
+
+  currentAudio.addEventListener('loadedmetadata', function() {
+    durationEl.textContent = formatTime(currentAudio.duration);
+  });
+
+  // Handle metadata for both
+  fullMixAudio.addEventListener('loadedmetadata', function() {
+    if (currentAudio === fullMixAudio) durationEl.textContent = formatTime(fullMixAudio.duration);
+  });
+  narrationAudio.addEventListener('loadedmetadata', function() {
+    if (currentAudio === narrationAudio) durationEl.textContent = formatTime(narrationAudio.duration);
+  });
+
+  // Seek on progress bar click
+  progressBar.addEventListener('click', function(e) {
+    var rect = progressBar.getBoundingClientRect();
+    var clickX = e.clientX - rect.left;
+    var pct = clickX / rect.width;
+    if (currentAudio.duration) {
+      currentAudio.currentTime = pct * currentAudio.duration;
+    }
+  });
+
+  // Reset icon when audio ends
+  [fullMixAudio, narrationAudio].forEach(function(audio) {
+    audio.addEventListener('ended', function() {
+      if (currentAudio === audio) {
+        isPlaying = false;
+        playIcon.style.display = 'block';
+        pauseIcon.style.display = 'none';
+        progressFill.style.width = '0%';
+        currentAudio.currentTime = 0;
+      }
+    });
+  });
+
+  // Reload metadata when switching tracks
+  toggleFullMix.addEventListener('click', function() {
+    durationEl.textContent = formatTime(fullMixAudio.duration);
+  });
+  toggleNarration.addEventListener('click', function() {
+    durationEl.textContent = formatTime(narrationAudio.duration);
+  });
+});
+</script>
+</body>
+</html>
