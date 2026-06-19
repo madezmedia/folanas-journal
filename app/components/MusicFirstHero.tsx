@@ -23,23 +23,23 @@ export function MusicFirstHero() {
           <div className="space-y-8">
             <div className="inline-flex items-center gap-3 rounded-full border border-folana-neon-cyan/30 bg-folana-neon-cyan/10 px-4 py-1.5 text-[10px] font-mono tracking-[4px] text-folana-neon-cyan">
               <Disc3 size={12} />
-              MUSIC FIRST
+              RELEASE HUB
             </div>
 
             <div className="space-y-5">
-              <p className="font-mono text-[11px] tracking-[5px] text-folana-text-muted">START HERE / PLAY FIRST</p>
+              <p className="font-mono text-[11px] tracking-[5px] text-folana-text-muted">FEATURED FIRST / ARCHIVE SECOND / OPS THIRD</p>
               <h1 className="max-w-4xl font-serif text-6xl leading-[0.9] tracking-[-4.2px] text-white md:text-[92px]">
-                Start with the track.
+                Start with the latest release.
               </h1>
               <p className="max-w-2xl text-xl font-serif italic leading-relaxed text-folana-text-secondary md:text-[22px]">
-                Play the latest release first, then move into the vault or the archive. Less hunting, more listening.
+                The homepage now leads with the newest episode, the live cut, and the operational lanes that keep Folana moving.
               </p>
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a href="/folana/premium/ep251/" className="neon-btn inline-flex items-center justify-center gap-2 text-sm px-8 py-4" style={{ background: 'linear-gradient(135deg, #0a1f12, #1e4d36)', border: '1px solid rgba(232,169,48,0.5)' }}>
                 <Play size={15} />
-                ★ FEATURED: EP251 THE FOREST SPEAKS
+                ★ OPEN FEATURED: EP251 THE FOREST SPEAKS
               </a>
               <Link href="#sonic" className="neon-btn inline-flex items-center justify-center gap-2 text-sm px-8 py-4">
                 <Play size={15} />
