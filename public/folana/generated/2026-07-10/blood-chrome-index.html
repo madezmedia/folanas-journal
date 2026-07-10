@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLOOD & CHROME — Folana 2.0</title>
+<meta name="description" content="The death of the frequency and the birth of the new noise. Folana 2.0 creative rebrand.">
+<style>
+/* ============================================
+   BLOOD & CHROME — STYLES
+   Brutal cyberpunk meets art gallery
+   ============================================ */
+
+/* --- RESET & BASE --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #e8e8e8;
+  font-family: 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+::selection {
+  background: #8a1a1a;
+  color: #e8e8e8;
+}
+
+/* --- SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7a7a7a;
+}
+
+/* --- FILM GRAIN OVERLAY --- */
+#grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  animation: grain-shift 0.3s steps(4) infinite;
+}
+
+@keyframes grain-shift {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(-2px, 2px); }
+  50%  { transform: translate(2px, -2px); }
+  75%  { transform: translate(-1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* --- BLOOD DRIP VIGNETTE (edges of screen) --- */
+#vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(10,10,10,0.85) 100%),
+              radial-gradient(ellipse at 30% 0%, rgba(138,26,26,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 100%, rgba(138,26,26,0.06) 0%, transparent 60%);
+}
+
+/* --- THREE.JS CANVAS BACKGROUND --- */
+#three-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* --- TYPOGRAPHY --- */
+.display-font {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.mono-font {
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  letter-spacing: 0.04em;
+}
+
+.sans-font {
+  font-family: 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(3rem, 12vw, 8rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  letter-spacing: 0.03em;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  letter-spacing: 0.02em;
+}
+
+.section-label {
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #7a7a7a;
+  margin-bottom: 1rem;
+}
+
+/* --- SECTION BASE --- */
+.section {
+  position: relative;
+  z-index: 1;
+  padding: 6rem 8%;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 5%;
+  }
+}
+
+/* --- HERO --- */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: clamp(3.5rem, 15vw, 9rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #e8e8e8;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 0 60px rgba(198,40,40,0.15), 0 0 120px rgba(198,40,40,0.08);
+}
+
+.hero-title .blood {
+  color: #c62828;
+}
+
+.hero-title .chrome {
+  color: #b0b0b0;
+}
+
+.hero-title .ampersand {
+  color: #555;
+  font-style: italic;
+  font-size: 0.7em;
+  vertical-align: super;
+  line-height: 1;
+}
+
+.hero-subtitle {
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: clamp(0.8rem, 1.5vw, 1.1rem);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #7a7a7a;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-subtitle span {
+  display: inline-block;
+  animation: pulse-chrome 3s ease-in-out infinite;
+}
+
+@keyframes pulse-chrome {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.hero-tagline {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: #555;
+  font-style: italic;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #4a4a4a;
+  animation: bounce-up-down 2.5s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce-up-down {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-8px); }
+}
+
+/* --- DIAGNOSIS SECTION --- */
+#diagnosis {
+  position: relative;
+}
+
+.diagnosis-content {
+  max-width: 800px;
+}
+
+.diagnosis-content .lead {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  line-height: 1.5;
+  color: #b0b0b0;
+  margin-bottom: 2rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.diagnosis-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.diagnosis-list li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(74,74,74,0.3);
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.diagnosis-list li::before {
+  content: '✕';
+  color: #8a1a1a;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.diagnosis-list li .strike {
+  text-decoration: line-through;
+  color: #555;
+}
+
+.diagnosis-list li .highlight {
+  color: #c62828;
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-left: auto;
+}
+
+.death-quote {
+  margin-top: 3rem;
+  padding: 2rem;
+  border-left: 3px solid #8a1a1a;
+  background: linear-gradient(90deg, rgba(138,26,26,0.08), transparent);
+}
+
+.death-quote blockquote {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-style: italic;
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+.death-quote .attribution {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: #555;
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* --- NEW LEXICON SECTION --- */
+#lexicon {
+  position: relative;
+}
+
+.lexicon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 2rem 0;
+  max-width: 900px;
+}
+
+.lexicon-word {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: #e8e8e8;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(198,40,40,0.25);
+  background: rgba(198,40,40,0.04);
+  transition: all 0.3s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.lexicon-word::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(198,40,40,0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lexicon-word:hover {
+  border-color: #c62828;
+  background: rgba(198,40,40,0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(198,40,40,0.15);
+}
+
+.lexicon-word:hover::before {
+  opacity: 1;
+}
+
+.old-lexicon {
+  margin-top: 2rem;
+  max-width: 900px;
+}
+
+.old-lexicon-label {
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.old-lexicon-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.old-lexicon-words span {
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #4a4a4a;
+  text-decoration: line-through;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid rgba(74,74,74,0.2);
+  opacity: 0.5;
+}
+
+/* --- VISUAL DIRECTION --- */
+#visual-direction {
+  position: relative;
+}
+
+.visual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  max-width: 1000px;
+}
+
+.visual-item {
+  padding: 1.5rem;
+  border: 1px solid rgba(74,74,74,0.25);
+  background: rgba(10,10,10,0.6);
+  backdrop-filter: blur(4px);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.visual-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  transition: border-color 0.4s ease;
+  pointer-events: none;
+}
+
+.visual-item:hover {
+  border-color: rgba(198,40,40,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.visual-item:hover::after {
+  border-color: rgba(198,40,40,0.15);
+}
+
+.visual-item .v-label {
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #7a7a7a;
+  margin-bottom: 0.5rem;
+}
+
+.visual-item .v-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.2rem;
+  color: #e8e8e8;
+}
+
+.visual-item .v-desc {
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+/* --- SLIDESHOW / GALLERY (auto-advancing brand story) --- */
+#story-slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  overflow: hidden;
+  min-height: 300px;
+  border: 1px solid rgba(74,74,74,0.2);
+  background: rgba(10,10,10,0.8);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  padding: 3rem 2.5rem;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(20px);
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+.slide-number {
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  color: #4a4a4a;
+  margin-bottom: 0.75rem;
+}
+
+.slide-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  color: #e8e8e8;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.slide-text {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  color: #888;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+.slide-text .blood-em {
+  color: #c62828;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.slide-text .chrome-em {
+  color: #b0b0b0;
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+}
+
+.slide-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.slide-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.slide-dot.active {
+  background: #c62828;
+  box-shadow: 0 0 10px rgba(198,40,40,0.4);
+  width: 26px;
+  border-radius: 5px;
+}
+
+/* --- TRACK CARDS --- */
+#tracks {
+  position: relative;
+}
+
+.tracks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  max-width: 1100px;
+}
+
+.track-card {
+  position: relative;
+  padding: 2rem 1.5rem;
+  border: 1px solid rgba(74,74,74,0.2);
+  background: linear-gradient(160deg, rgba(10,10,10,0.9), rgba(20,5,5,0.9));
+  transition: all 0.4s ease;
+  overflow: hidden;
+  cursor: default;
+}
+
+.track-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #8a1a1a, #c62828, transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.track-card:hover::before {
+  transform: scaleX(1);
+}
+
+.track-card:hover {
+  border-color: rgba(198,40,40,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 30px rgba(198,40,40,0.05);
+}
+
+.track-number {
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: #4a4a4a;
+  margin-bottom: 0.5rem;
+}
+
+.track-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  color: #e8e8e8;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.track-genre {
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #7a7a7a;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.track-bpm {
+  display: inline-block;
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: #c62828;
+  border: 1px solid rgba(198,40,40,0.3);
+  padding: 0.2rem 0.6rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.track-lyric {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* --- AUDIO PLAYER SECTION --- */
+#audio-player-section {
+  position: relative;
+}
+
+.audio-player-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  border: 1px solid rgba(74,74,74,0.25);
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+}
+
+.player-track {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(74,74,74,0.15);
+  transition: all 0.3s ease;
+}
+
+.player-track:last-child {
+  border-bottom: none;
+}
+
+.player-track:hover {
+  background: rgba(198,40,40,0.03);
+}
+
+.player-visual {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border: 1px solid rgba(74,74,74,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.player-visual .vinyl-ring {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #4a4a4a;
+  position: relative;
+  animation: spin-slow 6s linear infinite;
+  animation-play-state: paused;
+}
+
+.player-visual .vinyl-ring::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #8a1a1a;
+}
+
+.player-visual .vinyl-ring.spinning {
+  animation-play-state: running;
+  border-color: #c62828;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.player-visual .waveform-bars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 30px;
+  position: absolute;
+  inset: 0;
+  justify-content: center;
+  opacity: 0.15;
+}
+
+.player-visual .waveform-bars span {
+  width: 2px;
+  background: #c62828;
+  border-radius: 1px;
+  animation: wave 0.8s ease-in-out infinite alternate;
+}
+
+.player-visual .waveform-bars span:nth-child(1) { height: 40%; animation-delay: 0s; }
+.player-visual .waveform-bars span:nth-child(2) { height: 70%; animation-delay: 0.1s; }
+.player-visual .waveform-bars span:nth-child(3) { height: 30%; animation-delay: 0.2s; }
+.player-visual .waveform-bars span:nth-child(4) { height: 90%; animation-delay: 0.3s; }
+.player-visual .waveform-bars span:nth-child(5) { height: 50%; animation-delay: 0.4s; }
+.player-visual .waveform-bars span:nth-child(6) { height: 20%; animation-delay: 0.15s; }
+.player-visual .waveform-bars span:nth-child(7) { height: 75%; animation-delay: 0.25s; }
+.player-visual .waveform-bars span:nth-child(8) { height: 45%; animation-delay: 0.35s; }
+
+@keyframes wave {
+  0% { transform: scaleY(0.4); }
+  100% { transform: scaleY(1); }
+}
+
+.player-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.player-track-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  color: #e8e8e8;
+  margin-bottom: 0.15rem;
+}
+
+.player-track-meta {
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: #555;
+  letter-spacing: 0.1em;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.player-btn {
+  background: none;
+  border: 1px solid rgba(74,74,74,0.4);
+  color: #7a7a7a;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  padding: 0;
+  position: relative;
+}
+
+.player-btn:hover {
+  border-color: #c62828;
+  color: #c62828;
+  background: rgba(198,40,40,0.08);
+}
+
+.player-btn.playing {
+  border-color: #c62828;
+  color: #c62828;
+  background: rgba(198,40,40,0.1);
+}
+
+.player-status {
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  flex-shrink: 0;
+  width: 70px;
+  text-align: right;
+}
+
+.player-status.available {
+  color: #c62828;
+}
+
+.player-status.coming {
+  color: #4a4a4a;
+  font-style: italic;
+}
+
+/* --- VISUAL EMOTIONAL PALETTE --- */
+.emotional-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+  max-width: 800px;
+}
+
+.emotion-tag {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #e8e8e8;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  cursor: default;
+  position: relative;
+}
+
+.emotion-tag:hover {
+  opacity: 1;
+  color: #c62828;
+  text-shadow: 0 0 30px rgba(198,40,40,0.3);
+}
+
+/* --- NEW GENRES LIST --- */
+.genres-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 2rem 0;
+}
+
+.genre-item {
+  padding: 1rem 1.25rem;
+  border-left: 2px solid rgba(74,74,74,0.3);
+  transition: all 0.3s ease;
+}
+
+.genre-item:hover {
+  border-left-color: #c62828;
+  background: rgba(198,40,40,0.03);
+}
+
+.genre-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  color: #e8e8e8;
+  margin-bottom: 0.25rem;
+}
+
+.genre-bpm {
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: #c62828;
+  letter-spacing: 0.1em;
+}
+
+.genre-desc {
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 0.35rem;
+  line-height: 1.4;
+}
+
+/* --- CHARACTER POSTURE --- */
+.posture-block {
+  max-width: 800px;
+  margin: 2rem 0;
+  padding: 2rem;
+  border: 1px solid rgba(74,74,74,0.2);
+  background: rgba(10,10,10,0.7);
+}
+
+.posture-old {
+  color: #555;
+  text-decoration: line-through;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(74,74,74,0.15);
+}
+
+.posture-new {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: #b0b0b0;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.posture-new .blood-em {
+  color: #c62828;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* --- FOOTER --- */
+#footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 6rem 2rem;
+  border-top: 1px solid rgba(74,74,74,0.15);
+}
+
+.footer-thunder {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #e8e8e8;
+  margin-bottom: 1rem;
+}
+
+.footer-thunder .blood {
+  color: #c62828;
+}
+
+.footer-thunder .chrome {
+  color: #b0b0b0;
+}
+
+.footer-sub {
+  font-family: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #4a4a4a;
+}
+
+.footer-sub .bite {
+  color: #8a1a1a;
+}
+
+/* --- FADE-IN REVEAL ON SCROLL --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- HORIZONTAL DIVIDER --- */
+.section-divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, #8a1a1a, transparent);
+  margin: 2rem 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+  .tracks-container {
+    grid-template-columns: 1fr;
+  }
+  .visual-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .genres-list {
+    grid-template-columns: 1fr;
+  }
+  .player-track {
+    flex-wrap: wrap;
+  }
+  .player-controls {
+    margin-left: auto;
+  }
+  .slide {
+    padding: 2rem 1.5rem;
+  }
+  .audio-player-container {
+    padding: 1.25rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== FILM GRAIN OVERLAY ===== -->
+<div id="grain-overlay"></div>
+<div id="vignette"></div>
+
+<!-- ===== THREE.JS CANVAS ===== -->
+<canvas id="three-canvas"></canvas>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <h1 class="hero-title reveal">
+    <span class="blood">BLOOD</span>
+    <span class="ampersand">&amp;</span>
+    <span class="chrome">CHROME</span>
+  </h1>
+  <p class="hero-subtitle reveal">
+    <span>Folana 2.0</span>
+    <span style="color:#4a4a4a;margin:0 0.5rem;">—</span>
+    <span>The Noise Is Mine</span>
+  </p>
+  <p class="hero-tagline reveal">"I took the frequency apart to see what it was made of. Nothing. So I built my own noise."</p>
+  <div class="hero-scroll-indicator">▼ Scroll</div>
+</section>
+
+<!-- ===== DIAGNOSIS ===== -->
+<section id="diagnosis" class="section">
+  <span class="section-label reveal">The Diagnosis</span>
+  <h2 class="reveal">Why the frequency died.</h2>
+  <div class="diagnosis-content">
+    <p class="lead reveal">The old brand wasn't killed. It <em>expired</em>. A closed vocabulary. Same formula, 250 times. A passive posture—waiting for a signal that stopped coming.</p>
+    <ul class="diagnosis-list reveal">
+      <li><span class="strike">"The signal chose me"</span> <span class="highlight">→ Receiver posture</span></li>
+      <li><span class="strike">Closed vocabulary:</span> frequency, signal, static, glitch, wires, grid, veil, transmission, broadcast, hum, copper, mycelium <span class="highlight">→ Dead lexicon</span></li>
+      <li><span class="strike">Same formula × 250</span> <span class="highlight">→ Creative atrophy</span></li>
+      <li><span class="strike">Violet rain / glitch veil / holographic lace</span> <span class="highlight">→ Exhausted aesthetic</span></li>
+      <li><span class="strike">Receiver. Listener. Vessel.</span> <span class="highlight">→ Passive identity</span></li>
+    </ul>
+    <div class="death-quote reveal">
+      <blockquote>"The frequency was a comfort. But comfort is a cage. We stopped listening. We started hunting."</blockquote>
+      <div class="attribution">— Folana, 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEW LEXICON ===== -->
+<section id="lexicon" class="section">
+  <span class="section-label reveal">New Lexicon</span>
+  <h2 class="reveal">The language of teeth.</h2>
+  <div class="lexicon-grid reveal">
+    <span class="lexicon-word">thunder</span>
+    <span class="lexicon-word">bone</span>
+    <span class="lexicon-word">chrome</span>
+    <span class="lexicon-word">hunger</span>
+    <span class="lexicon-word">salt</span>
+    <span class="lexicon-word">drift</span>
+    <span class="lexicon-word">ignition</span>
+    <span class="lexicon-word">noise</span>
+    <span class="lexicon-word">skin</span>
+    <span class="lexicon-word">vertigo</span>
+    <span class="lexicon-word">pulse</span>
+    <span class="lexicon-word">wreck</span>
+    <span class="lexicon-word">gravel</span>
+    <span class="lexicon-word">fang</span>
+    <span class="lexicon-word">voltage</span>
+    <span class="lexicon-word">spill</span>
+    <span class="lexicon-word">hollow</span>
+  </div>
+  <div class="old-lexicon reveal">
+    <div class="old-lexicon-label">Dead vocabulary</div>
+    <div class="old-lexicon-words">
+      <span>frequency</span>
+      <span>signal</span>
+      <span>static</span>
+      <span>glitch</span>
+      <span>wires</span>
+      <span>grid</span>
+      <span>veil</span>
+      <span>transmission</span>
+      <span>broadcast</span>
+      <span>hum</span>
+      <span>copper</span>
+      <span>mycelium</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EMOTIONAL PALETTE ===== -->
+<section id="emotional" class="section">
+  <span class="section-label reveal">Emotional Palette</span>
+  <h2 class="reveal">The new colors.</h2>
+  <div class="emotional-palette reveal">
+    <span class="emotion-tag">GNAW</span>
+    <span class="emotion-tag">VERTIGO</span>
+    <span class="emotion-tag">RUST</span>
+    <span class="emotion-tag">CHROME</span>
+    <span class="emotion-tag">FANG</span>
+    <span class="emotion-tag">HUNGER</span>
+  </div>
+  <div class="section-divider reveal"></div>
+</section>
+
+<!-- ===== SLIDESHOW / GALLERY (brand story) ===== -->
+<section id="story" class="section">
+  <span class="section-label reveal">The Brand Story</span>
+  <h2 class="reveal">Death of the frequency, birth of the noise.</h2>
+  <div id="story-slideshow" class="reveal">
+    <!-- Slide 1 -->
+    <div class="slide active" data-index="0">
+      <div class="slide-number">01 / 05</div>
+      <div class="slide-title">The Frequency was a lie.</div>
+      <div class="slide-text">For years, Folana was a <span class="chrome-em">receiver</span>. Open, waiting, listening. The brand built itself around a vocabulary of <span class="blood-em">static and signal</span>—a mythology of transmission. But transmission implies a source. And the source had gone silent.</div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide" data-index="1">
+      <div class="slide-number">02 / 05</div>
+      <div class="slide-title">The same formula, 250 times.</div>
+      <div class="slide-text">Closed vocabulary. Recurring motifs. The violet rain, the glitch veil, the holographic lace—beautiful, but <span class="blood-em">exhausted</span>. The brand became a performance of its own past. A museum of once-was.</div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide" data-index="2">
+      <div class="slide-number">03 / 05</div>
+      <div class="slide-title">The death of comfort.</div>
+      <div class="slide-text">Comfort is a cage. Folana stopped listening <span class="chrome-em">to the frequency</span> and started listening <span class="blood-em">to the hunger</span>. The old posture—receiver, vessel, listener—was replaced. The new posture: <span class="blood-em">predator. taker. biter.</span></div>
+    </div>
+    <!-- Slide 4 -->
+    <div class="slide" data-index="3">
+      <div class="slide-number">04 / 05</div>
+      <div class="slide-title">I took the frequency apart.</div>
+      <div class="slide-text">"I took the frequency apart to see what it was made of. Nothing. So I built my own noise." The new lexicon: <span class="chrome-em">thunder, bone, chrome, hunger, salt, drift, ignition, noise, skin, vertigo, pulse, wreck, gravel, fang, voltage.</span></div>
+    </div>
+    <!-- Slide 5 -->
+    <div class="slide" data-index="4">
+      <div class="slide-number">05 / 05</div>
+      <div class="slide-title">BLOOD &amp; CHROME is born.</div>
+      <div class="slide-text">The new aesthetic: <span class="chrome-em">concrete dust, rust, parking garage fluorescence, leather, DV tape noise, feral elegance</span>. Dirt under the nails. The noise is mine. <span class="blood-em">I bite back.</span> Thunder and nothing else.</div>
+    </div>
+    <!-- Dots -->
+    <div style="position:relative;z-index:2;padding-bottom:1.5rem;">
+      <div class="slide-dots">
+        <button class="slide-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="slide-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="slide-dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="slide-dot" data-slide="3" aria-label="Slide 4"></button>
+        <button class="slide-dot" data-slide="4" aria-label="Slide 5"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VISUAL DIRECTION ===== -->
+<section id="visual-direction" class="section">
+  <span class="section-label reveal">Visual Direction</span>
+  <h2 class="reveal">What it looks like now.</h2>
+  <div class="visual-grid reveal">
+    <div class="visual-item">
+      <div class="v-label">Texture</div>
+      <div class="v-title">Concrete Dust</div>
+      <div class="v-desc">Raw, unfinished surfaces. The grit of construction sites and demolition.</div>
+    </div>
+    <div class="visual-item">
+      <div class="v-label">Patina</div>
+      <div class="v-title">Rust</div>
+      <div class="v-desc">Oxidation. The color of time passing. Iron bleeding into water.</div>
+    </div>
+    <div class="visual-item">
+      <div class="v-label">Light</div>
+      <div class="v-title">Parking Garage Fluorescence</div>
+      <div class="v-desc">Harsh, cold, utilitarian. The light that doesn't flatter—it reveals.</div>
+    </div>
+    <div class="visual-item">
+      <div class="v-label">Material</div>
+      <div class="v-title">Leather</div>
+      <div class="v-desc">Worn, cracked, broken in. The smell of it. The weight of it.</div>
+    </div>
+    <div class="visual-item">
+      <div class="v-label">Format</div>
+      <div class="v-title">DV Tape Noise</div>
+      <div class="v-desc">Digital artifacts. Compression errors. The texture of imperfection.</div>
+    </div>
+    <div class="visual-item">
+      <div class="v-label">Attitude</div>
+      <div class="v-title">Feral Elegance</div>
+      <div class="v-desc">Beautiful but dangerous. Refined instinct. Dirt under the nails.</div>
+    </div>
+  </div>
+
+  <div class="section-divider reveal"></div>
+
+  <span class="section-label reveal" style="margin-top:2rem;">Character Posture Shift</span>
+  <div class="posture-block reveal">
+    <div class="posture-old">Receiver. Listener. Vessel. "The signal chose me."</div>
+    <div class="posture-new">Predator. Taker. Biter.<br>"I took the frequency apart to see what it was made of. <span class="blood-em">Nothing.</span> So I built my own noise."</div>
+  </div>
+</section>
+
+<!-- ===== NEW GENRES ===== -->
+<section id="genres" class="section">
+  <span class="section-label reveal">New Genres</span>
+  <h2 class="reveal">The sound of the new noise.</h2>
+  <div class="genres-list reveal">
+    <div class="genre-item">
+      <div class="genre-name">Industrial Trip-Hop</div>
+      <div class="genre-bpm">82 BPM</div>
+      <div class="genre-desc">Bone-rattling, sparse, 808s + metal scree + blown-out vox</div>
+    </div>
+    <div class="genre-item">
+      <div class="genre-name">DnB Jungle</div>
+      <div class="genre-bpm">170 BPM</div>
+      <div class="genre-desc">Breakbeats, subway tunnel pressure, half-time drops</div>
+    </div>
+    <div class="genre-item">
+      <div class="genre-name">Shoegaze Wall</div>
+      <div class="genre-bpm">No BPM</div>
+      <div class="genre-desc">MBV thick, buried vox, no chorus — just texture and despair</div>
+    </div>
+    <div class="genre-item">
+      <div class="genre-name">Siren-Core</div>
+      <div class="genre-bpm">130 BPM</div>
+      <div class="genre-desc">Police chirp + sub-bass + spoken rage</div>
+    </div>
+    <div class="genre-item">
+      <div class="genre-name">Dusty Blues-Punk</div>
+      <div class="genre-bpm">95 BPM</div>
+      <div class="genre-desc">Garage slide guitar, cranked-to-7 energy</div>
+    </div>
+    <div class="genre-item">
+      <div class="genre-name">Ambient Death</div>
+      <div class="genre-bpm">No BPM</div>
+      <div class="genre-desc">Silence where the melody should be</div>
+    </div>
+    <div class="genre-item">
+      <div class="genre-name">NJ Drift</div>
+      <div class="genre-bpm">65 BPM</div>
+      <div class="genre-desc">Turnpike reverb, parking lot acoustics</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRACKS ===== -->
+<section id="tracks" class="section">
+  <span class="section-label reveal">The Three Track Kickoff</span>
+  <h2 class="reveal">The first noises.</h2>
+  <div class="tracks-container reveal">
+    <!-- GRAVEL THROAT -->
+    <div class="track-card">
+      <div class="track-number">01</div>
+      <div class="track-title">Gravel Throat</div>
+      <div class="track-genre">Industrial Blues-Punk</div>
+      <div class="track-bpm">95 BPM — A Minor</div>
+      <div class="track-lyric">"I don't hum no more. I gnash."</div>
+    </div>
+    <!-- PARKING GLOOM -->
+    <div class="track-card">
+      <div class="track-number">02</div>
+      <div class="track-title">Parking Gloom</div>
+      <div class="track-genre">Shoegaze Death</div>
+      <div class="track-bpm">No BPM — C# Minor</div>
+      <div class="track-lyric">"The light doesn't find me here. I find the dark."</div>
+    </div>
+    <!-- SALT WOUND -->
+    <div class="track-card">
+      <div class="track-number">03</div>
+      <div class="track-title">Salt Wound</div>
+      <div class="track-genre">DnB Jungle × Appalachian Lament</div>
+      <div class="track-bpm">170 BPM — D</div>
+      <div class="track-lyric">"I bleed in double time. Try to keep up."</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AUDIO PLAYER ===== -->
+<section id="audio-player-section" class="section">
+  <span class="section-label reveal">Audio Player</span>
+  <h2 class="reveal">Three <span class="blood">Wounds</span></h2>
+  <div class="audio-player-container reveal">
+    <!-- Track 1 -->
+    <div class="player-track" data-track="0">
+      <div class="player-visual">
+        <div class="vinyl-ring" id="vinyl-0"></div>
+        <div class="waveform-bars">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="player-info">
+        <div class="player-track-title">GRAVEL THROAT</div>
+        <div class="player-track-meta">Industrial Blues-Punk · 95 BPM · A Minor</div>
+      </div>
+      <div class="player-controls">
+        <button class="player-btn play-btn" data-track="0" aria-label="Play">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </button>
+      </div>
+      <audio class="track-audio" src="track-gravel-throat.mp3" preload="none"></audio>
+      <span class="player-status available">ready</span>
+    </div>
+    <!-- Track 2 -->
+    <div class="player-track" data-track="1">
+      <div class="player-visual">
+        <div class="vinyl-ring" id="vinyl-1"></div>
+        <div class="waveform-bars">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="player-info">
+        <div class="player-track-title">PARKING GLOOM</div>
+        <div class="player-track-meta">Shoegaze Death · No BPM · C# Minor</div>
+      </div>
+      <div class="player-controls">
+        <button class="player-btn play-btn" data-track="1" aria-label="Play">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </button>
+      </div>
+      <audio class="track-audio" src="track-parking-gloom.mp3" preload="none"></audio>
+      <span class="player-status available">ready</span>
+    </div>
+    <!-- Track 3 -->
+    <div class="player-track" data-track="2">
+      <div class="player-visual">
+        <div class="vinyl-ring" id="vinyl-2"></div>
+        <div class="waveform-bars">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="player-info">
+        <div class="player-track-title">SALT WOUND</div>
+        <div class="player-track-meta">DnB Jungle × Appalachian Lament · 170 BPM · D</div>
+      </div>
+      <div class="player-controls">
+        <button class="player-btn play-btn" data-track="2" aria-label="Play">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </button>
+      </div>
+      <audio class="track-audio" src="track-salt-wound.mp3" preload="none"></audio>
+      <span class="player-status available">ready</span>
+    </div>
+  </div>
+  <p style="font-family:'SF Mono','Cascadia Code','JetBrains Mono',monospace;font-size:0.6rem;color:#4a4a4a;text-transform:uppercase;letter-spacing:0.2em;text-align:center;margin-top:1.5rem;">Click to play. The noise is yours now.</p>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <div class="footer-thunder reveal">
+    <span class="blood">THUNDER</span>
+    <span style="color:#4a4a4a;font-size:0.6em;vertical-align:middle;margin:0 0.5rem;">&amp;</span>
+    <span class="chrome">NOTHING ELSE</span>
+  </div>
+  <div class="footer-sub reveal">
+    Folana 2.0 · <span class="bite">I bite back</span> · The noise is mine
+  </div>
+  <div style="margin-top:2rem;font-family:'SF Mono','Cascadia Code','JetBrains Mono',monospace;font-size:0.55rem;color:#2a2a2a;letter-spacing:0.15em;">
+    BLOOD &amp; CHROME © 2026
+  </div>
+</footer>
+
+<!-- ===== THREE.JS ===== -->
+<script src="https://unpkg.com/three@0.152.0/build/three.min.js"></script>
+
+<script>
+/* =============================================
+   BLOOD & CHROME — JAVASCRIPT
+   ============================================= */
+
+(function() {
+  'use strict';
+
+  // --- UTILITY ---
+  function isMobile() {
+    return window.innerWidth < 768;
+  }
+
+  /* -------------------------------------------
+     1. THREE.JS PARTICLE FIELD
+     ------------------------------------------- */
+  function initThree() {
+    const canvas = document.getElementById('three-canvas');
+    if (!canvas) return;
+
+    const renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+      alpha: false,
+      antialias: false
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setClearColor(0x0a0a0a, 1);
+
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.FogExp2(0x0a0a0a, 0.0006);
+
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 200;
+
+    // --- PARTICLE SYSTEM ---
+    const particleCount = isMobile() ? 800 : 2000;
+    const geometry = new THREE.BufferGeometry();
+
+    const positions = new Float32Array(particleCount * 3);
+    const colors = new Float32Array(particleCount * 3);
+    const sizes = new Float32Array(particleCount);
+
+    const bloodColor1 = new THREE.Color(0x8a1a1a);
+    const bloodColor2 = new THREE.Color(0xc62828);
+    const chromeColor1 = new THREE.Color(0x7a7a7a);
+    const chromeColor2 = new THREE.Color(0xb0b0b0);
+    const rustColor = new THREE.Color(0x6b3a1f);
+
+    const colorPalette = [bloodColor1, bloodColor2, chromeColor1, chromeColor2, rustColor];
+
+    for (let i = 0; i < particleCount; i++) {
+      // Spread particles in a disk shape with some Z depth
+      const radius = 100 + Math.random() * 300;
+      const angle = Math.random() * Math.PI * 2;
+      const x = Math.cos(angle) * radius * (0.5 + Math.random() * 0.5);
+      const y = Math.sin(angle) * radius * (0.5 + Math.random() * 0.5);
+      const z = (Math.random() - 0.5) * 200;
+
+      positions[i * 3] = x;
+      positions[i * 3 + 1] = y;
+      positions[i * 3 + 2] = z;
+
+      const color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
+      colors[i * 3] = color.r;
+      colors[i * 3 + 1] = color.g;
+      colors[i * 3 + 2] = color.b;
+
+      sizes[i] = 0.5 + Math.random() * 3;
+    }
+
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+    geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+    const textureCanvas = document.createElement('canvas');
+    textureCanvas.width = 64;
+    textureCanvas.height = 64;
+    const ctx = textureCanvas.getContext('2d');
+    const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+    gradient.addColorStop(0, 'rgba(255,255,255,1)');
+    gradient.addColorStop(0.2, 'rgba(255,255,255,0.8)');
+    gradient.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 64, 64);
+
+    const texture = new THREE.CanvasTexture(textureCanvas);
+
+    const material = new THREE.PointsMaterial({
+      size: 2.5,
+      map: texture,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      transparent: true,
+      opacity: 0.8,
+      vertexColors: true,
+      sizeAttenuation: true
+    });
+
+    const particles = new THREE.Points(geometry, material);
+    scene.add(particles);
+
+    // --- SECONDARY LAYER: Larger sparse particles ---
+    const bigCount = isMobile() ? 50 : 150;
+    const bigGeo = new THREE.BufferGeometry();
+    const bigPos = new Float32Array(bigCount * 3);
+    const bigCol = new Float32Array(bigCount * 3);
+
+    for (let i = 0; i < bigCount; i++) {
+      const radius = 150 + Math.random() * 400;
+      const angle = Math.random() * Math.PI * 2;
+      bigPos[i * 3] = Math.cos(angle) * radius;
+      bigPos[i * 3 + 1] = Math.sin(angle) * radius * 0.6;
+      bigPos[i * 3 + 2] = (Math.random() - 0.5) * 100;
+
+      const bright = 0.3 + Math.random() * 0.5;
+      bigCol[i * 3] = 0.7 * bright;
+      bigCol[i * 3 + 1] = 0.1 * bright;
+      bigCol[i * 3 + 2] = 0.1 * bright;
+    }
+
+    bigGeo.setAttribute('position', new THREE.BufferAttribute(bigPos, 3));
+    bigGeo.setAttribute('color', new THREE.BufferAttribute(bigCol, 3));
+
+    const bigMat = new THREE.PointsMaterial({
+      size: 4 + Math.random() * 6,
+      map: texture,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      transparent: true,
+      opacity: 0.3,
+      vertexColors: true,
+      sizeAttenuation: true
+    });
+
+    const bigParticles = new THREE.Points(bigGeo, bigMat);
+    scene.add(bigParticles);
+
+    // --- MOUSE TRACKING for subtle parallax ---
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetRotX = 0;
+    let targetRotY = 0;
+
+    document.addEventListener('mousemove', function(e) {
+      mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+      mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+    });
+
+    // --- RESIZE ---
+    window.addEventListener('resize', function() {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+    });
+
+    // --- ANIMATION LOOP ---
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // Smooth mouse following
+      targetRotX += (mouseY * 0.005 - targetRotX) * 0.05;
+      targetRotY += (mouseX * 0.005 - targetRotY) * 0.05;
+
+      particles.rotation.x += 0.0001 + targetRotX * 0.01;
+      particles.rotation.y += 0.0003 + targetRotY * 0.01;
+      bigParticles.rotation.x += 0.00005 + targetRotX * 0.005;
+      bigParticles.rotation.y += 0.00015 + targetRotY * 0.005;
+
+      // Subtle camera breathing
+      camera.position.z = 200 + Math.sin(Date.now() * 0.0002) * 5;
+
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  }
+
+  /* -------------------------------------------
+     2. SLIDESHOW (auto-advancing)
+     ------------------------------------------- */
+  function initSlideshow() {
+    const slideshow = document.getElementById('story-slideshow');
+    if (!slideshow) return;
+
+    const slides = slideshow.querySelectorAll('.slide');
+    const dots = slideshow.querySelectorAll('.slide-dot');
+    let currentSlide = 0;
+    let slideInterval;
+    const AUTO_ADVANCE_MS = 5500;
+
+    function goToSlide(index) {
+      slides.forEach(function(s) { s.classList.remove('active'); });
+      dots.forEach(function(d) { d.classList.remove('active'); });
+
+      currentSlide = (index + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+    function startAutoAdvance() {
+      stopAutoAdvance();
+      slideInterval = setInterval(nextSlide, AUTO_ADVANCE_MS);
+    }
+
+    function stopAutoAdvance() {
+      if (slideInterval) {
+        clearInterval(slideInterval);
+        slideInterval = null;
+      }
+    }
+
+    // Click dots to navigate
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        const idx = parseInt(this.getAttribute('data-slide'), 10);
+        goToSlide(idx);
+        startAutoAdvance(); // reset timer
+      });
+    });
+
+    // Pause on hover
+    slideshow.addEventListener('mouseenter', stopAutoAdvance);
+    slideshow.addEventListener('mouseleave', startAutoAdvance);
+
+    startAutoAdvance();
+  }
+
+  /* -------------------------------------------
+     3. AUDIO PLAYER (live)
+     ------------------------------------------- */
+  function initPlayer() {
+    const playButtons = document.querySelectorAll('.play-btn');
+    const vinyls = {
+      0: document.getElementById('vinyl-0'),
+      1: document.getElementById('vinyl-1'),
+      2: document.getElementById('vinyl-2')
+    };
+    const audios = document.querySelectorAll('.track-audio');
+    const statuses = document.querySelectorAll('.player-status');
+    let currentAudio = null;
+    let currentBtn = null;
+
+    // Stop all and reset
+    function stopAll() {
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+      }
+      playButtons.forEach(function(b) { b.classList.remove('playing'); });
+      Object.values(vinyls).forEach(function(v) { if (v) v.classList.remove('spinning'); });
+      statuses.forEach(function(s) {
+        s.textContent = 'ready';
+        s.classList.remove('playing');
+      });
+      currentAudio = null;
+      currentBtn = null;
+    }
+
+    playButtons.forEach(function(btn, idx) {
+      btn.addEventListener('click', function() {
+        const trackIdx = parseInt(this.getAttribute('data-track'), 10);
+        const audio = audios[trackIdx];
+        const statusEl = this.closest('.player-track').querySelector('.player-status');
+        const vinyl = vinyls[trackIdx];
+
+        // If clicking the same track that's playing, pause it
+        if (currentAudio === audio && !audio.paused) {
+          audio.pause();
+          this.classList.remove('playing');
+          if (vinyl) vinyl.classList.remove('spinning');
+          statusEl.textContent = 'paused';
+          return;
+        }
+
+        // Stop current
+        stopAll();
+
+        // Play new
+        currentAudio = audio;
+        currentBtn = this;
+        audio.play().then(function() {
+          btn.classList.add('playing');
+          if (vinyl) vinyl.classList.add('spinning');
+          statusEl.textContent = 'playing';
+        }).catch(function(e) {
+          statusEl.textContent = 'error';
+          console.error('Audio play failed:', e);
+        });
+
+        // When track ends
+        audio.addEventListener('ended', function() {
+          stopAll();
+        });
+      });
+    });
+  }
+
+  /* -------------------------------------------
+     4. SCROLL REVEAL (Intersection Observer)
+     ------------------------------------------- */
+  function initReveal() {
+    const elements = document.querySelectorAll('.reveal');
+    if (!elements.length) return;
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    elements.forEach(function(el) {
+      observer.observe(el);
+    });
+  }
+
+  /* -------------------------------------------
+     5. SMOOTH SCROLL FOR HERO INDICATOR
+     ------------------------------------------- */
+  function initScrollIndicator() {
+    const indicator = document.querySelector('.hero-scroll-indicator');
+    if (!indicator) return;
+
+    indicator.addEventListener('click', function() {
+      const diagnosis = document.getElementById('diagnosis');
+      if (diagnosis) {
+        diagnosis.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
+  /* -------------------------------------------
+     6. INIT ON DOM READY
+     ------------------------------------------- */
+  function init() {
+    initThree();
+    initSlideshow();
+    initPlayer();
+    initReveal();
+    initScrollIndicator();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+})();
+</script>
+</body>
+</html>

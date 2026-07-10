@@ -1,0 +1,49 @@
+{
+  "date": "2026-07-10",
+  "event": "BLOOD & CHROME — Rebrand Launch",
+  "assets": {
+    "music": {
+      "gravel-throat": {
+        "title": "GRAVEL THROAT",
+        "file": "gravel-throat.mp3",
+        "lyrics": "gravel-throat-lyrics.md",
+        "hero": "gravel-throat-hero.jpg",
+        "genre": "Industrial blues-punk",
+        "bpm": 95,
+        "key": "A minor",
+        "duration": "~2:08"
+      },
+      "parking-gloom": {
+        "title": "PARKING GLOOM",
+        "file": "parking-gloom.mp3",
+        "lyrics": "parking-gloom-lyrics.md",
+        "hero": "parking-gloom-hero.jpg",
+        "genre": "Shoegaze death",
+        "bpm": null,
+        "key": "C# minor"
+      },
+      "salt-wound": {
+        "title": "SALT WOUND",
+        "file": "salt-wound.mp3",
+        "lyrics": "salt-wound-lyrics.md",
+        "genre": "DnB jungle × Appalachian lament",
+        "bpm": 170,
+        "key": "D major"
+      }
+    },
+    "images": [
+      "gravel-throat-hero.jpg",
+      "parking-gloom-hero.jpg",
+      "blood-chrome-landscape.jpg"
+    ],
+    "web": [
+      "blood-chrome-index.html",
+      "managed-service.html"
+    ]
+  },
+  "journal_entry": "journal-entries/2026-07-10_blood-and-chrome-launch.md",
+  "generated_by": "folana-v2",
+  "model": "minimax-music",
+  "mmx_quota_remaining_daily": "78%",
+  "mmx_quota_remaining_weekly": "84%"
+}
