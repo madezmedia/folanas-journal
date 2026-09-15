@@ -57,6 +57,20 @@ export interface PrototypeTrack {
 // Real Productions from the pipeline (2026-05-27)
 export const REAL_PRODUCTIONS: RealTrack[] = [
   {
+    id: 'quantum-arc-rust-vein',
+    title: 'QUANTUM ARC · RUST VEIN',
+    subtitle: 'QUANTUM ARC • REAL PRODUCTION (locking-director + face-lock stills)',
+    description: 'New arc. Same Folana — different physics. Glitch light, hard cuts, music that doesn\'t apologize. Locking-director MV from face-lock stills Q01–Q03 + RUST VEIN.',
+    audioSrc: '/folana/generated/2026-09-15/quantum-arc/rust-vein-flowmusic.mp3',
+    posterSrc: '/folana/generated/2026-09-15/quantum-arc/quantum-q01.jpg',
+    // TODO: YouTube public URL will be supplied in a follow-up (locking-director cut ~118MB too large for git)
+    duration: '3:01',
+    mood: 'QUANTUM',
+    tags: ['quantum-arc', 'rust-vein', 'blood-and-chrome', 'locking-director', 'real-production', 'face-lock', '2026-09-15'],
+    journalEntry: '/entries/2026-09-15_quantum-arc-rust-vein',
+    isRealProduction: true,
+  },
+  {
     id: 'fracture-dispatch-001',
     title: 'FRACTURE DISPATCH 001 — THE SIGNAL SINGS BACK',
     subtitle: 'DISPATCH • REAL PRODUCTION (mmx + RunPod InfiniteTalk)',

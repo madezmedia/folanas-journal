@@ -6,10 +6,15 @@ import { Footer } from '../components/Footer';
 import { REAL_PRODUCTIONS } from '../../lib/music-manifest';
 
 const ARCS = [
-  'day-cycle', 'elements', 'city-souls', 'ghost-frequencies',
+  'quantum-arc', 'day-cycle', 'elements', 'city-souls', 'ghost-frequencies',
   'broadcast', 'inner-circle', 'horizon', 'constellation',
   'full-spectrum-broadcast', 'source',
 ];
+
+function featuredDateLabel(track: (typeof REAL_PRODUCTIONS)[number]): string {
+  const dateTag = track.tags.find((tag) => /^\d{4}-\d{2}-\d{2}$/.test(tag));
+  return dateTag || 'LIVE';
+}
 
 function formatArcLabel(arc: string): string {
   return arc.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
@@ -29,7 +34,7 @@ export default function MusicReleases() {
   const allMoods = useMemo(() => extractUniqueMoods(), []);
 
   const filteredTracks = useMemo(() => {
-    return REAL_PRODUCTIONS.filter(track => {
+    const filtered = REAL_PRODUCTIONS.filter(track => {
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
         const searchable = [track.title, track.subtitle, track.description, ...track.tags].join(' ').toLowerCase();
@@ -43,7 +48,11 @@ export default function MusicReleases() {
         if (track.mood !== moodFilter) return false;
       }
       return true;
-    }).reverse();
+    });
+    const featuredId = REAL_PRODUCTIONS[0]?.id;
+    const featured = filtered.find(track => track.id === featuredId);
+    const rest = filtered.filter(track => track.id !== featuredId).reverse();
+    return featured ? [featured, ...rest] : rest;
   }, [searchQuery, arcFilter, moodFilter]);
 
   return (
@@ -145,7 +154,7 @@ export default function MusicReleases() {
                       {!searchQuery && !arcFilter && !moodFilter && index === 0 && (
                         <div className="absolute bottom-6 left-6">
                           <div className="px-4 py-1 rounded-full bg-black/70 text-xs font-mono tracking-widest text-folana-neon-pink border border-folana-neon-pink/40 inline-block mb-3">
-                            FULL PRODUCTION • 2026-05-27
+                            FEATURED • {featuredDateLabel(track)}
                           </div>
                         </div>
                       )}

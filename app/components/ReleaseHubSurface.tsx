@@ -105,8 +105,8 @@ export function ReleaseHubSurface({
                 {featured.description}
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
-                <Link href="/folana/premium/ep251/" className="inline-flex items-center gap-2 rounded-full border border-folana-neon-pink/40 bg-folana-neon-pink/10 px-5 py-3 text-[10px] font-mono tracking-[3px] text-folana-neon-pink transition-colors hover:bg-folana-neon-pink/15">
-                  OPEN PREMIUM
+                <Link href="/music" className="inline-flex items-center gap-2 rounded-full border border-folana-neon-pink/40 bg-folana-neon-pink/10 px-5 py-3 text-[10px] font-mono tracking-[3px] text-folana-neon-pink transition-colors hover:bg-folana-neon-pink/15">
+                  PLAY FEATURED
                   <ExternalLink size={13} />
                 </Link>
                 <Link href="/music" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-[10px] font-mono tracking-[3px] text-white/80 transition-colors hover:border-folana-neon-cyan/40 hover:text-folana-neon-cyan">

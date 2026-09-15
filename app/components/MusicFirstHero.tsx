@@ -37,10 +37,10 @@ export function MusicFirstHero() {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a href="/folana/premium/ep251/" className="neon-btn inline-flex items-center justify-center gap-2 text-sm px-8 py-4" style={{ background: 'linear-gradient(135deg, #0a1f12, #1e4d36)', border: '1px solid rgba(232,169,48,0.5)' }}>
+              <Link href="/music" className="neon-btn inline-flex items-center justify-center gap-2 text-sm px-8 py-4">
                 <Play size={15} />
-                ★ OPEN FEATURED: EP251 THE FOREST SPEAKS
-              </a>
+                PLAY FEATURED: {featured.title}
+              </Link>
               <Link href="#sonic" className="neon-btn inline-flex items-center justify-center gap-2 text-sm px-8 py-4">
                 <Play size={15} />
                 PLAY THE VAULT
