@@ -35,7 +35,7 @@ function getSupabase(): SupabaseClient {
  * Runtime still requires env on first use.
  */
 export const supabase: SupabaseClient = new Proxy({} as SupabaseClient, {
-  get(_target, prop, _receiver) {
+  get(_target, prop) {
     // Avoid thenable detection if this export is accidentally awaited.
     if (prop === 'then') return undefined;
     const client = getSupabase();
