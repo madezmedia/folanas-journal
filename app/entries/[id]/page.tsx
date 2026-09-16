@@ -108,11 +108,20 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {entry.media_urls.map((url, i) => {
-                    const isVideo = url.toLowerCase().endsWith('.mp4');
+                    const lower = url.toLowerCase();
+                    const isVideo = lower.endsWith('.mp4');
+                    const isAudio = lower.endsWith('.mp3');
                     return (
-                      <div key={i} className="group relative overflow-hidden rounded-3xl border border-white/10 aspect-video md:aspect-square bg-black holo-frame">
+                      <div key={i} className={`group relative overflow-hidden rounded-3xl border border-white/10 ${isAudio ? 'aspect-auto md:aspect-auto p-4' : 'aspect-video md:aspect-square'} bg-black holo-frame`}>
                         {isVideo ? (
                           <video src={url} className="absolute inset-0 w-full h-full object-cover" autoPlay loop muted playsInline />
+                        ) : isAudio ? (
+                          <div className="flex flex-col gap-3">
+                            <div className="text-[10px] font-mono tracking-[2px] text-folana-neon-cyan">AUDIO FRAGMENT</div>
+                            <audio controls className="w-full accent-folana-neon-pink" src={url}>
+                              Your browser does not support the audio element.
+                            </audio>
+                          </div>
                         ) : (
                           <img src={url} alt={`Fragment ${i+1}`} className="absolute inset-0 w-full h-full object-cover grayscale-[0.35] group-hover:grayscale-0 transition-all duration-700" />
                         )}

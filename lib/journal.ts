@@ -16,6 +16,7 @@ export interface JournalEntry {
   image_url?: string;
   media_urls?: string[];
   mood?: string | null;
+  tags?: string[];
   interests?: unknown;
   opinions?: unknown;
   source?: string | null;
@@ -72,6 +73,8 @@ export async function getSortedJournalEntries(opts?: JournalReadOptions): Promis
           title: matterResult.data.title || matterResult.data.type || 'Untitled',
           image_url: matterResult.data.image_url,
           media_urls: matterResult.data.media_urls,
+          mood: matterResult.data.mood ?? null,
+          tags: Array.isArray(matterResult.data.tags) ? matterResult.data.tags : undefined,
           source: 'local-markdown',
           visibility: 'live',
         } as JournalEntry;
@@ -167,6 +170,8 @@ export async function getJournalEntry(id: string, opts?: JournalReadOptions): Pr
         title: matterResult.data.title || matterResult.data.type || 'Untitled',
         image_url: matterResult.data.image_url,
         media_urls: matterResult.data.media_urls,
+        mood: matterResult.data.mood ?? null,
+        tags: Array.isArray(matterResult.data.tags) ? matterResult.data.tags : undefined,
       };
     } catch (e) {
       console.error(`[getJournalEntry] Failed to parse local file for ${id}`, e);

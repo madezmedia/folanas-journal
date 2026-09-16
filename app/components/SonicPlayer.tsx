@@ -611,7 +611,9 @@ export function SonicVault() {
           return realTrack ? (
             <div className="space-y-4">
               <motion.button
-                onClick={() => openPlayer(realTrack)}
+                onClick={() => {
+                  if (realTrack.videoSrc) openPlayer(realTrack);
+                }}
                 whileHover={{ y: -4 }}
                 className="group w-full holo-frame rounded-3xl overflow-hidden text-left bg-folana-surface block border border-folana-neon-pink/30 hover:border-folana-neon-pink/70 transition-all"
               >
@@ -624,7 +626,7 @@ export function SonicVault() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
                     <div className="absolute bottom-4 left-4 px-4 py-1 rounded-full bg-black/70 text-xs font-mono tracking-widest text-folana-neon-pink border border-folana-neon-pink/50">
-                      REAL AUDIO + VIDEO
+                      {realTrack.videoSrc ? 'REAL AUDIO + VIDEO' : 'REAL AUDIO'}
                     </div>
                   </div>
                   <div className="md:col-span-3 p-8 space-y-4">
@@ -635,27 +637,29 @@ export function SonicVault() {
                     <p className="text-base leading-snug text-folana-text-secondary/95 font-serif italic max-w-prose">{realTrack.description}</p>
                     <div className="pt-2">
                       <div className="inline-flex items-center gap-2 text-xs font-mono tracking-[2px] text-folana-neon-cyan group-hover:text-white transition-colors">
-                        WATCH THE FULL VIDEO → <Play className="w-3 h-3" />
+                        {realTrack.videoSrc ? 'WATCH THE FULL VIDEO →' : 'LISTEN TO THE TRACK →'} <Play className="w-3 h-3" />
                       </div>
                     </div>
                   </div>
                 </div>
               </motion.button>
 
-              {/* Dedicated Real Audio Player for Dispatch 001 */}
+              {/* Dedicated Real Audio Player for the featured production */}
+              {realTrack.audioSrc && (
               <div className="bg-folana-surface/80 border border-white/10 rounded-2xl p-5 flex flex-col md:flex-row items-center gap-4">
                 <div className="flex-1">
                   <div className="font-mono text-[10px] tracking-[2px] text-folana-neon-cyan mb-1">LISTEN TO THE FULL TRACK</div>
-                  <div className="font-serif text-xl text-folana-ink">Fracture Dispatch 001 — The Signal Sings Back</div>
+                  <div className="font-serif text-xl text-folana-ink">{realTrack.title}</div>
                 </div>
                 <audio 
                   controls 
                   className="w-full md:w-80 accent-folana-neon-pink"
-                  src="/folana/generated/2026-05-27/fracture_dispatch_001_signal_sings_back.mp3"
+                  src={realTrack.audioSrc}
                 >
                   Your browser does not support the audio element.
                 </audio>
               </div>
+              )}
             </div>
           ) : null;
         })()}
@@ -669,7 +673,7 @@ export function SonicVault() {
         </div>
         <p className="text-sm text-folana-text-secondary/80 mb-6 max-w-2xl">
           High-quality visual references and early music video language experiments from the development of the pipeline. 
-          These are not full audio productions — the first complete real track is <span className="text-folana-neon-pink">Fracture Dispatch 001</span> above.
+          These are not full audio productions — the featured real production is <span className="text-folana-neon-pink">above</span>.
         </p>
       </div>
 
