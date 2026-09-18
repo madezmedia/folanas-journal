@@ -10,6 +10,7 @@ import { getSortedJournalEntries } from '@/lib/journal';
 import { getProfileSignals } from '@/lib/profile-signals';
 import { getFreshArchiveItems } from '@/lib/archive-view';
 import { REAL_PRODUCTIONS } from '@/lib/music-manifest';
+import { isAcmiConfigured } from '@/lib/acmi';
 import type { JournalEntry } from '@/lib/journal';
 import type { ProfileSignals } from '@/lib/profile-signals';
 
@@ -73,7 +74,7 @@ export default async function FolanasJournal() {
 
       <MusicFirstHero />
 
-      <div className="sticky top-20 z-40 border-b border-white/10 bg-folana-surface/60 backdrop-blur-xl">
+      <div className="pointer-events-none sticky top-20 z-40 border-b border-white/10 bg-folana-surface/60 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1480px] flex-wrap items-center gap-x-4 gap-y-2 px-4 py-4 sm:px-6 sm:py-5">
           <div className="font-mono text-[10px] tracking-[3px] text-folana-text-muted sm:text-xs">CURRENT NODE</div>
           <div className="font-serif text-xl tracking-tight text-folana-ink sm:text-2xl">{signals.display_name}</div>
@@ -120,11 +121,7 @@ export default async function FolanasJournal() {
           </div>
         </section>
 
-        <section id="grid">
-          <div className="mx-auto max-w-5xl">
-            <AcmiLiveFeed />
-          </div>
-        </section>
+        {isAcmiConfigured() ? <AcmiLiveFeed /> : null}
       </main>
 
       <Footer />

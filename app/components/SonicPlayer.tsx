@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, X, Volume2, VolumeX, Maximize2, Film } from 'lucide-react';
 import { MusicVideoPlayer } from './MusicVideoPlayer';
 import { REAL_PRODUCTIONS } from '@/lib/music-manifest';
-import { getFeaturedRealProductions } from '@/lib/featured-productions';
-import { FeaturedDropMedia, ProductionBadge } from './FeaturedDropMedia';
+import { getAboveFoldRealProductions, resolveFeaturedVideoSrc } from '@/lib/featured-productions';
+import { FeaturedDropMedia, PrimaryProductionMedia, ProductionBadge } from './FeaturedDropMedia';
 
 interface Track {
   id: string;
@@ -285,7 +285,7 @@ export function SonicVault() {
   const [progress, setProgress] = useState(0);
   const [isMuted, setIsMuted] = useState(false);
   const [glitchMode, setGlitchMode] = useState(false);
-  const [showVisualizer, setShowVisualizer] = useState(true);
+  const [showVisualizer, setShowVisualizer] = useState(false);
   // === NEW V3: Playlist + Sigil Sync + Advanced Glitch UX ===
   const [activePlaylist, setActivePlaylist] = useState<typeof PLAYLISTS[0] | null>(null);
   const [playlistIndex, setPlaylistIndex] = useState(0);
@@ -570,7 +570,7 @@ export function SonicVault() {
   }, [selectedTrack, showVisualizer, glitchMode, isPlaying]);
 
   return (
-    <div id="sonic" className="scroll-mt-28 space-y-10">
+    <div id="sonic" className="scroll-mt-44 space-y-10">
       {/* Section Header */}
       <div className="flex flex-col gap-4 border-b border-white/10 pb-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
@@ -613,28 +613,20 @@ export function SonicVault() {
         </div>
 
         <div className="space-y-6">
-          {getFeaturedRealProductions().map((realTrack) => (
+          {getAboveFoldRealProductions().map((realTrack) => (
             <div key={realTrack.id} className="space-y-4">
-              <div className="holo-frame group block overflow-hidden rounded-3xl border border-folana-neon-pink/30 bg-folana-surface text-left transition-all hover:border-folana-neon-pink/70">
+              <div className="overflow-hidden rounded-3xl border border-folana-neon-pink/30 bg-folana-surface text-left transition-all hover:border-folana-neon-pink/70">
                 <div className="grid gap-0 md:grid-cols-5">
-                  <div className="relative aspect-video bg-black md:col-span-2 md:aspect-auto">
-                    <img
-                      src={realTrack.posterSrc}
-                      alt={realTrack.title}
-                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-                    <div className="absolute bottom-4 left-4">
-                      <ProductionBadge kind="real" />
-                    </div>
+                  <div className="relative bg-black md:col-span-2">
+                    <PrimaryProductionMedia track={realTrack} />
                   </div>
                   <div className="space-y-4 p-5 md:col-span-3 md:p-8">
                     <div>
-                      <div className="font-serif text-3xl tracking-[-1px] text-folana-ink transition-colors group-hover:text-folana-neon-pink sm:text-4xl">{realTrack.title}</div>
+                      <div className="font-serif text-3xl tracking-[-1px] text-folana-ink sm:text-4xl">{realTrack.title}</div>
                       <div className="mt-1 font-mono text-sm tracking-[2px] text-folana-text-muted">{realTrack.subtitle} • {realTrack.duration}</div>
                     </div>
                     <p className="max-w-prose font-serif text-base italic leading-snug text-folana-text-secondary/95">{realTrack.description}</p>
-                    {realTrack.videoSrc ? (
+                    {resolveFeaturedVideoSrc(realTrack) ? (
                       <button
                         type="button"
                         onClick={() => openPlayer({
@@ -653,7 +645,7 @@ export function SonicVault() {
                         })}
                         className="inline-flex min-h-11 items-center gap-2 font-mono text-xs tracking-[2px] text-folana-neon-cyan transition-colors hover:text-white"
                       >
-                        WATCH THE FULL VIDEO → <Play className="h-3 w-3" />
+                        OPEN CINEMATIC PLAYER → <Play className="h-3 w-3" />
                       </button>
                     ) : (
                       <div className="font-mono text-xs tracking-[2px] text-folana-text-muted">
@@ -769,16 +761,6 @@ export function SonicVault() {
                     </div>
                   )}
 
-                  {/* Live Visualizer Canvas Overlay */}
-                  {showVisualizer && (
-                    <div className="absolute bottom-0 left-0 right-0 h-[38%] pointer-events-none">
-                      <canvas 
-                        ref={canvasRef} 
-                        className={`w-full h-full mix-blend-screen opacity-90 ${vizIntensity === 'fracture' ? 'viz-fracture' : ''}`} 
-                      />
-                    </div>
-                  )}
-
                   {/* Top HUD */}
                   <div className="absolute top-0 left-0 right-0 p-6 flex justify-between items-start text-xs font-mono tracking-[3px] z-10">
                     <div>
@@ -814,6 +796,15 @@ export function SonicVault() {
                     </button>
                   </div>
                 </div>
+
+                {showVisualizer && (
+                  <div className="h-24 border-t border-white/10 bg-black pointer-events-none">
+                    <canvas
+                      ref={canvasRef}
+                      className={`h-full w-full ${vizIntensity === 'fracture' ? 'viz-fracture' : ''}`}
+                    />
+                  </div>
+                )}
 
                 {/* Custom Neon Controls */}
                 <div className="video-controls p-5 flex flex-col gap-4 border-t border-white/10">

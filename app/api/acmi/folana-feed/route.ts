@@ -1,8 +1,7 @@
 import { NextResponse } from 'next/server';
-import { redis } from '@/lib/acmi';
+import { isAcmiConfigured, redis } from '@/lib/acmi';
 
 export const dynamic = 'force-dynamic';
-export const runtime = 'edge';
 
 const FOLANA_SOURCES = new Set([
   'folana',
@@ -72,7 +71,19 @@ function isExcluded(event: { summary?: string; kind?: string }): boolean {
   return false;
 }
 
+function unavailableResponse() {
+  return NextResponse.json({
+    events: [],
+    unavailable: true,
+    source: 'folana',
+  });
+}
+
 export async function GET(request: Request) {
+  if (!isAcmiConfigured()) {
+    return unavailableResponse();
+  }
+
   try {
     const { searchParams } = new URL(request.url);
     const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 50);
@@ -121,11 +132,10 @@ export async function GET(request: Request) {
       totalAvailable: filtered.length,
       fetchedAt: new Date().toISOString(),
     });
-  } catch (err: any) {
-    console.error('[acmi-folana-feed] Error:', err);
-    return NextResponse.json(
-      { error: 'Failed to fetch Folana ACMI feed', detail: err.message },
-      { status: 500 }
-    );
+  } catch (err: unknown) {
+    const detail = err instanceof Error ? err.message : 'unknown';
+    console.error('[acmi-folana-feed] unavailable:', detail);
+    // Degrade instead of HTTP 500: empty events, no invented metrics.
+    return unavailableResponse();
   }
 }
