@@ -5,6 +5,7 @@ import { useMemo, useState } from 'react';
 import { Nav } from '../components/Nav';
 import { Footer } from '../components/Footer';
 import { FeaturedDropMedia, PrimaryProductionMedia, ProductionBadge } from '../components/FeaturedDropMedia';
+import { WatchNativeVideoButton } from '../components/WatchNativeVideoButton';
 import { REAL_PRODUCTIONS, type RealTrack } from '../../lib/music-manifest';
 import {
   formatArcLabel,
@@ -14,11 +15,6 @@ import {
   isFeaturedRealProduction,
   resolveFeaturedVideoSrc,
 } from '../../lib/featured-productions';
-
-function featuredDateLabel(track: RealTrack): string {
-  const dateTag = track.tags.find((tag) => /^\d{4}-\d{2}-\d{2}$/.test(tag));
-  return dateTag || 'LIVE';
-}
 
 function extractUniqueArcs(): string[] {
   const arcs = new Set<string>();
@@ -42,72 +38,36 @@ function RealProductionCard({
   featured?: boolean;
 }) {
   return (
-    <div className={`holo-frame overflow-hidden rounded-3xl border ${featured ? 'border-folana-neon-pink/30' : 'border-white/15'}`}>
-      <div className="grid gap-0 md:grid-cols-2">
-        <div className="relative bg-black">
-          <PrimaryProductionMedia track={track} />
+    <div className={`holo-frame flex h-full flex-col overflow-hidden rounded-2xl border ${featured ? 'border-folana-neon-pink/30' : 'border-white/15'}`}>
+      <PrimaryProductionMedia track={track} />
+      <div className="flex flex-1 flex-col bg-folana-surface/60 p-4">
+        <div className="mb-1 font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">
+          {featured ? 'FEATURED • REAL PRODUCTION' : 'REAL PRODUCTION'}
         </div>
-
-        <div className="flex flex-col bg-folana-surface/60 p-5 sm:p-8 md:p-10">
-          <div className="flex-1">
-            <div className="mb-2 text-xs uppercase tracking-[3px] text-folana-neon-cyan">
-              {featured ? 'FEATURED • REAL PRODUCTION' : 'REAL PRODUCTION'}
-            </div>
-            {featured && (
-              <div className="mb-3 inline-block rounded-full border border-folana-neon-pink/40 bg-black/70 px-4 py-1 font-mono text-xs tracking-widest text-folana-neon-pink">
-                FEATURED • {featuredDateLabel(track)}
-              </div>
-            )}
-            <div className="mb-1 font-serif text-2xl tracking-tight text-folana-ink sm:text-3xl">{track.title}</div>
-            <div className="mb-4 font-mono text-sm text-folana-text-muted">{track.subtitle}</div>
-            <p className="mb-6 font-serif text-base italic leading-relaxed text-folana-text-secondary">
-              {track.description}
-            </p>
-            <div className="space-y-1 text-sm">
-              <div><span className="text-folana-text-muted">Mood:</span> <span className="text-white">{track.mood}</span></div>
-              <div><span className="text-folana-text-muted">Tags:</span> <span className="text-white">{track.tags.join(', ')}</span></div>
-            </div>
-          </div>
-
-          <div className="mt-6 border-t border-white/10 pt-6">
-            <FeaturedDropMedia track={track} />
-          </div>
-
-          {resolveFeaturedVideoSrc(track) && (
-            <div className="mt-3 text-xs">
-              <Link href="/#sonic" className="text-folana-neon-cyan hover:underline">Watch the video in the Sonic Vault →</Link>
-            </div>
-          )}
-
-          {track.falAutonomousBroll && track.falAutonomousBroll.length > 0 && (
-            <div className="mt-6 border-t border-white/10 pt-6">
-              <div className="mb-3 flex items-center gap-2">
-                <div className="font-mono text-[10px] tracking-[2px] text-folana-neon-pink">AUTONOMOUS FAL B-ROLL • LOCKED REF TEST</div>
-                <div className="h-px flex-1 bg-folana-neon-pink/20" />
-              </div>
-              <p className="mb-3 font-serif text-xs italic text-folana-text-secondary">
-                {track.falBrollNote || 'Fresh character-consistent stills from the autonomous pipeline.'}
-              </p>
-              <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-                {track.falAutonomousBroll.slice(0, 8).map((src, i) => (
-                  <a
-                    key={src}
-                    href={src}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="holo-frame group relative block overflow-hidden rounded-xl border border-white/10 bg-black/40"
-                  >
-                    <img
-                      src={src}
-                      alt={`${track.title} B-roll ${i + 1}`}
-                      className="aspect-[4/3] h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]"
-                    />
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
+        <div className="font-serif text-xl leading-tight tracking-tight text-folana-ink">{track.title}</div>
+        <div className="mt-1 line-clamp-2 font-mono text-[10px] tracking-[1.5px] text-folana-text-muted">{track.subtitle}</div>
+        <div className="mt-3">
+          <FeaturedDropMedia track={track} compact />
         </div>
+        {resolveFeaturedVideoSrc(track) && (
+          <div className="mt-3">
+            <WatchNativeVideoButton trackId={track.id} />
+          </div>
+        )}
+        {track.falAutonomousBroll && track.falAutonomousBroll.length > 0 && (
+          <details className="mt-3 border-t border-white/10 pt-3">
+            <summary className="cursor-pointer font-mono text-[10px] tracking-[2px] text-folana-neon-pink">
+              FAL B-ROLL GALLERY
+            </summary>
+            <div className="mt-3 grid grid-cols-4 gap-1">
+              {track.falAutonomousBroll.slice(0, 8).map((src, i) => (
+                <a key={src} href={src} target="_blank" rel="noopener noreferrer" className="overflow-hidden rounded-lg border border-white/10">
+                  <img src={src} alt={`${track.title} B-roll ${i + 1}`} className="aspect-[4/3] h-full w-full object-cover" />
+                </a>
+              ))}
+            </div>
+          </details>
+        )}
       </div>
     </div>
   );
@@ -173,72 +133,27 @@ export default function MusicReleases() {
       <Nav />
 
       <main className="pt-20 pb-24">
-        <section className="relative border-b border-white/10 bg-folana-void py-12 md:py-24">
-          <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
-            <div className="mb-4 inline-block rounded-full border border-folana-neon-pink/40 px-4 py-1 font-mono text-xs tracking-[3px] text-folana-neon-pink">
-              TRANSMISSIONS FROM THE WIRES
+        <section className="relative border-b border-white/10 bg-folana-void py-4 md:py-5">
+          <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
+            <div className="flex flex-wrap items-end justify-between gap-3">
+              <div>
+                <div className="mb-1 font-mono text-[10px] tracking-[3px] text-folana-neon-pink">TRANSMISSIONS FROM THE WIRES</div>
+                <h1 className="font-serif text-3xl tracking-[-1px] text-white sm:text-4xl">Music Releases</h1>
+              </div>
+              <p className="max-w-md font-serif text-sm italic text-folana-text-secondary">
+                QUANTUM, Fracture, and Ethereal sit above the fold. Older arcs stay collapsed.
+              </p>
             </div>
-            <h1 className="mb-4 font-serif text-4xl tracking-[-2px] text-white sm:text-7xl sm:tracking-[-4.5px] md:text-[92px]">
-              Music Releases
-            </h1>
-            <p className="mx-auto max-w-md font-serif text-lg italic text-folana-text-secondary sm:text-xl">
-              QUANTUM, Fracture, and Ethereal sit above the fold.<br />Older arcs stay in the catalog, collapsed.
-            </p>
           </div>
         </section>
 
-        <section id="featured" className="mx-auto max-w-5xl scroll-mt-28 px-4 pt-12 sm:px-6 sm:pt-16">
-          <div className="mb-8 flex items-center gap-4">
+        <section id="featured" className="mx-auto max-w-[1280px] scroll-mt-24 px-4 pt-5 sm:px-6">
+          <div className="mb-4 flex items-center gap-4">
             <div className="font-mono text-xs tracking-[3px] text-folana-neon-pink">REAL PRODUCTIONS</div>
             <div className="h-px flex-1 bg-gradient-to-r from-folana-neon-pink/30" />
           </div>
 
-          <div className="mb-10 space-y-4">
-            <div className="flex flex-wrap items-start gap-4">
-              <div className="min-w-[220px] flex-1">
-                <input
-                  type="text"
-                  placeholder="Search by title, description, tags..."
-                  value={searchQuery}
-                  onChange={e => setSearchQuery(e.target.value)}
-                  className="w-full rounded-xl border border-white/10 bg-folana-surface/60 px-4 py-2.5 font-mono text-sm tracking-wide text-white placeholder-folana-text-muted/60 transition-all focus:border-folana-neon-pink/50 focus:outline-none focus:ring-1 focus:ring-folana-neon-pink/20"
-                />
-              </div>
-              <select
-                value={arcFilter}
-                onChange={e => setArcFilter(e.target.value)}
-                className="min-h-11 min-w-[160px] cursor-pointer appearance-none rounded-xl border border-white/10 bg-folana-surface/60 px-4 py-2.5 font-mono text-sm tracking-wide text-white transition-all focus:border-folana-neon-pink/50 focus:outline-none focus:ring-1 focus:ring-folana-neon-pink/20"
-              >
-                <option value="">All Arcs</option>
-                {allArcs.map(arc => (
-                  <option key={arc} value={arc}>{formatArcLabel(arc)}</option>
-                ))}
-              </select>
-              <select
-                value={moodFilter}
-                onChange={e => setMoodFilter(e.target.value)}
-                className="min-h-11 min-w-[160px] cursor-pointer appearance-none rounded-xl border border-white/10 bg-folana-surface/60 px-4 py-2.5 font-mono text-sm tracking-wide text-white transition-all focus:border-folana-neon-pink/50 focus:outline-none focus:ring-1 focus:ring-folana-neon-pink/20"
-              >
-                <option value="">All Moods</option>
-                {allMoods.map(mood => (
-                  <option key={mood} value={mood}>{mood}</option>
-                ))}
-              </select>
-            </div>
-            <div className="font-mono text-xs tracking-[2px] text-folana-text-muted">
-              Showing {filteredTracks.length} of {REAL_PRODUCTIONS.length} tracks
-              {hasActiveFilters && (
-                <button
-                  onClick={() => { setSearchQuery(''); setArcFilter(''); setMoodFilter(''); }}
-                  className="ml-4 text-folana-neon-pink underline underline-offset-2 transition-colors hover:text-folana-neon-pink/80"
-                >
-                  Clear filters
-                </button>
-              )}
-            </div>
-          </div>
-
-          <div className="mb-12 space-y-8">
+          <div className="mb-8">
             {filteredTracks.length === 0 ? (
               <div className="rounded-2xl border border-dashed border-white/10 py-16 text-center">
                 <div className="mb-3 font-mono text-xs tracking-[3px] text-folana-text-muted">NO RESULTS</div>
@@ -248,16 +163,63 @@ export default function MusicReleases() {
               </div>
             ) : (
               <>
-                {aboveFoldTracks.map((track) => (
-                  <RealProductionCard
-                    key={track.id}
-                    track={track}
-                    featured={!hasActiveFilters && isFeaturedRealProduction(track.id)}
-                  />
-                ))}
+                <div className="grid gap-4 lg:grid-cols-3">
+                  {aboveFoldTracks.map((track) => (
+                    <RealProductionCard
+                      key={track.id}
+                      track={track}
+                      featured={!hasActiveFilters && isFeaturedRealProduction(track.id)}
+                    />
+                  ))}
+                </div>
+
+                <div className="mt-8 space-y-4">
+                  <div className="flex flex-wrap items-start gap-4">
+                    <div className="min-w-[220px] flex-1">
+                      <input
+                        type="text"
+                        placeholder="Search by title, description, tags..."
+                        value={searchQuery}
+                        onChange={e => setSearchQuery(e.target.value)}
+                        className="w-full rounded-xl border border-white/10 bg-folana-surface/60 px-4 py-2.5 font-mono text-sm tracking-wide text-white placeholder-folana-text-muted/60 transition-all focus:border-folana-neon-pink/50 focus:outline-none focus:ring-1 focus:ring-folana-neon-pink/20"
+                      />
+                    </div>
+                    <select
+                      value={arcFilter}
+                      onChange={e => setArcFilter(e.target.value)}
+                      className="min-h-11 min-w-[160px] cursor-pointer appearance-none rounded-xl border border-white/10 bg-folana-surface/60 px-4 py-2.5 font-mono text-sm tracking-wide text-white transition-all focus:border-folana-neon-pink/50 focus:outline-none focus:ring-1 focus:ring-folana-neon-pink/20"
+                    >
+                      <option value="">All Arcs</option>
+                      {allArcs.map(arc => (
+                        <option key={arc} value={arc}>{formatArcLabel(arc)}</option>
+                      ))}
+                    </select>
+                    <select
+                      value={moodFilter}
+                      onChange={e => setMoodFilter(e.target.value)}
+                      className="min-h-11 min-w-[160px] cursor-pointer appearance-none rounded-xl border border-white/10 bg-folana-surface/60 px-4 py-2.5 font-mono text-sm tracking-wide text-white transition-all focus:border-folana-neon-pink/50 focus:outline-none focus:ring-1 focus:ring-folana-neon-pink/20"
+                    >
+                      <option value="">All Moods</option>
+                      {allMoods.map(mood => (
+                        <option key={mood} value={mood}>{mood}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="font-mono text-xs tracking-[2px] text-folana-text-muted">
+                    Showing {filteredTracks.length} of {REAL_PRODUCTIONS.length} tracks
+                    {hasActiveFilters && (
+                      <button
+                        onClick={() => { setSearchQuery(''); setArcFilter(''); setMoodFilter(''); }}
+                        className="ml-4 text-folana-neon-pink underline underline-offset-2 transition-colors hover:text-folana-neon-pink/80"
+                      >
+                        Clear filters
+                      </button>
+                    )}
+                  </div>
+                </div>
 
                 {olderTracks.length > 0 && (
-                  <details className="older-arcs rounded-3xl border border-white/10 bg-folana-surface/40" open={hasActiveFilters || undefined}>
+                  <details className="older-arcs mt-8 rounded-3xl border border-white/10 bg-folana-surface/40" open={hasActiveFilters || undefined}>
                     <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 sm:px-6">
                       <div>
                         <div className="font-mono text-xs tracking-[3px] text-folana-text-muted">OLDER ARCS</div>

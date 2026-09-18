@@ -7,6 +7,7 @@ import { MusicVideoPlayer } from './MusicVideoPlayer';
 import { REAL_PRODUCTIONS } from '@/lib/music-manifest';
 import { getAboveFoldRealProductions, resolveFeaturedVideoSrc } from '@/lib/featured-productions';
 import { FeaturedDropMedia, PrimaryProductionMedia, ProductionBadge } from './FeaturedDropMedia';
+import { playNativeProductionVideo, WatchNativeVideoButton } from './WatchNativeVideoButton';
 
 interface Track {
   id: string;
@@ -277,7 +278,16 @@ const PLAYLISTS = [
 ];
 
 const REAL_PRODUCTION_IDS = new Set(REAL_PRODUCTIONS.map((track) => track.id));
+const NON_FOLANA_PROTOTYPE_IDS = new Set([
+  'industrial-awakening',
+  'threshold-veil-ep31',
+  'polaroid-ghost-transmission',
+  'vinyl-hush-ep31',
+  'synth-forge-reel',
+]);
 const PROTOTYPE_TRACKS = TRACKS.filter((track) => !REAL_PRODUCTION_IDS.has(track.id));
+const FOLANA_PROTOTYPE_TRACKS = PROTOTYPE_TRACKS.filter((track) => !NON_FOLANA_PROTOTYPE_IDS.has(track.id));
+const OFF_LOCK_PROTOTYPE_TRACKS = PROTOTYPE_TRACKS.filter((track) => NON_FOLANA_PROTOTYPE_IDS.has(track.id));
 
 export function SonicVault() {
   const [selectedTrack, setSelectedTrack] = useState<Track | null>(null);
@@ -612,52 +622,27 @@ export function SonicVault() {
           <div className="h-px flex-1 bg-gradient-to-r from-folana-neon-pink/40 to-transparent" />
         </div>
 
-        <div className="space-y-6">
+        <div className="grid gap-4 lg:grid-cols-3">
           {getAboveFoldRealProductions().map((realTrack) => (
-            <div key={realTrack.id} className="space-y-4">
-              <div className="holo-frame overflow-hidden rounded-3xl border border-folana-neon-pink/30 bg-folana-surface text-left transition-all hover:border-folana-neon-pink/70">
-                <div className="grid gap-0 md:grid-cols-5">
-                  <div className="relative bg-black md:col-span-2">
-                    <PrimaryProductionMedia track={realTrack} />
+            <div key={realTrack.id} className="space-y-3">
+              <div className="holo-frame overflow-hidden rounded-2xl border border-folana-neon-pink/30 bg-folana-surface text-left">
+                <PrimaryProductionMedia track={realTrack} />
+                <div className="space-y-3 p-4">
+                  <div>
+                    <div className="font-serif text-xl leading-tight tracking-[-0.5px] text-folana-ink">{realTrack.title}</div>
+                    <div className="mt-1 line-clamp-2 font-mono text-[10px] tracking-[1.5px] text-folana-text-muted">{realTrack.subtitle} • {realTrack.duration}</div>
                   </div>
-                  <div className="space-y-4 p-5 md:col-span-3 md:p-8">
-                    <div>
-                      <div className="font-serif text-3xl tracking-[-1px] text-folana-ink sm:text-4xl">{realTrack.title}</div>
-                      <div className="mt-1 font-mono text-sm tracking-[2px] text-folana-text-muted">{realTrack.subtitle} • {realTrack.duration}</div>
+                  {resolveFeaturedVideoSrc(realTrack) ? (
+                    <WatchNativeVideoButton trackId={realTrack.id} />
+                  ) : (
+                    <div className="font-mono text-[10px] tracking-[2px] text-folana-text-muted">
+                      AUDIO LIVE • MUSIC VIDEO URL PENDING
                     </div>
-                    <p className="max-w-prose font-serif text-base italic leading-snug text-folana-text-secondary/95">{realTrack.description}</p>
-                    {resolveFeaturedVideoSrc(realTrack) ? (
-                      <button
-                        type="button"
-                        onClick={() => openPlayer({
-                          id: realTrack.id,
-                          title: realTrack.title,
-                          subtitle: realTrack.subtitle,
-                          description: realTrack.description,
-                          videoSrc: realTrack.videoSrc,
-                          audioSrc: realTrack.audioSrc,
-                          posterSrc: realTrack.posterSrc,
-                          galleryStills: realTrack.galleryStills,
-                          duration: realTrack.duration,
-                          mood: realTrack.mood,
-                          tags: realTrack.tags,
-                          timedLyrics: realTrack.timedLyrics,
-                        })}
-                        className="inline-flex min-h-11 items-center gap-2 font-mono text-xs tracking-[2px] text-folana-neon-cyan transition-colors hover:text-white"
-                      >
-                        OPEN CINEMATIC PLAYER → <Play className="h-3 w-3" />
-                      </button>
-                    ) : (
-                      <div className="font-mono text-xs tracking-[2px] text-folana-text-muted">
-                        AUDIO LIVE • MUSIC VIDEO URL PENDING
-                      </div>
-                    )}
-                  </div>
+                  )}
                 </div>
               </div>
-
-              <div className="rounded-2xl border border-white/10 bg-folana-surface/80 p-4 sm:p-5">
-                <FeaturedDropMedia track={realTrack} />
+              <div className="rounded-2xl border border-white/10 bg-folana-surface/80 p-3">
+                <FeaturedDropMedia track={realTrack} compact />
               </div>
             </div>
           ))}
@@ -677,7 +662,7 @@ export function SonicVault() {
 
       {/* Visual Prototypes Grid — Beautiful posters, no fake video */}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {PROTOTYPE_TRACKS.map((track) => (
+        {FOLANA_PROTOTYPE_TRACKS.map((track) => (
           <motion.button
             key={track.id}
             onClick={() => openPlayer(track)}
@@ -708,6 +693,34 @@ export function SonicVault() {
         ))}
       </div>
 
+      {OFF_LOCK_PROTOTYPE_TRACKS.length > 0 && (
+        <details className="mt-8 rounded-2xl border border-amber-400/20 bg-black/30">
+          <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 px-5 py-3">
+            <div>
+              <div className="font-mono text-[10px] tracking-[3px] text-amber-200">NON-FOLANA • OFF-LOCK FACES</div>
+              <div className="mt-1 font-serif text-sm text-folana-text-secondary">Not face-lock SoT. Hidden from the Folana prototype rail.</div>
+            </div>
+            <div className="font-mono text-[10px] tracking-[2px] text-folana-text-muted">{OFF_LOCK_PROTOTYPE_TRACKS.length}</div>
+          </summary>
+          <div className="grid grid-cols-1 gap-5 border-t border-white/10 p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            {OFF_LOCK_PROTOTYPE_TRACKS.map((track) => (
+              <div key={track.id} className="overflow-hidden rounded-2xl border border-amber-400/20 bg-folana-surface">
+                <div className="relative aspect-[16/9] bg-black">
+                  <img src={track.posterSrc} alt={track.title} className="absolute inset-0 h-full w-full object-cover grayscale" />
+                  <div className="absolute left-3 top-3">
+                    <ProductionBadge kind="non-folana" />
+                  </div>
+                </div>
+                <div className="p-3">
+                  <div className="font-serif text-sm text-folana-ink">{track.title}</div>
+                  <div className="mt-1 font-mono text-[10px] tracking-[1.5px] text-folana-text-muted">NOT FACE-LOCK SOT</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </details>
+      )}
+
       {/* Player Modal — Full Holographic Cyber Experience */}
       <AnimatePresence>
         {selectedTrack && (
@@ -729,11 +742,11 @@ export function SonicVault() {
                 {/* Video + Visualizer Stack */}
                 <div className="relative bg-black">
                   {selectedTrack.videoSrc && !selectedTrack.videoSrc.includes('folana_animation_test.mp4') ? (
-                    // Real production video (e.g. Dispatch 001)
                     <video
                       ref={videoRef}
                       src={selectedTrack.videoSrc}
                       poster={selectedTrack.posterSrc}
+                      controls={Boolean(resolveFeaturedVideoSrc(selectedTrack))}
                       className={`w-full max-h-[62vh] object-contain bg-black transition-all duration-300 ${glitchMode ? 'contrast-[1.25] saturate-[1.35] hue-rotate-[12deg]' : ''}`}
                       playsInline
                     />
@@ -762,7 +775,7 @@ export function SonicVault() {
                   )}
 
                   {/* Live Visualizer Canvas Overlay */}
-                  {showVisualizer && (
+                  {showVisualizer && !resolveFeaturedVideoSrc(selectedTrack) && (
                     <div className="absolute bottom-0 left-0 right-0 h-[38%] pointer-events-none">
                       <canvas 
                         ref={canvasRef} 
@@ -882,7 +895,21 @@ export function SonicVault() {
                         {ch.label}
                       </button>
                     ))}
-                    <button onClick={() => { /* collab hook */ alert('ACMI PRE event queued for fanvue_music_video_orchestrator produce-music-video (Ep30 full reel). See bus for atomic trace. Pipeline collaborator notified.'); }} className="ml-auto px-3 py-0.5 text-[10px] font-mono tracking-widest bg-white/5 border border-folana-neon-cyan/40 hover:bg-folana-neon-cyan/10 rounded-full text-folana-neon-cyan">REQUEST FULL REEL FROM PIPELINE</button>
+                    {resolveFeaturedVideoSrc(selectedTrack) ? (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const id = selectedTrack.id;
+                          closePlayer();
+                          window.setTimeout(() => playNativeProductionVideo(id), 50);
+                        }}
+                        className="ml-auto px-3 py-0.5 text-[10px] font-mono tracking-widest bg-white/5 border border-folana-neon-cyan/40 hover:bg-folana-neon-cyan/10 rounded-full text-folana-neon-cyan"
+                      >
+                        WATCH / PLAY
+                      </button>
+                    ) : (
+                      <button onClick={() => { alert('ACMI PRE event queued for fanvue_music_video_orchestrator produce-music-video (Ep30 full reel). See bus for atomic trace. Pipeline collaborator notified.'); }} className="ml-auto px-3 py-0.5 text-[10px] font-mono tracking-widest bg-white/5 border border-folana-neon-cyan/40 hover:bg-folana-neon-cyan/10 rounded-full text-folana-neon-cyan">REQUEST FULL REEL FROM PIPELINE</button>
+                    )}
                   </div>
 
                   {/* V2 PLAYLIST NAV + HARNESS SHOWCASE (bidir sigil sync + REAL ACMI pre/post emitting dispatch per CLI-Anything harness) */}

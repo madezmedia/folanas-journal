@@ -86,6 +86,10 @@ export function resolveSideVideoSrc(track: Pick<RealTrack, 'id' | 'runpodJobs'>)
   return track.runpodJobs?.sideVideo;
 }
 
+export function nativeVideoElementId(trackId: string, angle: 'front' | 'side' = 'front'): string {
+  return `production-video-${trackId}-${angle}`;
+}
+
 export function getArcKey(track: RealTrack): string {
   if (track.id === 'ethereal-dispatch') return 'ethereal';
   const arcTag = track.tags.find((tag) => tag.endsWith('-arc'));
