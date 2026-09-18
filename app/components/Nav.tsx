@@ -9,6 +9,7 @@ import { BrandLock } from './BrandLock';
 
 const navLinks = [
   { href: '/', label: 'HOME', short: 'HOME' },
+  { href: '/music', label: 'MUSIC', short: 'MUSIC' },
   { href: '/#sonic', label: 'PLAY', short: 'PLAY' },
   { href: '/archive', label: 'ARCHIVE', short: 'ARCHIVE' },
   { href: '/inner-circle', label: 'JOIN', short: 'JOIN' },
@@ -25,7 +26,7 @@ export function Nav() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-folana-void/95 backdrop-blur-2xl">
-      <div className="max-w-[1480px] mx-auto flex items-center justify-between px-6 h-20">
+      <div className="mx-auto flex h-20 max-w-[1480px] items-center justify-between px-4 sm:px-6">
         {/* Brand — Holographic Lock */}
         <BrandLock size="nav" showBrooklyn className="group" />
 

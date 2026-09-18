@@ -17,6 +17,7 @@ export interface RealTrack {
   audioSrc?: string;
   videoSrc?: string;
   posterSrc?: string;
+  gallerySrcs?: string[];
   journalEntry?: string;   // Link to the corresponding journal entry
   duration: string;
   mood: string;
@@ -63,7 +64,12 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     description: 'New arc. Same Folana — different physics. Glitch light, hard cuts, music that doesn\'t apologize. Locking-director MV from face-lock stills Q01–Q03 + RUST VEIN.',
     audioSrc: '/folana/generated/2026-09-15/quantum-arc/rust-vein-flowmusic.mp3',
     posterSrc: '/folana/generated/2026-09-15/quantum-arc/quantum-q01.jpg',
-    // TODO: YouTube public URL will be supplied in a follow-up (locking-director cut ~118MB too large for git)
+    gallerySrcs: [
+      '/folana/generated/2026-09-15/quantum-arc/quantum-q01.jpg',
+      '/folana/generated/2026-09-15/quantum-arc/quantum-q02.jpg',
+      '/folana/generated/2026-09-15/quantum-arc/quantum-q03.jpg',
+    ],
+    // videoSrc intentionally unset — locking-director cut is not in git. No fake embed.
     duration: '3:01',
     mood: 'QUANTUM',
     tags: ['quantum-arc', 'rust-vein', 'blood-and-chrome', 'locking-director', 'real-production', 'face-lock', '2026-09-15'],
@@ -3483,4 +3489,34 @@ export function getRealProductions() {
 
 export function getVisualPrototypes() {
   return VISUAL_PROTOTYPES;
+}
+
+/** QUANTUM featured, then Fracture + Ethereal as real video. Everything else is an older arc. */
+export const FEATURED_REAL_PRODUCTION_IDS = [
+  'quantum-arc-rust-vein',
+  'fracture-dispatch-001',
+  'ethereal-dispatch',
+] as const;
+
+export const QUANTUM_STILLS = [
+  '/folana/generated/2026-09-15/quantum-arc/quantum-q01.jpg',
+  '/folana/generated/2026-09-15/quantum-arc/quantum-q02.jpg',
+  '/folana/generated/2026-09-15/quantum-arc/quantum-q03.jpg',
+] as const;
+
+export function isFeaturedRealProduction(track: { id: string }): boolean {
+  return (FEATURED_REAL_PRODUCTION_IDS as readonly string[]).includes(track.id);
+}
+
+export function getFeaturedRealProductions(): RealTrack[] {
+  const featured: RealTrack[] = [];
+  for (const id of FEATURED_REAL_PRODUCTION_IDS) {
+    const track = REAL_PRODUCTIONS.find((item) => item.id === id);
+    if (track) featured.push(track);
+  }
+  return featured;
+}
+
+export function getOlderArcTracks(): RealTrack[] {
+  return REAL_PRODUCTIONS.filter((track) => !isFeaturedRealProduction(track));
 }

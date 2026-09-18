@@ -4,7 +4,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, X, Volume2, VolumeX, Maximize2, Film } from 'lucide-react';
 import { MusicVideoPlayer } from './MusicVideoPlayer';
-import { REAL_PRODUCTIONS, VISUAL_PROTOTYPES } from '@/lib/music-manifest'; // New manifest from dev subagent plan
+import { FeaturedProductionCard } from './FeaturedProductionCard';
+import { getFeaturedRealProductions, VISUAL_PROTOTYPES } from '@/lib/music-manifest';
 
 interface Track {
   id: string;
@@ -566,13 +567,13 @@ export function SonicVault() {
   return (
     <div id="sonic" className="space-y-10">
       {/* Section Header */}
-      <div className="flex items-end justify-between border-b border-white/10 pb-4">
+      <div className="flex flex-col gap-4 border-b border-white/10 pb-4 md:flex-row md:items-end md:justify-between">
         <div>
-          <div className="font-mono tracking-[4px] text-xs text-folana-neon-cyan mb-2">TRANSMISSION ARCHIVE 03 • SONIC BLUEPRINTS</div>
-          <h2 className="font-serif text-6xl tracking-[-2.4px] text-folana-ink">The Sonic Vault</h2>
+          <div className="mb-2 font-mono text-xs tracking-[4px] text-folana-neon-cyan">TRANSMISSION ARCHIVE 03 • SONIC BLUEPRINTS</div>
+          <h2 className="font-serif text-3xl tracking-tight text-folana-ink sm:text-5xl md:text-6xl md:tracking-[-2.4px]">The Sonic Vault</h2>
         </div>
-        <p className="max-w-xs text-right text-sm text-folana-text-secondary font-serif italic hidden lg:block">
-          Fragments of music video prototypes, reference reels, and the first breath after the long silence.
+        <p className="max-w-xs font-serif text-sm italic text-folana-text-secondary md:text-right">
+          Real productions first. Prototypes stay below.
         </p>
       </div>
 
@@ -599,121 +600,109 @@ export function SonicVault() {
         </div>
       </div>
 
-      {/* === REAL PRODUCTIONS (the only actual finished music + video right now) === */}
+      {/* === REAL PRODUCTIONS (QUANTUM featured, Fracture + Ethereal real video) === */}
       <div className="mb-8">
-        <div className="flex items-center gap-3 mb-4">
+        <div className="mb-4 flex items-center gap-3">
           <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-pink">REAL PRODUCTIONS</div>
           <div className="h-px flex-1 bg-gradient-to-r from-folana-neon-pink/40 to-transparent" />
         </div>
 
-        {(() => {
-          const realTrack = REAL_PRODUCTIONS[0]; // Sourced from new music-manifest (dev subagent plan)
-          return realTrack ? (
-            <div className="space-y-4">
-              <motion.button
-                onClick={() => {
-                  if (realTrack.videoSrc) openPlayer(realTrack);
-                }}
-                whileHover={{ y: -4 }}
-                className="group w-full holo-frame rounded-3xl overflow-hidden text-left bg-folana-surface block border border-folana-neon-pink/30 hover:border-folana-neon-pink/70 transition-all"
-              >
-                <div className="grid md:grid-cols-5 gap-0">
-                  <div className="md:col-span-2 relative aspect-video md:aspect-auto bg-black">
-                    <img 
-                      src={realTrack.posterSrc} 
-                      alt={realTrack.title} 
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700" 
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-                    <div className="absolute bottom-4 left-4 px-4 py-1 rounded-full bg-black/70 text-xs font-mono tracking-widest text-folana-neon-pink border border-folana-neon-pink/50">
-                      {realTrack.videoSrc ? 'REAL AUDIO + VIDEO' : 'REAL AUDIO'}
-                    </div>
-                  </div>
-                  <div className="md:col-span-3 p-8 space-y-4">
-                    <div>
-                      <div className="font-serif text-4xl tracking-[-1px] text-folana-ink group-hover:text-folana-neon-pink transition-colors">{realTrack.title}</div>
-                      <div className="font-mono text-sm tracking-[2px] text-folana-text-muted mt-1">{realTrack.subtitle} • {realTrack.duration}</div>
-                    </div>
-                    <p className="text-base leading-snug text-folana-text-secondary/95 font-serif italic max-w-prose">{realTrack.description}</p>
-                    <div className="pt-2">
-                      <div className="inline-flex items-center gap-2 text-xs font-mono tracking-[2px] text-folana-neon-cyan group-hover:text-white transition-colors">
-                        {realTrack.videoSrc ? 'WATCH THE FULL VIDEO →' : 'LISTEN TO THE TRACK →'} <Play className="w-3 h-3" />
-                      </div>
-                    </div>
-                  </div>
+            <div className="space-y-6">
+          {getFeaturedRealProductions().map((realTrack, index) => (
+            <div key={realTrack.id} className="space-y-3">
+              <FeaturedProductionCard track={realTrack} featured={index === 0} />
+              {realTrack.videoSrc && (
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    onClick={() => openPlayer(realTrack)}
+                    className="inline-flex items-center gap-2 rounded-full border border-folana-neon-cyan/40 bg-folana-neon-cyan/10 px-4 py-2 text-[10px] font-mono tracking-[2px] text-folana-neon-cyan"
+                  >
+                    WATCH REAL VIDEO <Play className="h-3 w-3" />
+                  </button>
+                  {realTrack.runpodJobs?.sideVideo && (
+                    <button
+                      type="button"
+                      onClick={() => openPlayer({
+                        ...realTrack,
+                        videoSrc: realTrack.runpodJobs?.sideVideo,
+                        subtitle: `${realTrack.subtitle} • SIDE PROFILE`,
+                      })}
+                      className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-[10px] font-mono tracking-[2px] text-white/80"
+                    >
+                      WATCH SIDE VIDEO
+                    </button>
+                  )}
                 </div>
-              </motion.button>
-
-              {/* Dedicated Real Audio Player for the featured production */}
-              {realTrack.audioSrc && (
-              <div className="bg-folana-surface/80 border border-white/10 rounded-2xl p-5 flex flex-col md:flex-row items-center gap-4">
-                <div className="flex-1">
-                  <div className="font-mono text-[10px] tracking-[2px] text-folana-neon-cyan mb-1">LISTEN TO THE FULL TRACK</div>
-                  <div className="font-serif text-xl text-folana-ink">{realTrack.title}</div>
-                </div>
-                <audio 
-                  controls 
-                  className="w-full md:w-80 accent-folana-neon-pink"
-                  src={realTrack.audioSrc}
-                >
-                  Your browser does not support the audio element.
-                </audio>
-              </div>
               )}
             </div>
-          ) : null;
-        })()}
+          ))}
+        </div>
       </div>
 
-      {/* === VISUAL PROTOTYPES & EARLY PIPELINE WORK === */}
+      {/* === PROTOTYPES — demoted under QUANTUM real productions === */}
       <div className="mb-4">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="font-mono text-[10px] tracking-[3px] text-folana-text-muted">VISUAL PROTOTYPES • EARLY PIPELINE</div>
+        <div className="mb-4 flex items-center gap-3">
+          <div className="font-mono text-[10px] tracking-[3px] text-folana-text-muted">PROTOTYPES • EARLY PIPELINE</div>
           <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
         </div>
-        <p className="text-sm text-folana-text-secondary/80 mb-6 max-w-2xl">
-          High-quality visual references and early music video language experiments from the development of the pipeline. 
-          These are not full audio productions — the featured real production is <span className="text-folana-neon-pink">above</span>.
+        <p className="mb-6 max-w-2xl text-sm text-folana-text-secondary/80">
+          Visual references and early music-video language experiments. These are prototypes, not the featured real productions above.
         </p>
       </div>
 
-      {/* Visual Prototypes Grid — Beautiful posters, no fake video */}
-      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-5">
-        {TRACKS.filter(t => t.id !== 'fracture-dispatch-001').map((track) => (
+      {/* Visual Prototypes Grid — posters only, no fake video */}
+      <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {(() => {
+          const featuredIds = new Set(getFeaturedRealProductions().map((track) => track.id));
+          const seen = new Set<string>(featuredIds);
+          const prototypes: Track[] = [];
+          for (const proto of VISUAL_PROTOTYPES) {
+            if (seen.has(proto.id)) continue;
+            seen.add(proto.id);
+            prototypes.push({ ...proto, isPrototype: true });
+          }
+          for (const track of TRACKS) {
+            if (seen.has(track.id)) continue;
+            seen.add(track.id);
+            prototypes.push({ ...track, isPrototype: true, videoSrc: undefined });
+          }
+          return prototypes.map((track) => (
           <motion.button
             key={track.id}
-            onClick={() => openPlayer(track)}
+            onClick={() => openPlayer({ ...track, videoSrc: undefined, isPrototype: true })}
             whileHover={{ y: -3 }}
-            className="group holo-frame rounded-3xl overflow-hidden text-left bg-folana-surface block focus:outline-none focus-visible:ring-1 focus-visible:ring-white/30"
+            className="group holo-frame block overflow-hidden rounded-3xl bg-folana-surface text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white/30"
           >
             <div className="relative aspect-[16/9] bg-black">
               <img 
                 src={track.posterSrc} 
                 alt={track.title} 
-                className="absolute inset-0 w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700 scale-[1.01] group-hover:scale-100" 
+                className="absolute inset-0 h-full w-full scale-[1.01] object-cover grayscale-[0.2] transition-all duration-700 group-hover:scale-100 group-hover:grayscale-0" 
               />
               <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black/95" />
               
-              <div className="absolute top-4 left-4 px-3 py-px text-[10px] font-mono tracking-[2px] bg-black/70 text-white/80 border border-white/10 rounded">
-                VISUAL REFERENCE
+              <div className="absolute top-4 left-4 rounded border border-white/10 bg-black/70 px-3 py-px font-mono text-[10px] tracking-[2px] text-white/80">
+                PROTOTYPE
               </div>
             </div>
 
-            <div className="p-5 space-y-2.5">
+            <div className="space-y-2.5 p-5">
               <div>
-                <div className="font-serif text-xl tracking-[-0.4px] text-folana-ink group-hover:text-white transition-colors line-clamp-1">{track.title}</div>
+                <div className="line-clamp-1 font-serif text-xl tracking-[-0.4px] text-folana-ink transition-colors group-hover:text-white">{track.title}</div>
                 <div className="font-mono text-[10px] tracking-[1.5px] text-folana-text-muted">{track.subtitle} • {track.duration}</div>
               </div>
-              <p className="text-xs leading-snug text-folana-text-secondary/80 line-clamp-2 font-serif italic">{track.description}</p>
+              <p className="line-clamp-2 font-serif text-xs italic leading-snug text-folana-text-secondary/80">{track.description}</p>
             </div>
           </motion.button>
-        ))}
+          ));
+        })()}
       </div>
 
       {/* Player Modal — Full Holographic Cyber Experience */}
       <AnimatePresence>
         {selectedTrack && (
-          <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/95 p-4 md:p-8" onClick={handleBackdropTouch} onTouchEnd={handleBackdropTouch}>
+          <div className="fixed inset-0 z-[70] flex items-end justify-center overflow-y-auto bg-black/95 p-3 sm:items-center sm:p-4 md:p-8" onClick={handleBackdropTouch} onTouchEnd={handleBackdropTouch}>
             <motion.div 
               initial={{ opacity: 0, scale: 0.96, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -755,8 +744,8 @@ export function SonicVault() {
                             VISUAL REFERENCE — EARLY PIPELINE PROTOTYPE
                           </div>
                           <div className="text-white/90 text-sm max-w-md">
-                            This piece was generated during early pipeline development. 
-                            The first complete produced track with real audio + video is <span className="text-folana-neon-pink">Fracture Dispatch 001</span>.
+                            This piece is a prototype from early pipeline development.
+                            Featured real productions — QUANTUM, Fracture, and Ethereal — are above.
                           </div>
                         </div>
                       </div>
@@ -784,7 +773,7 @@ export function SonicVault() {
                   </div>
 
                   {/* Glitch / Viz toggles + V3 INTENSITY */}
-                  <div className="absolute top-5 right-5 flex gap-2 z-20">
+                  <div className="absolute top-5 right-5 z-20 hidden max-w-[55%] flex-wrap justify-end gap-2 md:flex">
                     <button 
                       onClick={toggleGlitch}
                       className={`px-4 py-1 text-xs font-mono tracking-widest border rounded-full transition-all ${glitchMode ? 'bg-folana-neon-pink text-black border-folana-neon-pink' : 'border-white/30 hover:border-white/70 text-white/80'}`}

@@ -14,6 +14,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://folana.live'),
   title: "Folana's Journal | Signals from the Static",
   description: "The holographic chronicle of Folana Lanez — AI music producer, visual alchemist, and dark fairy of the wires. Brooklyn node. Neon transmissions. Locked signatures.",
   icons: {

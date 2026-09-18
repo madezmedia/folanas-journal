@@ -182,13 +182,13 @@ export function AcmiLiveFeed() {
       )}
 
       {/* Footer */}
-      <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-[10px] font-mono tracking-widest text-folana-text-muted/60">
+      <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 font-mono text-[10px] tracking-widest text-folana-text-muted/60">
         <span>{events.length} EVENTS • UPDATES EVERY 60S</span>
         <a
-          href="/orchestrator"
-          className="hover:text-folana-neon-cyan transition-colors"
+          href="/archive"
+          className="transition-colors hover:text-folana-neon-cyan"
         >
-          FULL SWARM VIEW →
+          OPEN ARCHIVE →
         </a>
       </div>
     </div>
