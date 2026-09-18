@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { Nav } from '../components/Nav';
 import { Footer } from '../components/Footer';
-import { FeaturedDropMedia, ProductionBadge } from '../components/FeaturedDropMedia';
+import { FeaturedDropMedia, NativeProductionVideo, ProductionBadge } from '../components/FeaturedDropMedia';
 import { REAL_PRODUCTIONS, type RealTrack } from '../../lib/music-manifest';
 import {
   formatArcLabel,
@@ -40,20 +40,30 @@ function RealProductionCard({
   track: RealTrack;
   featured?: boolean;
 }) {
+  const videoSrc = resolveFeaturedVideoSrc(track);
+
   return (
     <div className={`holo-frame overflow-hidden rounded-3xl border ${featured ? 'border-folana-neon-pink/30' : 'border-white/15'}`}>
       <div className="grid gap-0 md:grid-cols-2">
-        <div className="relative aspect-[16/9] bg-black md:aspect-auto">
-          <img
-            src={track.posterSrc || '/brand/og-card-neutral.png'}
-            alt={track.title}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
-          <div className="absolute left-4 top-4">
-            <ProductionBadge kind="real" hasVideo={Boolean(resolveFeaturedVideoSrc(track))} />
+        <div className="relative bg-black">
+          {videoSrc ? (
+            <NativeProductionVideo src={videoSrc} poster={track.posterSrc} bleed />
+          ) : (
+            <>
+              <div className="relative aspect-[16/9] md:aspect-auto md:min-h-full">
+                <img
+                  src={track.posterSrc || '/brand/og-card-neutral.png'}
+                  alt={track.title}
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+              </div>
+            </>
+          )}
+          <div className="pointer-events-none absolute left-4 top-4 z-10">
+            <ProductionBadge kind="real" hasVideo={Boolean(videoSrc)} />
           </div>
-          {featured && (
+          {featured && !videoSrc && (
             <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6">
               <div className="inline-block rounded-full border border-folana-neon-pink/40 bg-black/70 px-4 py-1 font-mono text-xs tracking-widest text-folana-neon-pink">
                 FEATURED • {featuredDateLabel(track)}
@@ -79,7 +89,7 @@ function RealProductionCard({
           </div>
 
           <div className="mt-6 border-t border-white/10 pt-6">
-            <FeaturedDropMedia track={track} />
+            <FeaturedDropMedia track={track} showVideo={!videoSrc} />
           </div>
 
           {track.falAutonomousBroll && track.falAutonomousBroll.length > 0 && (

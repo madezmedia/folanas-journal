@@ -68,13 +68,49 @@ export function StillsGallery({
 
 type FeaturedMediaTrack = Pick<RealTrack, 'id' | 'title' | 'audioSrc' | 'videoSrc' | 'galleryStills' | 'posterSrc'>;
 
+export function NativeProductionVideo({
+  src,
+  poster,
+  label,
+  bleed = false,
+}: {
+  src: string;
+  poster?: string;
+  label?: string;
+  bleed?: boolean;
+}) {
+  const video = (
+    <video
+      controls
+      playsInline
+      preload="metadata"
+      poster={poster}
+      className={bleed ? 'aspect-video w-full bg-black' : 'w-full rounded-xl border border-white/10 bg-black'}
+      src={src}
+    >
+      Your browser does not support the video element.
+    </video>
+  );
+
+  if (!label) return video;
+
+  return (
+    <div>
+      <div className={`mb-2 font-mono text-[10px] tracking-[3px] ${label.includes('SIDE') ? 'text-folana-text-muted' : 'text-folana-neon-cyan'}`}>{label}</div>
+      {video}
+    </div>
+  );
+}
+
 export function FeaturedDropMedia({
   track,
   showAudio = true,
+  showVideo = true,
   showVideoPlaceholder = true,
 }: {
   track: FeaturedMediaTrack;
   showAudio?: boolean;
+  showVideo?: boolean;
   showVideoPlaceholder?: boolean;
 }) {
   const stills = track.galleryStills ?? [];
@@ -94,35 +130,23 @@ export function FeaturedDropMedia({
         </div>
       )}
       {videoSrc ? (
-        <div className="space-y-4">
-          <div>
-            <div className="mb-2 font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">MUSIC VIDEO • REAL</div>
-            <video
-              controls
-              playsInline
-              preload="metadata"
-              poster={track.posterSrc}
-              className="w-full rounded-xl border border-white/10 bg-black"
-              src={videoSrc}
-            >
-              Your browser does not support the video element.
-            </video>
-          </div>
-          {sideSrc && (
-            <div>
-              <div className="mb-2 font-mono text-[10px] tracking-[3px] text-folana-text-muted">SIDE ANGLE</div>
-              <video
-                controls
-                playsInline
-                preload="metadata"
-                className="w-full rounded-xl border border-white/10 bg-black"
+        (showVideo || sideSrc) ? (
+          <div className="space-y-4">
+            {showVideo && (
+              <NativeProductionVideo
+                src={videoSrc}
+                poster={track.posterSrc}
+                label="MUSIC VIDEO • REAL"
+              />
+            )}
+            {sideSrc && (
+              <NativeProductionVideo
                 src={sideSrc}
-              >
-                Your browser does not support the video element.
-              </video>
-            </div>
-          )}
-        </div>
+                label="SIDE ANGLE"
+              />
+            )}
+          </div>
+        ) : null
       ) : (
         showPlaceholder && <MusicVideoPlaceholder title={track.title} />
       )}

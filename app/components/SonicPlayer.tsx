@@ -6,7 +6,7 @@ import { Play, Pause, X, Volume2, VolumeX, Maximize2, Film } from 'lucide-react'
 import { MusicVideoPlayer } from './MusicVideoPlayer';
 import { REAL_PRODUCTIONS } from '@/lib/music-manifest';
 import { getFeaturedRealProductions, resolveFeaturedVideoSrc } from '@/lib/featured-productions';
-import { FeaturedDropMedia, ProductionBadge } from './FeaturedDropMedia';
+import { FeaturedDropMedia, NativeProductionVideo, ProductionBadge } from './FeaturedDropMedia';
 
 interface Track {
   id: string;
@@ -581,16 +581,22 @@ export function SonicVault() {
             const videoSrc = resolveFeaturedVideoSrc(realTrack);
             return (
             <div key={realTrack.id} className="space-y-4">
-              <div className="holo-frame group block overflow-hidden rounded-3xl border border-folana-neon-pink/30 bg-folana-surface text-left transition-all hover:border-folana-neon-pink/70">
+              <div className="holo-frame group overflow-hidden rounded-3xl border border-folana-neon-pink/30 bg-folana-surface text-left transition-all hover:border-folana-neon-pink/70">
                 <div className="grid gap-0 md:grid-cols-5">
-                  <div className="relative aspect-video bg-black md:col-span-2 md:aspect-auto">
-                    <img
-                      src={realTrack.posterSrc}
-                      alt={realTrack.title}
-                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-                    <div className="absolute bottom-4 left-4">
+                  <div className="relative bg-black md:col-span-2">
+                    {videoSrc ? (
+                      <NativeProductionVideo src={videoSrc} poster={realTrack.posterSrc} bleed />
+                    ) : (
+                      <div className="relative aspect-video md:aspect-auto md:min-h-full">
+                        <img
+                          src={realTrack.posterSrc}
+                          alt={realTrack.title}
+                          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+                      </div>
+                    )}
+                    <div className={`pointer-events-none absolute left-4 z-10 ${videoSrc ? 'top-4' : 'bottom-4'}`}>
                       <ProductionBadge kind="real" hasVideo={Boolean(videoSrc)} />
                     </div>
                   </div>
@@ -631,7 +637,7 @@ export function SonicVault() {
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-folana-surface/80 p-4 sm:p-5">
-                <FeaturedDropMedia track={realTrack} />
+                <FeaturedDropMedia track={realTrack} showVideo={!videoSrc} />
               </div>
             </div>
             );
