@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Disc3, Play } from 'lucide-react';
 import { REAL_PRODUCTIONS } from '@/lib/music-manifest';
+import { FeaturedDropMedia, ProductionBadge } from './FeaturedDropMedia';
 
 export function MusicFirstHero() {
   const featured = REAL_PRODUCTIONS[0];
@@ -11,41 +12,85 @@ export function MusicFirstHero() {
   if (!featured) return null;
 
   return (
-    <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(ellipse_at_top,rgba(255,31,154,0.12),transparent_44%),linear-gradient(to_bottom,#050507_0%,#0c0c12_52%,#14141b_100%)] pt-28 pb-16 md:pb-20">
-      <div className="absolute inset-0 pointer-events-none">
+    <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(ellipse_at_top,rgba(255,31,154,0.12),transparent_44%),linear-gradient(to_bottom,#050507_0%,#0c0c12_52%,#14141b_100%)] pt-24 pb-12 md:pt-28 md:pb-20">
+      <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-folana-neon-pink/60 to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff0f_1px,transparent_1px)] bg-[size:6px_6px] opacity-30" />
         <div className="absolute left-1/2 top-10 h-72 w-72 -translate-x-1/2 rounded-full bg-folana-neon-cyan/10 blur-3xl" />
       </div>
 
-      <div className="relative max-w-[1480px] mx-auto px-6">
-        <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
-          <div className="space-y-8">
+      <div className="relative mx-auto max-w-[1480px] px-4 sm:px-6">
+        <div className="grid items-center gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
+          <div className="relative order-first lg:order-last">
+            <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-folana-neon-pink/20 via-transparent to-folana-neon-cyan/20 blur-2xl" />
+            <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-folana-surface shadow-2xl sm:rounded-[2rem]">
+              <div className="relative aspect-[4/5] max-h-[48vh] bg-black sm:max-h-none">
+                <Image
+                  src={featured.posterSrc || '/brand/og-card-neutral.png'}
+                  alt={featured.title}
+                  fill
+                  priority
+                  quality={92}
+                  sizes="(max-width: 1024px) 100vw, 46vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/25 to-black/95" />
+                <div className="absolute left-3 top-3 sm:left-4 sm:top-4">
+                  <ProductionBadge kind="real" />
+                </div>
+                <div className="absolute right-3 bottom-3 left-3 rounded-2xl border border-white/10 bg-black/70 p-3 backdrop-blur-xl sm:right-4 sm:bottom-4 sm:left-4 sm:rounded-3xl sm:p-4">
+                  <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">NOW PLAYING</div>
+                  <div className="mt-2 font-serif text-2xl leading-tight tracking-[-1px] text-white sm:text-3xl sm:tracking-[-1.2px]">
+                    {featured.title}
+                  </div>
+                  <div className="mt-1 font-mono text-[10px] tracking-[2px] text-folana-text-muted sm:text-xs">
+                    {featured.subtitle} • {featured.duration}
+                  </div>
+                  <p className="mt-3 hidden max-w-xl font-serif text-sm italic leading-relaxed text-folana-text-secondary sm:block">
+                    {featured.description}
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2 sm:mt-4">
+                    <Link href="/music#featured" className="inline-flex min-h-11 items-center gap-2 rounded-full border border-folana-neon-pink/40 bg-folana-neon-pink/10 px-4 py-2 text-[10px] font-mono tracking-[3px] text-folana-neon-pink transition-colors hover:bg-folana-neon-pink/15">
+                      PLAY AUDIO
+                    </Link>
+                    <Link href="/music#featured" className="inline-flex min-h-11 items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-[10px] font-mono tracking-[3px] text-white/80 transition-colors hover:border-folana-neon-cyan/40 hover:text-folana-neon-cyan">
+                      VIEW DETAILS
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-4 border-t border-white/10 bg-black/40 p-4 sm:p-5">
+                <FeaturedDropMedia track={featured} />
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6 sm:space-y-8">
             <div className="inline-flex items-center gap-3 rounded-full border border-folana-neon-cyan/30 bg-folana-neon-cyan/10 px-4 py-1.5 text-[10px] font-mono tracking-[4px] text-folana-neon-cyan">
               <Disc3 size={12} />
               RELEASE HUB
             </div>
 
-            <div className="space-y-5">
-              <p className="font-mono text-[11px] tracking-[5px] text-folana-text-muted">FEATURED FIRST / ARCHIVE SECOND / OPS THIRD</p>
-              <h1 className="max-w-4xl font-serif text-6xl leading-[0.9] tracking-[-4.2px] text-white md:text-[92px]">
+            <div className="space-y-4 sm:space-y-5">
+              <p className="font-mono text-[10px] tracking-[4px] text-folana-text-muted sm:text-[11px] sm:tracking-[5px]">FEATURED FIRST / ARCHIVE SECOND / OPS THIRD</p>
+              <h1 className="max-w-4xl font-serif text-[2.35rem] leading-[0.95] tracking-[-1.6px] text-white sm:text-6xl sm:leading-[0.9] sm:tracking-[-4.2px] md:text-[92px]">
                 Start with the latest release.
               </h1>
-              <p className="max-w-2xl text-xl font-serif italic leading-relaxed text-folana-text-secondary md:text-[22px]">
-                The homepage now leads with the newest episode, the live cut, and the operational lanes that keep Folana moving.
+              <p className="max-w-2xl text-base font-serif italic leading-relaxed text-folana-text-secondary sm:text-xl md:text-[22px]">
+                QUANTUM ARC · RUST VEIN leads. Face-lock stills, the real audio, and a music-video slot that stays empty until the public URL exists.
               </p>
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link href="/music" className="neon-btn inline-flex items-center justify-center gap-2 text-sm px-8 py-4">
+              <Link href="/music#featured" className="neon-btn inline-flex min-h-12 items-center justify-center gap-2 px-8 py-4 text-sm">
                 <Play size={15} />
                 PLAY FEATURED: {featured.title}
               </Link>
-              <Link href="#sonic" className="neon-btn inline-flex items-center justify-center gap-2 text-sm px-8 py-4">
+              <Link href="#sonic" className="neon-btn inline-flex min-h-12 items-center justify-center gap-2 px-8 py-4 text-sm">
                 <Play size={15} />
                 PLAY THE VAULT
               </Link>
-              <Link href="/archive" className="inline-flex items-center justify-center gap-2 rounded-full border border-folana-neon-cyan/40 bg-folana-neon-cyan/10 px-8 py-4 text-sm font-mono tracking-[3px] text-folana-neon-cyan transition-colors hover:bg-folana-neon-cyan/15">
+              <Link href="/archive" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-folana-neon-cyan/40 bg-folana-neon-cyan/10 px-8 py-4 text-sm font-mono tracking-[3px] text-folana-neon-cyan transition-colors hover:bg-folana-neon-cyan/15">
                 BROWSE THE ARCHIVE
                 <ArrowRight size={14} />
               </Link>
@@ -63,46 +108,6 @@ export function MusicFirstHero() {
               <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                 <div className="font-mono text-[10px] tracking-[3px] text-folana-text-muted">ARCHIVE FLOW</div>
                 <div className="mt-2 font-serif text-lg text-folana-ink">Newest first, fewer clicks</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-folana-neon-pink/20 via-transparent to-folana-neon-cyan/20 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-folana-surface shadow-2xl">
-              <div className="relative aspect-[4/5] bg-black">
-                <Image
-                  src={featured.posterSrc || '/brand/og-card-neutral.png'}
-                  alt={featured.title}
-                  fill
-                  priority
-                  quality={92}
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/25 to-black/95" />
-                <div className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/70 px-3 py-1 font-mono text-[10px] tracking-[3px] text-folana-neon-pink">
-                  REAL PRODUCTION
-                </div>
-                <div className="absolute bottom-4 left-4 right-4 rounded-3xl border border-white/10 bg-black/70 p-4 backdrop-blur-xl">
-                  <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">NOW PLAYING</div>
-                  <div className="mt-2 font-serif text-3xl leading-tight tracking-[-1.2px] text-white">
-                    {featured.title}
-                  </div>
-                  <div className="mt-1 font-mono text-xs tracking-[2px] text-folana-text-muted">
-                    {featured.subtitle} • {featured.duration}
-                  </div>
-                  <p className="mt-3 max-w-xl font-serif text-sm italic leading-relaxed text-folana-text-secondary">
-                    {featured.description}
-                  </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  <Link href="/music" className="inline-flex items-center gap-2 rounded-full border border-folana-neon-pink/40 bg-folana-neon-pink/10 px-4 py-2 text-[10px] font-mono tracking-[3px] text-folana-neon-pink transition-colors hover:bg-folana-neon-pink/15">
-                    PLAY AUDIO
-                  </Link>
-                  <Link href={featured.videoSrc ? '/music' : '/archive'} className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-[10px] font-mono tracking-[3px] text-white/80 transition-colors hover:border-folana-neon-cyan/40 hover:text-folana-neon-cyan">
-                    VIEW DETAILS
-                  </Link>
-                </div>
-              </div>
               </div>
             </div>
           </div>

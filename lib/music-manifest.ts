@@ -15,8 +15,9 @@ export interface RealTrack {
   subtitle: string;
   description: string;
   audioSrc?: string;
-  videoSrc?: string;
+  videoSrc?: string;      // Real public video URL only. Leave unset until a real YouTube (or hosted) URL exists.
   posterSrc?: string;
+  galleryStills?: string[];
   journalEntry?: string;   // Link to the corresponding journal entry
   duration: string;
   mood: string;
@@ -63,7 +64,12 @@ export const REAL_PRODUCTIONS: RealTrack[] = [
     description: 'New arc. Same Folana — different physics. Glitch light, hard cuts, music that doesn\'t apologize. Locking-director MV from face-lock stills Q01–Q03 + RUST VEIN.',
     audioSrc: '/folana/generated/2026-09-15/quantum-arc/rust-vein-flowmusic.mp3',
     posterSrc: '/folana/generated/2026-09-15/quantum-arc/quantum-q01.jpg',
-    // TODO: YouTube public URL will be supplied in a follow-up (locking-director cut ~118MB too large for git)
+    galleryStills: [
+      '/folana/generated/2026-09-15/quantum-arc/quantum-q01.jpg',
+      '/folana/generated/2026-09-15/quantum-arc/quantum-q02.jpg',
+      '/folana/generated/2026-09-15/quantum-arc/quantum-q03.jpg',
+    ],
+    // videoSrc intentionally unset until a real public YouTube URL exists. Do not invent one.
     duration: '3:01',
     mood: 'QUANTUM',
     tags: ['quantum-arc', 'rust-vein', 'blood-and-chrome', 'locking-director', 'real-production', 'face-lock', '2026-09-15'],
