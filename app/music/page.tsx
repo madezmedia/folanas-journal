@@ -4,13 +4,15 @@ import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { Nav } from '../components/Nav';
 import { Footer } from '../components/Footer';
-import { FeaturedDropMedia, ProductionBadge } from '../components/FeaturedDropMedia';
+import { FeaturedDropMedia, PrimaryProductionMedia, ProductionBadge } from '../components/FeaturedDropMedia';
 import { REAL_PRODUCTIONS, type RealTrack } from '../../lib/music-manifest';
 import {
   formatArcLabel,
   getArcKey,
   groupTracksByArc,
+  isAboveFoldRealProduction,
   isFeaturedRealProduction,
+  resolveFeaturedVideoSrc,
 } from '../../lib/featured-productions';
 
 function featuredDateLabel(track: RealTrack): string {
@@ -42,30 +44,20 @@ function RealProductionCard({
   return (
     <div className={`holo-frame overflow-hidden rounded-3xl border ${featured ? 'border-folana-neon-pink/30' : 'border-white/15'}`}>
       <div className="grid gap-0 md:grid-cols-2">
-        <div className="relative aspect-[16/9] bg-black md:aspect-auto">
-          <img
-            src={track.posterSrc || '/brand/og-card-neutral.png'}
-            alt={track.title}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
-          <div className="absolute left-4 top-4">
-            <ProductionBadge kind="real" />
-          </div>
-          {featured && (
-            <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6">
-              <div className="inline-block rounded-full border border-folana-neon-pink/40 bg-black/70 px-4 py-1 font-mono text-xs tracking-widest text-folana-neon-pink">
-                FEATURED • {featuredDateLabel(track)}
-              </div>
-            </div>
-          )}
+        <div className="relative bg-black">
+          <PrimaryProductionMedia track={track} />
         </div>
 
         <div className="flex flex-col bg-folana-surface/60 p-5 sm:p-8 md:p-10">
           <div className="flex-1">
             <div className="mb-2 text-xs uppercase tracking-[3px] text-folana-neon-cyan">
-              REAL PRODUCTION
+              {featured ? 'FEATURED • REAL PRODUCTION' : 'REAL PRODUCTION'}
             </div>
+            {featured && (
+              <div className="mb-3 inline-block rounded-full border border-folana-neon-pink/40 bg-black/70 px-4 py-1 font-mono text-xs tracking-widest text-folana-neon-pink">
+                FEATURED • {featuredDateLabel(track)}
+              </div>
+            )}
             <div className="mb-1 font-serif text-2xl tracking-tight text-folana-ink sm:text-3xl">{track.title}</div>
             <div className="mb-4 font-mono text-sm text-folana-text-muted">{track.subtitle}</div>
             <p className="mb-6 font-serif text-base italic leading-relaxed text-folana-text-secondary">
@@ -81,7 +73,7 @@ function RealProductionCard({
             <FeaturedDropMedia track={track} />
           </div>
 
-          {track.videoSrc && (
+          {resolveFeaturedVideoSrc(track) && (
             <div className="mt-3 text-xs">
               <Link href="/#sonic" className="text-folana-neon-cyan hover:underline">Watch the video in the Sonic Vault →</Link>
             </div>
@@ -172,8 +164,8 @@ export default function MusicReleases() {
     });
   }, [searchQuery, arcFilter, moodFilter]);
 
-  const featuredTracks = filteredTracks.filter((track) => isFeaturedRealProduction(track.id));
-  const olderTracks = filteredTracks.filter((track) => !isFeaturedRealProduction(track.id));
+  const aboveFoldTracks = filteredTracks.filter((track) => isAboveFoldRealProduction(track.id));
+  const olderTracks = filteredTracks.filter((track) => !isAboveFoldRealProduction(track.id));
   const olderGroups = groupTracksByArc(olderTracks);
 
   return (
@@ -190,7 +182,7 @@ export default function MusicReleases() {
               Music Releases
             </h1>
             <p className="mx-auto max-w-md font-serif text-lg italic text-folana-text-secondary sm:text-xl">
-              QUANTUM and Fracture sit above the fold.<br />Older arcs stay in the catalog, collapsed.
+              QUANTUM, Fracture, and Ethereal sit above the fold.<br />Older arcs stay in the catalog, collapsed.
             </p>
           </div>
         </section>
@@ -256,8 +248,12 @@ export default function MusicReleases() {
               </div>
             ) : (
               <>
-                {featuredTracks.map((track) => (
-                  <RealProductionCard key={track.id} track={track} featured={!hasActiveFilters} />
+                {aboveFoldTracks.map((track) => (
+                  <RealProductionCard
+                    key={track.id}
+                    track={track}
+                    featured={!hasActiveFilters && isFeaturedRealProduction(track.id)}
+                  />
                 ))}
 
                 {olderTracks.length > 0 && (
