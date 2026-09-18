@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { RealTrack } from '@/lib/music-manifest';
+import { ETHEREAL_SIDE_VIDEO, resolveFeaturedVideoSrc } from '@/lib/featured-productions';
 
 export function ProductionBadge({ kind, hasVideo = false }: { kind: 'real' | 'prototype'; hasVideo?: boolean }) {
   const isReal = kind === 'real';
@@ -65,7 +66,7 @@ export function StillsGallery({
   );
 }
 
-type FeaturedMediaTrack = Pick<RealTrack, 'title' | 'audioSrc' | 'videoSrc' | 'galleryStills' | 'posterSrc'>;
+type FeaturedMediaTrack = Pick<RealTrack, 'id' | 'title' | 'audioSrc' | 'videoSrc' | 'galleryStills' | 'posterSrc'>;
 
 export function FeaturedDropMedia({
   track,
@@ -77,7 +78,9 @@ export function FeaturedDropMedia({
   showVideoPlaceholder?: boolean;
 }) {
   const stills = track.galleryStills ?? [];
-  const showPlaceholder = showVideoPlaceholder && !track.videoSrc;
+  const videoSrc = resolveFeaturedVideoSrc(track);
+  const sideSrc = track.id === 'ethereal-dispatch' ? ETHEREAL_SIDE_VIDEO : undefined;
+  const showPlaceholder = showVideoPlaceholder && !videoSrc;
 
   return (
     <div className="space-y-4">
@@ -90,19 +93,35 @@ export function FeaturedDropMedia({
           </audio>
         </div>
       )}
-      {track.videoSrc ? (
-        <div>
-          <div className="mb-2 font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">MUSIC VIDEO • REAL</div>
-          <video
-            controls
-            playsInline
-            preload="metadata"
-            poster={track.posterSrc}
-            className="w-full rounded-xl border border-white/10 bg-black"
-            src={track.videoSrc}
-          >
-            Your browser does not support the video element.
-          </video>
+      {videoSrc ? (
+        <div className="space-y-4">
+          <div>
+            <div className="mb-2 font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">MUSIC VIDEO • REAL</div>
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster={track.posterSrc}
+              className="w-full rounded-xl border border-white/10 bg-black"
+              src={videoSrc}
+            >
+              Your browser does not support the video element.
+            </video>
+          </div>
+          {sideSrc && (
+            <div>
+              <div className="mb-2 font-mono text-[10px] tracking-[3px] text-folana-text-muted">SIDE ANGLE</div>
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full rounded-xl border border-white/10 bg-black"
+                src={sideSrc}
+              >
+                Your browser does not support the video element.
+              </video>
+            </div>
+          )}
         </div>
       ) : (
         showPlaceholder && <MusicVideoPlaceholder title={track.title} />

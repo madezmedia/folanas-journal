@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, X, Volume2, VolumeX, Maximize2, Film } from 'lucide-react';
 import { MusicVideoPlayer } from './MusicVideoPlayer';
 import { REAL_PRODUCTIONS } from '@/lib/music-manifest';
-import { getFeaturedRealProductions } from '@/lib/featured-productions';
+import { getFeaturedRealProductions, resolveFeaturedVideoSrc } from '@/lib/featured-productions';
 import { FeaturedDropMedia, ProductionBadge } from './FeaturedDropMedia';
 
 interface Track {
@@ -25,19 +25,6 @@ interface Track {
 }
 
 const TRACKS: Track[] = [
-  // === REAL PRODUCTION: ETHEREAL DISPATCH (autonomous FAL B-roll + full RunPod InfiniteTalk videos, May 27 pipeline) ===
-  {
-    id: 'ethereal-dispatch',
-    title: 'ETHEREAL DISPATCH',
-    subtitle: 'AMBIENT • FULL PIPELINE PRODUCTION',
-    description: 'Dreamy atmospheric transmission on a rainy Brooklyn rooftop at blue hour. Real mmx audio + two full InfiniteTalk performances from the best autonomous FAL B-roll (locked full-body reference verified). The wires breathing between the heavier dispatches.',
-    videoSrc: '/folana/generated/2026-05-27/videos/ethereal-dispatch-fal-front.mp4',
-    audioSrc: '/folana/generated/2026-05-27/music/folana_ethereal_dispatch.mp3',
-    posterSrc: '/folana/generated/2026-05-27/broll/ethereal-dispatch-fal-autonomous/broll_1779903636.png',
-    duration: '—',
-    mood: 'ETHEREAL',
-    tags: ['ambient', 'real-production', 'fal-autonomous', 'runpod-infinitetalk', 'locked-ref', '2026-05-27']
-  },
   {
     id: 'mirror-transmission',
     title: 'MIRROR IN THE STATIC',
@@ -219,29 +206,6 @@ const TRACKS: Track[] = [
     mood: 'THRESHOLD',
     tags: ['ep31', 'threshold', 'veil-fracture', 'static-pause', 'harness', 'locked-lora', 'echoes']
   },
-  // === FRESH DISPATCH 001 (2026-05-27) — RunPod InfiniteTalk music video + locked mmx vocal textures ===
-  {
-    id: 'fracture-dispatch-001',
-    title: 'FRACTURE DISPATCH 001 — THE SIGNAL SINGS BACK',
-    subtitle: 'DISPATCH • REAL PRODUCTION (mmx + RunPod InfiniteTalk)',
-    description: 'The grid answered. Violet rain on the rooftop, lace dissolving into data. The signal chose the glitch and the glitch chose her back. Real mmx music + full InfiniteTalk lip-sync video. This is the first complete produced track with actual audio and synced visual.',
-    videoSrc: '/folana/generated/2026-05-27/fracture_dispatch_001_music_video.mp4',
-    audioSrc: '/folana/generated/2026-05-27/fracture_dispatch_001_signal_sings_back.mp3',
-    posterSrc: '/folana/generated/2026-05-27/fracture_dispatch_hero_01.jpg',
-    duration: '2:48',
-    mood: 'FRACTURE',
-    tags: ['dispatch-001', 'signal-sings-back', 'real-production', 'runpod-infinitetalk', 'mmx-music', 'locked', 'echoes-arc'],
-    timedLyrics: [
-      { time: 0, text: "The wires remember every static kiss", verse: "VERSE" },
-      { time: 8, text: "Brooklyn loft, vinyl hiss, frequencies twist", verse: "" },
-      { time: 16, text: "Veil thin as lace on the fire escape", verse: "" },
-      { time: 24, text: "Derrida pages in the rain, I read my fate", verse: "CHORUS" },
-      { time: 32, text: "The signal sings back through the fracture", verse: "" },
-      { time: 40, text: "Sings back, sings back — I am the rapture", verse: "" },
-      { time: 48, text: "In the glitch I chose, the choir awoke", verse: "OUTRO" },
-      { time: 56, text: "Static girl, come home to the smoke...", verse: "" }
-    ]
-  }
 ];
 
 // === PLAYLISTS — ECHOES ARC CURATED (tied to Ep30+/Ep31 fresh harness content + locked signatures) ===
@@ -250,7 +214,7 @@ const PLAYLISTS = [
     id: 'echoes-static-vol1',
     name: 'ECHOES IN THE STATIC — VOL.1',
     subtitle: 'Ep30 Frequency Fracture + Ep31 Veil',
-    trackIds: ['synth-wave-transmission', 'static-embrace-reel', 'glitch-hero-transmission', 'vinyl-static-embrace', 'veil-fracture-ep31', 'vinyl-hush-ep31', 'rain-window-ep31', 'fracture-dispatch-001'],
+    trackIds: ['synth-wave-transmission', 'static-embrace-reel', 'glitch-hero-transmission', 'vinyl-static-embrace', 'veil-fracture-ep31', 'vinyl-hush-ep31', 'rain-window-ep31'],
     accent: 'neon-pink'
   },
   {
@@ -613,7 +577,9 @@ export function SonicVault() {
         </div>
 
         <div className="space-y-6">
-          {getFeaturedRealProductions().map((realTrack) => (
+          {getFeaturedRealProductions().map((realTrack) => {
+            const videoSrc = resolveFeaturedVideoSrc(realTrack);
+            return (
             <div key={realTrack.id} className="space-y-4">
               <div className="holo-frame group block overflow-hidden rounded-3xl border border-folana-neon-pink/30 bg-folana-surface text-left transition-all hover:border-folana-neon-pink/70">
                 <div className="grid gap-0 md:grid-cols-5">
@@ -625,7 +591,7 @@ export function SonicVault() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
                     <div className="absolute bottom-4 left-4">
-                      <ProductionBadge kind="real" hasVideo={Boolean(realTrack.videoSrc)} />
+                      <ProductionBadge kind="real" hasVideo={Boolean(videoSrc)} />
                     </div>
                   </div>
                   <div className="space-y-4 p-5 md:col-span-3 md:p-8">
@@ -634,7 +600,7 @@ export function SonicVault() {
                       <div className="mt-1 font-mono text-sm tracking-[2px] text-folana-text-muted">{realTrack.subtitle} • {realTrack.duration}</div>
                     </div>
                     <p className="max-w-prose font-serif text-base italic leading-snug text-folana-text-secondary/95">{realTrack.description}</p>
-                    {realTrack.videoSrc ? (
+                    {videoSrc ? (
                       <button
                         type="button"
                         onClick={() => openPlayer({
@@ -642,7 +608,7 @@ export function SonicVault() {
                           title: realTrack.title,
                           subtitle: realTrack.subtitle,
                           description: realTrack.description,
-                          videoSrc: realTrack.videoSrc,
+                          videoSrc,
                           audioSrc: realTrack.audioSrc,
                           posterSrc: realTrack.posterSrc,
                           galleryStills: realTrack.galleryStills,
@@ -668,7 +634,8 @@ export function SonicVault() {
                 <FeaturedDropMedia track={realTrack} />
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

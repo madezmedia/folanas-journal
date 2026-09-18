@@ -11,6 +11,7 @@ import {
   getArcKey,
   groupTracksByArc,
   isFeaturedRealProduction,
+  resolveFeaturedVideoSrc,
 } from '../../lib/featured-productions';
 
 function featuredDateLabel(track: RealTrack): string {
@@ -50,7 +51,7 @@ function RealProductionCard({
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
           <div className="absolute left-4 top-4">
-            <ProductionBadge kind="real" hasVideo={Boolean(track.videoSrc)} />
+            <ProductionBadge kind="real" hasVideo={Boolean(resolveFeaturedVideoSrc(track))} />
           </div>
           {featured && (
             <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6">

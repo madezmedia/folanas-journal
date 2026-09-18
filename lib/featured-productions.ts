@@ -6,6 +6,21 @@ export const FEATURED_REAL_PRODUCTION_IDS = [
   'ethereal-dispatch',
 ] as const;
 
+/** SITE-REFRESH-PLAN-v1.md — verified files under public/. QUANTUM must not appear here. */
+export const REAL_VIDEO_INVENTORY = {
+  'fracture-dispatch-001': '/folana/generated/2026-05-27/fracture_dispatch_001_music_video.mp4',
+  'ethereal-dispatch': '/folana/generated/2026-05-27/videos/ethereal-dispatch-fal-front.mp4',
+} as const;
+
+export const ETHEREAL_SIDE_VIDEO = '/folana/generated/2026-05-27/videos/ethereal-dispatch-fal-side.mp4';
+
+export function resolveFeaturedVideoSrc(track: { id: string; videoSrc?: string }): string | undefined {
+  if (track.id === 'quantum-arc-rust-vein') return undefined;
+  if (track.id === 'fracture-dispatch-001') return REAL_VIDEO_INVENTORY['fracture-dispatch-001'];
+  if (track.id === 'ethereal-dispatch') return REAL_VIDEO_INVENTORY['ethereal-dispatch'];
+  return track.videoSrc;
+}
+
 export const OLDER_ARC_ORDER = [
   'canopy-arc',
   'threshold-arc',
