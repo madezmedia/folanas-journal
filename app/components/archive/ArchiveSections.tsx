@@ -50,6 +50,7 @@ export function ArchiveFreshRail({
   actionHref = '/archive',
   actionLabel = 'OPEN FULL ARCHIVE',
   onItemSelect,
+  compact = false,
 }: {
   items: ArchiveItem[];
   title?: string;
@@ -58,6 +59,7 @@ export function ArchiveFreshRail({
   actionHref?: string;
   actionLabel?: string;
   onItemSelect?: (item: ArchiveItem) => void;
+  compact?: boolean;
 }) {
   return (
     <section className="rounded-[2rem] border border-white/10 bg-folana-surface/60 p-5 md:p-6">
@@ -68,7 +70,7 @@ export function ArchiveFreshRail({
         </div>
         <div className="font-mono text-[10px] tracking-[3px] text-folana-text-muted">{summary}</div>
       </div>
-      <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+      <div className={`mt-5 grid gap-3 ${compact ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2 xl:grid-cols-4'}`}>
         {items.map(item => {
           const content = (
             <>
@@ -155,7 +157,7 @@ export function ArchiveFiltersBar({
             <button
               key={f.value}
               onClick={() => onTypeChange(f.value)}
-              className={`px-4 py-2 text-xs font-mono tracking-[2px] rounded-full border transition-all ${typeFilter === f.value ? 'bg-folana-neon-pink text-black border-folana-neon-pink' : 'border-white/15 hover:border-folana-neon-pink/70 text-folana-text-secondary hover:text-folana-ink'}`}
+              className={`min-h-11 px-4 py-2 text-xs font-mono tracking-[2px] rounded-full border transition-all ${typeFilter === f.value ? 'bg-folana-neon-pink text-black border-folana-neon-pink' : 'border-white/15 hover:border-folana-neon-pink/70 text-folana-text-secondary hover:text-folana-ink'}`}
             >
               {f.label}
             </button>

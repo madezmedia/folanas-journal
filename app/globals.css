@@ -498,7 +498,31 @@ button, a, [role="button"] {
   background: var(--color-folana-neon-pink);
 }
 
-/* Prose overrides for journal entries (dark fairy elegance) */
+details.older-arcs > summary {
+  list-style: none;
+}
+details.older-arcs > summary::-webkit-details-marker {
+  display: none;
+}
+
+audio {
+  max-width: 100%;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .glitch:hover::before,
+  .glitch:hover::after { display: none; }
+
+  audio {
+    min-height: 44px;
+  }
+
+  .sigil-modal {
+    max-height: calc(100dvh - 1.25rem);
+    overflow-y: auto;
+  }
+}
 .prose-cyber {
   font-family: var(--font-serif);
   font-style: italic;
@@ -521,8 +545,3 @@ button, a, [role="button"] {
   opacity: 0.85;
 }
 
-/* Responsive utilities */
-@media (max-width: 768px) {
-  .glitch:hover::before,
-  .glitch:hover::after { display: none; }
-}
