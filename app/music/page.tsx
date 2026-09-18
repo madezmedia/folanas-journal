@@ -123,8 +123,8 @@ function RealProductionCard({
 
 function OlderArcRow({ track }: { track: RealTrack }) {
   return (
-    <div className="flex flex-col gap-3 border-b border-white/10 py-4 last:border-b-0 sm:flex-row sm:items-center">
-      <div className="relative h-20 w-full shrink-0 overflow-hidden rounded-xl border border-white/10 bg-black sm:h-16 sm:w-28">
+    <div className="flex flex-col gap-3 border-b border-white/10 py-4 last:border-b-0 md:flex-row md:items-center">
+      <div className="relative h-20 w-full shrink-0 overflow-hidden rounded-xl border border-white/10 bg-black md:h-16 md:w-28">
         <img
           src={track.posterSrc || '/brand/og-card-neutral.png'}
           alt={track.title}
@@ -133,12 +133,12 @@ function OlderArcRow({ track }: { track: RealTrack }) {
       </div>
       <div className="min-w-0 flex-1">
         <div className="font-serif text-lg leading-tight tracking-tight text-folana-ink">{track.title}</div>
-        <div className="mt-1 font-mono text-[10px] tracking-[2px] text-folana-text-muted">
+        <div className="mt-1 font-mono text-[10px] leading-snug tracking-wide text-folana-text-muted">
           {track.subtitle} • {track.duration}
         </div>
       </div>
       {track.audioSrc && (
-        <audio controls preload="none" className="w-full min-h-11 accent-folana-neon-pink sm:max-w-xs" src={track.audioSrc}>
+        <audio controls preload="none" className="w-full min-h-11 shrink-0 accent-folana-neon-pink md:w-64" src={track.audioSrc}>
           Your browser does not support the audio element.
         </audio>
       )}
