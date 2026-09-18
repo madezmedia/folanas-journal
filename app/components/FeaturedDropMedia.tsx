@@ -91,7 +91,7 @@ export function NativeProductionVideo({
         poster={poster}
         src={src}
         aria-label={title}
-        className="aspect-video w-full bg-black object-contain"
+        className="relative z-[1] aspect-video w-full bg-black object-contain"
       >
         Your browser does not support the video element.
       </video>
@@ -122,7 +122,7 @@ export function PrimaryProductionMedia({
           poster={track.posterSrc}
           src={videoSrc}
           aria-label={track.title}
-          className="aspect-video w-full bg-black object-contain"
+          className="relative z-[1] aspect-video w-full bg-black object-contain"
         >
           Your browser does not support the video element.
         </video>
@@ -173,7 +173,7 @@ export function FeaturedDropMedia({
       {showAudio && track.audioSrc && (
         <div>
           <div className="mb-2 font-mono text-[10px] tracking-[3px] text-folana-text-muted">LISTEN</div>
-          <audio controls preload="none" className="w-full min-h-11 accent-folana-neon-pink" src={track.audioSrc}>
+          <audio controls preload="metadata" className="w-full min-h-11 accent-folana-neon-pink" src={track.audioSrc}>
             Your browser does not support the audio element.
           </audio>
         </div>

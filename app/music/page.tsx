@@ -75,7 +75,7 @@ function RealProductionCard({
 
           {resolveFeaturedVideoSrc(track) && (
             <div className="mt-3 text-xs">
-              <Link href="/#sonic" className="text-folana-neon-cyan hover:underline">Watch the video in the Sonic Vault →</Link>
+              <Link href="/#sonic" className="relative z-10 text-folana-neon-cyan hover:underline">Watch the video in the Sonic Vault →</Link>
             </div>
           )}
 
@@ -115,22 +115,29 @@ function RealProductionCard({
 
 function OlderArcRow({ track }: { track: RealTrack }) {
   return (
-    <div className="flex flex-col gap-3 border-b border-white/10 py-4 last:border-b-0 sm:flex-row sm:items-center">
-      <div className="relative h-20 w-full shrink-0 overflow-hidden rounded-xl border border-white/10 bg-black sm:h-16 sm:w-28">
-        <img
-          src={track.posterSrc || '/brand/og-card-neutral.png'}
-          alt={track.title}
-          className="h-full w-full object-cover"
-        />
-      </div>
-      <div className="min-w-0 flex-1">
-        <div className="font-serif text-lg leading-tight tracking-tight text-folana-ink">{track.title}</div>
-        <div className="mt-1 font-mono text-[10px] tracking-[2px] text-folana-text-muted">
-          {track.subtitle} • {track.duration}
+    <div className="flex flex-wrap items-start gap-3 border-b border-white/10 py-4 last:border-b-0">
+      <div className="flex min-w-0 flex-[1_1_16rem] items-start gap-3">
+        <div className="relative h-16 w-28 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-black">
+          <img
+            src={track.posterSrc || '/brand/og-card-neutral.png'}
+            alt={track.title}
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="min-w-0 flex-1">
+          <div className="break-words font-serif text-lg leading-snug tracking-tight text-folana-ink">{track.title}</div>
+          <div className="mt-1 break-words font-mono text-[10px] tracking-[2px] text-folana-text-muted">
+            {track.subtitle} • {track.duration}
+          </div>
         </div>
       </div>
       {track.audioSrc && (
-        <audio controls preload="none" className="w-full min-h-11 accent-folana-neon-pink sm:max-w-xs" src={track.audioSrc}>
+        <audio
+          controls
+          preload="metadata"
+          className="min-h-11 w-full min-w-0 flex-[1_1_16rem] accent-folana-neon-pink"
+          src={track.audioSrc}
+        >
           Your browser does not support the audio element.
         </audio>
       )}
@@ -173,27 +180,48 @@ export default function MusicReleases() {
       <Nav />
 
       <main className="pt-20 pb-24">
-        <section className="relative border-b border-white/10 bg-folana-void py-12 md:py-24">
+        <section className="relative border-b border-white/10 bg-folana-void py-5 md:py-7">
           <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
-            <div className="mb-4 inline-block rounded-full border border-folana-neon-pink/40 px-4 py-1 font-mono text-xs tracking-[3px] text-folana-neon-pink">
+            <div className="mb-2 inline-block rounded-full border border-folana-neon-pink/40 px-4 py-1 font-mono text-xs tracking-[3px] text-folana-neon-pink">
               TRANSMISSIONS FROM THE WIRES
             </div>
-            <h1 className="mb-4 font-serif text-4xl tracking-[-2px] text-white sm:text-7xl sm:tracking-[-4.5px] md:text-[92px]">
+            <h1 className="mb-2 font-serif text-3xl tracking-[-1px] text-white sm:text-5xl sm:tracking-[-2px] md:text-6xl">
               Music Releases
             </h1>
-            <p className="mx-auto max-w-md font-serif text-lg italic text-folana-text-secondary sm:text-xl">
-              QUANTUM, Fracture, and Ethereal sit above the fold.<br />Older arcs stay in the catalog, collapsed.
+            <p className="mx-auto max-w-lg font-serif text-base italic text-folana-text-secondary sm:text-lg">
+              QUANTUM, Fracture, and Ethereal lead. Older arcs stay in the catalog, collapsed.
             </p>
           </div>
         </section>
 
-        <section id="featured" className="mx-auto max-w-5xl scroll-mt-28 px-4 pt-12 sm:px-6 sm:pt-16">
-          <div className="mb-8 flex items-center gap-4">
+        <section id="featured" className="mx-auto max-w-5xl scroll-mt-28 px-4 pt-6 sm:px-6 sm:pt-8">
+          <div className="mb-6 flex items-center gap-4">
             <div className="font-mono text-xs tracking-[3px] text-folana-neon-pink">REAL PRODUCTIONS</div>
             <div className="h-px flex-1 bg-gradient-to-r from-folana-neon-pink/30" />
           </div>
 
-          <div className="mb-10 space-y-4">
+          <div className="mb-8 space-y-8">
+            {filteredTracks.length === 0 ? (
+              <div className="rounded-2xl border border-dashed border-white/10 py-16 text-center">
+                <div className="mb-3 font-mono text-xs tracking-[3px] text-folana-text-muted">NO RESULTS</div>
+                <p className="mx-auto max-w-md text-sm text-folana-text-secondary">
+                  No tracks match your current filters. Try adjusting your search or clearing filters.
+                </p>
+              </div>
+            ) : (
+              <>
+                {aboveFoldTracks.map((track) => (
+                  <RealProductionCard
+                    key={track.id}
+                    track={track}
+                    featured={!hasActiveFilters && isFeaturedRealProduction(track.id)}
+                  />
+                ))}
+              </>
+            )}
+          </div>
+
+          <div className="mb-8 space-y-4">
             <div className="flex flex-wrap items-start gap-4">
               <div className="min-w-[220px] flex-1">
                 <input
@@ -225,74 +253,55 @@ export default function MusicReleases() {
                 ))}
               </select>
             </div>
-            <div className="font-mono text-xs tracking-[2px] text-folana-text-muted">
-              Showing {filteredTracks.length} of {REAL_PRODUCTIONS.length} tracks
-              {hasActiveFilters && (
+            {hasActiveFilters && (
+              <div className="font-mono text-xs tracking-[2px] text-folana-text-muted">
+                Showing {filteredTracks.length} of {REAL_PRODUCTIONS.length} tracks
                 <button
                   onClick={() => { setSearchQuery(''); setArcFilter(''); setMoodFilter(''); }}
                   className="ml-4 text-folana-neon-pink underline underline-offset-2 transition-colors hover:text-folana-neon-pink/80"
                 >
                   Clear filters
                 </button>
-              )}
-            </div>
-          </div>
-
-          <div className="mb-12 space-y-8">
-            {filteredTracks.length === 0 ? (
-              <div className="rounded-2xl border border-dashed border-white/10 py-16 text-center">
-                <div className="mb-3 font-mono text-xs tracking-[3px] text-folana-text-muted">NO RESULTS</div>
-                <p className="mx-auto max-w-md text-sm text-folana-text-secondary">
-                  No tracks match your current filters. Try adjusting your search or clearing filters.
-                </p>
               </div>
-            ) : (
-              <>
-                {aboveFoldTracks.map((track) => (
-                  <RealProductionCard
-                    key={track.id}
-                    track={track}
-                    featured={!hasActiveFilters && isFeaturedRealProduction(track.id)}
-                  />
-                ))}
-
-                {olderTracks.length > 0 && (
-                  <details className="older-arcs rounded-3xl border border-white/10 bg-folana-surface/40" open={hasActiveFilters || undefined}>
-                    <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 sm:px-6">
-                      <div>
-                        <div className="font-mono text-xs tracking-[3px] text-folana-text-muted">OLDER ARCS</div>
-                        <div className="mt-1 font-serif text-xl text-folana-ink">Canopy, Threshold, and earlier transmissions</div>
-                      </div>
-                      <div className="shrink-0 font-mono text-[10px] tracking-[2px] text-folana-text-muted">
-                        {olderTracks.length} tracks
-                      </div>
-                    </summary>
-                    <div className="space-y-8 border-t border-white/10 px-5 py-6 sm:px-6">
-                      {olderGroups.map((group) => (
-                        <div key={group.key}>
-                          <div className="mb-3 flex items-center gap-3">
-                            <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">{group.label.toUpperCase()}</div>
-                            <div className="h-px flex-1 bg-gradient-to-r from-folana-neon-cyan/20" />
-                            <div className="font-mono text-[10px] tracking-[2px] text-folana-text-muted">{group.tracks.length}</div>
-                          </div>
-                          <div>
-                            {group.tracks.map((track) => (
-                              <OlderArcRow key={track.id} track={track} />
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </details>
-                )}
-              </>
             )}
           </div>
 
-          <div className="mb-16">
+          {olderTracks.length > 0 && (
+            <div className="mb-12">
+              <details className="older-arcs rounded-3xl border border-white/10 bg-folana-surface/40" open={hasActiveFilters || undefined}>
+                <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 sm:px-6">
+                  <div>
+                    <div className="font-mono text-xs tracking-[3px] text-folana-text-muted">OLDER ARCS</div>
+                    <div className="mt-1 font-serif text-xl text-folana-ink">Canopy, Threshold, and earlier transmissions</div>
+                  </div>
+                  <div className="shrink-0 font-mono text-[10px] tracking-[2px] text-folana-text-muted">
+                    {olderTracks.length} tracks
+                  </div>
+                </summary>
+                <div className="space-y-8 border-t border-white/10 px-5 py-6 sm:px-6">
+                  {olderGroups.map((group) => (
+                    <div key={group.key}>
+                      <div className="mb-3 flex items-center gap-3">
+                        <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">{group.label.toUpperCase()}</div>
+                        <div className="h-px flex-1 bg-gradient-to-r from-folana-neon-cyan/20" />
+                        <div className="font-mono text-[10px] tracking-[2px] text-folana-text-muted">{group.tracks.length}</div>
+                      </div>
+                      <div>
+                        {group.tracks.map((track) => (
+                          <OlderArcRow key={track.id} track={track} />
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </details>
+            </div>
+          )}
+
+          <div className="relative z-10 mb-16">
             <Link
               href="/#sonic"
-              className="group inline-flex min-h-11 items-center gap-3 font-mono text-sm tracking-[2px] text-folana-neon-cyan transition-colors hover:text-white"
+              className="group relative z-10 inline-flex min-h-11 items-center gap-3 font-mono text-sm tracking-[2px] text-folana-neon-cyan transition-colors hover:text-white"
             >
               WATCH THE FULL LIP-SYNC VIDEO IN THE SONIC VAULT
               <span className="transition group-hover:translate-x-1">→</span>

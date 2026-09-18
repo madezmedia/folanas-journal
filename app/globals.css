@@ -320,10 +320,6 @@ button, a, [role="button"] {
 }
 .holo-frame:hover::before {
   opacity: 1;
-  animation: holo-rotate 4s linear infinite;
-}
-@keyframes holo-rotate {
-  to { transform: rotate(360deg); }
 }
 
 /* Lace / grunge texture overlay for fairy elements */

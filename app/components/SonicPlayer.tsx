@@ -285,7 +285,7 @@ export function SonicVault() {
   const [progress, setProgress] = useState(0);
   const [isMuted, setIsMuted] = useState(false);
   const [glitchMode, setGlitchMode] = useState(false);
-  const [showVisualizer, setShowVisualizer] = useState(true);
+  const [showVisualizer, setShowVisualizer] = useState(false);
   // === NEW V3: Playlist + Sigil Sync + Advanced Glitch UX ===
   const [activePlaylist, setActivePlaylist] = useState<typeof PLAYLISTS[0] | null>(null);
   const [playlistIndex, setPlaylistIndex] = useState(0);
@@ -570,7 +570,7 @@ export function SonicVault() {
   }, [selectedTrack, showVisualizer, glitchMode, isPlaying]);
 
   return (
-    <div id="sonic" className="scroll-mt-28 space-y-10">
+    <div id="sonic" className="scroll-mt-44 space-y-10">
       {/* Section Header */}
       <div className="flex flex-col gap-4 border-b border-white/10 pb-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
@@ -615,7 +615,7 @@ export function SonicVault() {
         <div className="space-y-6">
           {getAboveFoldRealProductions().map((realTrack) => (
             <div key={realTrack.id} className="space-y-4">
-              <div className="holo-frame overflow-hidden rounded-3xl border border-folana-neon-pink/30 bg-folana-surface text-left transition-all hover:border-folana-neon-pink/70">
+              <div className="overflow-hidden rounded-3xl border border-folana-neon-pink/30 bg-folana-surface text-left transition-all hover:border-folana-neon-pink/70">
                 <div className="grid gap-0 md:grid-cols-5">
                   <div className="relative bg-black md:col-span-2">
                     <PrimaryProductionMedia track={realTrack} />
@@ -761,16 +761,6 @@ export function SonicVault() {
                     </div>
                   )}
 
-                  {/* Live Visualizer Canvas Overlay */}
-                  {showVisualizer && (
-                    <div className="absolute bottom-0 left-0 right-0 h-[38%] pointer-events-none">
-                      <canvas 
-                        ref={canvasRef} 
-                        className={`w-full h-full mix-blend-screen opacity-90 ${vizIntensity === 'fracture' ? 'viz-fracture' : ''}`} 
-                      />
-                    </div>
-                  )}
-
                   {/* Top HUD */}
                   <div className="absolute top-0 left-0 right-0 p-6 flex justify-between items-start text-xs font-mono tracking-[3px] z-10">
                     <div>
@@ -806,6 +796,15 @@ export function SonicVault() {
                     </button>
                   </div>
                 </div>
+
+                {showVisualizer && (
+                  <div className="h-24 border-t border-white/10 bg-black pointer-events-none">
+                    <canvas
+                      ref={canvasRef}
+                      className={`h-full w-full ${vizIntensity === 'fracture' ? 'viz-fracture' : ''}`}
+                    />
+                  </div>
+                )}
 
                 {/* Custom Neon Controls */}
                 <div className="video-controls p-5 flex flex-col gap-4 border-t border-white/10">

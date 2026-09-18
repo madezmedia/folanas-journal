@@ -47,7 +47,7 @@ export function MusicVideoPlayer({ track, onClose, onSigilLink, onHarnessReinvok
   const [progress, setProgress] = useState(0);
   const [isMuted, setIsMuted] = useState(false);
   const [glitchMode, setGlitchMode] = useState(false);
-  const [showVisualizer, setShowVisualizer] = useState(true);
+  const [showVisualizer, setShowVisualizer] = useState(false);
   const [currentLyricIndex, setCurrentLyricIndex] = useState(0);
   const [vizIntensity, setVizIntensity] = useState<'normal' | 'glitch' | 'fracture'>('fracture');
 
@@ -259,12 +259,6 @@ export function MusicVideoPlayer({ track, onClose, onSigilLink, onHarnessReinvok
               playsInline
             />
 
-            {showVisualizer && (
-              <div className="absolute bottom-0 left-0 right-0 h-[42%] pointer-events-none">
-                <canvas ref={canvasRef} className={`w-full h-full mix-blend-screen opacity-95 ${vizIntensity === 'fracture' ? 'viz-fracture' : ''}`} />
-              </div>
-            )}
-
             {/* Cinematic HUD */}
             <div className="absolute top-0 left-0 right-0 p-7 flex justify-between items-start text-xs font-mono tracking-[3.5px] z-10">
               <div className="flex items-center gap-3">
@@ -298,6 +292,12 @@ export function MusicVideoPlayer({ track, onClose, onSigilLink, onHarnessReinvok
               </button>
             </div>
           </div>
+
+          {showVisualizer && (
+            <div className="h-24 border-t border-white/10 bg-black pointer-events-none">
+              <canvas ref={canvasRef} className={`h-full w-full ${vizIntensity === 'fracture' ? 'viz-fracture' : ''}`} />
+            </div>
+          )}
 
           {/* Controls + Time-Synced Lyrics (dedicated immersive) */}
           <div className="video-controls p-7 flex flex-col gap-5 border-t border-white/10 bg-folana-surface">

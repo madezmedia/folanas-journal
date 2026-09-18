@@ -13,7 +13,6 @@ interface ACMIEvent {
 export function AcmiLiveFeed() {
   const [events, setEvents] = useState<ACMIEvent[]>([]);
   const [loading, setLoading] = useState(true);
-  const [unavailable, setUnavailable] = useState(false);
   const [autoRefresh, setAutoRefresh] = useState(true);
   const [totalAvailable, setTotalAvailable] = useState(0);
 
@@ -22,14 +21,12 @@ export function AcmiLiveFeed() {
       const res = await fetch('/api/acmi/folana-feed?limit=15');
       const data = await res.json().catch(() => ({}));
       if (!res.ok || data.unavailable) {
-        setUnavailable(true);
         return;
       }
       setEvents(Array.isArray(data.events) ? data.events : []);
       setTotalAvailable(typeof data.totalAvailable === 'number' ? data.totalAvailable : 0);
-      setUnavailable(false);
     } catch {
-      setUnavailable(true);
+      // Keep last real events if any; empty stays empty.
     } finally {
       setLoading(false);
     }
@@ -71,9 +68,21 @@ export function AcmiLiveFeed() {
     }
   };
 
-  // Hide the homepage widget when ACMI is down. Do not show SIGNAL LOST or invented metrics.
-  if ((loading || unavailable) && events.length === 0) {
+  // Quiet empty — never SIGNAL LOST theater. No invented metrics.
+  if (loading && events.length === 0) {
     return null;
+  }
+
+  if (events.length === 0) {
+    return (
+      <section id="grid">
+        <div className="mx-auto max-w-5xl">
+          <p className="py-8 text-center font-serif italic text-folana-text-muted">
+            The static is quiet.
+          </p>
+        </div>
+      </section>
+    );
   }
 
   return (
