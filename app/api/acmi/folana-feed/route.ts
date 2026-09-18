@@ -121,11 +121,14 @@ export async function GET(request: Request) {
       totalAvailable: filtered.length,
       fetchedAt: new Date().toISOString(),
     });
-  } catch (err: any) {
-    console.error('[acmi-folana-feed] Error:', err);
-    return NextResponse.json(
-      { error: 'Failed to fetch Folana ACMI feed', detail: err.message },
-      { status: 500 }
-    );
+  } catch (err: unknown) {
+    const detail = err instanceof Error ? err.message : 'unknown';
+    console.error('[acmi-folana-feed] unavailable:', detail);
+    // Degrade instead of HTTP 500: empty events, no invented metrics.
+    return NextResponse.json({
+      events: [],
+      unavailable: true,
+      source: 'folana',
+    });
   }
 }

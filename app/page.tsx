@@ -120,11 +120,7 @@ export default async function FolanasJournal() {
           </div>
         </section>
 
-        <section id="grid">
-          <div className="mx-auto max-w-5xl">
-            <AcmiLiveFeed />
-          </div>
-        </section>
+        <AcmiLiveFeed />
       </main>
 
       <Footer />
