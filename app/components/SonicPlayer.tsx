@@ -600,25 +600,40 @@ export function SonicVault() {
         </div>
       </div>
 
-      {/* === REAL PRODUCTIONS (QUANTUM first, Fracture secondary) === */}
+      {/* === REAL PRODUCTIONS (QUANTUM featured, Fracture + Ethereal real video) === */}
       <div className="mb-8">
         <div className="mb-4 flex items-center gap-3">
           <div className="font-mono text-[10px] tracking-[3px] text-folana-neon-pink">REAL PRODUCTIONS</div>
           <div className="h-px flex-1 bg-gradient-to-r from-folana-neon-pink/40 to-transparent" />
         </div>
 
-        <div className="space-y-6">
+            <div className="space-y-6">
           {getFeaturedRealProductions().map((realTrack, index) => (
             <div key={realTrack.id} className="space-y-3">
               <FeaturedProductionCard track={realTrack} featured={index === 0} />
               {realTrack.videoSrc && (
-                <button
-                  type="button"
-                  onClick={() => openPlayer(realTrack)}
-                  className="inline-flex items-center gap-2 rounded-full border border-folana-neon-cyan/40 bg-folana-neon-cyan/10 px-4 py-2 text-[10px] font-mono tracking-[2px] text-folana-neon-cyan"
-                >
-                  WATCH VIDEO <Play className="h-3 w-3" />
-                </button>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    onClick={() => openPlayer(realTrack)}
+                    className="inline-flex items-center gap-2 rounded-full border border-folana-neon-cyan/40 bg-folana-neon-cyan/10 px-4 py-2 text-[10px] font-mono tracking-[2px] text-folana-neon-cyan"
+                  >
+                    WATCH REAL VIDEO <Play className="h-3 w-3" />
+                  </button>
+                  {realTrack.runpodJobs?.sideVideo && (
+                    <button
+                      type="button"
+                      onClick={() => openPlayer({
+                        ...realTrack,
+                        videoSrc: realTrack.runpodJobs?.sideVideo,
+                        subtitle: `${realTrack.subtitle} • SIDE PROFILE`,
+                      })}
+                      className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-[10px] font-mono tracking-[2px] text-white/80"
+                    >
+                      WATCH SIDE VIDEO
+                    </button>
+                  )}
+                </div>
               )}
             </div>
           ))}
@@ -648,9 +663,9 @@ export function SonicVault() {
             prototypes.push({ ...proto, isPrototype: true });
           }
           for (const track of TRACKS) {
-            if (seen.has(track.id) || track.id === 'ethereal-dispatch') continue;
+            if (seen.has(track.id)) continue;
             seen.add(track.id);
-            prototypes.push({ ...track, isPrototype: true });
+            prototypes.push({ ...track, isPrototype: true, videoSrc: undefined });
           }
           return prototypes.map((track) => (
           <motion.button
@@ -730,7 +745,7 @@ export function SonicVault() {
                           </div>
                           <div className="text-white/90 text-sm max-w-md">
                             This piece is a prototype from early pipeline development.
-                            Featured real productions — QUANTUM and Fracture — are above.
+                            Featured real productions — QUANTUM, Fracture, and Ethereal — are above.
                           </div>
                         </div>
                       </div>

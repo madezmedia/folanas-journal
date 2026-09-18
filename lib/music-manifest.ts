@@ -3491,10 +3491,11 @@ export function getVisualPrototypes() {
   return VISUAL_PROTOTYPES;
 }
 
-/** QUANTUM + Fracture stay above the fold. Everything else is an older arc. */
+/** QUANTUM featured, then Fracture + Ethereal as real video. Everything else is an older arc. */
 export const FEATURED_REAL_PRODUCTION_IDS = [
   'quantum-arc-rust-vein',
   'fracture-dispatch-001',
+  'ethereal-dispatch',
 ] as const;
 
 export const QUANTUM_STILLS = [

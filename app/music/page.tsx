@@ -47,7 +47,7 @@ export default function MusicReleases() {
               Music Releases
             </h1>
             <p className="mx-auto max-w-md font-serif text-lg italic text-folana-text-secondary sm:text-xl">
-              Real productions first.<br />Older arcs stay in the catalog.
+              QUANTUM first. Fracture and Ethereal as real video.<br />Older arcs stay in the catalog.
             </p>
           </div>
         </section>

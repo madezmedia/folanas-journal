@@ -73,13 +73,17 @@ export function FeaturedProductionCard({
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
             <div className="absolute left-3 top-3 flex flex-wrap gap-2">
               <span className="rounded-full border border-folana-neon-pink/50 bg-black/70 px-3 py-1 text-[10px] font-mono tracking-[2px] text-folana-neon-pink">
-                REAL
+                REAL PRODUCTION
               </span>
-              {featured && (
+              {track.videoSrc ? (
+                <span className="rounded-full border border-folana-neon-cyan/50 bg-black/70 px-3 py-1 text-[10px] font-mono tracking-[2px] text-folana-neon-cyan">
+                  REAL VIDEO
+                </span>
+              ) : featured ? (
                 <span className="rounded-full border border-white/20 bg-black/70 px-3 py-1 text-[10px] font-mono tracking-[2px] text-white/80">
                   FEATURED
                 </span>
-              )}
+              ) : null}
             </div>
           </div>
           {stills.length > 1 && (
@@ -110,7 +114,7 @@ export function FeaturedProductionCard({
         <div className="flex min-w-0 flex-col bg-folana-surface/60 p-5 sm:p-8">
           <div className="flex-1">
             <div className="mb-2 text-[10px] font-mono uppercase tracking-[3px] text-folana-neon-cyan">
-              REAL PRODUCTION
+              {track.videoSrc ? 'REAL PRODUCTION • REAL VIDEO' : 'REAL PRODUCTION'}
             </div>
             <h3 className="font-serif text-2xl leading-tight tracking-tight text-folana-ink sm:text-3xl">
               {track.title}
