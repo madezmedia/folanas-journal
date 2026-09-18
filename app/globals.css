@@ -105,6 +105,24 @@ input, textarea, select, button, a {
   touch-action: manipulation;
 }
 
+/* Native audio controls must shrink on phone widths */
+.audio-shell,
+audio {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 40px;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
 /* Safe area padding for fixed/absolute elements on notched devices */
 @supports (padding-top: env(safe-area-inset-top)) {
   .safe-area-top {

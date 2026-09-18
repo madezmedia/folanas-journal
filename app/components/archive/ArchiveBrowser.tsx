@@ -125,16 +125,16 @@ export function ArchiveBrowser() {
 
       <AnimatePresence>
         {selectedItem && (
-          <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/95 p-4 md:p-8" onClick={closeItem}>
+          <div className="fixed inset-0 z-[70] flex items-end justify-center overflow-y-auto bg-black/95 p-3 sm:items-center sm:p-4 md:p-8" onClick={closeItem}>
             <motion.div
               initial={{ opacity: 0, scale: 0.96, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.97, y: 30 }}
               transition={{ ease: [0.21, 0.92, 0.3, 1], duration: 0.38 }}
-              className="relative w-full max-w-5xl"
+              className="relative w-full max-w-5xl max-h-[90dvh] overflow-y-auto"
               onClick={e => e.stopPropagation()}
             >
-              <button onClick={closeItem} className="absolute -top-3 -right-3 z-10 w-12 h-12 rounded-full bg-folana-void border border-white/20 flex items-center justify-center text-folana-text-secondary hover:text-white hover:border-folana-neon-pink transition-all">
+              <button onClick={closeItem} className="absolute right-3 top-3 z-10 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-folana-void text-folana-text-secondary transition-all hover:border-folana-neon-pink hover:text-white sm:-right-3 sm:-top-3">
                 <X size={19} />
               </button>
 
@@ -158,7 +158,7 @@ export function ArchiveBrowser() {
 
                 <div className="p-6 md:p-8 space-y-4 bg-folana-surface/80">
                   <div>
-                    <div className="font-serif text-3xl tracking-[-1px] text-folana-ink">{selectedItem.title}</div>
+                    <div className="font-serif text-2xl tracking-[-1px] text-folana-ink sm:text-3xl">{selectedItem.title}</div>
                     <div className="font-mono text-xs tracking-[2px] text-folana-text-muted mt-1">{selectedItem.mood} {selectedItem.duration ? `• ${selectedItem.duration}` : ''}</div>
                   </div>
                   <p className="text-sm text-folana-text-secondary/90 font-serif italic leading-relaxed">{selectedItem.description}</p>
@@ -166,7 +166,7 @@ export function ArchiveBrowser() {
                   {selectedItem.audioSrc && (
                     <div className="pt-2">
                       <div className="text-[10px] font-mono tracking-[2px] text-folana-neon-cyan mb-2">LISTEN</div>
-                      <audio controls className="w-full accent-folana-neon-pink" src={selectedItem.audioSrc}>Your browser does not support the audio element.</audio>
+                      <audio controls preload="none" className="audio-shell w-full max-w-full accent-folana-neon-pink" src={selectedItem.audioSrc}>Your browser does not support the audio element.</audio>
                     </div>
                   )}
 

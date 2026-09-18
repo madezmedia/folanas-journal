@@ -22,16 +22,16 @@ export function Footer() {
         {/* Navigation Columns */}
         <div className="md:col-span-3 grid grid-cols-2 gap-y-8 text-folana-text-secondary">
           <div className="space-y-3">
-            <div className="font-mono tracking-[2px] text-xs text-folana-text-muted mb-1">THE ARCHIVE</div>
-            <Link href="/" className="block hover:text-folana-neon-pink transition-colors">All Transmissions</Link>
-            <Link href="/#sigils" className="block hover:text-folana-neon-pink transition-colors">Visual Codex</Link>
-            <Link href="/#sonic" className="block hover:text-folana-neon-pink transition-colors">Sonic Vault</Link>
+            <div className="mb-1 font-mono text-xs tracking-[2px] text-folana-text-muted">THE ARCHIVE</div>
+            <Link href="/" className="block transition-colors hover:text-folana-neon-pink">Home</Link>
+            <Link href="/music" className="block transition-colors hover:text-folana-neon-pink">Music</Link>
+            <Link href="/#sonic" className="block transition-colors hover:text-folana-neon-pink">Sonic Vault</Link>
           </div>
           <div className="space-y-3">
-            <div className="font-mono tracking-[2px] text-xs text-folana-text-muted mb-1">SYSTEM</div>
-            <Link href="/orchestrator" className="block hover:text-folana-neon-pink transition-colors">The Grid (Orchestrator)</Link>
-            <a href="https://github.com" target="_blank" className="block hover:text-folana-neon-pink transition-colors opacity-60">Source Pipeline</a>
-            <Link href="/admin" className="block hover:text-folana-neon-pink transition-colors">Signal Admin</Link>
+            <div className="mb-1 font-mono text-xs tracking-[2px] text-folana-text-muted">LISTEN</div>
+            <Link href="/archive" className="block transition-colors hover:text-folana-neon-pink">Archive</Link>
+            <Link href="/inner-circle" className="block transition-colors hover:text-folana-neon-pink">Inner Circle</Link>
+            <Link href="/waitlist" className="block transition-colors hover:text-folana-neon-pink">Waitlist</Link>
           </div>
         </div>
 
