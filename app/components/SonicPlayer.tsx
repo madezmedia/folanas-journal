@@ -625,7 +625,7 @@ export function SonicVault() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
                     <div className="absolute bottom-4 left-4">
-                      <ProductionBadge kind="real" />
+                      <ProductionBadge kind="real" hasVideo={Boolean(realTrack.videoSrc)} />
                     </div>
                   </div>
                   <div className="space-y-4 p-5 md:col-span-3 md:p-8">

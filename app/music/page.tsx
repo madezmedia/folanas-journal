@@ -50,7 +50,7 @@ function RealProductionCard({
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
           <div className="absolute left-4 top-4">
-            <ProductionBadge kind="real" />
+            <ProductionBadge kind="real" hasVideo={Boolean(track.videoSrc)} />
           </div>
           {featured && (
             <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6">
@@ -80,12 +80,6 @@ function RealProductionCard({
           <div className="mt-6 border-t border-white/10 pt-6">
             <FeaturedDropMedia track={track} />
           </div>
-
-          {track.videoSrc && (
-            <div className="mt-3 text-xs">
-              <Link href="/#sonic" className="text-folana-neon-cyan hover:underline">Watch the video in the Sonic Vault →</Link>
-            </div>
-          )}
 
           {track.falAutonomousBroll && track.falAutonomousBroll.length > 0 && (
             <div className="mt-6 border-t border-white/10 pt-6">
@@ -189,8 +183,8 @@ export default function MusicReleases() {
             <h1 className="mb-4 font-serif text-4xl tracking-[-2px] text-white sm:text-7xl sm:tracking-[-4.5px] md:text-[92px]">
               Music Releases
             </h1>
-            <p className="mx-auto max-w-md font-serif text-lg italic text-folana-text-secondary sm:text-xl">
-              QUANTUM and Fracture sit above the fold.<br />Older arcs stay in the catalog, collapsed.
+            <p className="mx-auto max-w-lg font-serif text-lg italic text-folana-text-secondary sm:text-xl">
+              QUANTUM, Fracture, and Ethereal sit above the fold as real productions.<br />Older arcs stay in the catalog, collapsed.
             </p>
           </div>
         </section>

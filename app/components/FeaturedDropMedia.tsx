@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import type { RealTrack } from '@/lib/music-manifest';
 
-export function ProductionBadge({ kind }: { kind: 'real' | 'prototype' }) {
+export function ProductionBadge({ kind, hasVideo = false }: { kind: 'real' | 'prototype'; hasVideo?: boolean }) {
   const isReal = kind === 'real';
+  const label = isReal ? (hasVideo ? 'REAL VIDEO' : 'REAL') : 'PROTOTYPE';
   return (
     <span
       className={`inline-flex items-center rounded-full border px-3 py-1 text-[10px] font-mono tracking-[3px] ${
@@ -11,7 +12,7 @@ export function ProductionBadge({ kind }: { kind: 'real' | 'prototype' }) {
           : 'border-white/20 bg-black/70 text-white/75'
       }`}
     >
-      {isReal ? 'REAL' : 'PROTOTYPE'}
+      {label}
     </span>
   );
 }
@@ -89,7 +90,23 @@ export function FeaturedDropMedia({
           </audio>
         </div>
       )}
-      {showPlaceholder && <MusicVideoPlaceholder title={track.title} />}
+      {track.videoSrc ? (
+        <div>
+          <div className="mb-2 font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">MUSIC VIDEO • REAL</div>
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            poster={track.posterSrc}
+            className="w-full rounded-xl border border-white/10 bg-black"
+            src={track.videoSrc}
+          >
+            Your browser does not support the video element.
+          </video>
+        </div>
+      ) : (
+        showPlaceholder && <MusicVideoPlaceholder title={track.title} />
+      )}
     </div>
   );
 }

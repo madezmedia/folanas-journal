@@ -3,6 +3,7 @@ import { REAL_PRODUCTIONS, type RealTrack } from './music-manifest';
 export const FEATURED_REAL_PRODUCTION_IDS = [
   'quantum-arc-rust-vein',
   'fracture-dispatch-001',
+  'ethereal-dispatch',
 ] as const;
 
 export const OLDER_ARC_ORDER = [
