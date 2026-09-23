@@ -17,7 +17,18 @@ export interface RealTrack {
   audioSrc?: string;
   videoSrc?: string;      // Real public video URL only. Leave unset until a real YouTube (or hosted) URL exists.
   posterSrc?: string;
+  /** Full-bleed stills hero (exterior). Stills own the theme; the MV is the player, not the wallpaper. */
+  heroSrc?: string;
+  /** Portrait overlay on the stills hero (eyeline / lace). */
+  heroPortraitSrc?: string;
   galleryStills?: string[];
+  galleryLabels?: string[];
+  /** Honest distribution chip. Example: live on the hub, YouTube still coming. */
+  statusNote?: string;
+  /** Short caption under the native player (cut length vs song master). */
+  releaseNote?: string;
+  /** Optional public song link. Not a video embed. */
+  flowUrl?: string;
   journalEntry?: string;   // Link to the corresponding journal entry
   duration: string;
   mood: string;
@@ -57,6 +68,35 @@ export interface PrototypeTrack {
 
 // Real Productions from the pipeline (2026-05-27)
 export const REAL_PRODUCTIONS: RealTrack[] = [
+  {
+    id: 'sixteen-seconds',
+    title: 'SIXTEEN SECONDS',
+    subtitle: 'Florida Industrial Gospel · Folana · quantum drama opening',
+    description: 'Florida strip-mall Sunday. Second-to-last row. Same sixteen-second gap to Amen. Miss Icy\'s hand — "Clap, nuh." A notebook walking closer. She\'s not mocking the Spirit — she\'s watching a process she already knows how to run.',
+    audioSrc: '/folana/generated/2026-09-23/sixteen-seconds/sixteen-seconds-florida-warehouse-gospel.mp3',
+    videoSrc: '/folana/generated/2026-09-23/sixteen-seconds/sixteen-seconds-mv-pass.mp4',
+    posterSrc: '/folana/generated/2026-09-23/sixteen-seconds/poster-pass.jpg',
+    heroSrc: '/folana/generated/2026-09-23/sixteen-seconds/hero-01.jpg',
+    heroPortraitSrc: '/folana/generated/2026-09-23/sixteen-seconds/hero-03-overlay.jpg',
+    galleryStills: [
+      '/folana/generated/2026-09-23/sixteen-seconds/shot-01.jpg',
+      '/folana/generated/2026-09-23/sixteen-seconds/shot-02.jpg',
+      '/folana/generated/2026-09-23/sixteen-seconds/shot-03.jpg',
+    ],
+    galleryLabels: [
+      'PLACE · Florida strip-mall Mount Horeb',
+      'ROOM · Same sixteen-second gap to Amen',
+      'EYELINE · Watching the process execute',
+    ],
+    statusNote: 'LIVE ON HUB — YouTube coming',
+    releaseNote: '~1:55 cut · full song ~2:59',
+    flowUrl: 'https://www.flowmusic.app/song/7d34c8a4-a428-4044-b03a-02fb9e7668ef',
+    journalEntry: '/entries/2026-09-23_sixteen-seconds',
+    duration: '1:55',
+    mood: 'INDUSTRIAL-GOSPEL',
+    tags: ['sixteen-seconds', 'florida-industrial-gospel', 'real-production', 'quantum-drama', 'mount-horeb', '2026-09-23'],
+    isRealProduction: true,
+  },
   {
     id: 'quantum-arc-rust-vein',
     title: 'QUANTUM ARC · RUST VEIN',

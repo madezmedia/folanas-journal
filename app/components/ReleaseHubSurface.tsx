@@ -75,10 +75,10 @@ export function ReleaseHubSurface({
             FEATURED EPISODE
           </div>
           <div className="mt-3 grid items-center gap-5 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-black">
+            <div className={`relative overflow-hidden rounded-3xl bg-black ${featured.heroSrc ? 'border-[8px] border-[#6b4423]' : 'border border-white/10'}`}>
               <div className="relative aspect-[4/5]">
                 <Image
-                  src={featured.posterSrc || '/brand/og-card-neutral.png'}
+                  src={featured.heroPortraitSrc || featured.posterSrc || '/brand/og-card-neutral.png'}
                   alt={featured.title}
                   fill
                   className="object-cover"

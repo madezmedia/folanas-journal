@@ -1,7 +1,8 @@
 import { REAL_PRODUCTIONS, type RealTrack } from './music-manifest';
 
-/** Homepage featured drop + /music featured cards. QUANTUM leads; Fracture stays featured. */
+/** Homepage featured drop + /music featured cards. SIXTEEN SECONDS leads; QUANTUM and Fracture stay featured. */
 export const FEATURED_REAL_PRODUCTION_IDS = [
+  'sixteen-seconds',
   'quantum-arc-rust-vein',
   'fracture-dispatch-001',
 ] as const;
@@ -13,6 +14,7 @@ export const FEATURED_REAL_PRODUCTION_IDS = [
  * because it has no *-arc tag (only a genre tag `ambient`).
  */
 export const REAL_VIDEO_PRODUCTION_IDS = [
+  'sixteen-seconds',
   'fracture-dispatch-001',
   'ethereal-dispatch',
 ] as const;
@@ -51,7 +53,7 @@ export function isRealVideoProduction(id: string): boolean {
   return (REAL_VIDEO_PRODUCTION_IDS as readonly string[]).includes(id);
 }
 
-/** QUANTUM + Fracture + Ethereal: REAL PRODUCTIONS above the fold, not Older arcs. */
+/** SIXTEEN SECONDS + QUANTUM + Fracture + Ethereal: REAL PRODUCTIONS above the fold, not Older arcs. */
 export function isAboveFoldRealProduction(id: string): boolean {
   return isFeaturedRealProduction(id) || isRealVideoProduction(id);
 }
@@ -86,11 +88,16 @@ export function resolveSideVideoSrc(track: Pick<RealTrack, 'id' | 'runpodJobs'>)
   return track.runpodJobs?.sideVideo;
 }
 
-export function nativeVideoElementId(trackId: string, angle: 'front' | 'side' = 'front'): string {
-  return `production-video-${trackId}-${angle}`;
+export function nativeVideoElementId(
+  trackId: string,
+  angle: 'front' | 'side' = 'front',
+  surface = 'stage',
+): string {
+  return `production-video-${trackId}-${angle}-${surface}`;
 }
 
 export function getArcKey(track: RealTrack): string {
+  if (track.id === 'sixteen-seconds') return 'sixteen-seconds';
   if (track.id === 'ethereal-dispatch') return 'ethereal';
   const arcTag = track.tags.find((tag) => tag.endsWith('-arc'));
   if (arcTag) return arcTag;

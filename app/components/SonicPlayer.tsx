@@ -625,7 +625,7 @@ export function SonicVault() {
         <div className="grid gap-4 lg:grid-cols-3">
           {getAboveFoldRealProductions().map((realTrack) => (
             <div key={realTrack.id} className="space-y-3">
-              <div className="holo-frame overflow-hidden rounded-2xl border border-folana-neon-pink/30 bg-folana-surface text-left">
+              <div className={`overflow-hidden rounded-2xl text-left ${realTrack.heroSrc ? 'border border-[#6b4423]/80 bg-[#14110e]' : 'holo-frame border border-folana-neon-pink/30 bg-folana-surface'}`}>
                 <PrimaryProductionMedia track={realTrack} />
                 <div className="space-y-3 p-4">
                   <div>
