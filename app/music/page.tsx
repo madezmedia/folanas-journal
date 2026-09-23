@@ -37,11 +37,12 @@ function RealProductionCard({
   track: RealTrack;
   featured?: boolean;
 }) {
+  const gospel = Boolean(track.heroSrc);
   return (
-    <div className={`holo-frame flex h-full flex-col overflow-hidden rounded-2xl border ${featured ? 'border-folana-neon-pink/30' : 'border-white/15'}`}>
+    <div id={track.id} className={`flex h-full flex-col overflow-hidden rounded-2xl border ${gospel ? 'border-[#6b4423]/80 bg-[#14110e]' : `holo-frame ${featured ? 'border-folana-neon-pink/30' : 'border-white/15'}`}`}>
       <PrimaryProductionMedia track={track} />
-      <div className="flex flex-1 flex-col bg-folana-surface/60 p-4">
-        <div className="mb-1 font-mono text-[10px] tracking-[3px] text-folana-neon-cyan">
+      <div className={`flex flex-1 flex-col p-4 ${gospel ? 'bg-[#1c2a44]/55' : 'bg-folana-surface/60'}`}>
+        <div className={`mb-1 font-mono text-[10px] tracking-[3px] ${gospel ? 'text-[#f4efe4]' : 'text-folana-neon-cyan'}`}>
           {featured ? 'FEATURED • REAL PRODUCTION' : 'REAL PRODUCTION'}
         </div>
         <div className="font-serif text-xl leading-tight tracking-tight text-folana-ink">{track.title}</div>
@@ -51,7 +52,10 @@ function RealProductionCard({
         </div>
         {resolveFeaturedVideoSrc(track) && (
           <div className="mt-3">
-            <WatchNativeVideoButton trackId={track.id} />
+            <WatchNativeVideoButton
+              trackId={track.id}
+              className={gospel ? 'inline-flex min-h-11 items-center gap-2 font-mono text-xs tracking-[2px] text-[#f4efe4] transition-colors hover:text-[#e7c6d4]' : undefined}
+            />
           </div>
         )}
         {track.falAutonomousBroll && track.falAutonomousBroll.length > 0 && (
@@ -141,7 +145,7 @@ export default function MusicReleases() {
                 <h1 className="font-serif text-3xl tracking-[-1px] text-white sm:text-4xl">Music Releases</h1>
               </div>
               <p className="max-w-md font-serif text-sm italic text-folana-text-secondary">
-                QUANTUM, Fracture, and Ethereal sit above the fold. Older arcs stay collapsed.
+                SIXTEEN SECONDS leads. QUANTUM, Fracture, and Ethereal stay above the fold. Older arcs stay collapsed.
               </p>
             </div>
           </div>
