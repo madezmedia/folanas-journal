@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Audits Folana's Journal deployment completeness.
  * Checks each REAL_PRODUCTIONS entry against the filesystem.

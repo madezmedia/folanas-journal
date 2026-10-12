@@ -7,7 +7,7 @@ import { MusicFirstHero } from './components/MusicFirstHero';
 import { AcmiLiveFeed } from './components/AcmiLiveFeed';
 import { ReleaseHubSurface } from './components/ReleaseHubSurface';
 import { getSortedJournalEntries } from '@/lib/journal';
-import { getProfileSignals } from '@/lib/profile-signals';
+import { getProfileSignals, DEFAULT_PROFILE_SIGNALS } from '@/lib/profile-signals';
 import { getFreshArchiveItems } from '@/lib/archive-view';
 import { REAL_PRODUCTIONS } from '@/lib/music-manifest';
 import type { JournalEntry } from '@/lib/journal';
@@ -15,21 +15,7 @@ import type { ProfileSignals } from '@/lib/profile-signals';
 
 export default async function FolanasJournal() {
   let allEntries: JournalEntry[] = [];
-  let signals: ProfileSignals = {
-    id: 'folana',
-    display_name: 'Folana',
-    handle: '@folana_music',
-    avatar_url: '/images/folana-avatar.jpg',
-    hero_image_url: '/images/folana-hero.jpg',
-    reach_label: '4.5M',
-    influence_label: '+32%',
-    synthetic_resonance: 88,
-    holographic_engagement: 64,
-    current_mood: null,
-    bio: null,
-    metrics: null,
-    compositions: null,
-  };
+  let signals: ProfileSignals = DEFAULT_PROFILE_SIGNALS;
 
   try {
     allEntries = await getSortedJournalEntries();

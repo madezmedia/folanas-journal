@@ -90,17 +90,18 @@ export async function GET(request: Request) {
     }
 
     // Merge and parse
-    const merged: any[] = [];
+    const merged: Array<{ ts: number; summary?: string; source?: string; kind?: string }> = [];
     const seen = new Set<string>();
 
     const dedupAndAdd = (raw: string) => {
       try {
-        const parsed = JSON.parse(raw);
-        // Dedup by ts + summary
-        const key = `${parsed.ts}-${(parsed.summary || '').slice(0, 60)}`;
+        const parsed = JSON.parse(raw) as Record<string, unknown>;
+        const ts = typeof parsed.ts === 'number' ? parsed.ts : 0;
+        const summary = typeof parsed.summary === 'string' ? parsed.summary : '';
+        const key = `${ts}-${summary.slice(0, 60)}`;
         if (!seen.has(key)) {
           seen.add(key);
-          merged.push(parsed);
+          merged.push({ ts, summary, source: parsed.source as string | undefined, kind: parsed.kind as string | undefined });
         }
       } catch {}
     };
@@ -121,10 +122,18 @@ export async function GET(request: Request) {
       totalAvailable: filtered.length,
       fetchedAt: new Date().toISOString(),
     });
-  } catch (err: any) {
-    console.error('[acmi-folana-feed] Error:', err);
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      console.error('[acmi-folana-feed] Error:', err);
+      return NextResponse.json(
+        { error: 'Failed to fetch Folana ACMI feed', detail: err.message },
+        { status: 500 }
+      );
+    }
+
+    console.error('[acmi-folana-feed] Unknown error:', err);
     return NextResponse.json(
-      { error: 'Failed to fetch Folana ACMI feed', detail: err.message },
+      { error: 'Failed to fetch Folana ACMI feed' },
       { status: 500 }
     );
   }

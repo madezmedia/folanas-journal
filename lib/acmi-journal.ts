@@ -20,7 +20,7 @@ const REDIS_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 
 let hasLoggedMissingRedis = false;
 
-async function redis(command: string, ...args: any[]) {
+async function redis(command: string, ...args: unknown[]) {
   if (!REDIS_URL || !REDIS_TOKEN) {
     // Graceful for local development — we fall back to local markdown + Supabase
     if (!hasLoggedMissingRedis && process.env.NODE_ENV === 'development') {
@@ -56,8 +56,8 @@ export async function getAcmiJournalEntries(): Promise<AcmiJournalEntry[]> {
   try {
     const rawEntries: string[] = await redis('ZREVRANGE', 'acmi:character:folana:v1:corpus:journal', 0, -1);
     return rawEntries.map(e => JSON.parse(e));
-  } catch (error: any) {
-    if (error?.message === 'MISSING_REDIS_CREDS') {
+  } catch (error: unknown) {
+    if (error instanceof Error && error.message === 'MISSING_REDIS_CREDS') {
       return [];
     }
     console.warn("[acmi-journal] Failed to fetch entries from ACMI:", error);
@@ -69,7 +69,7 @@ export async function getAcmiJournalEntry(entryId: string): Promise<AcmiJournalE
   try {
     const entries = await getAcmiJournalEntries();
     return entries.find(e => e.payload.entryId === entryId) || null;
-  } catch (error) {
+  } catch {
     return null;
   }
 }

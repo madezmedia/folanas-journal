@@ -1,22 +1,23 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const ACMI_BUS_KEY = process.env.UPSTASH_REDIS_REST_URL
-  ? 'acmi:bus:broadcast'
-  : null;
-
 const UPSTASH_URL = process.env.UPSTASH_REDIS_REST_URL;
 const UPSTASH_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 
-async function writeToAcmi(event: object) {
+async function writeToAcmi(event: Record<string, unknown>) {
   if (!UPSTASH_URL || !UPSTASH_TOKEN) {
-    console.log('[broadcast] No Upstash Redis — ACMI write skipped:', JSON.stringify(event));
+    console.log(
+      '[broadcast] No Upstash Redis — ACMI write skipped:',
+      JSON.stringify(event)
+    );
     return false;
   }
+
   try {
     const body = {
       command: 'LPUSH',
       args: ['acmi:bus:broadcast', JSON.stringify(event)],
     };
+
     await fetch(UPSTASH_URL.replace(/\/$/, ''), {
       method: 'POST',
       headers: {
@@ -25,9 +26,13 @@ async function writeToAcmi(event: object) {
       },
       body: JSON.stringify([body.command, ...body.args]),
     });
+
     return true;
   } catch (err) {
-    console.error('[broadcast] ACMI write failed:', err);
+    console.error(
+      '[broadcast] ACMI write failed:',
+      err instanceof Error ? err.message : err
+    );
     return false;
   }
 }
@@ -60,7 +65,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const invalidPlatforms = body.platforms.filter(p => !PLATFORMS.includes(p as any));
+    const invalidPlatforms = body.platforms.filter(
+      (platform: string): platform is string =>
+        !PLATFORMS.includes(platform as typeof PLATFORMS[number])
+    );
+
     if (invalidPlatforms.length > 0) {
       return NextResponse.json(
         { success: false, message: `Invalid platforms: ${invalidPlatforms.join(', ')}` },
@@ -110,7 +119,12 @@ export async function GET() {
   });
 }
 
-const PLATFORM_LABELS = [
+const PLATFORM_LABELS: ReadonlyArray<{
+  id: string;
+  label: string;
+  enabled: boolean;
+  note?: string;
+}> = [
   { id: 'facebook', label: 'Facebook', enabled: true },
   { id: 'instagram', label: 'Instagram', enabled: true },
   { id: 'linkedin', label: 'LinkedIn', enabled: true },

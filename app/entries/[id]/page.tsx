@@ -1,5 +1,5 @@
 import { getJournalEntry, getSortedJournalEntries } from '@/lib/journal';
-import { getProfileSignals } from '@/lib/profile-signals';
+import { getProfileSignals, type ProfileSignals } from '@/lib/profile-signals';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -36,7 +36,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
     signals = await getProfileSignals();
   } catch (e) {
     console.warn('[EntryPage] getProfileSignals failed, using defaults', e);
-    signals = { bio: null } as any;
+    signals = { bio: null } as ProfileSignals;
   }
 
   if (!entry) {

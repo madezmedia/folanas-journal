@@ -1,4 +1,4 @@
-import { REAL_PRODUCTIONS, VISUAL_PROTOTYPES, type RealTrack, type PrototypeTrack } from './music-manifest';
+import { REAL_PRODUCTIONS, type RealTrack, type PrototypeTrack } from './music-manifest';
 import { SIGILS, type Sigil } from './sigils';
 
 export type ArchiveItemType = 'music-audio' | 'music-video' | 'visual-codex' | 'prototype';

@@ -32,6 +32,8 @@ const DEFAULT_PROFILE: ProfileSignals = {
   compositions: null,
 };
 
+export const DEFAULT_PROFILE_SIGNALS: ProfileSignals = DEFAULT_PROFILE;
+
 function asString(v: unknown, fallback: string): string {
   return typeof v === 'string' && v.length > 0 ? v : fallback;
 }

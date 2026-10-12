@@ -4,7 +4,7 @@ export interface ACMIEvent {
   source: string;
   kind: string;
   summary: string;
-  payload?: any;
+  payload?: unknown;
 }
 
 export async function redis(command: string, ...args: string[]) {
@@ -38,6 +38,9 @@ export async function getAgentTimeline(agentId: string, limit = 50): Promise<ACM
 
 export async function getLatestThought(): Promise<string | null> {
   const events = await getAgentTimeline("fanvue_orchestrator", 20);
-  const thoughtEvent = events.find(e => e.summary.includes("Thought of the Day") || (e.payload && e.payload.thought));
-  return thoughtEvent?.payload?.thought || thoughtEvent?.summary || null;
+  const thoughtEvent = events.find(e => e.summary.includes("Thought of the Day") || (e.payload && typeof (e.payload as Record<string, unknown> | null)?.thought === "string"));
+  const payload = typeof thoughtEvent?.payload === "string" ? thoughtEvent.payload : null;
+  if (payload) return payload;
+  const summary = typeof thoughtEvent?.summary === "string" ? thoughtEvent.summary : null;
+  return summary;
 }
